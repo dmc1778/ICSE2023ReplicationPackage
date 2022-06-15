@@ -3,7 +3,7 @@ from fnmatch import fnmatch
 from numpy import diff
 from py import code
 from pydriller import ModificationType, GitRepository as PyDrillerGitRepo
-import os, json, re, subprocess
+import os, json, re, subprocess, codecs
 
 user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
 this_project = os.getcwd()
@@ -79,10 +79,17 @@ def run(test_file):
     output = subprocess.getoutput(command_+test_file)
     return [parse_output(output), output]
 
-def diff_based_matching(f_names, current_commit, file):
-    changed_lines = f_names[file['file_path']]
-    if os.path.isfile(os.path.join(current_commit.project_path, file['file_path'])):
-        [res, output] = run(os.path.join(current_commit.project_path, file['file_path']))
+def diff_based_matching(changed_lines, current_commit, file):
+
+    for f in current_commit.modifications:
+        if f.filename == os.path.basename(file['file_path']):
+            vul_file_object = f
+            break
+    
+    save_source_code(vul_file_object.source_code, 'vul', vul_file_object.filename)
+
+    if os.path.isfile(os.path.join(this_project, 'vul_'+vul_file_object.filename)):
+        [res, output] = run(os.path.join(this_project, 'vul_'+vul_file_object.filename))
         if res == 'detected':
             g = REG_LOC.search(output).group(1)
             if changed_lines[0] <= int(g) <= changed_lines[1]:
@@ -94,15 +101,36 @@ def diff_based_matching(f_names, current_commit, file):
         else:
             print(res)
 
-def fixed_warning_base_matching(fix_commit, vul_commit, file):
+    subprocess.call('rm -rf '+this_project+'/vul_'+vul_file_object.filename, shell=True)
 
-    if os.path.isfile(os.path.join(vul_commit.project_path, file['file_path'])):
-        [res1, output1] = run(os.path.join(vul_commit.project_path, file['file_path']))
+def save_source_code(source_code, flag, filename):
+    split_source_code = source_code.split('\n')
+    with codecs.open(flag+'_'+filename, 'w') as f_method:
+        for line in split_source_code:
+            f_method.write("%s\n" % line)
+        f_method.close()
 
-    if os.path.isfile(os.path.join(fix_commit.project_path, file['file_path'])):
-        [res2, output2] = run(os.path.join(fix_commit.project_path, file['file_path']))
+def fixed_warning_base_matching(fix_commit, vul_commit, common_file):
+
+    for f in fix_commit.modifications:
+        if f.filename == os.path.basename(list(common_file)[0]):
+            fixed_file_object = f
+            break
+
+    save_source_code(fixed_file_object.source_code, 'fix', fixed_file_object.filename)
+    save_source_code(vul_commit.modifications[0].source_code, 'vul', vul_commit.modifications[0].filename)     
+
+    if os.path.isfile(this_project+'/fix_'+fixed_file_object.filename):
+        [res1, output1] = run(this_project+'/fix_'+fixed_file_object.filename)
+
+    if os.path.isfile(this_project+'/fix_'+vul_commit.modifications[0].filename):
+        [res2, output2] = run(this_project+'/fix_'+vul_commit.modifications[0].filename)
     
-    res1
+    if res1 == 'not detected' and res2 == 'detected':
+        print('Fixed Warning Method Detected a Bug Candidate')
+    
+    subprocess.call('rm -rf '+this_project+'/fix_'+fixed_file_object.filename, shell=True)
+    subprocess.call('rm -rf '+this_project+'/vul_'+vul_commit.modifications[0].filename, shell=True)
 
 
 def main():
@@ -126,13 +154,18 @@ def main():
                     if 'test' not in file['file_path']:
                         previous_commits = file['previous_commits']
                         for pc in previous_commits:
+                            # here we must get the main file
                             current_commit = PyDrillerGitRepo(repository_path).get_commit(pc[0])
-                            f_names = get_fix_file_names(current_commit.modifications)
+                            fix_commit = PyDrillerGitRepo(repository_path).get_commit(x[0])
+
+                            single_prev_file_names = get_fix_file_names(current_commit.modifications)
+                            fix_file_names = get_fix_file_names(fix_commit.modifications)
+
                             try:
-                                if f_names[file['file_path']]:
+                                if fix_file_names[file['file_path']] and single_prev_file_names[file['file_path']]:
                                     print('Running Flawfinder on {} Library, {}/{}'.format(dir.split('_')[1].split('.')[0], counter, len(data)))
-                                    diff_based_matching(f_names, current_commit, file)
-                                    fixed_warning_base_matching(PyDrillerGitRepo(repository_path).get_commit(x[0]), current_commit, file)
+                                    diff_based_matching(fix_file_names[file['file_path']], current_commit, file)
+                                    # fixed_warning_base_matching(PyDrillerGitRepo(repository_path).get_commit(x[0]), current_commit, common_files)
                             except Exception as e:
                                 # print('The vulnerable file is not found in fix files.')
                                 pass
