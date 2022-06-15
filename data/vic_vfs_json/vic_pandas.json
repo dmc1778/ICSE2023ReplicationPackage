@@ -1,0 +1,3009 @@
+[{
+"a4c5d7823ff16870accacb05bcdf1ed3042c4664": []},
+{
+"db6e71bf4d36edf38072714059cac8af5086de57": []},
+{
+"b7618487d8710f2389f599317f7a54ca15f4ef6c": []},
+{
+"ac2fd4e54f69a999c1249815dc31f0b02ba87139": []},
+{
+"8cf377199b1c94493666055c21012fd2f5fa86de": []},
+{
+"b438f747d436f7f25ba3e2e04ecf5d70c4121ab4": [
+{
+    "line_num": 1770,
+    "line_str": "while (isdigit_ascii(*p)) {",
+    "file_path": "pandas/_libs/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "8ea7744851048b032404f2400a7c7a070479e152",
+            1770,
+            "while (isdigit_ascii(*p)) {"
+        ],
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1708,
+            "while (isdigit(*p)) {"
+        ]
+    ]
+},
+{
+    "line_num": 2163,
+    "line_str": "number /= e[308];",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "d6e2c7561aba584c694fe3e132e733f6ee3fa605",
+            2163,
+            "number /= e[308];"
+        ]
+    ]
+},
+{
+    "line_num": 2162,
+    "line_str": "number /= e[-308 - exponent];",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "d6e2c7561aba584c694fe3e132e733f6ee3fa605",
+            2162,
+            "number /= e[-308 - exponent];"
+        ]
+    ]
+},
+{
+    "line_num": 1729,
+    "line_str": "if (exponent < -616)       // Prevent invalid array access.",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1729,
+            "if (exponent < -616)       // Prevent invalid array access."
+        ]
+    ]
+}
+]
+},{
+"91abd0ababfca8b229e4b5ba64a26811c3da384a": []},
+{
+"22374c3b50f3a1691e5867ab9a950f44826a1bb7": []},
+{
+"ed23eb894d2ce1c4e1ae2f530cb0394db0c4d8bc": []},
+{
+"1922ec414d50f88fb1db7d219159222f4dc89674": []},
+{
+"5aadb12e409507b78eb372a43a3e37d81460b149": []},
+{
+"d88b90d9e74af5570fe82d05ad76faf60c8dc04d": []},
+{
+"5b18d3c47695a5e677efdcc65e5eae807bd250a6": []},
+{
+"95cd98b41b925ecca27c350b860fd311f28c1b82": [
+{
+    "line_num": 1708,
+    "line_str": "strlen(self->words[word_deletions - 1]) + 1);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1708,
+            "strlen(self->words[word_deletions - 1]) + 1);"
+        ]
+    ]
+},
+{
+    "line_num": 1707,
+    "line_str": "char_count = (self->word_starts[word_deletions - 1] +",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1707,
+            "char_count = (self->word_starts[word_deletions - 1] +"
+        ]
+    ]
+}
+]
+},{
+"2e114ce0f6aa26c8c6ca3257f975f47bde69649b": []},
+{
+"650cf74325bcbd08d0d41d439ae26ba682789f9f": []},
+{
+"9aaaf1b92aafb1f8d7c7cafa2ad87d84cd38ba24": []},
+{
+"3a858a3bd2e3b4d74103ca3ebe3a6c5e6629cd92": []},
+{
+"e745be04791b13c79199a9ae0f864c73cd793aee": []},
+{
+"8841969eea43fa34c84c9cdc2d7f286fcc5e76e5": []},
+{
+"383c14aa2dcddd08d3075f3b6e76e8d5d72ca9e3": []},
+{
+"d0fe636b7357bf16d17e33dc1dd09ad25fd63a16": []},
+{
+"9fd432beaaae56061fdc7282b13c034a8ef12a07": []},
+{
+"c275dbfcee0fa9644fa2718ad76fd91ca056069b": []},
+{
+"388d22c3d1e6804dbc1390e41db1d7277b1d8c66": []},
+{
+"9c5165e26260483ae64300c4d98939bf575aab7e": []},
+{
+"9f04bb85acdfc6f8ab1b1640afadb76bafa5bc5c": []},
+{
+"ecbb0efaaaedd5b3a2937eb52af761a8402c67c4": []},
+{
+"00c119c50728bee88a5e5d1538cf3a405e36997c": []},
+{
+"025b5dcbcf27f8b3b74a415acc1a17bb50bcebae": []},
+{
+"ce4720575f65df38e59472d7f4d8543ffe7a0c13": []},
+{
+"8de2a927387ac650eaa3190441fe1adc72bd3fd1": []},
+{
+"1cd077a3077352d63c1226d554db1e46cb9d2c1a": []},
+{
+"3d6d8731d10248fd3a7dca4a7868788a8b2fccee": []},
+{
+"a9ddafea8799f16a9eb80b87b63bff0642de537d": []},
+{
+"79f7762c622c61e0dbf32575403206bcc9c402ab": []},
+{
+"8c128a3660b9642840cf8372ebfb9256ad712bed": []},
+{
+"57c7daa3251e8fed3f3f709ab5bc8e707db99e98": []},
+{
+"0a0b2b9fc56eb0753b6d07a55d497b970c8ccfe0": []},
+{
+"27ebb3e1e40513ad5f8919a5bbc7298e2e070a39": []},
+{
+"defdb34bafa3900069d399ce597c0abbd4a2b0cc": []},
+{
+"c0e75a59b8fd2870c55b8e15565d1f5f8be9ec00": []},
+{
+"ee2e6de7c236d2a098e7ad92a4c6a998f50472f9": []},
+{
+"6b6cfb84ed37c94cbae54e89437c14fe84cbdc4f": []},
+{
+"8388a47b7b09d345f463fe5fe91f32e87f7bb550": []},
+{
+"5959ee3e133723136d4862864988a63ef3cc2a2f": []},
+{
+"446d5b4bc13636cb4d569aeb5669421e9ee862ec": [
+{
+    "line_num": 719,
+    "line_str": "Buffer_Realloc((__enc), (__len));                             \\",
+    "file_path": "pandas/src/ujson/lib/ultrajsonenc.c",
+    "previous_commits": [
+        [
+            "358bc6f8967d56e0cf914f0890b6d11864f2cc47",
+            719,
+            "Buffer_Realloc((__enc), (__len));                             \\"
+        ]
+    ]
+},
+{
+    "line_num": 718,
+    "line_str": "if ((size_t)((__enc)->end - (__enc)->offset) < (size_t)(__len)) { \\",
+    "file_path": "pandas/src/ujson/lib/ultrajsonenc.c",
+    "previous_commits": [
+        [
+            "358bc6f8967d56e0cf914f0890b6d11864f2cc47",
+            718,
+            "if ((size_t)((__enc)->end - (__enc)->offset) < (size_t)(__len)) { \\"
+        ]
+    ]
+},
+{
+    "line_num": 717,
+    "line_str": "#define Buffer_Reserve(__enc, __len)                                  \\",
+    "file_path": "pandas/src/ujson/lib/ultrajsonenc.c",
+    "previous_commits": [
+        [
+            "358bc6f8967d56e0cf914f0890b6d11864f2cc47",
+            717,
+            "#define Buffer_Reserve(__enc, __len)                                  \\"
+        ]
+    ]
+},
+{
+    "line_num": 455,
+    "line_str": "}",
+    "file_path": "pandas/src/ujson/lib/ultrajsonenc.c",
+    "previous_commits": [
+        [
+            "a8d15bd4c6dae2c65ed4aa4b2f76c029b6358113",
+            455,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 417,
+    "line_str": "",
+    "file_path": "pandas/src/ujson/lib/ultrajsonenc.c",
+    "previous_commits": [
+        [
+            "9633880214ca6f6372ced250146368628014e3d0",
+            417,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 854,
+    "line_str": "if (PyErr_Occurred()) {",
+    "file_path": "pandas/src/ujson/python/objToJSON.c",
+    "previous_commits": [
+        [
+            "358bc6f8967d56e0cf914f0890b6d11864f2cc47",
+            854,
+            "if (PyErr_Occurred()) {"
+        ]
+    ]
+}
+]
+},{
+"76d17449f868e25b68bd636906b8f70c683761af": []},
+{
+"8d7d3fb545b4273cf9d1a61bf7ea3bfdde8a1199": [
+{
+    "line_num": 731,
+    "line_str": "int i, slen;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "4378f82967f59097055eef17ede50aa515525551",
+            731,
+            "int i, slen;"
+        ]
+    ]
+},
+{
+    "line_num": 801,
+    "line_str": "int sz;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            801,
+            "int sz;"
+        ]
+    ]
+},
+{
+    "line_num": 566,
+    "line_str": "int bufsize = 200;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            566,
+            "int bufsize = 200;"
+        ]
+    ]
+},
+{
+    "line_num": 1664,
+    "line_str": "int start_lines = self->lines;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            1664,
+            "int start_lines = self->lines;"
+        ]
+    ]
+},
+{
+    "line_num": 306,
+    "line_str": "self->word_starts = (int *)newptr;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            306,
+            "self->word_starts = (int *)newptr;"
+        ]
+    ]
+},
+{
+    "line_num": 690,
+    "line_str": "int tokenize_bytes(parser_t *self, size_t line_limit, int start_lines) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            690,
+            "int tokenize_bytes(parser_t *self, size_t line_limit, int start_lines) {"
+        ]
+    ]
+},
+{
+    "line_num": 302,
+    "line_str": "sizeof(int) * self->words_cap);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            302,
+            "sizeof(int) * self->words_cap);"
+        ]
+    ]
+},
+{
+    "line_num": 1260,
+    "line_str": "self->line_start = (int *)newptr;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1260,
+            "self->line_start = (int *)newptr;"
+        ]
+    ]
+},
+{
+    "line_num": 1227,
+    "line_str": "if ((int)new_cap < self->words_cap) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            1227,
+            "if ((int)new_cap < self->words_cap) {"
+        ]
+    ]
+},
+{
+    "line_num": 1256,
+    "line_str": "newptr = safe_realloc((void *)self->line_start, new_cap * sizeof(int));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1256,
+            "newptr = safe_realloc((void *)self->line_start, new_cap * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 418,
+    "line_str": "int bufsize = 100;  // for error or warning messages",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            418,
+            "int bufsize = 100;  // for error or warning messages"
+        ]
+    ]
+},
+{
+    "line_num": 1215,
+    "line_str": "self->word_starts = (int *)newptr;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1215,
+            "self->word_starts = (int *)newptr;"
+        ]
+    ]
+},
+{
+    "line_num": 348,
+    "line_str": "int bufsize = 100;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            348,
+            "int bufsize = 100;"
+        ]
+    ]
+},
+{
+    "line_num": 315,
+    "line_str": "(int *)grow_buffer((void *)self->line_start, self->lines + 1,",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            315,
+            "(int *)grow_buffer((void *)self->line_start, self->lines + 1,"
+        ]
+    ]
+},
+{
+    "line_num": 1211,
+    "line_str": "newptr = safe_realloc((void *)self->word_starts, new_cap * sizeof(int));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1211,
+            "newptr = safe_realloc((void *)self->word_starts, new_cap * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 505,
+    "line_str": "int bufsize = 100;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            505,
+            "int bufsize = 100;"
+        ]
+    ]
+},
+{
+    "line_num": 501,
+    "line_str": "if ((self->lines >= self->header_end + 1) && fields < ex_fields) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "cc93d614eaa3e3c46daf340a4aae58b56a0fa226",
+            501,
+            "if ((self->lines >= self->header_end + 1) && fields < ex_fields) {"
+        ]
+    ]
+},
+{
+    "line_num": 885,
+    "line_str": "self->error_msg = \"out of memory\";",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "6a5b1f92933c5f986151cabd73acea4d9bc9b662",
+            885,
+            "self->error_msg = \"out of memory\";"
+        ]
+    ]
+},
+{
+    "line_num": 1075,
+    "line_str": "self->lines == start_lines + (int)line_limit) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            1075,
+            "self->lines == start_lines + (int)line_limit) {"
+        ]
+    ]
+},
+{
+    "line_num": 1331,
+    "line_str": "if (!all && self->lines - start_lines >= (int)nrows) break;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            1331,
+            "if (!all && self->lines - start_lines >= (int)nrows) break;"
+        ]
+    ]
+},
+{
+    "line_num": 625,
+    "line_str": "if (line_limit > 0 && self->lines == start_lines + (int)line_limit) {  \\",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            625,
+            "if (line_limit > 0 && self->lines == start_lines + (int)line_limit) {  \\"
+        ]
+    ]
+},
+{
+    "line_num": 402,
+    "line_str": "int ex_length;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "5568670ff1ecc23577825ae3c56d1a4ac40f93f1",
+            402,
+            "int ex_length;"
+        ]
+    ]
+},
+{
+    "line_num": 365,
+    "line_str": "int bufsize = 100;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            365,
+            "int bufsize = 100;"
+        ]
+    ]
+},
+{
+    "line_num": 204,
+    "line_str": "self->line_fields = (int *)malloc(sz * sizeof(int));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            204,
+            "self->line_fields = (int *)malloc(sz * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 72,
+    "line_str": "static void *grow_buffer(void *buffer, int length, int *capacity, int space,",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            72,
+            "static void *grow_buffer(void *buffer, int length, int *capacity, int space,"
+        ]
+    ]
+},
+{
+    "line_num": 1224,
+    "line_str": "int i;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "31f8e4dc8af8f0d109f366d0b726aef210bf7904",
+            1224,
+            "int i;"
+        ]
+    ]
+},
+{
+    "line_num": 997,
+    "line_str": "int bufsize = 100;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            997,
+            "int bufsize = 100;"
+        ]
+    ]
+},
+{
+    "line_num": 448,
+    "line_str": "if (!(self->lines <= self->header_end + 1) &&",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            448,
+            "if (!(self->lines <= self->header_end + 1) &&"
+        ]
+    ]
+},
+{
+    "line_num": 1278,
+    "line_str": "if ((int)new_cap < self->lines_cap) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            1278,
+            "if ((int)new_cap < self->lines_cap) {"
+        ]
+    ]
+},
+{
+    "line_num": 316,
+    "line_str": "&self->lines_cap, nbytes, sizeof(int), &status);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            316,
+            "&self->lines_cap, nbytes, sizeof(int), &status);"
+        ]
+    ]
+},
+{
+    "line_num": 597,
+    "line_str": "int bufsize = 100;                                                    \\",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            597,
+            "int bufsize = 100;                                                    \\"
+        ]
+    ]
+},
+{
+    "line_num": 1695,
+    "line_str": "int i, offset, word_deletions, char_count;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1695,
+            "int i, offset, word_deletions, char_count;"
+        ]
+    ]
+},
+{
+    "line_num": 403,
+    "line_str": "int length = strlen(msg);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "5568670ff1ecc23577825ae3c56d1a4ac40f93f1",
+            403,
+            "int length = strlen(msg);"
+        ]
+    ]
+},
+{
+    "line_num": 1266,
+    "line_str": "self->line_fields = (int *)newptr;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1266,
+            "self->line_fields = (int *)newptr;"
+        ]
+    ]
+},
+{
+    "line_num": 1200,
+    "line_str": "for (i = 0; i < self->lines - (int)nrows + 1; ++i) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            1200,
+            "for (i = 0; i < self->lines - (int)nrows + 1; ++i) {"
+        ]
+    ]
+},
+{
+    "line_num": 1262,
+    "line_str": "newptr = safe_realloc((void *)self->line_fields, new_cap * sizeof(int));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1262,
+            "newptr = safe_realloc((void *)self->line_fields, new_cap * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 333,
+    "line_str": "self->line_fields = (int *)newptr;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            333,
+            "self->line_fields = (int *)newptr;"
+        ]
+    ]
+},
+{
+    "line_num": 110,
+    "line_str": "int cap = *capacity;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            110,
+            "int cap = *capacity;"
+        ]
+    ]
+},
+{
+    "line_num": 1163,
+    "line_str": "if ((int)nrows > self->lines) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            1163,
+            "if ((int)nrows > self->lines) {"
+        ]
+    ]
+},
+{
+    "line_num": 73,
+    "line_str": "int elsize, int *error) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            73,
+            "int elsize, int *error) {"
+        ]
+    ]
+},
+{
+    "line_num": 329,
+    "line_str": "sizeof(int) * self->lines_cap);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            329,
+            "sizeof(int) * self->lines_cap);"
+        ]
+    ]
+},
+{
+    "line_num": 197,
+    "line_str": "self->word_starts = (int *)malloc(sz * sizeof(int));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            197,
+            "self->word_starts = (int *)malloc(sz * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 1093,
+    "line_str": "int bufsize = 100;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1093,
+            "int bufsize = 100;"
+        ]
+    ]
+},
+{
+    "line_num": 1250,
+    "line_str": "if ((int)new_cap < self->stream_cap) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            1250,
+            "if ((int)new_cap < self->stream_cap) {"
+        ]
+    ]
+},
+{
+    "line_num": 1304,
+    "line_str": "(int)nrows, self->datapos, self->datalen));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            1304,
+            "(int)nrows, self->datapos, self->datalen));"
+        ]
+    ]
+},
+{
+    "line_num": 862,
+    "line_str": "int i, status, cap;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            862,
+            "int i, status, cap;"
+        ]
+    ]
+},
+{
+    "line_num": 202,
+    "line_str": "self->line_start = (int *)malloc(sz * sizeof(int));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            202,
+            "self->line_start = (int *)malloc(sz * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 1870,
+    "line_str": "int j, line;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            1870,
+            "int j, line;"
+        ]
+    ]
+},
+{
+    "line_num": 640,
+    "line_str": "if (line_limit > 0 && self->lines == start_lines + (int)line_limit) { \\",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b1c3c4838b168ae84c16853967af9f82cae4d556",
+            640,
+            "if (line_limit > 0 && self->lines == start_lines + (int)line_limit) { \\"
+        ]
+    ]
+},
+{
+    "line_num": 112,
+    "line_str": "int datapos;",
+    "file_path": "pandas/src/parser/parser.h",
+    "previous_commits": [
+        [
+            "4f6fac46713a28dd876c09c1649c0bc90b3f36cb",
+            112,
+            "int datapos;"
+        ]
+    ]
+},
+{
+    "line_num": 198,
+    "line_str": "int header_start;  // header row start",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            198,
+            "int header_start;  // header row start"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "int *line_fields;  // Number of fields in each line",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            161,
+            "int *line_fields;  // Number of fields in each line"
+        ]
+    ]
+},
+{
+    "line_num": 108,
+    "line_str": "int stream_len;",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            108,
+            "int stream_len;"
+        ]
+    ]
+},
+{
+    "line_num": 157,
+    "line_str": "char *pword_start;  // pointer to stream start of current field",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            157,
+            "char *pword_start;  // pointer to stream start of current field"
+        ]
+    ]
+},
+{
+    "line_num": 104,
+    "line_str": "int datalen;    // amount of data available",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            104,
+            "int datalen;    // amount of data available"
+        ]
+    ]
+},
+{
+    "line_num": 153,
+    "line_str": "int *word_starts;  // where we are in the stream",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            153,
+            "int *word_starts;  // where we are in the stream"
+        ]
+    ]
+},
+{
+    "line_num": 199,
+    "line_str": "int header_end;    // header row end",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            199,
+            "int header_end;    // header row end"
+        ]
+    ]
+},
+{
+    "line_num": 162,
+    "line_str": "int lines;         // Number of (good) lines observed",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            162,
+            "int lines;         // Number of (good) lines observed"
+        ]
+    ]
+},
+{
+    "line_num": 109,
+    "line_str": "int stream_cap;",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            109,
+            "int stream_cap;"
+        ]
+    ]
+},
+{
+    "line_num": 224,
+    "line_str": "const int i = *iter.line_start++ + iter.col;      \\",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            224,
+            "const int i = *iter.line_start++ + iter.col;      \\"
+        ]
+    ]
+},
+{
+    "line_num": 158,
+    "line_str": "int word_start;     // position start of current field",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            158,
+            "int word_start;     // position start of current field"
+        ]
+    ]
+},
+{
+    "line_num": 114,
+    "line_str": "int words_len;",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            114,
+            "int words_len;"
+        ]
+    ]
+},
+{
+    "line_num": 176,
+    "line_str": "int *line_start;",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            176,
+            "int *line_start;"
+        ]
+    ]
+},
+{
+    "line_num": 163,
+    "line_str": "int file_lines;  // Number of file lines observed (including bad or skipped)",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            163,
+            "int file_lines;  // Number of file lines observed (including bad or skipped)"
+        ]
+    ]
+},
+{
+    "line_num": 102,
+    "line_str": "int chunksize;  // Number of bytes to prepare for each chunk",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            102,
+            "int chunksize;  // Number of bytes to prepare for each chunk"
+        ]
+    ]
+},
+{
+    "line_num": 115,
+    "line_str": "int words_cap;",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            115,
+            "int words_cap;"
+        ]
+    ]
+},
+{
+    "line_num": 197,
+    "line_str": "int header;        // Boolean: 1: has header, 0: no header",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            197,
+            "int header;        // Boolean: 1: has header, 0: no header"
+        ]
+    ]
+},
+{
+    "line_num": 164,
+    "line_str": "int lines_cap;   // Vector capacity",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            164,
+            "int lines_cap;   // Vector capacity"
+        ]
+    ]
+},
+{
+    "line_num": 160,
+    "line_str": "int *line_start;   // position in words for start of line",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "846e9e58cd0ad7c9c103d56e5e9fbbf318dea868",
+            160,
+            "int *line_start;   // position in words for start of line"
+        ]
+    ]
+},
+{
+    "line_num": 103,
+    "line_str": "char *data;     // pointer to data to be processed",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            103,
+            "char *data;     // pointer to data to be processed"
+        ]
+    ]
+}
+]
+},{
+"81aa70c2a598f9c12d8cb56a4d758b7f213770fe": []},
+{
+"b17e28638995bbfc32bc3dd7c53cd8a343191e58": [
+{
+    "line_num": 85,
+    "line_str": "",
+    "file_path": "pandas/src/numpy_helper.h",
+    "previous_commits": [
+        [
+            "1c9c7f198905fac15a519d17b6469be898e07903",
+            85,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 82,
+    "line_str": "",
+    "file_path": "pandas/src/numpy_helper.h",
+    "previous_commits": [
+        [
+            "9637b509780997019d9089ea8ed2f2f01e2755e7",
+            82,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 80,
+    "line_str": "",
+    "file_path": "pandas/src/numpy_helper.h",
+    "previous_commits": [
+        [
+            "1c9c7f198905fac15a519d17b6469be898e07903",
+            80,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 99,
+    "line_str": "return ret;",
+    "file_path": "pandas/src/numpy_helper.h",
+    "previous_commits": [
+        [
+            "358bc6f8967d56e0cf914f0890b6d11864f2cc47",
+            99,
+            "return ret;"
+        ]
+    ]
+},
+{
+    "line_num": 95,
+    "line_str": "ret = PyBytes_AS_STRING(enc_str);",
+    "file_path": "pandas/src/numpy_helper.h",
+    "previous_commits": [
+        [
+            "358bc6f8967d56e0cf914f0890b6d11864f2cc47",
+            95,
+            "ret = PyBytes_AS_STRING(enc_str);"
+        ]
+    ]
+},
+{
+    "line_num": 94,
+    "line_str": "char* ret;",
+    "file_path": "pandas/src/numpy_helper.h",
+    "previous_commits": [
+        [
+            "358bc6f8967d56e0cf914f0890b6d11864f2cc47",
+            94,
+            "char* ret;"
+        ]
+    ]
+},
+{
+    "line_num": 92,
+    "line_str": "PyObject* enc_str = PyUnicode_AsEncodedString(obj, \"utf-8\", \"error\");",
+    "file_path": "pandas/src/numpy_helper.h",
+    "previous_commits": [
+        [
+            "358bc6f8967d56e0cf914f0890b6d11864f2cc47",
+            92,
+            "PyObject* enc_str = PyUnicode_AsEncodedString(obj, \"utf-8\", \"error\");"
+        ]
+    ]
+}
+]
+},{
+"7ee73ffcfd1cdf896a53589eebf74557210ab26c": []},
+{
+"7d04391dd3240c2d7cc80d638a39ad06b1ab679a": []},
+{
+"48fc9d613323ada9702a7d5c78c23eb0e8cae8a8": []},
+{
+"681e6a9b07271a0955e6780e476ab2d7101e549c": [
+{
+    "line_num": 2299,
+    "line_str": "#endif",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "52aee10acc390fc230eead4287e3341692a3500a",
+            2299,
+            "#endif"
+        ]
+    ]
+},
+{
+    "line_num": 2297,
+    "line_str": "#else",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "52aee10acc390fc230eead4287e3341692a3500a",
+            2297,
+            "#else"
+        ]
+    ]
+},
+{
+    "line_num": 2296,
+    "line_str": "return PyOS_string_to_double(p, q, 0);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "52aee10acc390fc230eead4287e3341692a3500a",
+            2296,
+            "return PyOS_string_to_double(p, q, 0);"
+        ]
+    ]
+},
+{
+    "line_num": 2295,
+    "line_str": "#if PY_VERSION_HEX >= 0x02070000",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "52aee10acc390fc230eead4287e3341692a3500a",
+            2295,
+            "#if PY_VERSION_HEX >= 0x02070000"
+        ]
+    ]
+},
+{
+    "line_num": 2183,
+    "line_str": "return strtod(p, q);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "d6e2c7561aba584c694fe3e132e733f6ee3fa605",
+            2183,
+            "return strtod(p, q);"
+        ]
+    ]
+},
+{
+    "line_num": 205,
+    "line_str": "double (*converter)(const char *, char **, char, char, char, int);",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "d6e2c7561aba584c694fe3e132e733f6ee3fa605",
+            205,
+            "double (*converter)(const char *, char **, char, char, char, int);"
+        ]
+    ]
+}
+]
+},{
+"78920775b0c0e5ed3db07a44e5fe2ae878adf4ef": []},
+{
+"b35c68996d4dfcd565dfbd7e27b53b392efe14cf": []},
+{
+"bdbebc4f3be9c14ad7ff03796eb36d415b397a52": []},
+{
+"51f725f7e817df964387b3b68bdf01a07e9fb8cc": []},
+{
+"83a380c95f89542a74b37f3cbd116f0e368c0d12": []},
+{
+"ee6c0cdbca17fb4a852fc8099e79c49faa662687": []},
+{
+"c69037cbac355ecd474167e52ebeac898ffd828b": [
+{
+    "line_num": 114,
+    "line_str": "while ( (length + space > cap) && (newbuffer != NULL) ){",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            114,
+            "while ( (length + space > cap) && (newbuffer != NULL) ){"
+        ]
+    ]
+}
+]
+},{
+"a06816eb193762d58ffecadec2b08607cb955397": [
+{
+    "line_num": 1167,
+    "line_str": "if (PyIter_Check(obj) || PyArray_Check(obj))",
+    "file_path": "pandas/src/ujson/python/objToJSON.c",
+    "previous_commits": [
+        [
+            "a8d15bd4c6dae2c65ed4aa4b2f76c029b6358113",
+            1167,
+            "if (PyIter_Check(obj) || PyArray_Check(obj))"
+        ],
+        [
+            "9633880214ca6f6372ced250146368628014e3d0",
+            1059,
+            "if (PyIter_Check(obj) || PyArray_Check(obj))"
+        ]
+    ]
+}
+]
+},{
+"ba0704f336c733f89ac8fa23c8700bd22ae620d4": []},
+{
+"25fc49d975d74c5cb969089dcb3efeda15c3262f": []},
+{
+"ed000e98f71119c4a8e9c9b35b638a6d070970e3": []},
+{
+"3a44ba48a03964d626511782de21d2e187818127": []},
+{
+"c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2": [
+{
+    "line_num": 194,
+    "line_str": "buffer = safe_realloc(buffer, elsize * cap);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            194,
+            "buffer = safe_realloc(buffer, elsize * cap);"
+        ]
+    ]
+},
+{
+    "line_num": 1780,
+    "line_str": "new_cap * sizeof(int));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1780,
+            "new_cap * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 1648,
+    "line_str": "int clear_parsed_lines(parser_t *self, size_t nlines) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            1648,
+            "int clear_parsed_lines(parser_t *self, size_t nlines) {"
+        ]
+    ]
+},
+{
+    "line_num": 542,
+    "line_str": "#endif",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            542,
+            "#endif"
+        ]
+    ]
+},
+{
+    "line_num": 410,
+    "line_str": "self->warn_msg = (char*) safe_realloc(self->warn_msg,",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "5568670ff1ecc23577825ae3c56d1a4ac40f93f1",
+            410,
+            "self->warn_msg = (char*) safe_realloc(self->warn_msg,"
+        ]
+    ]
+},
+{
+    "line_num": 1847,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "fc44ada5339d49e6e4ff00fd7b5aa3a6a0f6ca65",
+            1847,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1781,
+    "line_str": "self->lines_cap = new_cap;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1781,
+            "self->lines_cap = new_cap;"
+        ]
+    ]
+},
+{
+    "line_num": 179,
+    "line_str": "if (self->cb_cleanup(self->source) < 0) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "e9bc234d595b12aaa42bdb4c1b3fc42dbef9e5e2",
+            179,
+            "if (self->cb_cleanup(self->source) < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 1203,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            1203,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 939,
+    "line_str": "if (self->line_fields == NULL) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            939,
+            "if (self->line_fields == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 543,
+    "line_str": "",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            543,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 840,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            840,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 411,
+    "line_str": "ex_length + length + 1);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "5568670ff1ecc23577825ae3c56d1a4ac40f93f1",
+            411,
+            "ex_length + length + 1);"
+        ]
+    ]
+},
+{
+    "line_num": 196,
+    "line_str": "if (buffer == NULL) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            196,
+            "if (buffer == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 1452,
+    "line_str": "P_INLINE void lowercase(char *p) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "8be92dc1b1438512c9c3cbdca8a0fcb085302944",
+            1452,
+            "P_INLINE void lowercase(char *p) {"
+        ]
+    ]
+},
+{
+    "line_num": 544,
+    "line_str": "",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            544,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 841,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            841,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 412,
+    "line_str": "strcpy(self->warn_msg + ex_length, msg);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "5568670ff1ecc23577825ae3c56d1a4ac40f93f1",
+            412,
+            "strcpy(self->warn_msg + ex_length, msg);"
+        ]
+    ]
+},
+{
+    "line_num": 858,
+    "line_str": "return -1;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            858,
+            "return -1;"
+        ]
+    ]
+},
+{
+    "line_num": 875,
+    "line_str": "self->stream_len,",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            875,
+            "self->stream_len,"
+        ]
+    ]
+},
+{
+    "line_num": 1833,
+    "line_str": "TRACE((\"Asked to tokenize %d rows\\n\", (int) nrows));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "51cbf8bb928bf7bb0d798f374cbf3080b23cf9da",
+            1833,
+            "TRACE((\"Asked to tokenize %d rows\\n\", (int) nrows));"
+        ]
+    ]
+},
+{
+    "line_num": 1767,
+    "line_str": "self->words = (char**) safe_realloc((void*) self->words,",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1767,
+            "self->words = (char**) safe_realloc((void*) self->words,"
+        ]
+    ]
+},
+{
+    "line_num": 380,
+    "line_str": "TRACE((\"Char diff: %d\\n\", self->pword_start - self->words[0]));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            380,
+            "TRACE((\"Char diff: %d\\n\", self->pword_start - self->words[0]));"
+        ],
+        [
+            "51cbf8bb928bf7bb0d798f374cbf3080b23cf9da",
+            972,
+            "TRACE((\"Saw word %s at: %d\\n\", self->pword_start, self->word_start))"
+        ]
+    ]
+},
+{
+    "line_num": 198,
+    "line_str": "*error = -1;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            198,
+            "*error = -1;"
+        ]
+    ]
+},
+{
+    "line_num": 182,
+    "line_str": "if (self->cb_cleanup == NULL) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "dd7218cab88d0310b2efc67b48b3024366ce6766",
+            182,
+            "if (self->cb_cleanup == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 1652,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            1652,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 876,
+    "line_str": "&self->stream_cap, nbytes * 2,",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            876,
+            "&self->stream_cap, nbytes * 2,"
+        ]
+    ]
+},
+{
+    "line_num": 843,
+    "line_str": "free_if_not_null(self->stream);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            843,
+            "free_if_not_null(self->stream);"
+        ]
+    ]
+},
+{
+    "line_num": 1768,
+    "line_str": "new_cap * sizeof(char*));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1768,
+            "new_cap * sizeof(char*));"
+        ]
+    ]
+},
+{
+    "line_num": 199,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            199,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 183,
+    "line_str": "return 0;",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "dd7218cab88d0310b2efc67b48b3024366ce6766",
+            183,
+            "return 0;"
+        ]
+    ]
+},
+{
+    "line_num": 1785,
+    "line_str": "for ( ; *p; ++p) *p = tolower(*p);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "fc44ada5339d49e6e4ff00fd7b5aa3a6a0f6ca65",
+            1785,
+            "for ( ; *p; ++p) *p = tolower(*p);"
+        ]
+    ]
+},
+{
+    "line_num": 84,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            84,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1901,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "fc44ada5339d49e6e4ff00fd7b5aa3a6a0f6ca65",
+            1901,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 844,
+    "line_str": "free_if_not_null(self->words);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            844,
+            "free_if_not_null(self->words);"
+        ]
+    ]
+},
+{
+    "line_num": 877,
+    "line_str": "sizeof(char), &status);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            877,
+            "sizeof(char), &status);"
+        ]
+    ]
+},
+{
+    "line_num": 1769,
+    "line_str": "self->word_starts = (int*) safe_realloc((void*) self->word_starts,",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1769,
+            "self->word_starts = (int*) safe_realloc((void*) self->word_starts,"
+        ]
+    ]
+},
+{
+    "line_num": 382,
+    "line_str": "TRACE((\"Saw word %s at: %d. Total: %d\\n\",",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            382,
+            "TRACE((\"Saw word %s at: %d. Total: %d\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 200,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            200,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1059,
+    "line_str": "TRACE((\"new line start: %d\\n\", self->line_start[self->lines]));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "c109d75bdf0f20b26910c65f83cd0f0f3dce44b1",
+            1059,
+            "TRACE((\"new line start: %d\\n\", self->line_start[self->lines]));"
+        ]
+    ]
+},
+{
+    "line_num": 184,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "dd7218cab88d0310b2efc67b48b3024366ce6766",
+            184,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1786,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "fc44ada5339d49e6e4ff00fd7b5aa3a6a0f6ca65",
+            1786,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 845,
+    "line_str": "free_if_not_null(self->word_starts);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            845,
+            "free_if_not_null(self->word_starts);"
+        ]
+    ]
+},
+{
+    "line_num": 449,
+    "line_str": "TRACE((\"Skipping row %d\\n\", self->file_lines));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "6bf83c5dc575f52c84783d6bd6c4b9713b6201ab",
+            449,
+            "TRACE((\"Skipping row %d\\n\", self->file_lines));"
+        ],
+        [
+            "045c73015b8ed20f36e61288efeaa6ed3d2b7984",
+            1002,
+            "TRACE((\"Skipping row %d\\n\", self->file_lines));"
+        ]
+    ]
+},
+{
+    "line_num": 1770,
+    "line_str": "new_cap * sizeof(int));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1770,
+            "new_cap * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 1258,
+    "line_str": "if (self->quoting == QUOTE_NONNUMERIC)",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            1258,
+            "if (self->quoting == QUOTE_NONNUMERIC)"
+        ]
+    ]
+},
+{
+    "line_num": 961,
+    "line_str": "self->numeric_field = 0;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            961,
+            "self->numeric_field = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 862,
+    "line_str": "free_if_not_null(self->error_msg);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            862,
+            "free_if_not_null(self->error_msg);"
+        ]
+    ]
+},
+{
+    "line_num": 1787,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "fc44ada5339d49e6e4ff00fd7b5aa3a6a0f6ca65",
+            1787,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 53,
+    "line_str": "if (result != NULL) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            53,
+            "if (result != NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 846,
+    "line_str": "free_if_not_null(self->line_start);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            846,
+            "free_if_not_null(self->line_start);"
+        ]
+    ]
+},
+{
+    "line_num": 1771,
+    "line_str": "self->words_cap = new_cap;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1771,
+            "self->words_cap = new_cap;"
+        ]
+    ]
+},
+{
+    "line_num": 1259,
+    "line_str": "self->numeric_field = 1;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            1259,
+            "self->numeric_field = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 1193,
+    "line_str": "#define PUSH_CHAR(c)                           \\",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            1193,
+            "#define PUSH_CHAR(c)                           \\"
+        ]
+    ]
+},
+{
+    "line_num": 186,
+    "line_str": "free_if_not_null(self->warn_msg);",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "5568670ff1ecc23577825ae3c56d1a4ac40f93f1",
+            186,
+            "free_if_not_null(self->warn_msg);"
+        ]
+    ]
+},
+{
+    "line_num": 533,
+    "line_str": "#if defined(VERBOSE)",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            533,
+            "#if defined(VERBOSE)"
+        ]
+    ]
+},
+{
+    "line_num": 863,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            863,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1887,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            1887,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 913,
+    "line_str": "self->word_starts = (int*) safe_realloc((void *) self->word_starts,",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            913,
+            "self->word_starts = (int*) safe_realloc((void *) self->word_starts,"
+        ]
+    ]
+},
+{
+    "line_num": 847,
+    "line_str": "free_if_not_null(self->line_fields);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            847,
+            "free_if_not_null(self->line_fields);"
+        ]
+    ]
+},
+{
+    "line_num": 203,
+    "line_str": "*capacity = cap;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            203,
+            "*capacity = cap;"
+        ]
+    ]
+},
+{
+    "line_num": 1194,
+    "line_str": "*stream++ = c;                             \\",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            1194,
+            "*stream++ = c;                             \\"
+        ]
+    ]
+},
+{
+    "line_num": 864,
+    "line_str": "if (self->skipset != NULL)",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            864,
+            "if (self->skipset != NULL)"
+        ]
+    ]
+},
+{
+    "line_num": 1888,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            1888,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 187,
+    "line_str": "int space, int elsize, int *error) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            187,
+            "int space, int elsize, int *error) {"
+        ]
+    ]
+},
+{
+    "line_num": 914,
+    "line_str": "sizeof(int) * self->words_cap);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            914,
+            "sizeof(int) * self->words_cap);"
+        ]
+    ]
+},
+{
+    "line_num": 848,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            848,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 204,
+    "line_str": "*error = 0;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            204,
+            "*error = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 1195,
+    "line_str": "slen++;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            1195,
+            "slen++;"
+        ]
+    ]
+},
+{
+    "line_num": 535,
+    "line_str": "printf(\"Pushing %c, slen now: %d\\n\", c, slen);  \\",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            535,
+            "printf(\"Pushing %c, slen now: %d\\n\", c, slen);  \\"
+        ]
+    ]
+},
+{
+    "line_num": 865,
+    "line_str": "kh_destroy_int64((kh_int64_t*) self->skipset);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            865,
+            "kh_destroy_int64((kh_int64_t*) self->skipset);"
+        ]
+    ]
+},
+{
+    "line_num": 1856,
+    "line_str": "TRACE((\"Status %d returned from tokenize_bytes, breaking\\n\",",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "51cbf8bb928bf7bb0d798f374cbf3080b23cf9da",
+            1856,
+            "TRACE((\"Status %d returned from tokenize_bytes, breaking\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 188,
+    "line_str": "int cap = *capacity;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            188,
+            "int cap = *capacity;"
+        ]
+    ]
+},
+{
+    "line_num": 915,
+    "line_str": "if (self->word_starts == NULL) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            915,
+            "if (self->word_starts == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 1295,
+    "line_str": "TRACE((\"Iter: %d Char: %c Line %d field_count %d, state %d\\n\",",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "4f6fac46713a28dd876c09c1649c0bc90b3f36cb",
+            1295,
+            "TRACE((\"Iter: %d Char: %c Line %d field_count %d, state %d\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 205,
+    "line_str": "return buffer;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            205,
+            "return buffer;"
+        ]
+    ]
+},
+{
+    "line_num": 189,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            189,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 90,
+    "line_str": "if (ptr != NULL) free(ptr);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            90,
+            "if (ptr != NULL) free(ptr);"
+        ]
+    ]
+},
+{
+    "line_num": 57,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            57,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 24,
+    "line_str": "#define READ_ERROR_OUT_OF_MEMORY   1",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "fc44ada5339d49e6e4ff00fd7b5aa3a6a0f6ca65",
+            24,
+            "#define READ_ERROR_OUT_OF_MEMORY   1"
+        ]
+    ]
+},
+{
+    "line_num": 41,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            41,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 91,
+    "line_str": "static  void free_if_not_null(void *ptr) {",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "46e75d91d29a67d61f6f08b807c9774d72488afe",
+            91,
+            "static  void free_if_not_null(void *ptr) {"
+        ],
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            89,
+            "void free_if_not_null(void *ptr) {"
+        ]
+    ]
+},
+{
+    "line_num": 1957,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "8be92dc1b1438512c9c3cbdca8a0fcb085302944",
+            1957,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 867,
+    "line_str": "return 0;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            867,
+            "return 0;"
+        ]
+    ]
+},
+{
+    "line_num": 405,
+    "line_str": "TRACE((\"Line end, nfields: %d\\n\", fields));",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            405,
+            "TRACE((\"Line end, nfields: %d\\n\", fields));"
+        ]
+    ]
+},
+{
+    "line_num": 58,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            58,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1710,
+    "line_str": "TRACE((\"Deleting %d words, %d chars\\n\", word_deletions, char_count));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1710,
+            "TRACE((\"Deleting %d words, %d chars\\n\", word_deletions, char_count));"
+        ]
+    ]
+},
+{
+    "line_num": 42,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            42,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 538,
+    "line_str": "#else",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "b8dae948311d0f07f46a6dfb1b39dd98ae27934f",
+            538,
+            "#else"
+        ]
+    ]
+},
+{
+    "line_num": 1760,
+    "line_str": "self->stream = safe_realloc((void*) self->stream, new_cap);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1760,
+            "self->stream = safe_realloc((void*) self->stream, new_cap);"
+        ]
+    ]
+},
+{
+    "line_num": 191,
+    "line_str": "while (length + space > cap) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            191,
+            "while (length + space > cap) {"
+        ]
+    ]
+},
+{
+    "line_num": 1777,
+    "line_str": "self->line_start = (int*) safe_realloc((void*) self->line_start,",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1777,
+            "self->line_start = (int*) safe_realloc((void*) self->line_start,"
+        ]
+    ]
+},
+{
+    "line_num": 1199,
+    "line_str": "#define END_FIELD()                                \\",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            1199,
+            "#define END_FIELD()                                \\"
+        ]
+    ]
+},
+{
+    "line_num": 43,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            43,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1761,
+    "line_str": "self->stream_cap = new_cap;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1761,
+            "self->stream_cap = new_cap;"
+        ]
+    ]
+},
+{
+    "line_num": 192,
+    "line_str": "cap = cap? cap << 1 : 2;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "879ae75abf7ff362b64a1f2a5e7d48ebc8b63a56",
+            192,
+            "cap = cap? cap << 1 : 2;"
+        ]
+    ]
+},
+{
+    "line_num": 1778,
+    "line_str": "new_cap * sizeof(int));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1778,
+            "new_cap * sizeof(int));"
+        ]
+    ]
+},
+{
+    "line_num": 936,
+    "line_str": "self->line_fields = (int*) safe_realloc((void *) self->line_fields,",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            936,
+            "self->line_fields = (int*) safe_realloc((void *) self->line_fields,"
+        ]
+    ]
+},
+{
+    "line_num": 1894,
+    "line_str": "TRACE((\"Trying to process %d bytes\\n\", self->datalen - self->datapos));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "4f6fac46713a28dd876c09c1649c0bc90b3f36cb",
+            1894,
+            "TRACE((\"Trying to process %d bytes\\n\", self->datalen - self->datapos));"
+        ]
+    ]
+},
+{
+    "line_num": 193,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "90cdcd4a5bacaf16a49ce2f42f7b96719842b2fa",
+            193,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 854,
+    "line_str": "return -1;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "380f6e6b0ebf194b3b205a27c450fb0742cfaee5",
+            854,
+            "return -1;"
+        ]
+    ]
+},
+{
+    "line_num": 1267,
+    "line_str": "TRACE((\"datapos: %d, datalen: %d\\n\", self->datapos, self->datalen));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "4f6fac46713a28dd876c09c1649c0bc90b3f36cb",
+            1267,
+            "TRACE((\"datapos: %d, datalen: %d\\n\", self->datapos, self->datalen));"
+        ]
+    ]
+},
+{
+    "line_num": 1779,
+    "line_str": "self->line_fields = (int*) safe_realloc((void*) self->line_fields,",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "a0f4eca215ac81a15be3745a036562eb19094ed7",
+            1779,
+            "self->line_fields = (int*) safe_realloc((void*) self->line_fields,"
+        ]
+    ]
+},
+{
+    "line_num": 1036,
+    "line_str": "TRACE((\"Finished line, at %d\\n\", self->lines));",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "ff534d103dcda4e81f38a41281041e3f27c2543f",
+            1036,
+            "TRACE((\"Finished line, at %d\\n\", self->lines));"
+        ]
+    ]
+},
+{
+    "line_num": 937,
+    "line_str": "sizeof(int) * self->lines_cap);",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            937,
+            "sizeof(int) * self->lines_cap);"
+        ]
+    ]
+},
+{
+    "line_num": 214,
+    "line_str": "int clear_parsed_lines(parser_t *self, size_t nlines);",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            214,
+            "int clear_parsed_lines(parser_t *self, size_t nlines);"
+        ]
+    ]
+},
+{
+    "line_num": 177,
+    "line_str": "",
+    "file_path": "pandas/src/parser/parser.h",
+    "previous_commits": [
+        [
+            "e9bc234d595b12aaa42bdb4c1b3fc42dbef9e5e2",
+            177,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 173,
+    "line_str": "",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            173,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 226,
+    "line_str": "uint64_t str_to_uint64(const char *p_item, uint64_t uint_max, int *error);",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "c4d36ca5681892e506d58125ba394caf2135d5ad",
+            226,
+            "uint64_t str_to_uint64(const char *p_item, uint64_t uint_max, int *error);"
+        ]
+    ]
+},
+{
+    "line_num": 255,
+    "line_str": "int P_INLINE to_boolean(char *item, uint8_t *val);",
+    "file_path": "pandas/src/parser/parser.h",
+    "previous_commits": [
+        [
+            "8be92dc1b1438512c9c3cbdca8a0fcb085302944",
+            255,
+            "int P_INLINE to_boolean(char *item, uint8_t *val);"
+        ]
+    ]
+},
+{
+    "line_num": 254,
+    "line_str": "int P_INLINE to_longlong_thousands(char *item, long long *p_value, char tsep);",
+    "file_path": "pandas/src/parser/parser.h",
+    "previous_commits": [
+        [
+            "8be92dc1b1438512c9c3cbdca8a0fcb085302944",
+            254,
+            "int P_INLINE to_longlong_thousands(char *item, long long *p_value, char tsep);"
+        ]
+    ]
+},
+{
+    "line_num": 252,
+    "line_str": "int P_INLINE to_complex(char *item, double *p_real, double *p_imag, char sci, char decimal);",
+    "file_path": "pandas/src/parser/parser.h",
+    "previous_commits": [
+        [
+            "8be92dc1b1438512c9c3cbdca8a0fcb085302944",
+            252,
+            "int P_INLINE to_complex(char *item, double *p_real, double *p_imag, char sci, char decimal);"
+        ]
+    ]
+}
+]
+},{
+"b69c1a26899b38adff8390236ee83ba36af0374e": []},
+{
+"b94186d4c58ee055656a84f55618be537db0095a": []},
+{
+"fe555db3f178b57f1d15c6c30f7bea0ca452db68": []},
+{
+"f8bd08e9c2fc6365980f41b846bbae4b40f08b83": []},
+{
+"65362aa4f06f01efdc20ca487c1c3c1f090613ee": [
+{
+    "line_num": 838,
+    "line_str": "set_datetimestruct_days((dt - (perday-1)) / perday, out);",
+    "file_path": "pandas/src/np_datetime.c",
+    "previous_commits": [
+        [
+            "098ce7344ea1755e965855c5c44633ff39195a9c",
+            838,
+            "set_datetimestruct_days((dt - (perday-1)) / perday, out);"
+        ]
+    ]
+},
+{
+    "line_num": 741,
+    "line_str": "set_datetimestruct_days((dt - (perday-1)) / perday, out);",
+    "file_path": "pandas/src/np_datetime.c",
+    "previous_commits": [
+        [
+            "098ce7344ea1755e965855c5c44633ff39195a9c",
+            741,
+            "set_datetimestruct_days((dt - (perday-1)) / perday, out);"
+        ]
+    ]
+},
+{
+    "line_num": 803,
+    "line_str": "set_datetimestruct_days((dt - (perday-1)) / perday, out);",
+    "file_path": "pandas/src/np_datetime.c",
+    "previous_commits": [
+        [
+            "098ce7344ea1755e965855c5c44633ff39195a9c",
+            803,
+            "set_datetimestruct_days((dt - (perday-1)) / perday, out);"
+        ]
+    ]
+},
+{
+    "line_num": 770,
+    "line_str": "set_datetimestruct_days((dt - (perday-1)) / perday, out);",
+    "file_path": "pandas/src/np_datetime.c",
+    "previous_commits": [
+        [
+            "098ce7344ea1755e965855c5c44633ff39195a9c",
+            770,
+            "set_datetimestruct_days((dt - (perday-1)) / perday, out);"
+        ]
+    ]
+},
+{
+    "line_num": 820,
+    "line_str": "set_datetimestruct_days((dt - (perday-1)) / perday, out);",
+    "file_path": "pandas/src/np_datetime.c",
+    "previous_commits": [
+        [
+            "098ce7344ea1755e965855c5c44633ff39195a9c",
+            820,
+            "set_datetimestruct_days((dt - (perday-1)) / perday, out);"
+        ]
+    ]
+},
+{
+    "line_num": 755,
+    "line_str": "set_datetimestruct_days((dt - (perday-1)) / perday, out);",
+    "file_path": "pandas/src/np_datetime.c",
+    "previous_commits": [
+        [
+            "098ce7344ea1755e965855c5c44633ff39195a9c",
+            755,
+            "set_datetimestruct_days((dt - (perday-1)) / perday, out);"
+        ]
+    ]
+},
+{
+    "line_num": 786,
+    "line_str": "set_datetimestruct_days((dt - (perday-1)) / perday, out);",
+    "file_path": "pandas/src/np_datetime.c",
+    "previous_commits": [
+        [
+            "098ce7344ea1755e965855c5c44633ff39195a9c",
+            786,
+            "set_datetimestruct_days((dt - (perday-1)) / perday, out);"
+        ]
+    ]
+}
+]
+},{
+"977b384cc7cb0ee0d403730ca4b34e32b388ac0c": []},
+{
+"ce56542d1226adf8b3439c51f0c34b49dd53bb28": []},
+{
+"1296ab39d32acaf2c77ed0c185fafe4ebcfedcb3": []},
+{
+"f32b44fed1c2cf815f0c39eb9cb1508cef5ca542": []},
+{
+"160e7f281acb8576900c68a30c0bb7bd4a56b912": []},
+{
+"5866b2c1f803d5974632beb9f9d3a7833db17d19": []},
+{
+"1da4a6d98b0f679b639af388c9a25222887c68d4": []},
+{
+"07ea11caac8a68aa36aa6d8bd06a115e2628eef9": []},
+{
+"a8b99baa470d70d35fb7007c65eca058561b1852": [
+{
+    "line_num": 2109,
+    "line_str": "",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "d6e2c7561aba584c694fe3e132e733f6ee3fa605",
+            2109,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 667,
+    "line_str": "return ( kh_get_int64((kh_int64_t*) self->skipset, self->file_lines) !=",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "6bf83c5dc575f52c84783d6bd6c4b9713b6201ab",
+            667,
+            "return ( kh_get_int64((kh_int64_t*) self->skipset, self->file_lines) !="
+        ],
+        [
+            "045c73015b8ed20f36e61288efeaa6ed3d2b7984",
+            999,
+            "k = kh_get_int64((kh_int64_t*) self->skipset, self->file_lines);"
+        ]
+    ]
+},
+{
+    "line_num": 1571,
+    "line_str": "int to_boolean(char *item, uint8_t *val) {",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "8be92dc1b1438512c9c3cbdca8a0fcb085302944",
+            1571,
+            "int to_boolean(char *item, uint8_t *val) {"
+        ]
+    ]
+},
+{
+    "line_num": 1880,
+    "line_str": "TRACE((\"_tokenize_helper: Trying to process %d bytes, datalen=%d, datapos= %d\\n\",",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            1880,
+            "TRACE((\"_tokenize_helper: Trying to process %d bytes, datalen=%d, datapos= %d\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 374,
+    "line_str": "TRACE((\"make_stream_space: grow_buffer(self->line_start, %zu, %zu, %zu, %d)\\n\",",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            374,
+            "TRACE((\"make_stream_space: grow_buffer(self->line_start, %zu, %zu, %zu, %d)\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 307,
+    "line_str": "TRACE((\"make_stream_space: self->stream=%p, self->stream_len = %zu, self->stream_cap=%zu, status=%zu\\n\",",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            307,
+            "TRACE((\"make_stream_space: self->stream=%p, self->stream_len = %zu, self->stream_cap=%zu, status=%zu\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 989,
+    "line_str": "khiter_t k;  /* for hash set detection */",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "045c73015b8ed20f36e61288efeaa6ed3d2b7984",
+            989,
+            "khiter_t k;  /* for hash set detection */"
+        ]
+    ]
+},
+{
+    "line_num": 337,
+    "line_str": "TRACE((\"make_stream_space: grow_buffer(self->self->words, %zu, %zu, %zu, %d)\\n\",",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            337,
+            "TRACE((\"make_stream_space: grow_buffer(self->self->words, %zu, %zu, %zu, %d)\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 401,
+    "line_str": "TRACE((\"push_char: ERROR!!! self->stream_len(%d) >= self->stream_cap(%d)\\n\",",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            401,
+            "TRACE((\"push_char: ERROR!!! self->stream_len(%d) >= self->stream_cap(%d)\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 1085,
+    "line_str": "void *src = self->source;",
+    "file_path": "pandas/src/parser/parser.c",
+    "previous_commits": [
+        [
+            "9874d62fbc6fd05880a2258e7290c6b6ba815fd6",
+            1085,
+            "void *src = self->source;"
+        ]
+    ]
+},
+{
+    "line_num": 715,
+    "line_str": "}",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "31c2558b33d727d6bd2fcb21f97e49d5a016513f",
+            715,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 613,
+    "line_str": "TRACE((\"parser_buffer_bytes self->cb_io: nbytes=%zu, datalen: %d, status=%d\\n\",",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            613,
+            "TRACE((\"parser_buffer_bytes self->cb_io: nbytes=%zu, datalen: %d, status=%d\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 452,
+    "line_str": "",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "6bf83c5dc575f52c84783d6bd6c4b9713b6201ab",
+            452,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1759,
+    "line_str": "TRACE((\"parser_trim_buffers: new_cap = %zu, stream_cap = %zu, lines_cap = %zu\\n\",",
+    "file_path": "pandas/src/parser/tokenizer.c",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            1759,
+            "TRACE((\"parser_trim_buffers: new_cap = %zu, stream_cap = %zu, lines_cap = %zu\\n\","
+        ]
+    ]
+},
+{
+    "line_num": 186,
+    "line_str": "parser_t* parser_new();",
+    "file_path": "pandas/src/parser/common.h",
+    "previous_commits": [
+        [
+            "663182db418527481f8d311686514cb65d5eed15",
+            186,
+            "parser_t* parser_new();"
+        ]
+    ]
+},
+{
+    "line_num": 196,
+    "line_str": "#define COLITER_NEXT(iter) iter.words[*iter.line_start++ + iter.col]",
+    "file_path": "pandas/src/parser/parser.h",
+    "previous_commits": [
+        [
+            "ff534d103dcda4e81f38a41281041e3f27c2543f",
+            196,
+            "#define COLITER_NEXT(iter) iter.words[*iter.line_start++ + iter.col]"
+        ]
+    ]
+},
+{
+    "line_num": 273,
+    "line_str": "int to_boolean(char *item, uint8_t *val);",
+    "file_path": "pandas/src/parser/tokenizer.h",
+    "previous_commits": [
+        [
+            "c6c9c0bfc10e24bdd0e4d32f7a8faf7fbc2294b2",
+            273,
+            "int to_boolean(char *item, uint8_t *val);"
+        ],
+        [
+            "8be92dc1b1438512c9c3cbdca8a0fcb085302944",
+            255,
+            "int P_INLINE to_boolean(char *item, uint8_t *val);"
+        ]
+    ]
+}
+]
+},{
+"3afd6c76ead9020eb2cd84c6f532f774ce3d4e84": []}
+]

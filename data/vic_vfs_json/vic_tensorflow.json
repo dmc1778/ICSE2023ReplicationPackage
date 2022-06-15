@@ -1,0 +1,6342 @@
+[{
+"af5fcebb37c8b5d71c237f4e59c6477015c78ce6": []},
+{
+"7b31eb3cf8f2f723cb937fd379264eb573cd3b97": []},
+{
+"8ba6fa29cd8bf9cef9b718dc31c78c73081f5b31": []},
+{
+"bf460e240a631852b4bc76396cc8e80655ad5ae7": []},
+{
+"0cc38aaa4064fd9e79101994ce9872c6d91f816b": []},
+{
+"ee119d4a498979525046fba1c3dd3f13a039fbb1": []},
+{
+"bcd54671b0d32e462b9576ac34f847d0d8f47e1b": []},
+{
+"37054f9134af917ded7f40c7d663fa490d85c7d4": []},
+{
+"368af875869a204b4ac552b9ddda59f6a46a56ec": []},
+{
+"9a133d73ae4b4664d22bd1aa6d654fec13c52ee1": []},
+{
+"698e01511f62a3c185754db78ebce0eee1f0184d": []},
+{
+"9ba2e103731f3cebc9c1711d1ef5d51e120c05f4": []},
+{
+"48f594cba4cf6c33c81f59fec9eac1af0aa4c951": [
+{
+    "line_num": 81,
+    "line_str": "uint32_t result = (ua << 9) + ut * (ub - ua);",
+    "file_path": "tensorflow/lite/kernels/internal/reference/integer_ops/logistic.h",
+    "previous_commits": [
+        [
+            "e8ea83ab58aa63d9b0b86ff26e30293017022029",
+            81,
+            "uint32_t result = (ua << 9) + ut * (ub - ua);"
+        ]
+    ]
+},
+{
+    "line_num": 78,
+    "line_str": "uint32_t ut = abs_input_data & 0x1ff;",
+    "file_path": "tensorflow/lite/kernels/internal/reference/integer_ops/logistic.h",
+    "previous_commits": [
+        [
+            "e8ea83ab58aa63d9b0b86ff26e30293017022029",
+            78,
+            "uint32_t ut = abs_input_data & 0x1ff;"
+        ]
+    ]
+},
+{
+    "line_num": 77,
+    "line_str": "uint32_t ub = sigmoid_table_uint16[uh + 1];",
+    "file_path": "tensorflow/lite/kernels/internal/reference/integer_ops/logistic.h",
+    "previous_commits": [
+        [
+            "e8ea83ab58aa63d9b0b86ff26e30293017022029",
+            77,
+            "uint32_t ub = sigmoid_table_uint16[uh + 1];"
+        ]
+    ]
+},
+{
+    "line_num": 76,
+    "line_str": "uint32_t ua = sigmoid_table_uint16[uh];",
+    "file_path": "tensorflow/lite/kernels/internal/reference/integer_ops/logistic.h",
+    "previous_commits": [
+        [
+            "e8ea83ab58aa63d9b0b86ff26e30293017022029",
+            76,
+            "uint32_t ua = sigmoid_table_uint16[uh];"
+        ]
+    ]
+},
+{
+    "line_num": 75,
+    "line_str": "uint8_t uh = abs_input_data >> 9;",
+    "file_path": "tensorflow/lite/kernels/internal/reference/integer_ops/logistic.h",
+    "previous_commits": [
+        [
+            "e8ea83ab58aa63d9b0b86ff26e30293017022029",
+            75,
+            "uint8_t uh = abs_input_data >> 9;"
+        ]
+    ]
+}
+]
+},{
+"087859fce9409991164f727735743da4cb310fd4": []},
+{
+"7d57263720c7d2c88861f2f325e8ca1bd02deb38": []},
+{
+"c974dc5caa85831452e66676c60ad8e97c73fd6b": []},
+{
+"07b75ffa453b1ec9189371244d21b6684503340b": []},
+{
+"9cb0a05d8a997ddb2772987534ec751efb5065ce": []},
+{
+"e1470f465d09525390010118429ca15233b99cfa": []},
+{
+"6d94002a09711d297dbba90390d5482b76113899": []},
+{
+"b5cdbf12ffcaaffecf98f22a6be5a64bb96e4f58": []},
+{
+"401dc1b3db4e7412f4fc50f96c25fd564d593f4c": []},
+{
+"45370f0d3ba3eb8843a3a255ed60e22b3c132eb2": []},
+{
+"66f452d2217b155b697fc6d6cef5f56599ee2bbc": []},
+{
+"b47be308c4b5ac7babd6400a8fb40c3d8bf163d6": [
+{
+    "line_num": 247,
+    "line_str": "return -(abs_x + abs_y - 1) / abs_y;",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "bdae9c62caa19c7ecef1eca8e3b9149629404182",
+            247,
+            "return -(abs_x + abs_y - 1) / abs_y;"
+        ]
+    ]
+},
+{
+    "line_num": 60,
+    "line_str": "return DivOrMod()(a, safe_b);",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "1ed0e764c8ca84d45823f2fd172dc8d40f89e3e2",
+            60,
+            "return DivOrMod()(a, safe_b);"
+        ]
+    ]
+},
+{
+    "line_num": 250,
+    "line_str": "}",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "bdae9c62caa19c7ecef1eca8e3b9149629404182",
+            250,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 249,
+    "line_str": "return x / y;",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "bdae9c62caa19c7ecef1eca8e3b9149629404182",
+            249,
+            "return x / y;"
+        ]
+    ]
+},
+{
+    "line_num": 248,
+    "line_str": "} else {",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "bdae9c62caa19c7ecef1eca8e3b9149629404182",
+            248,
+            "} else {"
+        ]
+    ]
+},
+{
+    "line_num": 375,
+    "line_str": "#endif",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "83a0c0e427c864890e23ef7af70467baf3e51213",
+            375,
+            "#endif"
+        ]
+    ]
+},
+{
+    "line_num": 246,
+    "line_str": "T abs_y = std::abs(y);",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "bdae9c62caa19c7ecef1eca8e3b9149629404182",
+            246,
+            "T abs_y = std::abs(y);"
+        ]
+    ]
+},
+{
+    "line_num": 245,
+    "line_str": "T abs_x = std::abs(x);",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "bdae9c62caa19c7ecef1eca8e3b9149629404182",
+            245,
+            "T abs_x = std::abs(x);"
+        ]
+    ]
+},
+{
+    "line_num": 372,
+    "line_str": "#else",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "83a0c0e427c864890e23ef7af70467baf3e51213",
+            372,
+            "#else"
+        ]
+    ]
+},
+{
+    "line_num": 371,
+    "line_str": "T abs_y = (y < T(0)) ? -y : y;",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "83a0c0e427c864890e23ef7af70467baf3e51213",
+            371,
+            "T abs_y = (y < T(0)) ? -y : y;"
+        ]
+    ]
+},
+{
+    "line_num": 370,
+    "line_str": "T abs_x = (x < T(0)) ? -x : x;",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "83a0c0e427c864890e23ef7af70467baf3e51213",
+            370,
+            "T abs_x = (x < T(0)) ? -x : x;"
+        ]
+    ]
+},
+{
+    "line_num": 369,
+    "line_str": "#if defined(__HIP_DEVICE_COMPILE__)",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "83a0c0e427c864890e23ef7af70467baf3e51213",
+            369,
+            "#if defined(__HIP_DEVICE_COMPILE__)"
+        ]
+    ]
+},
+{
+    "line_num": 368,
+    "line_str": "Packet abs_y = pabs(y);",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "dcbc81277b91376a0a2999b1478ea24aaf2bdc3a",
+            368,
+            "Packet abs_y = pabs(y);"
+        ]
+    ]
+},
+{
+    "line_num": 367,
+    "line_str": "Packet abs_x = pabs(x);",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "dcbc81277b91376a0a2999b1478ea24aaf2bdc3a",
+            367,
+            "Packet abs_x = pabs(x);"
+        ]
+    ]
+},
+{
+    "line_num": 244,
+    "line_str": "if ((x < T(0)) != (y < T(0))) {",
+    "file_path": "tensorflow/core/kernels/cwise_ops.h",
+    "previous_commits": [
+        [
+            "bdae9c62caa19c7ecef1eca8e3b9149629404182",
+            244,
+            "if ((x < T(0)) != (y < T(0))) {"
+        ]
+    ]
+}
+]
+},{
+"e35be978351a8578549d30b6f483825d36dc0f8b": []},
+{
+"e07e48b2e0908333a36f1c5726a9406a83b3ec90": []},
+{
+"82e6203221865de4008445b13c69b6826d2b28d9": []},
+{
+"7ae2af34087fb4b5c8915279efd03da3b81028bc": []},
+{
+"f60e73456ed6c0e121a9d2b308f9c9f8f9a3cdb7": [
+{
+    "line_num": 71,
+    "line_str": "kDimLabels,      // [0-9bf]{2,}_[0-9io]{2,}->[0-9bf]{2,}",
+    "file_path": "tensorflow/compiler/xla/service/hlo_lexer.h",
+    "previous_commits": [
+        [
+            "b55e7a9a82dd9fbf0b6ac92b5f621424c23e48f2",
+            71,
+            "kDimLabels,      // [0-9bf]{2,}_[0-9io]{2,}->[0-9bf]{2,}"
+        ]
+    ]
+}
+]
+},{
+"51300ba1cc2f487aefec6e6631fef03b0e08b298": []},
+{
+"1d04d7d93f4ed3854abf75d6b712d72c3f70d6b6": []},
+{
+"4253f96a58486ffe84b61c0415bb234a4632ee73": []},
+{
+"c57c0b9f3a4f8684f3489dd9a9ec627ad8b599f5": []},
+{
+"8ee24e7949a203d234489f9da2c5bf45a7d5157d": [
+{
+    "line_num": 272,
+    "line_str": "return shape1.Dims(index1);",
+    "file_path": "tensorflow/contrib/lite/kernels/internal/types.h",
+    "previous_commits": [
+        [
+            "47b1c9396aef567b839c2c5ad91aa37ba0cb68ca",
+            272,
+            "return shape1.Dims(index1);"
+        ]
+    ]
+}
+]
+},{
+"7c8cc4ec69cd348e44ad6a2699057ca88faad3e5": [
+{
+    "line_num": 21,
+    "line_str": "TfLiteIntArray* ret =",
+    "file_path": "tensorflow/contrib/lite/context.c",
+    "previous_commits": [
+        [
+            "0b15439f8f0f2d4755587f4096c3ea04cb199d23",
+            21,
+            "TfLiteIntArray* ret ="
+        ]
+    ]
+},
+{
+    "line_num": 27,
+    "line_str": "(TfLiteIntArray*)malloc(TfLiteIntArrayGetSizeInBytes(size));",
+    "file_path": "tensorflow/contrib/lite/context.c",
+    "previous_commits": [
+        [
+            "6e3a43f4b7a1288c878b5daff274f1229256fbe8",
+            27,
+            "(TfLiteIntArray*)malloc(TfLiteIntArrayGetSizeInBytes(size));"
+        ]
+    ]
+}
+]
+},{
+"aa44812e3e40b1c95586466bc177b07525b787ea": []},
+{
+"febd380da9219e08ea493b5baff765e2ef2d99d5": []},
+{
+"578e634b4f1c1c684d4b4294f9e5281b2133b3ed": []},
+{
+"e0b6e58c328059829c3eb968136f17aa72b6c876": []},
+{
+"ff72f8f7902b61992d72fffcfe8b0326f19c4497": []},
+{
+"faa76f39014ed3b5e2c158593b1335522e573c7f": []},
+{
+"704866eabe03a9aeda044ec91a8d0c83fc1ebdbe": []},
+{
+"ae4794f5154eca0589ec13c86bb27792cc09024a": []},
+{
+"9c1dc920d8ffb4893d6c9d27d1f039607b326743": []},
+{
+"e07e1c3d26492c06f078c7e5bf2d138043e199c1": []},
+{
+"2dac0812a52cc72661a55487d2bc9ed84fd7b268": []},
+{
+"44bcb14ec77b43854b5b5777d9b36f36303638c0": [
+{
+    "line_num": 145,
+    "line_str": "void TensorRangeSanityCheck(quant::StatisticsOp op, double min,",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "c6aaecf54e89836ad63d3c45c3436b95039beb8d",
+            145,
+            "void TensorRangeSanityCheck(quant::StatisticsOp op, double min,"
+        ]
+    ]
+},
+{
+    "line_num": 152,
+    "line_str": "std::to_string(range) + \", bit width: \" + std::to_string(num_bits));",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "c6aaecf54e89836ad63d3c45c3436b95039beb8d",
+            152,
+            "std::to_string(range) + \", bit width: \" + std::to_string(num_bits));"
+        ]
+    ]
+},
+{
+    "line_num": 151,
+    "line_str": "\"tf.relu6 to narrow the tensor range. Range: \" +",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "c6aaecf54e89836ad63d3c45c3436b95039beb8d",
+            151,
+            "\"tf.relu6 to narrow the tensor range. Range: \" +"
+        ]
+    ]
+},
+{
+    "line_num": 150,
+    "line_str": "\"Tensor range is too wide to be quantized. Use tf.clip_by_value or \"",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "c6aaecf54e89836ad63d3c45c3436b95039beb8d",
+            150,
+            "\"Tensor range is too wide to be quantized. Use tf.clip_by_value or \""
+        ]
+    ]
+},
+{
+    "line_num": 149,
+    "line_str": "op.emitWarning(",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "c6aaecf54e89836ad63d3c45c3436b95039beb8d",
+            149,
+            "op.emitWarning("
+        ]
+    ]
+},
+{
+    "line_num": 146,
+    "line_str": "double max) const {",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "c6aaecf54e89836ad63d3c45c3436b95039beb8d",
+            146,
+            "double max) const {"
+        ]
+    ]
+}
+]
+},{
+"e60741121151ead703ea659dc7ccce5e60afff00": []},
+{
+"0c36d11574c72e26a5104ef8766e07edd701103b": []},
+{
+"dcd7867de0fea4b72a2b34bd41eb74548dc23886": []},
+{
+"8fefda402a4c5e313954c1467ed6e350b39d6f58": [
+{
+    "line_num": 89,
+    "line_str": "const SmallVectorImpl<double>& maxs);",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "0fa8e3c7ddfd449e6a4af84925f63be2401e0a30",
+            89,
+            "const SmallVectorImpl<double>& maxs);"
+        ],
+        [
+            "fe004863b7308658000d48e31632b17e5fc537eb",
+            564,
+            "SmallVector<double, 4>& maxs);"
+        ]
+    ]
+},
+{
+    "line_num": 131,
+    "line_str": "quant_type = DownCastScale(quant_type, mins, maxs);",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "0fa8e3c7ddfd449e6a4af84925f63be2401e0a30",
+            131,
+            "quant_type = DownCastScale(quant_type, mins, maxs);"
+        ]
+    ]
+},
+{
+    "line_num": 91,
+    "line_str": "QuantizedType DownCastScale(QuantizedType type, double min, double max);",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "0fa8e3c7ddfd449e6a4af84925f63be2401e0a30",
+            91,
+            "QuantizedType DownCastScale(QuantizedType type, double min, double max);"
+        ]
+    ]
+},
+{
+    "line_num": 146,
+    "line_str": "quant_type = DownCastScale(quant_type, rmin, rmax);",
+    "file_path": "tensorflow/compiler/mlir/lite/quantization/quantization_utils.h",
+    "previous_commits": [
+        [
+            "0fa8e3c7ddfd449e6a4af84925f63be2401e0a30",
+            146,
+            "quant_type = DownCastScale(quant_type, rmin, rmax);"
+        ]
+    ]
+},
+{
+    "line_num": 390,
+    "line_str": "quant_type = quant::DownCastScale(quant_type, min, max);",
+    "file_path": "tensorflow/compiler/mlir/lite/transforms/prepare_quantize_helper.h",
+    "previous_commits": [
+        [
+            "0fa8e3c7ddfd449e6a4af84925f63be2401e0a30",
+            390,
+            "quant_type = quant::DownCastScale(quant_type, min, max);"
+        ]
+    ]
+},
+{
+    "line_num": 472,
+    "line_str": "calibrated_type.getMax())",
+    "file_path": "tensorflow/compiler/mlir/lite/transforms/prepare_quantize_helper.h",
+    "previous_commits": [
+        [
+            "0fa8e3c7ddfd449e6a4af84925f63be2401e0a30",
+            472,
+            "calibrated_type.getMax())"
+        ]
+    ]
+}
+]
+},{
+"a33a0e8524108a7fe00614194788aad7991ab268": []},
+{
+"81908ee16f7e0efa611c408553271e48f68c9041": []},
+{
+"94330403b70e022f37c61aa503404224d46d8c64": []},
+{
+"ae2ec43d674e8e8e6160c562f0b29e1a018e9118": []},
+{
+"01108a05710fc0c72e212901512b448f9abbb03e": []},
+{
+"2ed4c2279cef8a18d17b6b80736135edb810a6a6": []},
+{
+"92aed7b14476f7e26a5d5ba317cb5dccd45734b6": []},
+{
+"12243e6b65958c2e0c344aa3df4875f472ce5ae0": []},
+{
+"87cf4d3ea9949051e50ca3f071fc909538a51cd0": []},
+{
+"26af5c3fb290cda49bd83928efe3846f297b0af9": []},
+{
+"69c68ecbb24dff3fa0e46da0d16c821a2dd22d7c": []},
+{
+"4c0ee937c0f61c4fc5f5d32d9bb4c67428012a60": []},
+{
+"f851613f8f0fb0c838d160ced13c134f778e3ce7": []},
+{
+"eccb7ec454e6617738554a255d77f08e60ee0808": []},
+{
+"cc0621d70fb6c3d4e4b3b92d65f1c8fdfafe014f": []},
+{
+"a84358aa12f0b1518e606095ab9cfddbf597c121": []},
+{
+"29f1aa1beb79abe1358129715986749551902442": []},
+{
+"e6340f0665d53716ef3197ada88936c2a5f7a2d3": []},
+{
+"24c54fda9c1b5dafc9adba56ac43808f6e9ec7b7": []},
+{
+"b432a38fe0e1b4b904a6c222cbce794c39703e87": []},
+{
+"d975d4db11c0a41516594e5b564ffd042d22e7b0": [
+{
+    "line_num": 245,
+    "line_str": "void RecomputeNumElements();",
+    "file_path": "tensorflow/core/framework/tensor_shape.h",
+    "previous_commits": [
+        [
+            "f5bbcdf2d05ddc3b24a17ac7fc2cfdf36ef2ee2b",
+            245,
+            "void RecomputeNumElements();"
+        ],
+        [
+            "df66b9fe049cb17e58454f309b662bdaf0d14fdb",
+            149,
+            "void RecomputeNumElements();"
+        ]
+    ]
+}
+]
+},{
+"ff6601a943db5f71fda09210e67ba8e9fd839ae8": []},
+{
+"5bb73bc2aa7b4143d0197181e27e9a442d5b39a5": [
+{
+    "line_num": 63,
+    "line_str": "auto num_bytes = sizeof(int64) * host_buf.size();",
+    "file_path": "tensorflow/core/kernels/tile_functor_gpu.cu.cc",
+    "previous_commits": [
+        [
+            "50b999a8336d19400ab75aea66fe46eca2f5fe0b",
+            63,
+            "auto num_bytes = sizeof(int64) * host_buf.size();"
+        ]
+    ]
+}
+]
+},{
+"94b6db8cc538408cc29d88be13307f9fd8a77120": []},
+{
+"390611e0d45c5793c7066110af37c8514e6a6c54": []},
+{
+"ca8c013b5e97b1373b3bb1c97ea655e69f31a575": []},
+{
+"aeee9bd1096fbce84cdf665174b2132e1a78e2b4": [
+{
+    "line_num": 47,
+    "line_str": "llvm::SmallDenseMap<FuncOp, InfoT, 8> info_map_;",
+    "file_path": "tensorflow/compiler/mlir/tensorflow/analysis/per_function_aggregate_analysis.h",
+    "previous_commits": [
+        [
+            "f3e7bc6a0b347d7db21fad8280b687f53c34e8d7",
+            47,
+            "llvm::SmallDenseMap<FuncOp, InfoT, 8> info_map_;"
+        ]
+    ]
+}
+]
+},{
+"081098ee7639211687db7d369aa172029572e7dd": []},
+{
+"2dd9bc663e52e1a75f972e981117b7e29196f3d2": [
+{
+    "line_num": 72,
+    "line_str": "map_.erase(it);",
+    "file_path": "tensorflow/compiler/xla/refcounting_hash_map.h",
+    "previous_commits": [
+        [
+            "bed506e3a160402f4f93aa8fdfc4bb8b270a3953",
+            72,
+            "map_.erase(it);"
+        ],
+        [
+            "353e06c3a3a2f2509137def40daa518f3fcadec2",
+            104,
+            "parent->map_.erase(it);"
+        ]
+    ]
+},
+{
+    "line_num": 101,
+    "line_str": "auto it = parent->map_.find(*key);",
+    "file_path": "tensorflow/compiler/xla/refcounting_hash_map.h",
+    "previous_commits": [
+        [
+            "353e06c3a3a2f2509137def40daa518f3fcadec2",
+            101,
+            "auto it = parent->map_.find(*key);"
+        ]
+    ]
+},
+{
+    "line_num": 100,
+    "line_str": "absl::MutexLock lock(&parent->mu_);",
+    "file_path": "tensorflow/compiler/xla/refcounting_hash_map.h",
+    "previous_commits": [
+        [
+            "353e06c3a3a2f2509137def40daa518f3fcadec2",
+            100,
+            "absl::MutexLock lock(&parent->mu_);"
+        ]
+    ]
+},
+{
+    "line_num": 96,
+    "line_str": "RefcountingHashMap* parent;",
+    "file_path": "tensorflow/compiler/xla/refcounting_hash_map.h",
+    "previous_commits": [
+        [
+            "353e06c3a3a2f2509137def40daa518f3fcadec2",
+            96,
+            "RefcountingHashMap* parent;"
+        ]
+    ]
+},
+{
+    "line_num": 95,
+    "line_str": "const K* key;  // Points into parent->map_.",
+    "file_path": "tensorflow/compiler/xla/refcounting_hash_map.h",
+    "previous_commits": [
+        [
+            "353e06c3a3a2f2509137def40daa518f3fcadec2",
+            95,
+            "const K* key;  // Points into parent->map_."
+        ]
+    ]
+},
+{
+    "line_num": 89,
+    "line_str": "std::shared_ptr<V> value(value_unique.release(), Deleter{&it->first, this});",
+    "file_path": "tensorflow/compiler/xla/refcounting_hash_map.h",
+    "previous_commits": [
+        [
+            "d5b2156e4e5367cc336d26fbbac3a6e76781de05",
+            89,
+            "std::shared_ptr<V> value(value_unique.release(), Deleter{&it->first, this});"
+        ]
+    ]
+},
+{
+    "line_num": 109,
+    "line_str": "parent->map_.erase(it);",
+    "file_path": "tensorflow/compiler/xla/refcounting_hash_map.h",
+    "previous_commits": [
+        [
+            "bed506e3a160402f4f93aa8fdfc4bb8b270a3953",
+            109,
+            "parent->map_.erase(it);"
+        ],
+        [
+            "353e06c3a3a2f2509137def40daa518f3fcadec2",
+            104,
+            "parent->map_.erase(it);"
+        ]
+    ]
+},
+{
+    "line_num": 108,
+    "line_str": "if (it != parent->map_.end() && it->second.expired()) {",
+    "file_path": "tensorflow/compiler/xla/refcounting_hash_map.h",
+    "previous_commits": [
+        [
+            "bed506e3a160402f4f93aa8fdfc4bb8b270a3953",
+            108,
+            "if (it != parent->map_.end() && it->second.expired()) {"
+        ]
+    ]
+}
+]
+},{
+"8b5b9dc96666a3a5d27fad7179ff215e3b74b67c": []},
+{
+"35f478825b56218768220a46bb49b9645271f6cf": []},
+{
+"0462de5b544ed4731aa2fb23946ac22c01856b80": []},
+{
+"16108b7bb1c7e173142d2011473e4d9a97cc43d3": []},
+{
+"63dbe41c4c455992f88e4e618efcf638b0325815": []},
+{
+"83870cb25fa07fac8900aa9da7ecc7823f15cbcf": [
+{
+    "line_num": 339,
+    "line_str": "class CollectiveImplementationInterface {",
+    "file_path": "tensorflow/core/framework/collective.h",
+    "previous_commits": [
+        [
+            "85a6164912e21bc398b930943da7ea90ffe3bc20",
+            339,
+            "class CollectiveImplementationInterface {"
+        ]
+    ]
+}
+]
+},{
+"78026d6a66f7f0fc80c69b1a2f8843616f4cd2a7": []},
+{
+"de0a617f4ef321ebf579a4539cec85690f55fb4c": []},
+{
+"7bfbd3f7be0725ee9c220047fe85032cf126d92b": []},
+{
+"1c74b32aa27dc0d40a9ce1f883ea632d399a7b9a": []},
+{
+"1afe51a60cbda6fc42b157f6393063052208da70": [
+{
+    "line_num": 140,
+    "line_str": "virtual ~Node() { FlushMetrics(); }",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "eabc157fd52200f21f06c61f7686230ea20295b9",
+            140,
+            "virtual ~Node() { FlushMetrics(); }"
+        ]
+    ]
+}
+]
+},{
+"b53ed4d560aaeb7a92185f4fbf2562e5e274456a": []},
+{
+"40835281112e42fd34af2aea4d3788d15b8e795a": [
+{
+    "line_num": 49,
+    "line_str": "PropagatorState(const ImmutableExecutorState& immutable_state, int64 step_id);",
+    "file_path": "tensorflow/core/common_runtime/propagator_state.h",
+    "previous_commits": [
+        [
+            "bd530a65d5712b0734c0b6c9af5aa83ccd9e7387",
+            49,
+            "PropagatorState(const ImmutableExecutorState& immutable_state, int64 step_id);"
+        ]
+    ]
+},
+{
+    "line_num": 50,
+    "line_str": "int64 step_id);",
+    "file_path": "tensorflow/core/common_runtime/simple_propagator_state.h",
+    "previous_commits": [
+        [
+            "0bde6a68f2e3ab93a266c905465f87a1c6b3b0c0",
+            50,
+            "int64 step_id);"
+        ]
+    ]
+},
+{
+    "line_num": 159,
+    "line_str": "const ImmutableExecutorState::FrameInfo& finfo);",
+    "file_path": "tensorflow/core/common_runtime/simple_propagator_state.h",
+    "previous_commits": [
+        [
+            "0bde6a68f2e3ab93a266c905465f87a1c6b3b0c0",
+            159,
+            "const ImmutableExecutorState::FrameInfo& finfo);"
+        ]
+    ]
+}
+]
+},{
+"25b0e7d995050c85a56d787a6aac4e1a7423902e": []},
+{
+"78edbb6403b73d6c79bd58e23e08dc21b5c33847": []},
+{
+"96498f7fb36e8fcc660cc9444ab0b30f6064cb72": [
+{
+    "line_num": 423,
+    "line_str": "TF_SHARED_LOCKS_REQUIRED(mu_) = 0;",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "83d65b152b6b1ed1e622c59d908e76d8d2e7d07b",
+            423,
+            "TF_SHARED_LOCKS_REQUIRED(mu_) = 0;"
+        ],
+        [
+            "0716c686e047935329fcf1e4bda3c5bde065aab0",
+            265,
+            "SHARED_LOCKS_REQUIRED(mu_) = 0;"
+        ],
+        [
+            "0e1efc3d9129c740a16081fdc53bdc482f8f0c11",
+            290,
+            "SHARED_LOCKS_REQUIRED(mu_);"
+        ],
+        [
+            "c8a0dfc741736a59f8fd1776b71f38619d66da56",
+            358,
+            "EXCLUSIVE_LOCKS_REQUIRED(mu_);"
+        ]
+    ]
+},
+{
+    "line_num": 550,
+    "line_str": "std::map<string, double>* gradient);",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "600336f712218e0af3d8387d9051256c31a296f5",
+            550,
+            "std::map<string, double>* gradient);"
+        ]
+    ]
+},
+{
+    "line_num": 355,
+    "line_str": "std::map<string, double>* gradient) const",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "600336f712218e0af3d8387d9051256c31a296f5",
+            355,
+            "std::map<string, double>* gradient) const"
+        ]
+    ]
+},
+{
+    "line_num": 226,
+    "line_str": "std::shared_ptr<Node> Snapshot(std::shared_ptr<Node> output)",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "0716c686e047935329fcf1e4bda3c5bde065aab0",
+            226,
+            "std::shared_ptr<Node> Snapshot(std::shared_ptr<Node> output)"
+        ],
+        [
+            "41a0bff7936ad4c8272c8c1db875ab100524725b",
+            259,
+            "std::shared_ptr<Node> Snapshot(std::shared_ptr<Node> output)"
+        ]
+    ]
+},
+{
+    "line_num": 415,
+    "line_str": "std::map<string, std::shared_ptr<Parameter>> CollectTunableParameters(",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "bf3bd1c026d0ab751369392e7f09b76fc41df4dd",
+            415,
+            "std::map<string, std::shared_ptr<Parameter>> CollectTunableParameters("
+        ],
+        [
+            "0716c686e047935329fcf1e4bda3c5bde065aab0",
+            365,
+            "std::vector<std::shared_ptr<Parameter>> CollectTunableParameters("
+        ],
+        [
+            "41a0bff7936ad4c8272c8c1db875ab100524725b",
+            397,
+            "std::vector<std::shared_ptr<Node::Tunable>> CollectTunables("
+        ],
+        [
+            "c8a0dfc741736a59f8fd1776b71f38619d66da56",
+            357,
+            "std::vector<std::shared_ptr<Node::Tunable>> CollectTunables()"
+        ]
+    ]
+},
+{
+    "line_num": 668,
+    "line_str": "std::map<string, std::shared_ptr<Node>> lookup_table_ TF_GUARDED_BY(mu_);",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "83d65b152b6b1ed1e622c59d908e76d8d2e7d07b",
+            668,
+            "std::map<string, std::shared_ptr<Node>> lookup_table_ TF_GUARDED_BY(mu_);"
+        ],
+        [
+            "683cf4eb603defd7b55a83bbe0e0f335d7ab6354",
+            389,
+            "std::map<string, std::shared_ptr<Node>> lookup_table_ GUARDED_BY(mu_);"
+        ]
+    ]
+},
+{
+    "line_num": 316,
+    "line_str": "double TotalProcessingTime(std::map<string, double>* processing_times)",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "43a408b8ac4776d0715fbdca7279cba59c1c2f73",
+            316,
+            "double TotalProcessingTime(std::map<string, double>* processing_times)"
+        ]
+    ]
+},
+{
+    "line_num": 218,
+    "line_str": "std::map<string, std::shared_ptr<Parameter>>* parameters) const",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "bf3bd1c026d0ab751369392e7f09b76fc41df4dd",
+            218,
+            "std::map<string, std::shared_ptr<Parameter>>* parameters) const"
+        ],
+        [
+            "55e470a0b33355e4b9b6ef551558e5d5d5d15d60",
+            200,
+            "std::vector<std::shared_ptr<Parameter>>* parameters) const"
+        ],
+        [
+            "0716c686e047935329fcf1e4bda3c5bde065aab0",
+            196,
+            "std::vector<std::shared_ptr<Parameter>>* parameters) LOCKS_EXCLUDED(mu_) {"
+        ],
+        [
+            "0e1efc3d9129c740a16081fdc53bdc482f8f0c11",
+            173,
+            "std::list<std::shared_ptr<Node>> inputs() LOCKS_EXCLUDED(mu_) {"
+        ],
+        [
+            "683cf4eb603defd7b55a83bbe0e0f335d7ab6354",
+            95,
+            "std::list<std::shared_ptr<Node>> inputs() LOCKS_EXCLUDED(mu_) {"
+        ]
+    ]
+},
+{
+    "line_num": 377,
+    "line_str": "TF_SHARED_LOCKS_REQUIRED(mu_);",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "ac10027777d5a3e9bbfc7811b225632190429bb1",
+            377,
+            "TF_SHARED_LOCKS_REQUIRED(mu_);"
+        ],
+        [
+            "83d65b152b6b1ed1e622c59d908e76d8d2e7d07b",
+            407,
+            "TF_SHARED_LOCKS_REQUIRED(mu_) {"
+        ],
+        [
+            "0716c686e047935329fcf1e4bda3c5bde065aab0",
+            255,
+            "SHARED_LOCKS_REQUIRED(mu_) {"
+        ],
+        [
+            "0e1efc3d9129c740a16081fdc53bdc482f8f0c11",
+            293,
+            "SHARED_LOCKS_REQUIRED(mu_) {"
+        ],
+        [
+            "683cf4eb603defd7b55a83bbe0e0f335d7ab6354",
+            215,
+            "EXCLUSIVE_LOCKS_REQUIRED(mu_) {"
+        ]
+    ]
+},
+{
+    "line_num": 503,
+    "line_str": "std::map<std::thread::id, int64> work_start_ TF_GUARDED_BY(mu_);",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "83d65b152b6b1ed1e622c59d908e76d8d2e7d07b",
+            503,
+            "std::map<std::thread::id, int64> work_start_ TF_GUARDED_BY(mu_);"
+        ],
+        [
+            "0716c686e047935329fcf1e4bda3c5bde065aab0",
+            287,
+            "std::map<std::thread::id, int64> work_start_ GUARDED_BY(mu_);"
+        ],
+        [
+            "0e1efc3d9129c740a16081fdc53bdc482f8f0c11",
+            376,
+            "std::map<std::thread::id, int64> work_start_ GUARDED_BY(mu_);"
+        ],
+        [
+            "683cf4eb603defd7b55a83bbe0e0f335d7ab6354",
+            321,
+            "std::map<std::thread::id, int64> work_start_ GUARDED_BY(mu_);"
+        ]
+    ]
+},
+{
+    "line_num": 277,
+    "line_str": "std::map<string, double>* gradient) const",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "600336f712218e0af3d8387d9051256c31a296f5",
+            277,
+            "std::map<string, double>* gradient) const"
+        ]
+    ]
+},
+{
+    "line_num": 339,
+    "line_str": "std::map<string, double>* gradient) const",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "600336f712218e0af3d8387d9051256c31a296f5",
+            339,
+            "std::map<string, double>* gradient) const"
+        ]
+    ]
+},
+{
+    "line_num": 398,
+    "line_str": "std::shared_ptr<Node> node);",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "41a0bff7936ad4c8272c8c1db875ab100524725b",
+            398,
+            "std::shared_ptr<Node> node);"
+        ]
+    ]
+},
+{
+    "line_num": 396,
+    "line_str": "std::map<string, double>* processing_times) TF_SHARED_LOCKS_REQUIRED(mu_);",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "ac10027777d5a3e9bbfc7811b225632190429bb1",
+            396,
+            "std::map<string, double>* processing_times) TF_SHARED_LOCKS_REQUIRED(mu_);"
+        ]
+    ]
+},
+{
+    "line_num": 555,
+    "line_str": "std::map<string, std::shared_ptr<Parameter>> CollectEssentialParallelism(",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "43a408b8ac4776d0715fbdca7279cba59c1c2f73",
+            555,
+            "std::map<string, std::shared_ptr<Parameter>> CollectEssentialParallelism("
+        ]
+    ]
+},
+{
+    "line_num": 588,
+    "line_str": "std::map<string, std::shared_ptr<Parameter>> parameters_ TF_GUARDED_BY(mu_);",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "eabc157fd52200f21f06c61f7686230ea20295b9",
+            588,
+            "std::map<string, std::shared_ptr<Parameter>> parameters_ TF_GUARDED_BY(mu_);"
+        ],
+        [
+            "83d65b152b6b1ed1e622c59d908e76d8d2e7d07b",
+            504,
+            "std::map<string, std::shared_ptr<Parameter>> parameters_ TF_GUARDED_BY(mu_);"
+        ],
+        [
+            "0716c686e047935329fcf1e4bda3c5bde065aab0",
+            288,
+            "std::map<string, std::shared_ptr<Parameter>> parameters_ GUARDED_BY(mu_);"
+        ],
+        [
+            "0e1efc3d9129c740a16081fdc53bdc482f8f0c11",
+            379,
+            "std::map<string, std::shared_ptr<Tunable>> tunable_params_ GUARDED_BY(mu_);"
+        ],
+        [
+            "c8a0dfc741736a59f8fd1776b71f38619d66da56",
+            316,
+            "std::map<string, std::shared_ptr<Tunable>> tunable_params_ GUARDED_BY(mu_);"
+        ]
+    ]
+},
+{
+    "line_num": 556,
+    "line_str": "std::shared_ptr<Node> node);",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "43a408b8ac4776d0715fbdca7279cba59c1c2f73",
+            556,
+            "std::shared_ptr<Node> node);"
+        ]
+    ]
+},
+{
+    "line_num": 424,
+    "line_str": "std::map<string, double>* processing_times)",
+    "file_path": "tensorflow/core/framework/model.h",
+    "previous_commits": [
+        [
+            "43a408b8ac4776d0715fbdca7279cba59c1c2f73",
+            424,
+            "std::map<string, double>* processing_times)"
+        ]
+    ]
+}
+]
+},{
+"d3c76ae3af38fdcaa88bedb9c73c1ab9bf3bd4f5": []},
+{
+"2e23d38ce733613fd0db938b8ba6bcf39c722ba1": []},
+{
+"f075bcedbb55daeea9692f3112b098b432c845af": []},
+{
+"60196aa5ac41fe1ec952a7bc094c59133200c9a8": []},
+{
+"e4e26b491796a6fb42b336ba01c84b0d3beca793": []},
+{
+"d4f1668c434505553fa1d1ecc1dc0567349857a5": [
+{
+    "line_num": 47,
+    "line_str": "LOG(ERROR)",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "8cd7135ea19fc184c873a1ba1463ff4b77f3c7ad",
+            47,
+            "LOG(ERROR)"
+        ]
+    ]
+},
+{
+    "line_num": 46,
+    "line_str": "if (iteration_count == limit) {",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "8cd7135ea19fc184c873a1ba1463ff4b77f3c7ad",
+            46,
+            "if (iteration_count == limit) {"
+        ]
+    ]
+},
+{
+    "line_num": 41,
+    "line_str": "std::max(static_cast<int64>(1000), module->instruction_count());",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "8cd7135ea19fc184c873a1ba1463ff4b77f3c7ad",
+            41,
+            "std::max(static_cast<int64>(1000), module->instruction_count());"
+        ]
+    ]
+},
+{
+    "line_num": 40,
+    "line_str": "int64 limit =",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "8cd7135ea19fc184c873a1ba1463ff4b77f3c7ad",
+            40,
+            "int64 limit ="
+        ]
+    ]
+},
+{
+    "line_num": 66,
+    "line_str": "}",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            66,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 65,
+    "line_str": "limit = std::max<int64>(limit, module->instruction_count());",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            65,
+            "limit = std::max<int64>(limit, module->instruction_count());"
+        ]
+    ]
+},
+{
+    "line_num": 64,
+    "line_str": "for (const HloModule* module : module_group->modules()) {",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            64,
+            "for (const HloModule* module : module_group->modules()) {"
+        ]
+    ]
+},
+{
+    "line_num": 63,
+    "line_str": "int64 limit = 1000;",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            63,
+            "int64 limit = 1000;"
+        ]
+    ]
+},
+{
+    "line_num": 53,
+    "line_str": "<< \")\\nIf compilation hangs here, please file a bug with XLA.\";",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            53,
+            "<< \")\\nIf compilation hangs here, please file a bug with XLA.\";"
+        ]
+    ]
+},
+{
+    "line_num": 52,
+    "line_str": "<< iteration_count",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            52,
+            "<< iteration_count"
+        ]
+    ]
+},
+{
+    "line_num": 51,
+    "line_str": "<< \"Unexpectedly high number of iterations in HLO passes (\"",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            51,
+            "<< \"Unexpectedly high number of iterations in HLO passes (\""
+        ]
+    ]
+},
+{
+    "line_num": 50,
+    "line_str": "LOG(ERROR)",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            50,
+            "LOG(ERROR)"
+        ]
+    ]
+},
+{
+    "line_num": 49,
+    "line_str": "if (iteration_count == limit) {",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "46ddf3105bfd2a8eebabfff50c0cbf3e16d911dd",
+            49,
+            "if (iteration_count == limit) {"
+        ]
+    ]
+},
+{
+    "line_num": 48,
+    "line_str": "<< \"Unexpectedly high number of iterations in HLO passes (\"",
+    "file_path": "tensorflow/compiler/xla/service/hlo_pass_fix.h",
+    "previous_commits": [
+        [
+            "985cbd7ff220795abc4a50839144c177924d469c",
+            48,
+            "<< \"Unexpectedly high number of iterations in HLO passes (\""
+        ],
+        [
+            "8cd7135ea19fc184c873a1ba1463ff4b77f3c7ad",
+            48,
+            "<< \"Unexpectedly number of iterations in HLO passes (\""
+        ]
+    ]
+}
+]
+},{
+"d75abdfd35094e28aaccdafacd655a96175d8189": []},
+{
+"eba45c548371e29cd141c32d367b582b9ca656be": []},
+{
+"1514b7fdcd54744f1ae68e6d396e0b05028ee1a8": [
+{
+    "line_num": 34,
+    "line_str": "float result = 1.f / (1.f + std::exp(-val));",
+    "file_path": "tensorflow/lite/kernels/internal/reference/logistic.h",
+    "previous_commits": [
+        [
+            "be4b75fc92761004fdb0f01be22830517fce29fa",
+            34,
+            "float result = 1.f / (1.f + std::exp(-val));"
+        ]
+    ]
+}
+]
+},{
+"2522ce7dd5d28c9733824a66133fc918290e3ed0": []},
+{
+"5ac1b9e24ff6afc465756edf845d2e9660bd34bf": []},
+{
+"54daf3c5700897a6062313983933ca28e92c410d": []},
+{
+"0c3af9326f23cb4a254c41a80679ab39f87e82d0": [
+{
+    "line_num": 106,
+    "line_str": "if (s->rank_ == kUnknownRank) {",
+    "file_path": "tensorflow/core/framework/shape_inference.h",
+    "previous_commits": [
+        [
+            "75c1ae37e448278977a69bdcb1e33cf559a37c44",
+            106,
+            "if (s->rank_ == kUnknownRank) {"
+        ]
+    ]
+}
+]
+},{
+"75e5b5d70b6f33bd41fdf07b844c762b23f99d1b": []},
+{
+"23fde233bf3210759b5a4453bc39101df9c86d0c": []},
+{
+"79605069321520bd8af318eef92b71070dcc8961": [
+{
+    "line_num": 895,
+    "line_str": "int16 strides[4];",
+    "file_path": "tensorflow/contrib/lite/kernels/internal/types.h",
+    "previous_commits": [
+        [
+            "b4e6098db6e707bccdb3ea9027365ddd9b38fb72",
+            895,
+            "int16 strides[4];"
+        ]
+    ]
+},
+{
+    "line_num": 893,
+    "line_str": "int16 stop_indices[4];",
+    "file_path": "tensorflow/contrib/lite/kernels/internal/types.h",
+    "previous_commits": [
+        [
+            "b4e6098db6e707bccdb3ea9027365ddd9b38fb72",
+            893,
+            "int16 stop_indices[4];"
+        ]
+    ]
+},
+{
+    "line_num": 891,
+    "line_str": "int16 start_indices[4];",
+    "file_path": "tensorflow/contrib/lite/kernels/internal/types.h",
+    "previous_commits": [
+        [
+            "b4e6098db6e707bccdb3ea9027365ddd9b38fb72",
+            891,
+            "int16 start_indices[4];"
+        ]
+    ]
+}
+]
+},{
+"e2f6723772345d6b83fac92cf5737f19a68dfca6": [
+{
+    "line_num": 147,
+    "line_str": "case '@':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            147,
+            "case '@':"
+        ]
+    ]
+},
+{
+    "line_num": 114,
+    "line_str": "return formToken(Token::l_brace, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            114,
+            "return formToken(Token::l_brace, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 81,
+    "line_str": "break;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            81,
+            "break;"
+        ]
+    ]
+},
+{
+    "line_num": 164,
+    "line_str": "case '3':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            164,
+            "case '3':"
+        ]
+    ]
+},
+{
+    "line_num": 131,
+    "line_str": "return formToken(Token::star, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            131,
+            "return formToken(Token::star, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 98,
+    "line_str": "case 0:",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            98,
+            "case 0:"
+        ]
+    ]
+},
+{
+    "line_num": 148,
+    "line_str": "return lexAtIdentifier(tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            148,
+            "return lexAtIdentifier(tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 115,
+    "line_str": "case '}':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            115,
+            "case '}':"
+        ]
+    ]
+},
+{
+    "line_num": 82,
+    "line_str": "}",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            82,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 165,
+    "line_str": "case '4':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            165,
+            "case '4':"
+        ]
+    ]
+},
+{
+    "line_num": 132,
+    "line_str": "case '-':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            132,
+            "case '-':"
+        ]
+    ]
+},
+{
+    "line_num": 116,
+    "line_str": "return formToken(Token::r_brace, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            116,
+            "return formToken(Token::r_brace, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 166,
+    "line_str": "case '5':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            166,
+            "case '5':"
+        ]
+    ]
+},
+{
+    "line_num": 133,
+    "line_str": "if (*curPtr == '>') {",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            133,
+            "if (*curPtr == '>') {"
+        ]
+    ]
+},
+{
+    "line_num": 150,
+    "line_str": "case '!':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            150,
+            "case '!':"
+        ]
+    ]
+},
+{
+    "line_num": 117,
+    "line_str": "case '[':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            117,
+            "case '[':"
+        ]
+    ]
+},
+{
+    "line_num": 84,
+    "line_str": "const char *tokStart = curPtr;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            84,
+            "const char *tokStart = curPtr;"
+        ]
+    ]
+},
+{
+    "line_num": 167,
+    "line_str": "case '6':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            167,
+            "case '6':"
+        ]
+    ]
+},
+{
+    "line_num": 134,
+    "line_str": "++curPtr;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            134,
+            "++curPtr;"
+        ]
+    ]
+},
+{
+    "line_num": 101,
+    "line_str": "if (curPtr - 1 == curBuffer.end())",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            101,
+            "if (curPtr - 1 == curBuffer.end())"
+        ]
+    ]
+},
+{
+    "line_num": 68,
+    "line_str": "switch (*curPtr) {",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            68,
+            "switch (*curPtr) {"
+        ]
+    ]
+},
+{
+    "line_num": 151,
+    "line_str": "LLVM_FALLTHROUGH;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            151,
+            "LLVM_FALLTHROUGH;"
+        ]
+    ]
+},
+{
+    "line_num": 118,
+    "line_str": "return formToken(Token::l_square, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            118,
+            "return formToken(Token::l_square, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 85,
+    "line_str": "switch (*curPtr++) {",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            85,
+            "switch (*curPtr++) {"
+        ]
+    ]
+},
+{
+    "line_num": 168,
+    "line_str": "case '7':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            168,
+            "case '7':"
+        ]
+    ]
+},
+{
+    "line_num": 135,
+    "line_str": "return formToken(Token::arrow, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            135,
+            "return formToken(Token::arrow, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 102,
+    "line_str": "return formToken(Token::eof, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            102,
+            "return formToken(Token::eof, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 152,
+    "line_str": "case '^':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            152,
+            "case '^':"
+        ]
+    ]
+},
+{
+    "line_num": 119,
+    "line_str": "case ']':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            119,
+            "case ']':"
+        ]
+    ]
+},
+{
+    "line_num": 86,
+    "line_str": "default:",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            86,
+            "default:"
+        ]
+    ]
+},
+{
+    "line_num": 169,
+    "line_str": "case '8':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            169,
+            "case '8':"
+        ]
+    ]
+},
+{
+    "line_num": 136,
+    "line_str": "}",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            136,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 103,
+    "line_str": "",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            103,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 153,
+    "line_str": "LLVM_FALLTHROUGH;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            153,
+            "LLVM_FALLTHROUGH;"
+        ]
+    ]
+},
+{
+    "line_num": 120,
+    "line_str": "return formToken(Token::r_square, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            120,
+            "return formToken(Token::r_square, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 170,
+    "line_str": "case '9':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            170,
+            "case '9':"
+        ]
+    ]
+},
+{
+    "line_num": 137,
+    "line_str": "return formToken(Token::minus, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            137,
+            "return formToken(Token::minus, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 104,
+    "line_str": "LLVM_FALLTHROUGH;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            104,
+            "LLVM_FALLTHROUGH;"
+        ]
+    ]
+},
+{
+    "line_num": 154,
+    "line_str": "case '#':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            154,
+            "case '#':"
+        ]
+    ]
+},
+{
+    "line_num": 121,
+    "line_str": "case '<':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            121,
+            "case '<':"
+        ]
+    ]
+},
+{
+    "line_num": 88,
+    "line_str": "if (isalpha(curPtr[-1]))",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            88,
+            "if (isalpha(curPtr[-1]))"
+        ]
+    ]
+},
+{
+    "line_num": 171,
+    "line_str": "return lexNumber(tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            171,
+            "return lexNumber(tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 105,
+    "line_str": "case ':':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            105,
+            "case ':':"
+        ]
+    ]
+},
+{
+    "line_num": 155,
+    "line_str": "LLVM_FALLTHROUGH;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            155,
+            "LLVM_FALLTHROUGH;"
+        ]
+    ]
+},
+{
+    "line_num": 122,
+    "line_str": "return formToken(Token::less, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            122,
+            "return formToken(Token::less, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 139,
+    "line_str": "case '?':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            139,
+            "case '?':"
+        ]
+    ]
+},
+{
+    "line_num": 106,
+    "line_str": "return formToken(Token::colon, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            106,
+            "return formToken(Token::colon, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 73,
+    "line_str": "++curPtr;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            73,
+            "++curPtr;"
+        ]
+    ]
+},
+{
+    "line_num": 156,
+    "line_str": "case '%':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            156,
+            "case '%':"
+        ]
+    ]
+},
+{
+    "line_num": 123,
+    "line_str": "case '>':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            123,
+            "case '>':"
+        ]
+    ]
+},
+{
+    "line_num": 239,
+    "line_str": "return lexToken();",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "f4eb302af826048b59706e0311764c6e87c1c6e2",
+            239,
+            "return lexToken();"
+        ],
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            194,
+            "return lexToken();"
+        ]
+    ]
+},
+{
+    "line_num": 140,
+    "line_str": "return formToken(Token::question, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            140,
+            "return formToken(Token::question, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 107,
+    "line_str": "case ',':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            107,
+            "case ',':"
+        ]
+    ]
+},
+{
+    "line_num": 157,
+    "line_str": "return lexPrefixedIdentifier(tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            157,
+            "return lexPrefixedIdentifier(tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 124,
+    "line_str": "return formToken(Token::greater, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            124,
+            "return formToken(Token::greater, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 108,
+    "line_str": "return formToken(Token::comma, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            108,
+            "return formToken(Token::comma, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 75,
+    "line_str": "default:",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            75,
+            "default:"
+        ]
+    ]
+},
+{
+    "line_num": 158,
+    "line_str": "case '\"':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            158,
+            "case '\"':"
+        ]
+    ]
+},
+{
+    "line_num": 125,
+    "line_str": "case '=':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            125,
+            "case '=':"
+        ]
+    ]
+},
+{
+    "line_num": 92,
+    "line_str": "return emitError(tokStart, \"unexpected character\");",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            92,
+            "return emitError(tokStart, \"unexpected character\");"
+        ]
+    ]
+},
+{
+    "line_num": 142,
+    "line_str": "case '/':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            142,
+            "case '/':"
+        ]
+    ]
+},
+{
+    "line_num": 109,
+    "line_str": "case '.':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "9c08346505ca26fc77fc1fe4534169307f9a6e36",
+            109,
+            "case '.':"
+        ]
+    ]
+},
+{
+    "line_num": 159,
+    "line_str": "return lexString(tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            159,
+            "return lexString(tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 126,
+    "line_str": "return formToken(Token::equal, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            126,
+            "return formToken(Token::equal, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 93,
+    "line_str": "",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            93,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 143,
+    "line_str": "if (*curPtr == '/')",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            143,
+            "if (*curPtr == '/')"
+        ]
+    ]
+},
+{
+    "line_num": 110,
+    "line_str": "return lexEllipsis(tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "9c08346505ca26fc77fc1fe4534169307f9a6e36",
+            110,
+            "return lexEllipsis(tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 160,
+    "line_str": "",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            160,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 127,
+    "line_str": "",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            127,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 94,
+    "line_str": "case '_':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            94,
+            "case '_':"
+        ]
+    ]
+},
+{
+    "line_num": 144,
+    "line_str": "return lexComment();",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            144,
+            "return lexComment();"
+        ]
+    ]
+},
+{
+    "line_num": 111,
+    "line_str": "case ')':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            111,
+            "case ')':"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "case '0':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            161,
+            "case '0':"
+        ]
+    ]
+},
+{
+    "line_num": 128,
+    "line_str": "case '+':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            128,
+            "case '+':"
+        ]
+    ]
+},
+{
+    "line_num": 244,
+    "line_str": "return lexToken();",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "f4eb302af826048b59706e0311764c6e87c1c6e2",
+            244,
+            "return lexToken();"
+        ],
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            194,
+            "return lexToken();"
+        ]
+    ]
+},
+{
+    "line_num": 145,
+    "line_str": "return emitError(tokStart, \"unexpected character\");",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            145,
+            "return emitError(tokStart, \"unexpected character\");"
+        ]
+    ]
+},
+{
+    "line_num": 112,
+    "line_str": "return formToken(Token::r_paren, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            112,
+            "return formToken(Token::r_paren, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 79,
+    "line_str": "break;",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            79,
+            "break;"
+        ]
+    ]
+},
+{
+    "line_num": 162,
+    "line_str": "case '1':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            162,
+            "case '1':"
+        ]
+    ]
+},
+{
+    "line_num": 129,
+    "line_str": "return formToken(Token::plus, tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            129,
+            "return formToken(Token::plus, tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 96,
+    "line_str": "return lexBareIdentifierOrKeyword(tokStart);",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            96,
+            "return lexBareIdentifierOrKeyword(tokStart);"
+        ]
+    ]
+},
+{
+    "line_num": 113,
+    "line_str": "case '{':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            113,
+            "case '{':"
+        ]
+    ]
+},
+{
+    "line_num": 80,
+    "line_str": "}",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            80,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 229,
+    "line_str": "Token Lexer::lexComment() {",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "f4eb302af826048b59706e0311764c6e87c1c6e2",
+            229,
+            "Token Lexer::lexComment() {"
+        ],
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            179,
+            "Token Lexer::lexComment() {"
+        ]
+    ]
+},
+{
+    "line_num": 163,
+    "line_str": "case '2':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            163,
+            "case '2':"
+        ]
+    ]
+},
+{
+    "line_num": 130,
+    "line_str": "case '*':",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            130,
+            "case '*':"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            97,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 59,
+    "line_str": "Token lexComment();",
+    "file_path": "third_party/mlir/lib/Parser/Lexer.h",
+    "previous_commits": [
+        [
+            "f4eb302af826048b59706e0311764c6e87c1c6e2",
+            59,
+            "Token lexComment();"
+        ],
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            57,
+            "Token lexComment();"
+        ]
+    ]
+}
+]
+},{
+"dbcb2a5470e40974924cebd0f74d7f117b21bf8e": []},
+{
+"37ccc893dbe6ae28747eb63c7d144475a7bdf130": [
+{
+    "line_num": 471,
+    "line_str": ": indexing;",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            471,
+            ": indexing;"
+        ]
+    ]
+},
+{
+    "line_num": 752,
+    "line_str": "ValueHandle ub(sliceRange.max);",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            752,
+            "ValueHandle ub(sliceRange.max);"
+        ]
+    ]
+},
+{
+    "line_num": 748,
+    "line_str": "using linalg::intrinsics::dim;",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            748,
+            "using linalg::intrinsics::dim;"
+        ]
+    ]
+},
+{
+    "line_num": 439,
+    "line_str": "int i = en.index();",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "f63a72d992335f695b2aa398301c15c72afb23df",
+            439,
+            "int i = en.index();"
+        ]
+    ]
+},
+{
+    "line_num": 468,
+    "line_str": "Value *min =",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            468,
+            "Value *min ="
+        ]
+    ]
+},
+{
+    "line_num": 753,
+    "line_str": "auto max = edsc::intrinsics::select(size < ub, size, ub);",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            753,
+            "auto max = edsc::intrinsics::select(size < ub, size, ub);"
+        ]
+    ]
+},
+{
+    "line_num": 749,
+    "line_str": "unsigned rank = en.index();",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            749,
+            "unsigned rank = en.index();"
+        ]
+    ]
+},
+{
+    "line_num": 473,
+    "line_str": "baseOffset = add(baseOffset, product);",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            473,
+            "baseOffset = add(baseOffset, product);"
+        ]
+    ]
+},
+{
+    "line_num": 440,
+    "line_str": "Value *rangeDescriptor = adaptor.indexings()[i];",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "f63a72d992335f695b2aa398301c15c72afb23df",
+            440,
+            "Value *rangeDescriptor = adaptor.indexings()[i];"
+        ]
+    ]
+},
+{
+    "line_num": 754,
+    "line_str": "ranges.push_back(range(sliceRange.min, max, sliceRange.step));",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            754,
+            "ranges.push_back(range(sliceRange.min, max, sliceRange.step));"
+        ]
+    ]
+},
+{
+    "line_num": 750,
+    "line_str": "auto sliceRange = en.value();",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            750,
+            "auto sliceRange = en.value();"
+        ]
+    ]
+},
+{
+    "line_num": 428,
+    "line_str": "Value *product = mul(min, strides[i]);",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "f63a72d992335f695b2aa398301c15c72afb23df",
+            428,
+            "Value *product = mul(min, strides[i]);"
+        ]
+    ]
+},
+{
+    "line_num": 746,
+    "line_str": "for (auto en : llvm::enumerate(op.getRanges())) {",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            746,
+            "for (auto en : llvm::enumerate(op.getRanges())) {"
+        ]
+    ]
+},
+{
+    "line_num": 445,
+    "line_str": "Value *stride = mul(strides[i], step);",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "f63a72d992335f695b2aa398301c15c72afb23df",
+            445,
+            "Value *stride = mul(strides[i], step);"
+        ]
+    ]
+},
+{
+    "line_num": 470,
+    "line_str": "? static_cast<Value *>(extractvalue(int64Ty, indexing, pos(0)))",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            470,
+            "? static_cast<Value *>(extractvalue(int64Ty, indexing, pos(0)))"
+        ]
+    ]
+},
+{
+    "line_num": 755,
+    "line_str": "}",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            755,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 751,
+    "line_str": "auto size = dim(view, rank);",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            751,
+            "auto size = dim(view, rank);"
+        ]
+    ]
+},
+{
+    "line_num": 747,
+    "line_str": "using edsc::op::operator<;",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            747,
+            "using edsc::op::operator<;"
+        ]
+    ]
+},
+{
+    "line_num": 425,
+    "line_str": "sliceOp.indexing(i)->getType().isa<RangeType>()",
+    "file_path": "third_party/mlir/lib/Linalg/Transforms/LowerToLLVMDialect.cpp",
+    "previous_commits": [
+        [
+            "f63a72d992335f695b2aa398301c15c72afb23df",
+            425,
+            "sliceOp.indexing(i)->getType().isa<RangeType>()"
+        ]
+    ]
+}
+]
+},{
+"0d6095963d907e0de1d635842d8ed80759a436ba": [
+{
+    "line_num": 65,
+    "line_str": "static constexpr std::size_t kAlignment = 64;",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            65,
+            "static constexpr std::size_t kAlignment = 64;"
+        ]
+    ]
+},
+{
+    "line_num": 30,
+    "line_str": "inline void* VoidPtrAdd(void* p, std::size_t offset) {",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            30,
+            "inline void* VoidPtrAdd(void* p, std::size_t offset) {"
+        ]
+    ]
+},
+{
+    "line_num": 87,
+    "line_str": "std::size_t new_size = round_up_pot(size_ + fallback_blocks_total_size_);",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            87,
+            "std::size_t new_size = round_up_pot(size_ + fallback_blocks_total_size_);"
+        ]
+    ]
+},
+{
+    "line_num": 118,
+    "line_str": "void* SystemAlignedAlloc(std::size_t num_bytes);",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            118,
+            "void* SystemAlignedAlloc(std::size_t num_bytes);"
+        ]
+    ]
+},
+{
+    "line_num": 149,
+    "line_str": "void* AllocateBytes(std::size_t num_bytes) {",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "4bbf04134f7f8d2de03b8494dd0d2d24b811d31e",
+            149,
+            "void* AllocateBytes(std::size_t num_bytes) {"
+        ]
+    ]
+},
+{
+    "line_num": 150,
+    "line_str": "void Allocate(std::size_t count, Pointer* out) {",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            150,
+            "void Allocate(std::size_t count, Pointer* out) {"
+        ]
+    ]
+},
+{
+    "line_num": 138,
+    "line_str": "std::size_t size_ = 0;",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            138,
+            "std::size_t size_ = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 137,
+    "line_str": "std::size_t current_ = 0;",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            137,
+            "std::size_t current_ = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 109,
+    "line_str": "void* AllocateSlow(std::size_t num_bytes) {",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            109,
+            "void* AllocateSlow(std::size_t num_bytes) {"
+        ]
+    ]
+},
+{
+    "line_num": 140,
+    "line_str": "std::size_t fallback_blocks_total_size_ = 0;",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            140,
+            "std::size_t fallback_blocks_total_size_ = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 106,
+    "line_str": "return nullptr;",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            106,
+            "return nullptr;"
+        ]
+    ]
+},
+{
+    "line_num": 104,
+    "line_str": "return ret;",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            104,
+            "return ret;"
+        ]
+    ]
+},
+{
+    "line_num": 72,
+    "line_str": "void* AllocateAlignedBytes(std::size_t num_bytes) {",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            72,
+            "void* AllocateAlignedBytes(std::size_t num_bytes) {"
+        ]
+    ]
+},
+{
+    "line_num": 103,
+    "line_str": "current_ += num_bytes;",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            103,
+            "current_ += num_bytes;"
+        ]
+    ]
+},
+{
+    "line_num": 102,
+    "line_str": "void* ret = VoidPtrAdd(ptr_, current_);",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            102,
+            "void* ret = VoidPtrAdd(ptr_, current_);"
+        ]
+    ]
+},
+{
+    "line_num": 101,
+    "line_str": "if (current_ + num_bytes <= size_) {",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            101,
+            "if (current_ + num_bytes <= size_) {"
+        ]
+    ]
+},
+{
+    "line_num": 100,
+    "line_str": "void* AllocateFast(std::size_t num_bytes) {",
+    "file_path": "tensorflow/lite/experimental/ruy/allocator.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            100,
+            "void* AllocateFast(std::size_t num_bytes) {"
+        ]
+    ]
+},
+{
+    "line_num": 38,
+    "line_str": "inline int ceil_log2(int n) {",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            38,
+            "inline int ceil_log2(int n) {"
+        ]
+    ]
+},
+{
+    "line_num": 34,
+    "line_str": "return 31 - __builtin_clz(n);",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            34,
+            "return 31 - __builtin_clz(n);"
+        ]
+    ]
+},
+{
+    "line_num": 31,
+    "line_str": "_BitScanReverse(&result, n);",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            31,
+            "_BitScanReverse(&result, n);"
+        ]
+    ]
+},
+{
+    "line_num": 60,
+    "line_str": "inline int clamp(int x, int lo, int hi) {",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            60,
+            "inline int clamp(int x, int lo, int hi) {"
+        ]
+    ]
+},
+{
+    "line_num": 27,
+    "line_str": "inline int floor_log2(int n) {",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            27,
+            "inline int floor_log2(int n) {"
+        ]
+    ]
+},
+{
+    "line_num": 56,
+    "line_str": "inline int round_up_pot(int value, int modulo) {",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            56,
+            "inline int round_up_pot(int value, int modulo) {"
+        ]
+    ]
+},
+{
+    "line_num": 51,
+    "line_str": "inline int round_down_pot(int value, int modulo) {",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            51,
+            "inline int round_down_pot(int value, int modulo) {"
+        ]
+    ]
+},
+{
+    "line_num": 49,
+    "line_str": "inline int round_up_pot(int value) { return 1 << ceil_log2(value); }",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            49,
+            "inline int round_up_pot(int value) { return 1 << ceil_log2(value); }"
+        ]
+    ]
+},
+{
+    "line_num": 47,
+    "line_str": "inline int round_down_pot(int value) { return 1 << floor_log2(value); }",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            47,
+            "inline int round_down_pot(int value) { return 1 << floor_log2(value); }"
+        ]
+    ]
+},
+{
+    "line_num": 43,
+    "line_str": "inline bool is_pot(int value) {",
+    "file_path": "tensorflow/lite/experimental/ruy/size_util.h",
+    "previous_commits": [
+        [
+            "f3165cc663dfa3f4574a42ff2c490cfb3e75a2a4",
+            43,
+            "inline bool is_pot(int value) {"
+        ]
+    ]
+}
+]
+},{
+"71fc0645a882d901e2c0e7307bea7b33ce89119c": []},
+{
+"97bf0b07b4bb232ba691165bafea93595824ef0c": []},
+{
+"a84fc332467e888103b3a35ab6c8d44a423c4aed": [
+{
+    "line_num": 129,
+    "line_str": "os << \"    for (auto arg : op.getODSOperands(\" << i << \")) {\\n\";",
+    "file_path": "third_party/mlir/tools/mlir-tblgen/SPIRVUtilsGen.cpp",
+    "previous_commits": [
+        [
+            "366ddc89483dcebae00b11b9a1fa693a7a1ef3f2",
+            129,
+            "os << \"    for (auto arg : op.getODSOperands(\" << i << \")) {\\n\";"
+        ]
+    ]
+}
+]
+},{
+"02874a2e4272733cd2148ab9498f3ee4a06dc2da": []},
+{
+"2b8485c1b79d8cc4534096758ec28dab80d5d828": []},
+{
+"3ae3c3c9d43f870d6340cec529de03175e914595": []},
+{
+"db4f9717c41bccc3ce10099ab61996b246099892": [
+{
+    "line_num": 44,
+    "line_str": "const Index data_size, const T* data,",
+    "file_path": "tensorflow/core/kernels/segment_reduction_ops.h",
+    "previous_commits": [
+        [
+            "88686b308146887a88903c883bed7affc650e076",
+            44,
+            "const Index data_size, const T* data,"
+        ]
+    ]
+},
+{
+    "line_num": 56,
+    "line_str": "const TensorShape& segment_ids_shape,",
+    "file_path": "tensorflow/core/kernels/segment_reduction_ops.h",
+    "previous_commits": [
+        [
+            "3d86d8ce14989ca65a59ad4cf37f690694bf6267",
+            56,
+            "const TensorShape& segment_ids_shape,"
+        ],
+        [
+            "982549ea3423df4270ff154e5c764beb43d472da",
+            58,
+            "const TensorShape& segment_ids_shape,"
+        ],
+        [
+            "639b4e71f532761a4840b1cdbaea55ad0917c75b",
+            35,
+            "const Index output_rows, const TensorShape& segment_ids_shape,"
+        ]
+    ]
+},
+{
+    "line_num": 55,
+    "line_str": "void operator()(OpKernelContext* ctx, const Index num_segments,",
+    "file_path": "tensorflow/core/kernels/segment_reduction_ops.h",
+    "previous_commits": [
+        [
+            "3d86d8ce14989ca65a59ad4cf37f690694bf6267",
+            55,
+            "void operator()(OpKernelContext* ctx, const Index num_segments,"
+        ],
+        [
+            "88686b308146887a88903c883bed7affc650e076",
+            41,
+            "void operator()(OpKernelContext* ctx, const Device& d,"
+        ]
+    ]
+}
+]
+},{
+"3b239555fe63c2046e762cd0272c42a02b505afe": [
+{
+    "line_num": 162,
+    "line_str": "std::unordered_map<Device*, std::unique_ptr<FunctionLibraryRuntime>> flr_map_;",
+    "file_path": "tensorflow/core/common_runtime/process_function_library_runtime.h",
+    "previous_commits": [
+        [
+            "117bcd9cb5f3e55ce1fcc09a0bb4963c32bad8ce",
+            162,
+            "std::unordered_map<Device*, std::unique_ptr<FunctionLibraryRuntime>> flr_map_;"
+        ],
+        [
+            "9d262b24ea9730f038767a4f62b68055f798f503",
+            42,
+            "std::unordered_map<string, std::unique_ptr<FunctionLibraryRuntime>> flr_map_;"
+        ]
+    ]
+}
+]
+},{
+"449e442c9dd15439d867950b2a17dded0f361052": []},
+{
+"840f25bd4623e5a9aedcbe6163332f51ee303784": [
+{
+    "line_num": 86,
+    "line_str": "N > std::numeric_limits<int32>::max());",
+    "file_path": "tensorflow/core/kernels/gather_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "412ae46894b42c76e8222a3dfa52fe333ce58706",
+            86,
+            "N > std::numeric_limits<int32>::max());"
+        ]
+    ]
+},
+{
+    "line_num": 80,
+    "line_str": "const int64 N = indices.size();",
+    "file_path": "tensorflow/core/kernels/gather_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "412ae46894b42c76e8222a3dfa52fe333ce58706",
+            80,
+            "const int64 N = indices.size();"
+        ]
+    ]
+}
+]
+},{
+"e985e958b333a4b4bd9b3c9abadf340517b3b88d": [
+{
+    "line_num": 1021,
+    "line_str": "vspace_->DeleteGradient(existing->second);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            1021,
+            "vspace_->DeleteGradient(existing->second);"
+        ]
+    ]
+},
+{
+    "line_num": 993,
+    "line_str": "vspace_->DeleteGradient(existing->second);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            993,
+            "vspace_->DeleteGradient(existing->second);"
+        ]
+    ]
+},
+{
+    "line_num": 955,
+    "line_str": "this->vspace_->DeleteGradient(tensor);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            955,
+            "this->vspace_->DeleteGradient(tensor);"
+        ]
+    ]
+},
+{
+    "line_num": 279,
+    "line_str": "const VSpace<Gradient, BackwardFunction, TapeTensor>* vspace_;",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            279,
+            "const VSpace<Gradient, BackwardFunction, TapeTensor>* vspace_;"
+        ]
+    ]
+},
+{
+    "line_num": 886,
+    "line_str": "TF_RETURN_IF_ERROR(vspace_->CallBackwardFunction(",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            886,
+            "TF_RETURN_IF_ERROR(vspace_->CallBackwardFunction("
+        ]
+    ]
+},
+{
+    "line_num": 918,
+    "line_str": "return tape->ComputeGradient(*vspace_, targets, sources,",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            918,
+            "return tape->ComputeGradient(*vspace_, targets, sources,"
+        ]
+    ]
+},
+{
+    "line_num": 1012,
+    "line_str": "existing->second = vspace_->AggregateGradients(to_aggregate);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            1012,
+            "existing->second = vspace_->AggregateGradients(to_aggregate);"
+        ]
+    ]
+},
+{
+    "line_num": 914,
+    "line_str": "vspace_->MarkAsResult(in_grad);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            914,
+            "vspace_->MarkAsResult(in_grad);"
+        ]
+    ]
+},
+{
+    "line_num": 878,
+    "line_str": "this->vspace_->DeleteGradient(tensor);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            878,
+            "this->vspace_->DeleteGradient(tensor);"
+        ]
+    ]
+},
+{
+    "line_num": 1005,
+    "line_str": "vspace_->MarkAsResult(tangent);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            1005,
+            "vspace_->MarkAsResult(tangent);"
+        ]
+    ]
+},
+{
+    "line_num": 868,
+    "line_str": "Gradient* aid = vspace_->Ones(output_tensor);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            868,
+            "Gradient* aid = vspace_->Ones(output_tensor);"
+        ]
+    ]
+},
+{
+    "line_num": 201,
+    "line_str": "vspace_->DeleteGradient(accumulated.second);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            201,
+            "vspace_->DeleteGradient(accumulated.second);"
+        ]
+    ]
+},
+{
+    "line_num": 968,
+    "line_str": "Gradient* zero = vspace_->Zeros(input_tensors[target_index]);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            968,
+            "Gradient* zero = vspace_->Zeros(input_tensors[target_index]);"
+        ]
+    ]
+},
+{
+    "line_num": 870,
+    "line_str": "int64 aid_id = vspace_->TensorId(aid);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            870,
+            "int64 aid_id = vspace_->TensorId(aid);"
+        ]
+    ]
+},
+{
+    "line_num": 901,
+    "line_str": "tensor_id, vspace_->TapeTensorFromGradient(grad_tensor));",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            901,
+            "tensor_id, vspace_->TapeTensorFromGradient(grad_tensor));"
+        ]
+    ]
+},
+{
+    "line_num": 196,
+    "line_str": "const VSpace<Gradient, BackwardFunction, TapeTensor>* vspace)",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            196,
+            "const VSpace<Gradient, BackwardFunction, TapeTensor>* vspace)"
+        ]
+    ]
+},
+{
+    "line_num": 897,
+    "line_str": "int64 tensor_id = vspace_->TensorId(grad_tensor);",
+    "file_path": "tensorflow/c/eager/tape.h",
+    "previous_commits": [
+        [
+            "8e19a3f3dfbc12b1c60b2fbe33d2f1bc584de907",
+            897,
+            "int64 tensor_id = vspace_->TensorId(grad_tensor);"
+        ]
+    ]
+}
+]
+},{
+"3ce688f5a78fb7dff8df5cc284ca6c628eed136b": []},
+{
+"097fc1cdef5c56d4bb239a5a44bf950f0b1c4d37": []},
+{
+"aa4765a1417950cf2c29afd0172aebdd31b0725f": []},
+{
+"dd89d37a9eb0739dae3715baeaed9d7814bf459a": []},
+{
+"286e5e5d59f9b1dd1565f464348e044b704d3ac9": []},
+{
+"3553486256ae68ac72ed1ed2688a055381d818a5": []},
+{
+"434dbe38970ffc90a5b546780be702e0b5de9a0c": []},
+{
+"fc44600e5c3ccf1de1e3d4792a00d3578311d3f6": []},
+{
+"880390941ce6430996c8f842540f73b53f3d1d8e": []},
+{
+"f0d7172a30954b6696bdf2f40a5be11e7fdeb39c": []},
+{
+"85f4f6b7ced7afab7e77e65c2b21448cfbf2d6f2": []},
+{
+"55cf8c0db7bf6bf68380035032c24da2e5fa385b": []},
+{
+"8f9413bf41ff89672a3415eef606ecaca7c70a2f": []},
+{
+"885cd2942ae7b6239146a3f51ec3d6948ac2b89e": []},
+{
+"63bac283d12899a2d769a768729942c4f64436ea": []},
+{
+"4f7a169a7eb97ea4819217f14705d6c2bd125355": []},
+{
+"b18cbef5772abd61d841b2b765f3a203f8616f2e": [
+{
+    "line_num": 559,
+    "line_str": "template <",
+    "file_path": "tensorflow/compiler/xla/service/hlo_evaluator_typed_visitor.h",
+    "previous_commits": [
+        [
+            "cd065ca7be11a4c87c9a5e68271cbc2d9aaaa260",
+            559,
+            "template <"
+        ]
+    ]
+},
+{
+    "line_num": 560,
+    "line_str": "typename NativeT,",
+    "file_path": "tensorflow/compiler/xla/service/hlo_evaluator_typed_visitor.h",
+    "previous_commits": [
+        [
+            "cd065ca7be11a4c87c9a5e68271cbc2d9aaaa260",
+            560,
+            "typename NativeT,"
+        ]
+    ]
+},
+{
+    "line_num": 561,
+    "line_str": "typename std::enable_if<!is_complex_t<NativeT>::value>::type* = nullptr>",
+    "file_path": "tensorflow/compiler/xla/service/hlo_evaluator_typed_visitor.h",
+    "previous_commits": [
+        [
+            "cd065ca7be11a4c87c9a5e68271cbc2d9aaaa260",
+            561,
+            "typename std::enable_if<!is_complex_t<NativeT>::value>::type* = nullptr>"
+        ]
+    ]
+},
+{
+    "line_num": 472,
+    "line_str": "Status HandleDivide(HloInstruction* divide) override {",
+    "file_path": "tensorflow/compiler/xla/service/hlo_evaluator_typed_visitor.h",
+    "previous_commits": [
+        [
+            "cd065ca7be11a4c87c9a5e68271cbc2d9aaaa260",
+            472,
+            "Status HandleDivide(HloInstruction* divide) override {"
+        ]
+    ]
+}
+]
+},{
+"1132333db732548e85c2c860239421b649dcc5d6": []},
+{
+"daaaab25fb8aa981fdf76740763714c9ea3f2879": []},
+{
+"7e8a83543b7eb36647894453129f15eeec60b3ba": [
+{
+    "line_num": 52,
+    "line_str": "XlaBuilder* builder() const { return builder_; }",
+    "file_path": "tensorflow/compiler/xla/client/xla_client/xla_builder.h",
+    "previous_commits": [
+        [
+            "49934f7d1a289325480c618c658b7c4cdb8584c6",
+            52,
+            "XlaBuilder* builder() const { return builder_; }"
+        ],
+        [
+            "6af31f6260161bab02db83d7e9e1d7ba7fd14b2c",
+            60,
+            "const XlaBuilder* builder() const { return builder_; }"
+        ]
+    ]
+}
+]
+},{
+"a6df304e5ec4b0ad28884025558ecda414b9df07": []},
+{
+"e7674c09a151cac07bae43f6fe8551e8fec6dfe0": [
+{
+    "line_num": 141,
+    "line_str": "for (int i = 0; i < NDIMS; ++i) {            // spatial dimensions",
+    "file_path": "tensorflow/core/kernels/conv_2d.h",
+    "previous_commits": [
+        [
+            "6a187ccddaebb741ea77fc3201c6e36625f0aadb",
+            141,
+            "for (int i = 0; i < NDIMS; ++i) {            // spatial dimensions"
+        ]
+    ]
+}
+]
+},{
+"d09b1ebe4188c1b8089806336895907439fe5ee2": []},
+{
+"9f312f32091534bfc115212d2ec7c838180df663": [
+{
+    "line_num": 65,
+    "line_str": "tensor.flat<T>() = tensor.flat<T>().random();",
+    "file_path": "tensorflow/core/grappler/utils/grappler_test.h",
+    "previous_commits": [
+        [
+            "86d06ff37f9f1cb2bb5cd0c2d594286bbf023491",
+            65,
+            "tensor.flat<T>() = tensor.flat<T>().random();"
+        ]
+    ]
+}
+]
+},{
+"6a7779f3384e48012d3e27ae0f48d410f5174d06": [
+{
+    "line_num": 143,
+    "line_str": "result[i] = lo_ + static_cast<int64>(bits % range_);",
+    "file_path": "tensorflow/core/lib/random/random_distributions.h",
+    "previous_commits": [
+        [
+            "fa095c5db0ac9cfe2328a19b32ae208e58e3746a",
+            143,
+            "result[i] = lo_ + static_cast<int64>(bits % range_);"
+        ]
+    ]
+},
+{
+    "line_num": 110,
+    "line_str": "result[i] = lo_ + static_cast<int32>(sample[i] % range_);",
+    "file_path": "tensorflow/core/lib/random/random_distributions.h",
+    "previous_commits": [
+        [
+            "fa095c5db0ac9cfe2328a19b32ae208e58e3746a",
+            110,
+            "result[i] = lo_ + static_cast<int32>(sample[i] % range_);"
+        ]
+    ]
+}
+]
+},{
+"32e0db3e7a085ff2473a53b9401686544b4442aa": []},
+{
+"4ef9be236bdbf4cc50c71514503c0aa0fd41f72e": []},
+{
+"3344714a2886287377c2255906d6004f213e3bc0": []},
+{
+"13ef0af4867477cdda7e0b294e61560c2952df42": []},
+{
+"942a32bc71291994c14625b6311268319dd27808": []},
+{
+"9cd65e9a9081640934b2b78cf84b6e51ddd69796": [
+{
+    "line_num": 41,
+    "line_str": "xla::ComputationBuilder* builder);",
+    "file_path": "tensorflow/compiler/tf2xla/kernels/reduction_ops.h",
+    "previous_commits": [
+        [
+            "1e67c90e2caceeff82d09793d1ef5fa0300d219b",
+            41,
+            "xla::ComputationBuilder* builder);"
+        ]
+    ]
+},
+{
+    "line_num": 36,
+    "line_str": "explicit XlaReductionOp(OpKernelConstruction* ctx);",
+    "file_path": "tensorflow/compiler/tf2xla/kernels/reduction_ops.h",
+    "previous_commits": [
+        [
+            "1e67c90e2caceeff82d09793d1ef5fa0300d219b",
+            36,
+            "explicit XlaReductionOp(OpKernelConstruction* ctx);"
+        ]
+    ]
+}
+]
+},{
+"49f73c55d56edffebde4bca4a407ad69c1cae433": []},
+{
+"c460a245a25467a66d7319544afb92407057b424": []},
+{
+"4c24ab2d0651b048d81c4743b73ac92b5c39d8cc": []},
+{
+"698bc996f7190f5cd836d48d29b8c1b3ddcd37c2": []},
+{
+"7f88363810e77a39db919fb4000583ad0138e53c": []},
+{
+"ff47768027a66d550667015e1f238541169414c5": [
+{
+    "line_num": 105,
+    "line_str": "resources);",
+    "file_path": "tensorflow/core/grappler/costs/graph_properties.h",
+    "previous_commits": [
+        [
+            "6a7cdfa8c973f3ce6a31664233fc8b096f2ba393",
+            105,
+            "resources);"
+        ]
+    ]
+},
+{
+    "line_num": 102,
+    "line_str": "static Status PropagateShapes(",
+    "file_path": "tensorflow/core/grappler/costs/graph_properties.h",
+    "previous_commits": [
+        [
+            "6a7cdfa8c973f3ce6a31664233fc8b096f2ba393",
+            102,
+            "static Status PropagateShapes("
+        ]
+    ]
+}
+]
+},{
+"192f1c24ec6692342391c03bb620f5de1af9de3b": []},
+{
+"217e6a70b9a095974ed0e27b1848458edb232a3e": []},
+{
+"202d7e812ebcb2a88fc44cba145dbde560b31ffe": [
+{
+    "line_num": 64,
+    "line_str": "",
+    "file_path": "tensorflow/compiler/tf2xla/xla_compilation_device.h",
+    "previous_commits": [
+        [
+            "1e67c90e2caceeff82d09793d1ef5fa0300d219b",
+            64,
+            ""
+        ]
+    ]
+}
+]
+},{
+"74137f994faad09593ae2daad6251a4ccf72f558": []},
+{
+"793fa4e91d3cae77565f753c2b8d769e1a3928f8": []},
+{
+"d906c963269dd1522c7693c8f944e6a846b86221": []},
+{
+"a7c36173cabcc1289a836e8143accb5f0914b19a": [
+{
+    "line_num": 790,
+    "line_str": "bool ignore_control_predecessors);",
+    "file_path": "tensorflow/compiler/xla/service/hlo_instruction.h",
+    "previous_commits": [
+        [
+            "fc197e6c77e336700a22e04df2b1f20e0fc72fd5",
+            790,
+            "bool ignore_control_predecessors);"
+        ]
+    ]
+},
+{
+    "line_num": 789,
+    "line_str": "const CompareFunction* operand_order,",
+    "file_path": "tensorflow/compiler/xla/service/hlo_instruction.h",
+    "previous_commits": [
+        [
+            "fc197e6c77e336700a22e04df2b1f20e0fc72fd5",
+            789,
+            "const CompareFunction* operand_order,"
+        ],
+        [
+            "379560be32c3910593e94aa6e91277fc3df3fc98",
+            733,
+            "const CompareFunction* operand_order);"
+        ]
+    ]
+},
+{
+    "line_num": 732,
+    "line_str": "Status AcceptInternal(DfsHloVisitor* visitor,",
+    "file_path": "tensorflow/compiler/xla/service/hlo_instruction.h",
+    "previous_commits": [
+        [
+            "379560be32c3910593e94aa6e91277fc3df3fc98",
+            732,
+            "Status AcceptInternal(DfsHloVisitor* visitor,"
+        ],
+        [
+            "1e67c90e2caceeff82d09793d1ef5fa0300d219b",
+            666,
+            "Status AcceptInternal(DfsHloVisitor* visitor);"
+        ]
+    ]
+},
+{
+    "line_num": 667,
+    "line_str": "",
+    "file_path": "tensorflow/compiler/xla/service/hlo_instruction.h",
+    "previous_commits": [
+        [
+            "1e67c90e2caceeff82d09793d1ef5fa0300d219b",
+            667,
+            ""
+        ]
+    ]
+}
+]
+},{
+"ebae3deba801b55debbf67205c43ee54f80a7494": []},
+{
+"4e3544100876676f85ef1668fc2222a6d18a3a68": []},
+{
+"a352cba4a60aa99af9c817a792aae3e03e1b74a6": []},
+{
+"47cd4cd100800482b57d1b7755dfdcbc04969ffe": [
+{
+    "line_num": 36,
+    "line_str": "if (TF_PREDICT_FALSE(ux >= kSqrtInt64Max || uy >= kSqrtInt64Max)) {",
+    "file_path": "tensorflow/core/util/overflow.h",
+    "previous_commits": [
+        [
+            "e8ee5286a686c6fc3057ba7cf9ba9ef7003789a6",
+            36,
+            "if (TF_PREDICT_FALSE(ux >= kSqrtInt64Max || uy >= kSqrtInt64Max)) {"
+        ]
+    ]
+},
+{
+    "line_num": 35,
+    "line_str": "static const uint64 kSqrtInt64Max = 3037000500;  // ceil(sqrt(2**63 - 1))",
+    "file_path": "tensorflow/core/util/overflow.h",
+    "previous_commits": [
+        [
+            "e8ee5286a686c6fc3057ba7cf9ba9ef7003789a6",
+            35,
+            "static const uint64 kSqrtInt64Max = 3037000500;  // ceil(sqrt(2**63 - 1))"
+        ]
+    ]
+}
+]
+},{
+"e8ee5286a686c6fc3057ba7cf9ba9ef7003789a6": [
+{
+    "line_num": 36,
+    "line_str": "",
+    "file_path": "tensorflow/core/framework/tensor_shape.h",
+    "previous_commits": [
+        [
+            "7f8449a388dc1857fe743ca726d1977ee82d7208",
+            36,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 35,
+    "line_str": "constexpr int64 kMaxElements = (1LL << 40);",
+    "file_path": "tensorflow/core/framework/tensor_shape.h",
+    "previous_commits": [
+        [
+            "7f8449a388dc1857fe743ca726d1977ee82d7208",
+            35,
+            "constexpr int64 kMaxElements = (1LL << 40);"
+        ]
+    ]
+}
+]
+},{
+"32e4c38ffee4d14a8ee94d63f3c3bc5bbc3e7ee1": []},
+{
+"033f87b7f4d54c9f981ef848f559d232dbcc8d34": []},
+{
+"13700159b96f832b9230e79524693862df793840": [
+{
+    "line_num": 56,
+    "line_str": "out.device(d) = input * T(0);",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantize_and_dequantize_op.h",
+    "previous_commits": [
+        [
+            "f8e1c57cf36ae6a67972ee8d397742da75afcad3",
+            56,
+            "out.device(d) = input * T(0);"
+        ]
+    ]
+},
+{
+    "line_num": 49,
+    "line_str": "",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantize_and_dequantize_op.h",
+    "previous_commits": [
+        [
+            "f8e1c57cf36ae6a67972ee8d397742da75afcad3",
+            49,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 48,
+    "line_str": "T max_range = input_max();",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantize_and_dequantize_op.h",
+    "previous_commits": [
+        [
+            "f8e1c57cf36ae6a67972ee8d397742da75afcad3",
+            48,
+            "T max_range = input_max();"
+        ]
+    ]
+},
+{
+    "line_num": 47,
+    "line_str": "T min_range = input_min();",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantize_and_dequantize_op.h",
+    "previous_commits": [
+        [
+            "f8e1c57cf36ae6a67972ee8d397742da75afcad3",
+            47,
+            "T min_range = input_min();"
+        ]
+    ]
+},
+{
+    "line_num": 31,
+    "line_str": "typename TTypes<T>::Vec out);",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantize_and_dequantize_op.h",
+    "previous_commits": [
+        [
+            "f8e1c57cf36ae6a67972ee8d397742da75afcad3",
+            31,
+            "typename TTypes<T>::Vec out);"
+        ]
+    ]
+},
+{
+    "line_num": 30,
+    "line_str": "typename TTypes<T>::Scalar input_max,",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantize_and_dequantize_op.h",
+    "previous_commits": [
+        [
+            "f8e1c57cf36ae6a67972ee8d397742da75afcad3",
+            30,
+            "typename TTypes<T>::Scalar input_max,"
+        ]
+    ]
+}
+]
+},{
+"e3fdc3b7fd4784b88512517d3b3dacfbb9677e43": []},
+{
+"f4264cb8e1ea70c612170ed72b9fe0382d1967a0": [
+{
+    "line_num": 125,
+    "line_str": ".cwiseMax(f2q.lowest_quantized())                   \\",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantization_utils.h",
+    "previous_commits": [
+        [
+            "57915d504f1910afb43052dd337a35a1becffec7",
+            125,
+            ".cwiseMax(f2q.lowest_quantized())                   \\"
+        ]
+    ]
+},
+{
+    "line_num": 165,
+    "line_str": "return static_cast<float>(Eigen::NumTraits<T>::highest());",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantization_utils.h",
+    "previous_commits": [
+        [
+            "57915d504f1910afb43052dd337a35a1becffec7",
+            165,
+            "return static_cast<float>(Eigen::NumTraits<T>::highest());"
+        ]
+    ]
+},
+{
+    "line_num": 164,
+    "line_str": "static float highest_quantized() {",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantization_utils.h",
+    "previous_commits": [
+        [
+            "57915d504f1910afb43052dd337a35a1becffec7",
+            164,
+            "static float highest_quantized() {"
+        ]
+    ]
+},
+{
+    "line_num": 162,
+    "line_str": "return static_cast<double>(Eigen::NumTraits<T>::lowest());",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantization_utils.h",
+    "previous_commits": [
+        [
+            "57915d504f1910afb43052dd337a35a1becffec7",
+            162,
+            "return static_cast<double>(Eigen::NumTraits<T>::lowest());"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "static double lowest_quantized_double() {",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantization_utils.h",
+    "previous_commits": [
+        [
+            "57915d504f1910afb43052dd337a35a1becffec7",
+            161,
+            "static double lowest_quantized_double() {"
+        ]
+    ]
+},
+{
+    "line_num": 159,
+    "line_str": "return static_cast<float>(Eigen::NumTraits<T>::lowest());",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantization_utils.h",
+    "previous_commits": [
+        [
+            "57915d504f1910afb43052dd337a35a1becffec7",
+            159,
+            "return static_cast<float>(Eigen::NumTraits<T>::lowest());"
+        ]
+    ]
+},
+{
+    "line_num": 158,
+    "line_str": "static float lowest_quantized() {",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantization_utils.h",
+    "previous_commits": [
+        [
+            "57915d504f1910afb43052dd337a35a1becffec7",
+            158,
+            "static float lowest_quantized() {"
+        ]
+    ]
+},
+{
+    "line_num": 126,
+    "line_str": ".cwiseMin(f2q.highest_quantized())                  \\",
+    "file_path": "tensorflow/contrib/quantization/kernels/quantization_utils.h",
+    "previous_commits": [
+        [
+            "57915d504f1910afb43052dd337a35a1becffec7",
+            126,
+            ".cwiseMin(f2q.highest_quantized())                  \\"
+        ]
+    ]
+}
+]
+},{
+"74d1e78c47a5ac2609084ad654542a90e0813c54": []},
+{
+"b09764d0c95ec3c8f56bc930ab2cc25157630cfb": []},
+{
+"2092fb45f773db7ff0cfc090cc245594999e4999": []},
+{
+"95ae233e25f8521b8b4cc3d02e424501f77b514b": [
+{
+    "line_num": 92,
+    "line_str": "AsyncServiceInterface* master_service_;",
+    "file_path": "tensorflow/core/distributed_runtime/rpc/grpc_server_lib.h",
+    "previous_commits": [
+        [
+            "4cec6830bc0aaed6cc089c06c437eae1f240758b",
+            92,
+            "AsyncServiceInterface* master_service_;"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "AsyncServiceInterface* worker_service_;",
+    "file_path": "tensorflow/core/distributed_runtime/rpc/grpc_server_lib.h",
+    "previous_commits": [
+        [
+            "4cec6830bc0aaed6cc089c06c437eae1f240758b",
+            97,
+            "AsyncServiceInterface* worker_service_;"
+        ]
+    ]
+}
+]
+},{
+"867227c1317d05ab1b6e5c2341212ed5741da049": [
+{
+    "line_num": 20,
+    "line_str": "void ConcatGPU(const Eigen::GpuDevice& d,",
+    "file_path": "tensorflow/core/kernels/concat_op.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            20,
+            "void ConcatGPU(const Eigen::GpuDevice& d,"
+        ]
+    ]
+},
+{
+    "line_num": 23,
+    "line_str": "typename TTypes<T, 2>::Matrix* output);",
+    "file_path": "tensorflow/core/kernels/concat_op.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            23,
+            "typename TTypes<T, 2>::Matrix* output);"
+        ]
+    ]
+},
+{
+    "line_num": 22,
+    "line_str": "std::unique_ptr<typename TTypes<T, 2>::ConstMatrix>>& inputs,",
+    "file_path": "tensorflow/core/kernels/concat_op.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            22,
+            "std::unique_ptr<typename TTypes<T, 2>::ConstMatrix>>& inputs,"
+        ]
+    ]
+},
+{
+    "line_num": 21,
+    "line_str": "const std::vector<",
+    "file_path": "tensorflow/core/kernels/concat_op.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            21,
+            "const std::vector<"
+        ]
+    ]
+}
+]
+},{
+"6047c6977dbc30f018b8b3ea0486ca907901dabb": []},
+{
+"f4686d27a705bd547b828693462714d31bfd21ce": []},
+{
+"8fce27bc797582c573c232b9b9328cef4c642048": [
+{
+    "line_num": 60,
+    "line_str": "const int32 missing = input.NumElements() / product;",
+    "file_path": "tensorflow/core/kernels/reshape_op.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            60,
+            "const int32 missing = input.NumElements() / product;"
+        ]
+    ]
+},
+{
+    "line_num": 34,
+    "line_str": "int32 product = 1;",
+    "file_path": "tensorflow/core/kernels/reshape_op.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            34,
+            "int32 product = 1;"
+        ]
+    ]
+}
+]
+},{
+"4be49cce22726281a90851d12c99bfdbbeb2739c": [
+{
+    "line_num": 125,
+    "line_str": "sts.AppendToString(&key_value.second);",
+    "file_path": "tensorflow/core/util/tensor_slice_writer.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            125,
+            "sts.AppendToString(&key_value.second);"
+        ]
+    ]
+}
+]
+},{
+"3d854a744d1236944eb0ecdc172b1825ace565e1": []},
+{
+"f7837905c0a24b18841198863a64e8a878c53b44": []},
+{
+"6605938c280590ee981470abe87386396cf0e438": [
+{
+    "line_num": 196,
+    "line_str": "llvm::Value* source_address);",
+    "file_path": "tensorflow/compiler/xla/service/gpu/ir_emitter.h",
+    "previous_commits": [
+        [
+            "1e67c90e2caceeff82d09793d1ef5fa0300d219b",
+            196,
+            "llvm::Value* source_address);"
+        ]
+    ]
+},
+{
+    "line_num": 195,
+    "line_str": "llvm::Value* output_address,",
+    "file_path": "tensorflow/compiler/xla/service/gpu/ir_emitter.h",
+    "previous_commits": [
+        [
+            "1e67c90e2caceeff82d09793d1ef5fa0300d219b",
+            195,
+            "llvm::Value* output_address,"
+        ]
+    ]
+},
+{
+    "line_num": 194,
+    "line_str": "bool MaybeEmitSpecialAtomicOperation(const HloComputation& computation,",
+    "file_path": "tensorflow/compiler/xla/service/gpu/ir_emitter.h",
+    "previous_commits": [
+        [
+            "1e67c90e2caceeff82d09793d1ef5fa0300d219b",
+            194,
+            "bool MaybeEmitSpecialAtomicOperation(const HloComputation& computation,"
+        ]
+    ]
+}
+]
+},{
+"7ebe79f21d5f64f0b25c0b75d607f3cb00bb2c45": []},
+{
+"64c4e8f6c1f2676fbd79b9a88a634424176d7101": [
+{
+    "line_num": 110,
+    "line_str": "void ReturnSubStream(Stream *sub_stream);",
+    "file_path": "tensorflow/stream_executor/stream.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            110,
+            "void ReturnSubStream(Stream *sub_stream);"
+        ]
+    ]
+},
+{
+    "line_num": 1134,
+    "line_str": "bool BlockHostUntilDone();",
+    "file_path": "tensorflow/stream_executor/stream.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            1134,
+            "bool BlockHostUntilDone();"
+        ]
+    ]
+},
+{
+    "line_num": 1197,
+    "line_str": "void CheckError(bool operation_retcode) {",
+    "file_path": "tensorflow/stream_executor/stream.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            1197,
+            "void CheckError(bool operation_retcode) {"
+        ]
+    ]
+},
+{
+    "line_num": 106,
+    "line_str": "Stream *GetOrCreateSubStream();",
+    "file_path": "tensorflow/stream_executor/stream.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            106,
+            "Stream *GetOrCreateSubStream();"
+        ]
+    ]
+},
+{
+    "line_num": 1190,
+    "line_str": "bool InErrorState() const {",
+    "file_path": "tensorflow/stream_executor/stream.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            1190,
+            "bool InErrorState() const {"
+        ]
+    ]
+},
+{
+    "line_num": 91,
+    "line_str": "Stream &Init();",
+    "file_path": "tensorflow/stream_executor/stream.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            91,
+            "Stream &Init();"
+        ]
+    ]
+},
+{
+    "line_num": 422,
+    "line_str": "bool BlockHostUntilDone(Stream *stream);",
+    "file_path": "tensorflow/stream_executor/stream_executor_pimpl.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            422,
+            "bool BlockHostUntilDone(Stream *stream);"
+        ]
+    ]
+}
+]
+},{
+"c231d2115d5536873fa1f3d93ecaf3b1701c158f": []},
+{
+"1c4810141e71289d71bfd94a74434bd09ee6b20f": []},
+{
+"75350d385533b5aae9c33fc52ca90d359db6cc9d": []},
+{
+"4a423d13c6814ede1941e35c7cdcdc21ca13e8ef": []},
+{
+"d8af56e3b4cd0ac5096e32c3eee2d2cfb4d4137d": []},
+{
+"c746ce85d64f9eb9a922f31a4bd590c9dc8d4ad5": []},
+{
+"2f8d3387c3b27cd77509efb69732c336479e014c": []},
+{
+"07d78ddeafe41bc0363ac92efd7ca8ea60478989": []},
+{
+"b1c095a28a7aa9bbee4af4d9a7e9d0c60567765b": []},
+{
+"ce2f89c8bfdbef373c1b1ff9a1c6818f6bf462f8": []},
+{
+"9aad24f89ee9fbaa31f36087ec5fc527d7b728b6": []},
+{
+"727d6270f9d16b4f60ac35039abb161bd037812d": []},
+{
+"14ea6d5a6a78664071eff0f00593e8eff3b18b1d": [
+{
+    "line_num": 168,
+    "line_str": "const int64 num_units = in_x.dim_size(0);",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "b06bc257f65539371f10121344e8d7317eed647b",
+            168,
+            "const int64 num_units = in_x.dim_size(0);"
+        ]
+    ]
+},
+{
+    "line_num": 230,
+    "line_str": "});",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            230,
+            "});"
+        ]
+    ]
+},
+{
+    "line_num": 229,
+    "line_str": "start, limit);",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            229,
+            "start, limit);"
+        ]
+    ]
+},
+{
+    "line_num": 228,
+    "line_str": "ParallelMatMulKernel::Run(context, in_x, in_y, adj_x, adj_y, out,",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            228,
+            "ParallelMatMulKernel::Run(context, in_x, in_y, adj_x, adj_y, out,"
+        ]
+    ]
+},
+{
+    "line_num": 227,
+    "line_str": "[context, &in_x, &in_y, adj_x, adj_y, out](int start, int limit) {",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            227,
+            "[context, &in_x, &in_y, adj_x, adj_y, out](int start, int limit) {"
+        ]
+    ]
+},
+{
+    "line_num": 448,
+    "line_str": "0, num_units);",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op_impl.h",
+    "previous_commits": [
+        [
+            "1b5235fd897f7ea5cffc715300f67b4dc852fa27",
+            448,
+            "0, num_units);"
+        ]
+    ]
+},
+{
+    "line_num": 225,
+    "line_str": "Shard(std::max(1, worker_threads.num_threads - 1), worker_threads.workers,",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            225,
+            "Shard(std::max(1, worker_threads.num_threads - 1), worker_threads.workers,"
+        ]
+    ]
+},
+{
+    "line_num": 446,
+    "line_str": "const int64 num_units = in_x.dim_size(0);",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op_impl.h",
+    "previous_commits": [
+        [
+            "1b5235fd897f7ea5cffc715300f67b4dc852fa27",
+            446,
+            "const int64 num_units = in_x.dim_size(0);"
+        ]
+    ]
+},
+{
+    "line_num": 226,
+    "line_str": "num_units, cost_per_unit,",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            226,
+            "num_units, cost_per_unit,"
+        ]
+    ]
+},
+{
+    "line_num": 220,
+    "line_str": "} else if (min_dim > 1 && worker_threads.num_threads > num_units) {",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            220,
+            "} else if (min_dim > 1 && worker_threads.num_threads > num_units) {"
+        ]
+    ]
+},
+{
+    "line_num": 219,
+    "line_str": "conjugate_result = adj_x;",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            219,
+            "conjugate_result = adj_x;"
+        ]
+    ]
+},
+{
+    "line_num": 218,
+    "line_str": "num_units);",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            218,
+            "num_units);"
+        ]
+    ]
+},
+{
+    "line_num": 213,
+    "line_str": "(num_units == 1 || cost_per_unit > kMaxCostOuterParallelism)) {",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            213,
+            "(num_units == 1 || cost_per_unit > kMaxCostOuterParallelism)) {"
+        ]
+    ]
+},
+{
+    "line_num": 212,
+    "line_str": "if (min_dim > 1 &&",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            212,
+            "if (min_dim > 1 &&"
+        ]
+    ]
+},
+{
+    "line_num": 209,
+    "line_str": "out->dim_size(2));",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            209,
+            "out->dim_size(2));"
+        ]
+    ]
+},
+{
+    "line_num": 208,
+    "line_str": "const int64 min_dim = std::min(std::min(in_x.dim_size(1), in_x.dim_size(2)),",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            208,
+            "const int64 min_dim = std::min(std::min(in_x.dim_size(1), in_x.dim_size(2)),"
+        ]
+    ]
+},
+{
+    "line_num": 174,
+    "line_str": "const int64 kMaxCostOuterParallelism = 128 * 256 * 256;  // heuristic.",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "b06bc257f65539371f10121344e8d7317eed647b",
+            174,
+            "const int64 kMaxCostOuterParallelism = 128 * 256 * 256;  // heuristic."
+        ]
+    ]
+},
+{
+    "line_num": 235,
+    "line_str": "Shard(worker_threads.num_threads, worker_threads.workers, num_units,",
+    "file_path": "tensorflow/core/kernels/batch_matmul_op.cc",
+    "previous_commits": [
+        [
+            "e5ecc53c382be1a0e958029cc1f96fc6e57ab97c",
+            235,
+            "Shard(worker_threads.num_threads, worker_threads.workers, num_units,"
+        ]
+    ]
+}
+]
+},{
+"3a38f48a32f1190520b3647d99752c1d805ffb42": []},
+{
+"639661f1a7ddb8c82898d0b4247bd1892f03c7ae": [
+{
+    "line_num": 265,
+    "line_str": "static std::unordered_map<string, std::shared_ptr<DebugGrpcChannel>>*",
+    "file_path": "tensorflow/core/debug/debug_io_utils.h",
+    "previous_commits": [
+        [
+            "ecb5266e4791639781e4789a91cca8d3e00c4da7",
+            265,
+            "static std::unordered_map<string, std::shared_ptr<DebugGrpcChannel>>*"
+        ],
+        [
+            "ef2a926ec05dfd337d84279aafa58b22f0f36123",
+            173,
+            "static std::unordered_map<string, std::shared_ptr<DebugGrpcChannel>>"
+        ]
+    ]
+}
+]
+},{
+"00c865566f8e2bef09a2e738c6f72395aa68cfb0": []},
+{
+"eebcc861ac0e720bfccf728a98036cceaae60841": []},
+{
+"c1f69be22e151e2d051f41fccf436767eee4a26a": []},
+{
+"a55f2481ac4e657b73acd606dbc7f85545ef3b2f": []},
+{
+"3926a3aca125c42987adc602a5cb006d97b0261e": []},
+{
+"525b0f05839779e40d0ca9cc2967a3886b6a0f4d": []},
+{
+"f5fcd1fdcf896f46aed03c7e61525b48b75d1acc": []},
+{
+"414470329b203158a7ac670e99d73e7d04dbd724": [
+{
+    "line_num": 170,
+    "line_str": "stream_pools_;",
+    "file_path": "tensorflow/compiler/xla/service/backend.h",
+    "previous_commits": [
+        [
+            "61197393ab39929e945e9adf1378659a5c2bbab1",
+            170,
+            "stream_pools_;"
+        ]
+    ]
+}
+]
+},{
+"01967e30a4fa3003e917973dbfa04016c7f0b69a": []},
+{
+"ef2f8891ad409e41f4f9b8e9cfd86b519adb6da6": []},
+{
+"841d3dbf2be11fc34f1be3bbabe8443b98e60528": []},
+{
+"36a706d97af7ad6317395e2a3cba5ab5f1cd49a7": []},
+{
+"ca170f34d9174d6981850855190a398393aa921e": []},
+{
+"73394f4c06c19265e44a65728c6cf25b0fab25f9": []},
+{
+"9560e4163c256fc828c2047c2435ae0ef32f44f9": []},
+{
+"1092bfd98c1533a8f04cdc4178d1dea15137599e": []},
+{
+"57151fe77addf768e0cf6555f0570c52a6356e89": []},
+{
+"11951fbad22f3ccfa33d165a65d1dd2fd1b238ba": []},
+{
+"26460c8cef9028ad592f350388782c6f58679ee1": []},
+{
+"c84a2100085cc32b280d54f3d1bb7e3c9e29bacd": []},
+{
+"abd3190d329385776e92baaaaf605d3371010486": [
+{
+    "line_num": 38,
+    "line_str": "class MasterSession {",
+    "file_path": "tensorflow/core/distributed_runtime/master_session.h",
+    "previous_commits": [
+        [
+            "4cb0e926f86d5b0611cecf59e05a52d2da4f4e60",
+            38,
+            "class MasterSession {"
+        ],
+        [
+            "00986d48bb646daab659503ad3a713919865f32d",
+            27,
+            "class MasterSessionInterface;"
+        ]
+    ]
+}
+]
+},{
+"a1f2e1ebe0b371714e164addd79e651b1786c5cd": []},
+{
+"f137144bd761bb33d542db4a26055270bc6ea577": []},
+{
+"e3209bd34e12238f6993f104ef55d2aef618fe1a": []},
+{
+"fd05b5ebc56316eb6ac9fcb74234979fee2fc5f9": [
+{
+    "line_num": 51,
+    "line_str": "Index operator()(const Device& d, const Index slice_size,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            51,
+            "Index operator()(const Device& d, const Index slice_size,"
+        ]
+    ]
+},
+{
+    "line_num": 56,
+    "line_str": "typename TTypes<T, IXDIM + 1>::Tensor Toutput);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            56,
+            "typename TTypes<T, IXDIM + 1>::Tensor Toutput);"
+        ]
+    ]
+},
+{
+    "line_num": 55,
+    "line_str": "typename TTypes<T, 2>::ConstTensor Tupdates,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            55,
+            "typename TTypes<T, 2>::ConstTensor Tupdates,"
+        ]
+    ]
+},
+{
+    "line_num": 54,
+    "line_str": "typename TTypes<Index, 2>::ConstTensor Tindices,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            54,
+            "typename TTypes<Index, 2>::ConstTensor Tindices,"
+        ]
+    ]
+},
+{
+    "line_num": 53,
+    "line_str": "typename TTypes<T, IXDIM + 1>::Tensor Tparams,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            53,
+            "typename TTypes<T, IXDIM + 1>::Tensor Tparams,"
+        ]
+    ]
+},
+{
+    "line_num": 52,
+    "line_str": "typename TTypes<Index>::Scalar Tscratch,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            52,
+            "typename TTypes<Index>::Scalar Tscratch,"
+        ]
+    ]
+},
+{
+    "line_num": 159,
+    "line_str": "typename TTypes<Index>::Scalar Tscratch,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            159,
+            "typename TTypes<Index>::Scalar Tscratch,"
+        ]
+    ]
+},
+{
+    "line_num": 126,
+    "line_str": "auto loc = loc_array[0];",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            126,
+            "auto loc = loc_array[0];"
+        ]
+    ]
+},
+{
+    "line_num": 209,
+    "line_str": "REGISTER_SCATTER_ND_INDEX(type, scatter_nd_op::UpdateOp::MUL); \\",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            209,
+            "REGISTER_SCATTER_ND_INDEX(type, scatter_nd_op::UpdateOp::MUL); \\"
+        ]
+    ]
+},
+{
+    "line_num": 176,
+    "line_str": "generator::ScatterNdSliceGenerator<T, Index, op, IXDIM> generator(",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            176,
+            "generator::ScatterNdSliceGenerator<T, Index, op, IXDIM> generator("
+        ]
+    ]
+},
+{
+    "line_num": 143,
+    "line_str": "const Index slice_size_;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            143,
+            "const Index slice_size_;"
+        ]
+    ]
+},
+{
+    "line_num": 110,
+    "line_str": "error_loc_(error_loc) {}",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            110,
+            "error_loc_(error_loc) {}"
+        ]
+    ]
+},
+{
+    "line_num": 193,
+    "line_str": "typename TTypes<Index>::Scalar Tscratch,                               \\",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            193,
+            "typename TTypes<Index>::Scalar Tscratch,                               \\"
+        ]
+    ]
+},
+{
+    "line_num": 160,
+    "line_str": "typename TTypes<T, IXDIM + 1>::Tensor Tparams,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            160,
+            "typename TTypes<T, IXDIM + 1>::Tensor Tparams,"
+        ]
+    ]
+},
+{
+    "line_num": 127,
+    "line_str": "Eigen::array<Eigen::DenseIndex, IXDIM + 1> ix_params;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            127,
+            "Eigen::array<Eigen::DenseIndex, IXDIM + 1> ix_params;"
+        ]
+    ]
+},
+{
+    "line_num": 210,
+    "line_str": "REGISTER_SCATTER_ND_INDEX(type, scatter_nd_op::UpdateOp::DIV);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            210,
+            "REGISTER_SCATTER_ND_INDEX(type, scatter_nd_op::UpdateOp::DIV);"
+        ]
+    ]
+},
+{
+    "line_num": 177,
+    "line_str": "slice_size, Tparams, Tindices, Tupdates, Toutput, &error_loc);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            177,
+            "slice_size, Tparams, Tindices, Tupdates, Toutput, &error_loc);"
+        ]
+    ]
+},
+{
+    "line_num": 144,
+    "line_str": "mutable typename TTypes<T, IXDIM + 1>::Tensor Tparams_;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            144,
+            "mutable typename TTypes<T, IXDIM + 1>::Tensor Tparams_;"
+        ]
+    ]
+},
+{
+    "line_num": 111,
+    "line_str": "",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            111,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 78,
+    "line_str": "template <typename T, typename Index>",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            78,
+            "template <typename T, typename Index>"
+        ]
+    ]
+},
+{
+    "line_num": 45,
+    "line_str": "namespace generator {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            45,
+            "namespace generator {"
+        ]
+    ]
+},
+{
+    "line_num": 194,
+    "line_str": "typename TTypes<T, CPU_PROVIDED_IXDIM + 1>::Tensor Tparams,            \\",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            194,
+            "typename TTypes<T, CPU_PROVIDED_IXDIM + 1>::Tensor Tparams,            \\"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "typename TTypes<Index, 2>::ConstTensor Tindices,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            161,
+            "typename TTypes<Index, 2>::ConstTensor Tindices,"
+        ]
+    ]
+},
+{
+    "line_num": 128,
+    "line_str": "Eigen::array<Eigen::DenseIndex, 2> ix_updates;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            128,
+            "Eigen::array<Eigen::DenseIndex, 2> ix_updates;"
+        ]
+    ]
+},
+{
+    "line_num": 62,
+    "line_str": "template <typename T, typename Index>",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            62,
+            "template <typename T, typename Index>"
+        ]
+    ]
+},
+{
+    "line_num": 178,
+    "line_str": "Tscratch.device(d) = Tscratch.reshape(reshape_dims)",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            178,
+            "Tscratch.device(d) = Tscratch.reshape(reshape_dims)"
+        ]
+    ]
+},
+{
+    "line_num": 145,
+    "line_str": "const typename TTypes<Index, 2>::ConstTensor Tindices_;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            145,
+            "const typename TTypes<Index, 2>::ConstTensor Tindices_;"
+        ]
+    ]
+},
+{
+    "line_num": 112,
+    "line_str": "EIGEN_DEVICE_FUNC bool GenerateIndices(",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            112,
+            "EIGEN_DEVICE_FUNC bool GenerateIndices("
+        ]
+    ]
+},
+{
+    "line_num": 79,
+    "line_str": "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::MUL> {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            79,
+            "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::MUL> {"
+        ]
+    ]
+},
+{
+    "line_num": 162,
+    "line_str": "typename TTypes<T, 2>::ConstTensor Tupdates,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            162,
+            "typename TTypes<T, 2>::ConstTensor Tupdates,"
+        ]
+    ]
+},
+{
+    "line_num": 129,
+    "line_str": "ix_updates[0] = loc;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            129,
+            "ix_updates[0] = loc;"
+        ]
+    ]
+},
+{
+    "line_num": 96,
+    "line_str": "template <typename T, typename Index, scatter_nd_op::UpdateOp op, int IXDIM>",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            96,
+            "template <typename T, typename Index, scatter_nd_op::UpdateOp op, int IXDIM>"
+        ]
+    ]
+},
+{
+    "line_num": 63,
+    "line_str": "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::ADD> {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            63,
+            "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::ADD> {"
+        ]
+    ]
+},
+{
+    "line_num": 179,
+    "line_str": ".broadcast(broadcast_dims)",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            179,
+            ".broadcast(broadcast_dims)"
+        ]
+    ]
+},
+{
+    "line_num": 146,
+    "line_str": "const typename TTypes<T, 2>::ConstTensor Tupdates_;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            146,
+            "const typename TTypes<T, 2>::ConstTensor Tupdates_;"
+        ]
+    ]
+},
+{
+    "line_num": 113,
+    "line_str": "const Index loc, Eigen::array<Eigen::DenseIndex, IXDIM + 1>* ix) const {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            113,
+            "const Index loc, Eigen::array<Eigen::DenseIndex, IXDIM + 1>* ix) const {"
+        ]
+    ]
+},
+{
+    "line_num": 47,
+    "line_str": "template <typename T, typename Index, scatter_nd_op::UpdateOp op>",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            47,
+            "template <typename T, typename Index, scatter_nd_op::UpdateOp op>"
+        ]
+    ]
+},
+{
+    "line_num": 163,
+    "line_str": "typename TTypes<T, IXDIM + 1>::Tensor Toutput) {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            163,
+            "typename TTypes<T, IXDIM + 1>::Tensor Toutput) {"
+        ]
+    ]
+},
+{
+    "line_num": 130,
+    "line_str": "ix_updates[1] = 0;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            130,
+            "ix_updates[1] = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "class ScatterNdSliceGenerator {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            97,
+            "class ScatterNdSliceGenerator {"
+        ]
+    ]
+},
+{
+    "line_num": 180,
+    "line_str": ".generate(generator)",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            180,
+            ".generate(generator)"
+        ]
+    ]
+},
+{
+    "line_num": 147,
+    "line_str": "mutable typename TTypes<T, IXDIM + 1>::Tensor Toutput_;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            147,
+            "mutable typename TTypes<T, IXDIM + 1>::Tensor Toutput_;"
+        ]
+    ]
+},
+{
+    "line_num": 114,
+    "line_str": "(*ix)[IXDIM] = 0;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            114,
+            "(*ix)[IXDIM] = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 81,
+    "line_str": "static void Update(T* input, const T* updates, T* output, Index slice_size) {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            81,
+            "static void Update(T* input, const T* updates, T* output, Index slice_size) {"
+        ]
+    ]
+},
+{
+    "line_num": 197,
+    "line_str": "typename TTypes<T, CPU_PROVIDED_IXDIM + 1>::Tensor Toutput)",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            197,
+            "typename TTypes<T, CPU_PROVIDED_IXDIM + 1>::Tensor Toutput)"
+        ]
+    ]
+},
+{
+    "line_num": 164,
+    "line_str": "std::atomic<Index> error_loc(-1);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            164,
+            "std::atomic<Index> error_loc(-1);"
+        ]
+    ]
+},
+{
+    "line_num": 131,
+    "line_str": "const bool out_of_bounds = GenerateIndices(loc, &ix_params);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            131,
+            "const bool out_of_bounds = GenerateIndices(loc, &ix_params);"
+        ]
+    ]
+},
+{
+    "line_num": 98,
+    "line_str": "public:",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            98,
+            "public:"
+        ]
+    ]
+},
+{
+    "line_num": 65,
+    "line_str": "static void Update(T* input, const T* updates, T* output, Index slice_size) {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            65,
+            "static void Update(T* input, const T* updates, T* output, Index slice_size) {"
+        ]
+    ]
+},
+{
+    "line_num": 181,
+    "line_str": ".sum();",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            181,
+            ".sum();"
+        ]
+    ]
+},
+{
+    "line_num": 148,
+    "line_str": "std::atomic<Index>* error_loc_;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            148,
+            "std::atomic<Index>* error_loc_;"
+        ]
+    ]
+},
+{
+    "line_num": 115,
+    "line_str": "bool out_of_bounds = false;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            115,
+            "bool out_of_bounds = false;"
+        ]
+    ]
+},
+{
+    "line_num": 82,
+    "line_str": "std::transform(input, input + slice_size, updates, output,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            82,
+            "std::transform(input, input + slice_size, updates, output,"
+        ]
+    ]
+},
+{
+    "line_num": 132,
+    "line_str": "if (TF_PREDICT_FALSE(out_of_bounds)) {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            132,
+            "if (TF_PREDICT_FALSE(out_of_bounds)) {"
+        ]
+    ]
+},
+{
+    "line_num": 99,
+    "line_str": "EIGEN_DEVICE_FUNC EIGEN_ALWAYS_INLINE ScatterNdSliceGenerator(",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            99,
+            "EIGEN_DEVICE_FUNC EIGEN_ALWAYS_INLINE ScatterNdSliceGenerator("
+        ]
+    ]
+},
+{
+    "line_num": 66,
+    "line_str": "std::transform(input, input + slice_size, updates, output, std::plus<T>());",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            66,
+            "std::transform(input, input + slice_size, updates, output, std::plus<T>());"
+        ]
+    ]
+},
+{
+    "line_num": 182,
+    "line_str": "",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            182,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 149,
+    "line_str": "};",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            149,
+            "};"
+        ]
+    ]
+},
+{
+    "line_num": 116,
+    "line_str": "for (int i = 0; i < IXDIM; ++i) {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            116,
+            "for (int i = 0; i < IXDIM; ++i) {"
+        ]
+    ]
+},
+{
+    "line_num": 83,
+    "line_str": "std::multiplies<T>());",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            83,
+            "std::multiplies<T>());"
+        ]
+    ]
+},
+{
+    "line_num": 50,
+    "line_str": "static void Update(T* input, const T* updates, T* output, Index slice_size);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            50,
+            "static void Update(T* input, const T* updates, T* output, Index slice_size);"
+        ]
+    ]
+},
+{
+    "line_num": 133,
+    "line_str": "error_loc_->store(loc);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            133,
+            "error_loc_->store(loc);"
+        ]
+    ]
+},
+{
+    "line_num": 100,
+    "line_str": "const Index slice_size, typename TTypes<T, IXDIM + 1>::Tensor Tparams,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            100,
+            "const Index slice_size, typename TTypes<T, IXDIM + 1>::Tensor Tparams,"
+        ]
+    ]
+},
+{
+    "line_num": 150,
+    "line_str": "",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            150,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 117,
+    "line_str": "const Index ix_i = internal::SubtleMustCopy(Tindices_(loc, i));",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            117,
+            "const Index ix_i = internal::SubtleMustCopy(Tindices_(loc, i));"
+        ]
+    ]
+},
+{
+    "line_num": 167,
+    "line_str": "#if !defined(EIGEN_HAS_INDEX_LIST)",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            167,
+            "#if !defined(EIGEN_HAS_INDEX_LIST)"
+        ]
+    ]
+},
+{
+    "line_num": 134,
+    "line_str": "} else {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            134,
+            "} else {"
+        ]
+    ]
+},
+{
+    "line_num": 101,
+    "line_str": "typename TTypes<Index, 2>::ConstTensor Tindices,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            101,
+            "typename TTypes<Index, 2>::ConstTensor Tindices,"
+        ]
+    ]
+},
+{
+    "line_num": 151,
+    "line_str": "}  // namespace generator",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            151,
+            "}  // namespace generator"
+        ]
+    ]
+},
+{
+    "line_num": 118,
+    "line_str": "(*ix)[i] = ix_i;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            118,
+            "(*ix)[i] = ix_i;"
+        ]
+    ]
+},
+{
+    "line_num": 168,
+    "line_str": "Eigen::Tensor<Eigen::DenseIndex, 1>::Dimensions reshape_dims{{ 1 }};",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            168,
+            "Eigen::Tensor<Eigen::DenseIndex, 1>::Dimensions reshape_dims{{ 1 }};"
+        ]
+    ]
+},
+{
+    "line_num": 135,
+    "line_str": "UpdateExecutor<T, Index, op>::Update(&Tparams_(ix_params),",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            135,
+            "UpdateExecutor<T, Index, op>::Update(&Tparams_(ix_params),"
+        ]
+    ]
+},
+{
+    "line_num": 102,
+    "line_str": "typename TTypes<T, 2>::ConstTensor Tupdates,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            102,
+            "typename TTypes<T, 2>::ConstTensor Tupdates,"
+        ]
+    ]
+},
+{
+    "line_num": 185,
+    "line_str": "return error_loc.load();",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            185,
+            "return error_loc.load();"
+        ]
+    ]
+},
+{
+    "line_num": 119,
+    "line_str": "out_of_bounds |= !FastBoundsCheck(ix_i, Tparams_.dimension(i));",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            119,
+            "out_of_bounds |= !FastBoundsCheck(ix_i, Tparams_.dimension(i));"
+        ]
+    ]
+},
+{
+    "line_num": 53,
+    "line_str": "template <typename T, typename Index>",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            53,
+            "template <typename T, typename Index>"
+        ]
+    ]
+},
+{
+    "line_num": 169,
+    "line_str": "Eigen::array<Eigen::DenseIndex, 1> broadcast_dims{{ batch_size }};",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            169,
+            "Eigen::array<Eigen::DenseIndex, 1> broadcast_dims{{ batch_size }};"
+        ]
+    ]
+},
+{
+    "line_num": 136,
+    "line_str": "&Tupdates_(ix_updates),",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            136,
+            "&Tupdates_(ix_updates),"
+        ]
+    ]
+},
+{
+    "line_num": 103,
+    "line_str": "typename TTypes<T, IXDIM + 1>::Tensor Toutput,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            103,
+            "typename TTypes<T, IXDIM + 1>::Tensor Toutput,"
+        ]
+    ]
+},
+{
+    "line_num": 70,
+    "line_str": "template <typename T, typename Index>",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            70,
+            "template <typename T, typename Index>"
+        ]
+    ]
+},
+{
+    "line_num": 120,
+    "line_str": "}",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            120,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 87,
+    "line_str": "template <typename T, typename Index>",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            87,
+            "template <typename T, typename Index>"
+        ]
+    ]
+},
+{
+    "line_num": 54,
+    "line_str": "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::ASSIGN> {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            54,
+            "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::ASSIGN> {"
+        ]
+    ]
+},
+{
+    "line_num": 170,
+    "line_str": "#else",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            170,
+            "#else"
+        ]
+    ]
+},
+{
+    "line_num": 137,
+    "line_str": "&Toutput_(ix_params), slice_size_);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            137,
+            "&Toutput_(ix_params), slice_size_);"
+        ]
+    ]
+},
+{
+    "line_num": 104,
+    "line_str": "std::atomic<Index>* error_loc)",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            104,
+            "std::atomic<Index>* error_loc)"
+        ]
+    ]
+},
+{
+    "line_num": 71,
+    "line_str": "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::SUB> {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            71,
+            "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::SUB> {"
+        ]
+    ]
+},
+{
+    "line_num": 121,
+    "line_str": "return out_of_bounds;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            121,
+            "return out_of_bounds;"
+        ]
+    ]
+},
+{
+    "line_num": 88,
+    "line_str": "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::DIV> {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            88,
+            "class UpdateExecutor<T, Index, scatter_nd_op::UpdateOp::DIV> {"
+        ]
+    ]
+},
+{
+    "line_num": 171,
+    "line_str": "Eigen::IndexList<Eigen::type2index<1> > reshape_dims;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            171,
+            "Eigen::IndexList<Eigen::type2index<1> > reshape_dims;"
+        ]
+    ]
+},
+{
+    "line_num": 138,
+    "line_str": "}",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            138,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 105,
+    "line_str": ": slice_size_(slice_size),",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            105,
+            ": slice_size_(slice_size),"
+        ]
+    ]
+},
+{
+    "line_num": 122,
+    "line_str": "}",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            122,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 56,
+    "line_str": "static void Update(T* /* unused */, const T* updates, T* output,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            56,
+            "static void Update(T* /* unused */, const T* updates, T* output,"
+        ]
+    ]
+},
+{
+    "line_num": 172,
+    "line_str": "Eigen::IndexList<Eigen::DenseIndex> broadcast_dims;",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            172,
+            "Eigen::IndexList<Eigen::DenseIndex> broadcast_dims;"
+        ]
+    ]
+},
+{
+    "line_num": 139,
+    "line_str": "return static_cast<int32>(0);  // Return something...",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            139,
+            "return static_cast<int32>(0);  // Return something..."
+        ]
+    ]
+},
+{
+    "line_num": 106,
+    "line_str": "Tparams_(Tparams),",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            106,
+            "Tparams_(Tparams),"
+        ]
+    ]
+},
+{
+    "line_num": 73,
+    "line_str": "static void Update(T* input, const T* updates, T* output, Index slice_size) {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            73,
+            "static void Update(T* input, const T* updates, T* output, Index slice_size) {"
+        ]
+    ]
+},
+{
+    "line_num": 156,
+    "line_str": "template <typename T, typename Index, scatter_nd_op::UpdateOp op, int IXDIM>",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            156,
+            "template <typename T, typename Index, scatter_nd_op::UpdateOp op, int IXDIM>"
+        ]
+    ]
+},
+{
+    "line_num": 123,
+    "line_str": "",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            123,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 90,
+    "line_str": "static void Update(T* input, const T* updates, T* output, Index slice_size) {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            90,
+            "static void Update(T* input, const T* updates, T* output, Index slice_size) {"
+        ]
+    ]
+},
+{
+    "line_num": 57,
+    "line_str": "Index slice_size) {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            57,
+            "Index slice_size) {"
+        ]
+    ]
+},
+{
+    "line_num": 173,
+    "line_str": "broadcast_dims.set(0, batch_size);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            173,
+            "broadcast_dims.set(0, batch_size);"
+        ]
+    ]
+},
+{
+    "line_num": 140,
+    "line_str": "}",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            140,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 107,
+    "line_str": "Tindices_(Tindices),",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            107,
+            "Tindices_(Tindices),"
+        ]
+    ]
+},
+{
+    "line_num": 74,
+    "line_str": "std::transform(input, input + slice_size, updates, output, std::minus<T>());",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            74,
+            "std::transform(input, input + slice_size, updates, output, std::minus<T>());"
+        ]
+    ]
+},
+{
+    "line_num": 157,
+    "line_str": "struct ScatterNdFunctor<CPUDevice, T, Index, op, IXDIM> {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            157,
+            "struct ScatterNdFunctor<CPUDevice, T, Index, op, IXDIM> {"
+        ]
+    ]
+},
+{
+    "line_num": 124,
+    "line_str": "EIGEN_DEVICE_FUNC EIGEN_ALWAYS_INLINE int32",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            124,
+            "EIGEN_DEVICE_FUNC EIGEN_ALWAYS_INLINE int32"
+        ]
+    ]
+},
+{
+    "line_num": 91,
+    "line_str": "std::transform(input, input + slice_size, updates, output,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            91,
+            "std::transform(input, input + slice_size, updates, output,"
+        ]
+    ]
+},
+{
+    "line_num": 58,
+    "line_str": "std::copy_n(updates, slice_size, output);",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            58,
+            "std::copy_n(updates, slice_size, output);"
+        ]
+    ]
+},
+{
+    "line_num": 174,
+    "line_str": "#endif",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            174,
+            "#endif"
+        ]
+    ]
+},
+{
+    "line_num": 141,
+    "line_str": "",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            141,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 108,
+    "line_str": "Tupdates_(Tupdates),",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            108,
+            "Tupdates_(Tupdates),"
+        ]
+    ]
+},
+{
+    "line_num": 158,
+    "line_str": "Index operator()(const CPUDevice& d, const Index slice_size,",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            158,
+            "Index operator()(const CPUDevice& d, const Index slice_size,"
+        ]
+    ]
+},
+{
+    "line_num": 125,
+    "line_str": "operator()(const Eigen::array<Eigen::DenseIndex, 1>& loc_array) const {",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            125,
+            "operator()(const Eigen::array<Eigen::DenseIndex, 1>& loc_array) const {"
+        ]
+    ]
+},
+{
+    "line_num": 92,
+    "line_str": "std::divides<T>());",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            92,
+            "std::divides<T>());"
+        ]
+    ]
+},
+{
+    "line_num": 208,
+    "line_str": "REGISTER_SCATTER_ND_INDEX(type, scatter_nd_op::UpdateOp::SUB); \\",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            208,
+            "REGISTER_SCATTER_ND_INDEX(type, scatter_nd_op::UpdateOp::SUB); \\"
+        ]
+    ]
+},
+{
+    "line_num": 175,
+    "line_str": "",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            175,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 142,
+    "line_str": "protected:",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            142,
+            "protected:"
+        ]
+    ]
+},
+{
+    "line_num": 109,
+    "line_str": "Toutput_(Toutput),",
+    "file_path": "tensorflow/core/kernels/scatter_nd_op_cpu_impl.h",
+    "previous_commits": [
+        [
+            "9a66842db8568e90bfef7c3c7836c052b776f17c",
+            109,
+            "Toutput_(Toutput),"
+        ]
+    ]
+}
+]
+},{
+"7231d01fcb2cd9ef9ffbfea03b724892c8a4026e": []},
+{
+"0f605abad3b30594416dc627860102e3382d6dea": [
+{
+    "line_num": 30,
+    "line_str": "explicit RandomAccessInputStream(RandomAccessFile* file);",
+    "file_path": "tensorflow/core/lib/io/random_inputstream.h",
+    "previous_commits": [
+        [
+            "a4bbacf14882f60525947c1b543b0ad250c793db",
+            30,
+            "explicit RandomAccessInputStream(RandomAccessFile* file);"
+        ]
+    ]
+}
+]
+},{
+"b3eb232e533c77ce537eab29e7f7732f1139ce9d": []},
+{
+"6c6f5f144c8a780edbc9cc44d957b3cda363ee86": []},
+{
+"8d5e12d957b63305fa6bd72e0bc3235821887c6a": []},
+{
+"bdda9fab81e63a73716bdc7f490d54f31600bd28": []},
+{
+"e6e06b2fc89d41556d159d1181a558f8f5352b87": []},
+{
+"91d65f6e5971302081a9348c4188a5031c30b021": []},
+{
+"cc40cd3b0a8b83f5ee071b7ee32c17b56815a89c": [
+{
+    "line_num": 119,
+    "line_str": "SaveData(data, sliced_shape.num_elements(), ss);",
+    "file_path": "tensorflow/core/util/tensor_slice_writer.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            119,
+            "SaveData(data, sliced_shape.num_elements(), ss);"
+        ]
+    ]
+},
+{
+    "line_num": 52,
+    "line_str": "static void SaveData(const T* data, int num_elements, SavedSlice* ss);",
+    "file_path": "tensorflow/core/util/tensor_slice_writer.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            52,
+            "static void SaveData(const T* data, int num_elements, SavedSlice* ss);"
+        ]
+    ]
+},
+{
+    "line_num": 48,
+    "line_str": "private:",
+    "file_path": "tensorflow/core/util/tensor_slice_writer.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            48,
+            "private:"
+        ]
+    ]
+},
+{
+    "line_num": 134,
+    "line_str": "SavedSlice* ss) {",
+    "file_path": "tensorflow/core/util/tensor_slice_writer.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            134,
+            "SavedSlice* ss) {"
+        ]
+    ]
+},
+{
+    "line_num": 133,
+    "line_str": "void TensorSliceWriter::SaveData(const T* data, int num_elements,",
+    "file_path": "tensorflow/core/util/tensor_slice_writer.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            133,
+            "void TensorSliceWriter::SaveData(const T* data, int num_elements,"
+        ]
+    ]
+}
+]
+},{
+"95386342480482271b7515e0e89aac0fcce167e1": []},
+{
+"7ea0c996910a24d6bdd3e080a151bdbc86685780": [
+{
+    "line_num": 85,
+    "line_str": "string handle_;",
+    "file_path": "tensorflow/core/distributed_runtime/rpc/grpc_session.h",
+    "previous_commits": [
+        [
+            "00986d48bb646daab659503ad3a713919865f32d",
+            85,
+            "string handle_;"
+        ]
+    ]
+}
+]
+},{
+"0a8ac4d0d977eb804099a65271572a8497af304e": [
+{
+    "line_num": 173,
+    "line_str": "rendez_->StartAbort(status);",
+    "file_path": "tensorflow/core/common_runtime/executor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            173,
+            "rendez_->StartAbort(status);"
+        ]
+    ]
+}
+]
+},{
+"7e572539f7b00d35dacfd5a11807fd302238f6a5": []},
+{
+"73d557cc88ee86834917088416e5ce8783d11798": [
+{
+    "line_num": 153,
+    "line_str": "return true;",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            153,
+            "return true;"
+        ]
+    ]
+},
+{
+    "line_num": 133,
+    "line_str": "bool bad_order = false;",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            133,
+            "bool bad_order = false;"
+        ]
+    ]
+},
+{
+    "line_num": 132,
+    "line_str": "bool different = false;",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            132,
+            "bool different = false;"
+        ]
+    ]
+},
+{
+    "line_num": 131,
+    "line_str": "int64 n) const {",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            131,
+            "int64 n) const {"
+        ]
+    ]
+},
+{
+    "line_num": 130,
+    "line_str": "inline bool IndexValid(const TTypes<int64>::ConstMatrix& ix_t,",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            130,
+            "inline bool IndexValid(const TTypes<int64>::ConstMatrix& ix_t,"
+        ]
+    ]
+},
+{
+    "line_num": 152,
+    "line_str": "if (bad_order) return false;   // Decreasing in order.",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            152,
+            "if (bad_order) return false;   // Decreasing in order."
+        ]
+    ]
+},
+{
+    "line_num": 64,
+    "line_str": "return true;",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            64,
+            "return true;"
+        ]
+    ]
+},
+{
+    "line_num": 61,
+    "line_str": "if (!IndexValid(ix_t, n)) return false;",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            61,
+            "if (!IndexValid(ix_t, n)) return false;"
+        ]
+    ]
+},
+{
+    "line_num": 57,
+    "line_str": "\"construction time or run ReorderInPlace\";",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            57,
+            "\"construction time or run ReorderInPlace\";"
+        ]
+    ]
+},
+{
+    "line_num": 56,
+    "line_str": "CHECK_GE(ord, 0) << \"Order was not provided.  Provide an order at \"",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            56,
+            "CHECK_GE(ord, 0) << \"Order was not provided.  Provide an order at \""
+        ]
+    ]
+},
+{
+    "line_num": 151,
+    "line_str": "if (!different) return false;  // The past two indices are identical...",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            151,
+            "if (!different) return false;  // The past two indices are identical..."
+        ]
+    ]
+},
+{
+    "line_num": 150,
+    "line_str": "if (!valid) return false;      // Out of bounds",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            150,
+            "if (!valid) return false;      // Out of bounds"
+        ]
+    ]
+},
+{
+    "line_num": 53,
+    "line_str": "bool IndicesValid() const {",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            53,
+            "bool IndicesValid() const {"
+        ]
+    ]
+},
+{
+    "line_num": 147,
+    "line_str": "if (!different && diff < 0) bad_order = true;",
+    "file_path": "tensorflow/core/util/sparse/sparse_tensor.h",
+    "previous_commits": [
+        [
+            "f41959ccb2d9d4c722fe8fc3351401d53bcf4900",
+            147,
+            "if (!different && diff < 0) bad_order = true;"
+        ]
+    ]
+}
+]
+},]
