@@ -1,29 +1,121 @@
 
 from fnmatch import fnmatch
+import string
 from numpy import diff
 from py import code
 from pydriller import ModificationType, GitRepository as PyDrillerGitRepo
 import os, json, re, subprocess, codecs
 
 user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
+
 this_project = os.getcwd()
 
 REG_CHANGED = re.compile(".*@@ -(\d+),(\d+) \+(\d+),(\d+) @@.*")
-REG_LOC = re.compile('\:(\d+)')
+REG_LOC_FLAWFINDER = re.compile('\:(\d+)')
+REG_RATS = re.compile('<vulnerability>')
+
+
+def decompose_detections(splitted_lines, detector_name):
+    super_temp = []
+    j = 0
+    indices = []
+    while j < len(splitted_lines):
+        if detector_name == 'flawfinder':
+            if REG_LOC_FLAWFINDER.search(splitted_lines[j]):
+                indices.append(j)
+            j += 1
+        if detector_name == 'rats':
+            if REG_RATS.search(splitted_lines[j]):
+                indices.append(j)
+            j += 1
+        if detector_name == 'cppcheck':
+            if REG_LOC_FLAWFINDER.search(splitted_lines[j]):
+                indices.append(j)
+            j += 1
+        if detector_name == 'infer':
+            if REG_LOC_FLAWFINDER.search(splitted_lines[j]):
+                indices.append(j)
+            j += 1
+
+    if len(indices) == 1:
+        for i, item in enumerate(splitted_lines):
+            if i != 0:
+                super_temp.append(item)
+        super_temp = [super_temp]
+    else:
+        i = 0
+        j = 1
+        while True:
+            temp = [] 
+            for row in range(indices[i], indices[j]):
+                temp.append(splitted_lines[row])
+            super_temp.append(temp)
+            if j == len(indices)-1:
+                temp = [] 
+                for row in range(indices[j], len(splitted_lines)):
+                    temp.append(splitted_lines[row])
+                super_temp.append(temp)
+                break
+            i+= 1
+            j+= 1
+
+    return super_temp
+
+
+def get_patches(splitted_lines):
+    change_info = {}
+    i = 0
+    for line in splitted_lines:
+        if REG_CHANGED.match(line):
+            i += 1
+            addStart = int(REG_CHANGED.search(line).group(1))
+            addedLines = int(REG_CHANGED.search(line).group(2))
+            deletedStart = int(REG_CHANGED.search(line).group(3))
+            deletedLines = int(REG_CHANGED.search(line).group(4))
+                        
+            start = deletedStart
+            if(start == 0):
+                start += 1
+    
+            end = addStart+addedLines-1
+            change_info[i] = [deletedStart, deletedStart+deletedLines]
+
+    super_temp = []
+    j = 0
+    indices = []
+    while j < len(splitted_lines):
+        if re.findall(r'(@@)',splitted_lines[j]):
+            indices.append(j)
+        j += 1
+
+    if len(indices) == 1:
+        for i, item in enumerate(splitted_lines):
+            if i != 0:
+                super_temp.append(item)
+        super_temp = [super_temp]
+    else:
+        i = 0
+        j = 1
+        while True:
+            temp = [] 
+            for row in range(indices[i]+1, indices[j]):
+                temp.append(splitted_lines[row])
+            super_temp.append(temp)
+            if j == len(indices)-1:
+                temp = [] 
+                for row in range(indices[j]+1, len(splitted_lines)):
+                    temp.append(splitted_lines[row])
+                super_temp.append(temp)
+                break
+            i+= 1
+            j+= 1
+    return super_temp, change_info
+
 
 def get_diff_header(diff):
     code_lines = diff.split('\n')
-    if code_lines[0]:
-        for line in code_lines:
-            try:
-                window = [int(REG_CHANGED.search(line).group(3)), int(REG_CHANGED.search(line).group(3))+int(REG_CHANGED.search(line).group(4))]
-                break
-            except Exception as e:
-                # print('There is no diff content for this file.')
-                return
-        return window
-    else:
-        return 'None'
+    [super_temp, change_info] = get_patches(code_lines)
+    return change_info
 
 
 def get_fix_file_names(commits):
@@ -61,25 +153,52 @@ def get_prev_file_names(repository_path, items):
                             f_names[modification.old_path] = diff_split
     return f_names
 
-def parse_output(output):
+def parse_rats(output):
+    parsed_ouput = {}
+    if re.findall(r'(\<vulnerability\>)', output):
+        x = re.findall(r'<vulnerability.*>((.|\n)*?)<\/vulnerability>', output)
+        x = list(x[0])
+        del x[-1]
+        for detection in x:
+            detection_split = detection.split('\n')
+            for line in detection_split:
+                if re.findall(r'<line.*>((.|\n)*?)<\/line>', line):
+                    y = int(re.findall(r'<line.*>((.|\n)*?)<\/line>', line)[0][0])
+                    parsed_ouput[y] = detection
+        return parsed_ouput
+    else:
+        return 'not detected'
+
+def parse_flawfinder(output):
+    parsed_ouput = {}
     if re.findall(r'(No hits found)', output):
         return 'not detected'
     if re.findall(r'(Hits =)', output):
-        # if re.findall(r'(\(CWE-[0-9]+\))', output):
-        #     match_ = re.findall(r'(\(CWE-[0-9]+\))', output)
-        #     if match_[0] == actual_cwe_id:
-        #         return 'true detected'
-        #     else:
-        #         return 'detected'
-        return 'detected'
+        detections = decompose_detections(output.split('\n'), 'flawfinder')
+        for detection in detections:
+            for line in detection:
+                # extra looping here, should be resolved
+                if REG_LOC_FLAWFINDER.search(line):
+                    x = int(REG_LOC_FLAWFINDER.search(line).group(1))
+                    break
+            parsed_ouput[x] = detection 
+    return parsed_ouput
 
-
-def run(test_file):
-    command_ = 'flawfinder --context '
+def run(test_file, detector_name):
+    if detector_name == 'flawfinder':
+        command_ = 'flawfinder --context '
+    if detector_name == 'rats':
+        command_ = 'rats --quiet --xml -w 3 '
+    if detector_name == 'cppcheck':
+        command_ = 'cppcheck --xml '
+    if detector_name == 'infer':
+        command_ = 'infer analyze -gcc -c '
     output = subprocess.getoutput(command_+test_file)
-    return [parse_output(output), output]
+    return output
 
 def diff_based_matching(changed_lines, current_commit, file):
+
+    detector_name = 'rats'
 
     for f in current_commit.modifications:
         if f.filename == os.path.basename(file['file_path']):
@@ -89,15 +208,18 @@ def diff_based_matching(changed_lines, current_commit, file):
     save_source_code(vul_file_object.source_code, 'vul', vul_file_object.filename)
 
     if os.path.isfile(os.path.join(this_project, 'vul_'+vul_file_object.filename)):
-        [res, output] = run(os.path.join(this_project, 'vul_'+vul_file_object.filename))
-        if res == 'detected':
-            g = REG_LOC.search(output).group(1)
-            if changed_lines[0] <= int(g) <= changed_lines[1]:
-                print('Full Match')
-            if int(g) <= changed_lines[0] or int(g) >= changed_lines[1]:
-                print('Partial Match')
-            else:
-                print('Mismatch')
+        output = run(os.path.join(this_project, 'vul_'+vul_file_object.filename), detector_name)
+        # res = parse_flawfinder(output)
+        # res = parse_rats(output)
+        if not isinstance(res, str):
+            for line in output_split:
+                g = REG_LOC_FLAWFINDER.search(line).group(1)
+                if changed_lines[0] <= int(g) <= changed_lines[1]:
+                    print('Full Match')
+                if int(g) <= changed_lines[0] or int(g) >= changed_lines[1]:
+                    print('Partial Match')
+                else:
+                    print('Mismatch')
         else:
             print(res)
 
@@ -110,34 +232,46 @@ def save_source_code(source_code, flag, filename):
             f_method.write("%s\n" % line)
         f_method.close()
 
-def fixed_warning_base_matching(fix_commit, vul_commit, common_file):
+def fixed_warning_base_matching(fix_commit, vul_commit, file):
 
-    for f in fix_commit.modifications:
-        if f.filename == os.path.basename(list(common_file)[0]):
-            fixed_file_object = f
+    for j in fix_commit.modifications:
+        if j.filename == os.path.basename(file['file_path']):
+            fixed_file_object = j
+            break
+
+    for i in vul_commit.modifications:
+        if j.filename == os.path.basename(file['file_path']):
+            vul_file_object = j
             break
 
     save_source_code(fixed_file_object.source_code, 'fix', fixed_file_object.filename)
-    save_source_code(vul_commit.modifications[0].source_code, 'vul', vul_commit.modifications[0].filename)     
+    save_source_code(vul_file_object.source_code, 'vul', vul_file_object.filename)     
 
     if os.path.isfile(this_project+'/fix_'+fixed_file_object.filename):
         [res1, output1] = run(this_project+'/fix_'+fixed_file_object.filename)
+        # print("The detectors' warning on fixed file is {}".format(res1))
 
-    if os.path.isfile(this_project+'/fix_'+vul_commit.modifications[0].filename):
-        [res2, output2] = run(this_project+'/fix_'+vul_commit.modifications[0].filename)
+    if os.path.isfile(this_project+'/fix_'+vul_file_object.filename):
+        [res2, output2] = run(this_project+'/fix_'+vul_file_object.filename)
+        # print("The detectors' warning on vulnerable file is {}".format(res2))
     
     if res1 == 'not detected' and res2 == 'detected':
-        print('Fixed Warning Method Detected a Bug Candidate')
+        print('Bug candidate detected')
+    if res1 == 'detected' and res2 == 'detected':
+        print('Bug detected on fix and vul programs')
     
     subprocess.call('rm -rf '+this_project+'/fix_'+fixed_file_object.filename, shell=True)
-    subprocess.call('rm -rf '+this_project+'/vul_'+vul_commit.modifications[0].filename, shell=True)
+    subprocess.call('rm -rf '+this_project+'/vul_'+vul_file_object.filename, shell=True)
 
 
 def main():
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
 
     for i, dir in enumerate(os.listdir(vic_path)):
-        repository_path = this_project+'/ml_repos_cloned/'+user_names[i]+'/'+dir.split('_')[1].split('.')[0]
+        if user_names[i] == 'tensorflow':
+            repository_path = this_project+'/ml_repos_cloned/'+user_names[i]
+        else:
+            repository_path = this_project+'/ml_repos_cloned/'+user_names[i]+'/'+dir.split('_')[1].split('.')[0]
         
         v = "https://github.com/{0}/{1}{2}".format(user_names[i], dir.split('_')[1].split('.')[0],'.git')
 
@@ -145,8 +279,12 @@ def main():
             subprocess.call('git clone '+v+' '+repository_path, shell=True)
         
         vic_lib_path = os.path.join(vic_path, dir)
+
+        # load vulnerable inducing commits
         with open(vic_lib_path, 'r', encoding='utf-8') as f:
             data = json.loads(f.read(),strict=False)
+
+        # iterate over vulnerable inducing commits
         for counter, item in enumerate(data):
             x = list(item.keys())
             if bool(item[x[0]]):
@@ -158,16 +296,19 @@ def main():
                             current_commit = PyDrillerGitRepo(repository_path).get_commit(pc[0])
                             fix_commit = PyDrillerGitRepo(repository_path).get_commit(x[0])
 
-                            single_prev_file_names = get_fix_file_names(current_commit.modifications)
-                            fix_file_names = get_fix_file_names(fix_commit.modifications)
-
                             try:
+
+                                single_prev_file_names = get_fix_file_names(current_commit.modifications)
+                                fix_file_names = get_fix_file_names(fix_commit.modifications)
+
+                            
                                 if fix_file_names[file['file_path']] and single_prev_file_names[file['file_path']]:
                                     print('Running Flawfinder on {} Library, {}/{}'.format(dir.split('_')[1].split('.')[0], counter, len(data)))
-                                    diff_based_matching(fix_file_names[file['file_path']], current_commit, file)
-                                    # fixed_warning_base_matching(PyDrillerGitRepo(repository_path).get_commit(x[0]), current_commit, common_files)
+                                    diff_based_matching(single_prev_file_names[file['file_path']], current_commit, file)
+                                    # fixed_warning_base_matching(PyDrillerGitRepo(repository_path).get_commit(x[0]), current_commit, file)
                             except Exception as e:
                                 # print('The vulnerable file is not found in fix files.')
+                                #print(e)
                                 pass
 
                                 
