@@ -1,10 +1,11 @@
 
 from fnmatch import fnmatch
 import string
-from numpy import diff
+from numpy import diff, isin
 from py import code
 from pydriller import ModificationType, GitRepository as PyDrillerGitRepo
 import os, json, re, subprocess, codecs
+from csv import writer
 
 user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
 
@@ -13,7 +14,8 @@ this_project = os.getcwd()
 REG_CHANGED = re.compile(".*@@ -(\d+),(\d+) \+(\d+),(\d+) @@.*")
 REG_LOC_FLAWFINDER = re.compile('\:(\d+)')
 REG_RATS = re.compile('<vulnerability>')
-
+REG_CPP_CHECK_LOC = re.compile('line=\"(\d+)\"')
+REG_CPP_CHECK = re.compile('error id=')
 
 def decompose_detections(splitted_lines, detector_name):
     super_temp = []
@@ -24,12 +26,8 @@ def decompose_detections(splitted_lines, detector_name):
             if REG_LOC_FLAWFINDER.search(splitted_lines[j]):
                 indices.append(j)
             j += 1
-        if detector_name == 'rats':
-            if REG_RATS.search(splitted_lines[j]):
-                indices.append(j)
-            j += 1
         if detector_name == 'cppcheck':
-            if REG_LOC_FLAWFINDER.search(splitted_lines[j]):
+            if REG_CPP_CHECK.search(splitted_lines[j]):
                 indices.append(j)
             j += 1
         if detector_name == 'infer':
@@ -153,9 +151,27 @@ def get_prev_file_names(repository_path, items):
                             f_names[modification.old_path] = diff_split
     return f_names
 
+def parse_cppcheck(output):
+    parsed_ouput = {}
+    if re.findall(r'<location file=',  output):
+        # x = re.findall(r'<error id=.*>((.|\n)*?)<\/error>', output)
+        x = decompose_detections(output.split('\n'), 'cppcheck')
+        for detection in x:
+            detection = list(detection)
+            # del detection[-1]
+            # detection_split = detection[0].split('\n')
+            for line in detection:
+                if REG_CPP_CHECK_LOC.search(line):
+                    y = int(REG_CPP_CHECK_LOC.search(line).group(1))
+                    break
+            parsed_ouput[x] = '\\n'.join(detection)
+        return parsed_ouput
+    else:
+        return 'not detected'
+
 def parse_rats(output):
     parsed_ouput = {}
-    if re.findall(r'(\<vulnerability\>)', output):
+    if re.findall(r'(<vulnerability\>)', output):
         x = re.findall(r'<vulnerability.*>((.|\n)*?)<\/vulnerability>', output)
         x = list(x[0])
         del x[-1]
@@ -181,7 +197,7 @@ def parse_flawfinder(output):
                 if REG_LOC_FLAWFINDER.search(line):
                     x = int(REG_LOC_FLAWFINDER.search(line).group(1))
                     break
-            parsed_ouput[x] = detection 
+            parsed_ouput[x] = '\\n'.join(detection) 
     return parsed_ouput
 
 def run(test_file, detector_name):
@@ -196,10 +212,7 @@ def run(test_file, detector_name):
     output = subprocess.getoutput(command_+test_file)
     return output
 
-def diff_based_matching(changed_lines, current_commit, file):
-
-    detector_name = 'rats'
-
+def diff_based_matching(changed_lines, current_commit, file, detector_name):
     for f in current_commit.modifications:
         if f.filename == os.path.basename(file['file_path']):
             vul_file_object = f
@@ -209,21 +222,30 @@ def diff_based_matching(changed_lines, current_commit, file):
 
     if os.path.isfile(os.path.join(this_project, 'vul_'+vul_file_object.filename)):
         output = run(os.path.join(this_project, 'vul_'+vul_file_object.filename), detector_name)
-        # res = parse_flawfinder(output)
-        # res = parse_rats(output)
+
+        if detector_name == 'flawfinder':
+            res = parse_flawfinder(output)
+
+        if detector_name == 'cppcheck':
+            res = parse_rats(output)
+        
+        if detector_name == 'rats':
+            res = parse_cppcheck(output)
+
+        detection_status = {'full_match': [], 'partial_match': [], 'mismatch': []}
         if not isinstance(res, str):
-            for line in output_split:
-                g = REG_LOC_FLAWFINDER.search(line).group(1)
-                if changed_lines[0] <= int(g) <= changed_lines[1]:
-                    print('Full Match')
-                if int(g) <= changed_lines[0] or int(g) >= changed_lines[1]:
-                    print('Partial Match')
-                else:
-                    print('Mismatch')
-        else:
-            print(res)
+            for loc, warning in res.items():
+                for k, cl in changed_lines.items():
+                    if cl[0] <= loc <= cl[1]:
+                        detection_status['full_match'].append(warning)
+                    if loc <= cl[0] or loc >= cl[1]:
+                        detection_status['partial_match'].append(warning)
+                    else:
+                        detection_status['mismatch'].append(warning)
 
     subprocess.call('rm -rf '+this_project+'/vul_'+vul_file_object.filename, shell=True)
+
+    return detection_status, vul_file_object, res
 
 def save_source_code(source_code, flag, filename):
     split_source_code = source_code.split('\n')
@@ -234,82 +256,116 @@ def save_source_code(source_code, flag, filename):
 
 def fixed_warning_base_matching(fix_commit, vul_commit, file):
 
-    for j in fix_commit.modifications:
-        if j.filename == os.path.basename(file['file_path']):
-            fixed_file_object = j
-            break
+    # for j in fix_commit.modifications:
+    #     if j.filename == os.path.basename(file['file_path']):
+    #         fixed_file_object = j
+    #         break
 
     for i in vul_commit.modifications:
-        if j.filename == os.path.basename(file['file_path']):
-            vul_file_object = j
+        if i.filename == os.path.basename(file['file_path']):
+            vul_file_object = i
             break
 
-    save_source_code(fixed_file_object.source_code, 'fix', fixed_file_object.filename)
-    save_source_code(vul_file_object.source_code, 'vul', vul_file_object.filename)     
+    # save_source_code(fixed_file_object.source_code, 'fix', fixed_file_object.filename
+    save_source_code(vul_file_object.source_code_before, 'vul', vul_file_object.filename)
+    save_source_code(vul_file_object.source_code, 'fix', vul_file_object.filename)
+        
 
-    if os.path.isfile(this_project+'/fix_'+fixed_file_object.filename):
-        [res1, output1] = run(this_project+'/fix_'+fixed_file_object.filename)
-        # print("The detectors' warning on fixed file is {}".format(res1))
+    if os.path.isfile(this_project+'/vul_'+vul_file_object.filename):
+        output1 = run(this_project+'/vul_'+vul_file_object.filename, 'rats')
+        res1 = parse_rats(output1)
 
     if os.path.isfile(this_project+'/fix_'+vul_file_object.filename):
-        [res2, output2] = run(this_project+'/fix_'+vul_file_object.filename)
-        # print("The detectors' warning on vulnerable file is {}".format(res2))
-    
-    if res1 == 'not detected' and res2 == 'detected':
-        print('Bug candidate detected')
-    if res1 == 'detected' and res2 == 'detected':
-        print('Bug detected on fix and vul programs')
-    
-    subprocess.call('rm -rf '+this_project+'/fix_'+fixed_file_object.filename, shell=True)
+        output2 = run(this_project+'/fix_'+vul_file_object.filename, 'rats')
+        res2 = parse_rats(output2)
+
+    # print('RES1 is {}'.format(res1))
+    # print('RES2 is {}'.format(res2))
+
+    flag = False
+    if not isinstance(res1, str) and isinstance(res2, str):
+        flag = True
+
+    subprocess.call('rm -rf '+this_project+'/fix_'+vul_file_object.filename, shell=True)
     subprocess.call('rm -rf '+this_project+'/vul_'+vul_file_object.filename, shell=True)
+
+    return flag, vul_file_object
+
+def combine_diff_results(detection_status):
+    data_list = []
+    for k, v in detection_status.items():
+        if bool(v):
+            data_list.append(k)
+            for item in v:
+                data_list.append(item)
+    return data_list
 
 
 def main():
+    bug_candidate_counter = 0
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
 
-    for i, dir in enumerate(os.listdir(vic_path)):
-        if user_names[i] == 'tensorflow':
-            repository_path = this_project+'/ml_repos_cloned/'+user_names[i]
-        else:
-            repository_path = this_project+'/ml_repos_cloned/'+user_names[i]+'/'+dir.split('_')[1].split('.')[0]
-        
-        v = "https://github.com/{0}/{1}{2}".format(user_names[i], dir.split('_')[1].split('.')[0],'.git')
+    tools = ['flawfinder', 'cppcheck', 'rats']
+    mappings_ = ['fixed', 'diff']
 
-        if not os.path.exists(repository_path):
-            subprocess.call('git clone '+v+' '+repository_path, shell=True)
-        
-        vic_lib_path = os.path.join(vic_path, dir)
+    for tool in tools:
+        for mapping_ in mappings_:
+            for i, dir in enumerate(os.listdir(vic_path)):
+                if user_names[i] == 'tensorflow':
+                    repository_path = this_project+'/ml_repos_cloned/'+user_names[i]
+                else:
+                    repository_path = this_project+'/ml_repos_cloned/'+user_names[i]+'/'+dir.split('_')[1].split('.')[0]
+                
+                v = "https://github.com/{0}/{1}{2}".format(user_names[i], dir.split('_')[1].split('.')[0],'.git')
 
-        # load vulnerable inducing commits
-        with open(vic_lib_path, 'r', encoding='utf-8') as f:
-            data = json.loads(f.read(),strict=False)
+                if not os.path.exists(repository_path):
+                    subprocess.call('git clone '+v+' '+repository_path, shell=True)
+                
+                vic_lib_path = os.path.join(vic_path, dir)
 
-        # iterate over vulnerable inducing commits
-        for counter, item in enumerate(data):
-            x = list(item.keys())
-            if bool(item[x[0]]):
-                for file in item[x[0]]:
-                    if 'test' not in file['file_path']:
-                        previous_commits = file['previous_commits']
-                        for pc in previous_commits:
-                            # here we must get the main file
-                            current_commit = PyDrillerGitRepo(repository_path).get_commit(pc[0])
-                            fix_commit = PyDrillerGitRepo(repository_path).get_commit(x[0])
+                # load vulnerable inducing commits
+                with open(vic_lib_path, 'r', encoding='utf-8') as f:
+                    data = json.loads(f.read(),strict=False)
 
-                            try:
+                # iterate over vulnerable inducing commits
+                for counter, item in enumerate(data):
+                    x = list(item.keys())
+                    if bool(item[x[0]]):
+                        for file in item[x[0]]:
+                            if 'test' not in file['file_path']:
+                                previous_commits = file['previous_commits']
 
-                                single_prev_file_names = get_fix_file_names(current_commit.modifications)
-                                fix_file_names = get_fix_file_names(fix_commit.modifications)
+                                for pc in previous_commits:
+                                    # here we must get the main file
+                                    current_commit = PyDrillerGitRepo(repository_path).get_commit(pc[0])
+                                    fix_commit = PyDrillerGitRepo(repository_path).get_commit(x[0])
+                                    try:
+                                        single_prev_file_names = get_fix_file_names(current_commit.modifications)
+                                        fix_file_names = get_fix_file_names(fix_commit.modifications)
 
-                            
-                                if fix_file_names[file['file_path']] and single_prev_file_names[file['file_path']]:
-                                    print('Running Flawfinder on {} Library, {}/{}'.format(dir.split('_')[1].split('.')[0], counter, len(data)))
-                                    diff_based_matching(single_prev_file_names[file['file_path']], current_commit, file)
-                                    # fixed_warning_base_matching(PyDrillerGitRepo(repository_path).get_commit(x[0]), current_commit, file)
-                            except Exception as e:
-                                # print('The vulnerable file is not found in fix files.')
-                                #print(e)
-                                pass
+                                        if fix_file_names[file['file_path']] and single_prev_file_names[file['file_path']]:
+
+                                            if mapping_ == 'diff':
+                                                detection_status, vul_file_object, res = diff_based_matching(single_prev_file_names[file['file_path']], current_commit, file, tool)
+                                                if res == 'not detected':
+                                                    print('No vulnerable candidate detected!')
+                                                    my_data = [tool, dir.split('_')[1].split('.')[0], x[0], current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed]
+                                                    my_data.append('not detected')
+                                                else:
+                                                    data_list = combine_diff_results(detection_status)
+                                                    my_data = [tool, dir.split('_')[1].split('.')[0], x[0], current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed]
+                                                    my_data = my_data + data_list
+
+                                                with open('./detection_results/results.csv', 'a', newline='\n') as fd:
+                                                    writer_object = writer(fd)
+                                                    writer_object.writerow(my_data)
+                                            else:
+                                                flag = fixed_warning_base_matching(PyDrillerGitRepo(repository_path).get_commit(x[0]), current_commit, file)
+                                                if flag:
+                                                    bug_candidate_counter += 1
+                                            print('Running Flawfinder on {} Library, {}/{}, Number of bug candidate detected: {}'.format(dir.split('_')[1].split('.')[0], counter, len(data), bug_candidate_counter))
+                                    except Exception as e:
+                                        pass
 
                                 
 
