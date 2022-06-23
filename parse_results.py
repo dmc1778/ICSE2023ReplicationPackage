@@ -3,7 +3,7 @@ import pandas as pd
 
 this_project = os.getcwd()
 
-def main():
+def test1():
     for dir in os.listdir('./detection_results/project_level'):
         data = pd.read_csv('./detection_results/project_level/'+dir)
         flawfinder_data = len(data[data.iloc[:, 1] == 'flawfinder'])
@@ -26,7 +26,10 @@ def main():
         df_cpp.to_csv('./detection_results/randomly_selected/cppcheck_'+dir, sep=',')
         df_rats.to_csv('./detection_results/randomly_selected/rats_'+dir, sep=',')
 
-
+def parse_results():
+    data = pd.read_csv('detection_results/results1.csv')
+    print(data.head())
+    
 
 if __name__ == '__main__':
-    main()
+    parse_results()
