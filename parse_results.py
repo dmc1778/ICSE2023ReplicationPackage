@@ -28,8 +28,13 @@ def test1():
 
 def parse_results():
     data = pd.read_csv('detection_results/results1.csv')
-    print(data.head())
-    
+    data = data[data.iloc[:, 11] == 'detected']
+    data.to_csv('detection_results/detected.csv', sep=',', index=False)
+
+    data = pd.read_csv('detection_results/detected.csv')
+    data = data[data.iloc[:, 10] == '1']
+    data.to_csv('detection_results/limited_data.csv', sep=',', index=False)
+
 
 if __name__ == '__main__':
     parse_results()

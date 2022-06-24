@@ -216,15 +216,22 @@ def run(test_file, detector_name):
     execution_time = time.time() - start_time
     return output, execution_time
 
-def diff_based_matching(changed_lines, current_commit, file, detector_name):
+def diff_based_matching(changed_lines, current_commit, fix_commit, file, detector_name):
+
     for f in current_commit.modifications:
         if f.filename == os.path.basename(file['file_path']):
             vul_file_object = f
             break
-    
-    save_source_code(vul_file_object.source_code, 'vul', vul_file_object.filename)
 
-    loc = len(vul_file_object.source_code.split('\n'))
+    # for f in fix_commit.modifications:
+    #     if f.filename == os.path.basename(file['file_path']):
+    #         fix_file_object = f
+    #         break
+    # f_objects_ = [vul_file_object.source_code_before, vul_file_object.source_code, fix_file_object.source_code_before
+
+    save_source_code(vul_file_object.source_code_before, 'vul', vul_file_object.filename)
+
+    loc = len(vul_file_object.source_code_before.split('\n'))
 
     if os.path.isfile(os.path.join(this_project, 'vul_'+vul_file_object.filename)):
         [output, execution_time] = run(os.path.join(this_project, 'vul_'+vul_file_object.filename), detector_name)
@@ -238,16 +245,17 @@ def diff_based_matching(changed_lines, current_commit, file, detector_name):
         if detector_name == 'rats':
             res = parse_rats(output)
 
-        detection_status = {'full_match': [], 'partial_match': [], 'mismatch': []}
+        detection_status = {'detected': []}
         if not isinstance(res, str):
             for loc, warning in res.items():
-                for k, cl in changed_lines.items():
-                    if cl[0] <= loc <= cl[1]:
-                        detection_status['full_match'].append(warning)
-                    elif loc <= cl[0] or loc >= cl[1]:
-                        detection_status['partial_match'].append(warning)
-                    else:
-                        detection_status['mismatch'].append(warning)
+                detection_status['detected'].append(warning) 
+                # for k, cl in changed_lines.items():
+                #     if cl[0] <= loc <= cl[1]:
+                #         detection_status['full_match'].append(warning)
+                #     elif loc <= cl[0] or loc >= cl[1]:
+                #         detection_status['partial_match'].append(warning)
+                #     else:
+                #         detection_status['mismatch'].append(warning)
 
     subprocess.call('rm -rf '+this_project+'/vul_'+vul_file_object.filename, shell=True)
 
@@ -262,19 +270,19 @@ def save_source_code(source_code, flag, filename):
 
 def fixed_warning_base_matching(fix_commit, vul_commit, file, detector_name):
 
-    # for j in fix_commit.modifications:
-    #     if j.filename == os.path.basename(file['file_path']):
-    #         fixed_file_object = j
-    #         break
+    for j in fix_commit.modifications:
+        if j.filename == os.path.basename(file['file_path']):
+            fixed_file_object = j
+            break
 
     for i in vul_commit.modifications:
         if i.filename == os.path.basename(file['file_path']):
             vul_file_object = i
             break
 
-    save_source_code(vul_file_object.source_code_before, 'fix', vul_file_object.filename)
-    save_source_code(vul_file_object.source_code, 'vul', vul_file_object.filename)
-    # save_source_code(fixed_file_object.source_code, 'fix', fixed_file_object.filename)
+    #save_source_code(vul_file_object.source_code_before, 'fix', vul_file_object.filename)
+    save_source_code(vul_file_object.source_code_before, 'vul', vul_file_object.filename)
+    save_source_code(vul_file_object.source_code, 'fix', vul_file_object.filename)
         
     if os.path.isfile(this_project+'/vul_'+vul_file_object.filename):
         [output1, execution_time1] = run(this_project+'/vul_'+vul_file_object.filename, detector_name)
@@ -303,6 +311,7 @@ def fixed_warning_base_matching(fix_commit, vul_commit, file, detector_name):
     flag = False
     if not isinstance(res1, str) and isinstance(res2, str):
         flag = True
+        
 
     subprocess.call('rm -rf '+this_project+'/fix_'+vul_file_object.filename, shell=True)
     subprocess.call('rm -rf '+this_project+'/vul_'+vul_file_object.filename, shell=True)
@@ -334,7 +343,7 @@ def combine_diff_results(detection_status):
 def main():
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
 
-    tools = ['flawfinder', 'cppcheck', 'rats']
+    tools = ['flawfinder', 'cppcheck' ,'rats']
     mappings_ = ['diff', 'fixed']
 
     for tool in tools:
@@ -376,23 +385,20 @@ def main():
                                         if fix_file_names[file['file_path']] and single_prev_file_names[file['file_path']]:
 
                                             if mapping_ == 'diff':
-                                                detection_status, vul_file_object, res, execution_time, loc = diff_based_matching(single_prev_file_names[file['file_path']], current_commit, file, tool)
+                                                detection_status, vul_file_object, res, execution_time, loc = diff_based_matching(single_prev_file_names[file['file_path']], current_commit, fix_commit, file, tool)
                                                 if res == 'not detected':
                                                     print('No vulnerable candidate detected!')
                                                     my_data = [tool, 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, pc[1], 0]
                                                     my_data.append('not detected')
 
-                                                    with open('./detection_results/not_detected2.csv', 'a', newline='\n') as fd:
-                                                        writer_object = writer(fd)
-                                                        writer_object.writerow(my_data)
                                                 else:
                                                     data_list, j = combine_diff_results(detection_status)
                                                     my_data = [tool, 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, pc[1], j]
                                                     my_data = my_data + data_list
 
-                                                    with open('./detection_results/detected2.csv', 'a', newline='\n') as fd:
-                                                        writer_object = writer(fd)
-                                                        writer_object.writerow(my_data)
+                                                with open('./detection_results/results.csv', 'a', newline='\n') as fd:
+                                                    writer_object = writer(fd)
+                                                    writer_object.writerow(my_data)
 
                                             if mapping_ == 'fixed':
                                                 flag, vul_file_object, res1, res2, execution_time = fixed_warning_base_matching(PyDrillerGitRepo(repository_path).get_commit(x[0]), current_commit, file, tool)
@@ -400,16 +406,13 @@ def main():
                                                     data_list, j = combine_fixed_results(res1)
                                                     my_data = [tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed,pc[1], j]
                                                     my_data = my_data + data_list
-                                                    
-                                                    with open('./detection_results/detected2.csv', 'a', newline='\n') as fd:
-                                                        writer_object = writer(fd)
-                                                        writer_object.writerow(my_data)
+        
                                                 else:
                                                     my_data = [tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, pc[1], 0 , 'not detected']
                                                 
-                                                    with open('./detection_results/not_detected2.csv', 'a', newline='\n') as fd:
-                                                        writer_object = writer(fd)
-                                                        writer_object.writerow(my_data)
+                                                with open('./detection_results/results.csv', 'a', newline='\n') as fd:
+                                                    writer_object = writer(fd)
+                                                    writer_object.writerow(my_data)
 
                                             print('Running {} using {} method on {} Library, {}/{}'.format(tool, mapping_, dir.split('_')[1].split('.')[0], counter, len(data)))
                                     except Exception as e:
