@@ -3,25 +3,20 @@ import re, os, json, itertools
 json_begin = '['
 json_end = ']'
 
-def write_to_file(output, jsonfile):
-    for i, row in enumerate(output):
-        jsonfile.write('{')
-        jsonfile.write('\n')
-        json.dump(row, jsonfile, indent=4)
-        jsonfile.write(':')
-        jsonfile.write(' ')
-        jsonfile.write('[')
-        jsonfile.write('\n')
-        for j, sub_row in enumerate(output[row]):
-            json.dump(sub_row, jsonfile, indent=4)
-            if j != len(output[row])-1:
+def write_to_file(output, jsonfile, j , log_data_decomposed):
+    if j != len(log_data_decomposed) - 1:
+        for i, row in enumerate(output):
+            jsonfile.write('\n')
+            temp_dict = {'command': row[0], 'file': row[1]}
+            json.dump(temp_dict, jsonfile, indent=4)
+            jsonfile.write(',')
+    else:
+        for i, row in enumerate(output):
+            jsonfile.write('\n')
+            temp_dict = {'command': row[0], 'file': row[1]}
+            json.dump(temp_dict, jsonfile, indent=4)
+            if i != len(output) -1:
                 jsonfile.write(',')
-                jsonfile.write('\n')
-        jsonfile.write('\n')
-        jsonfile.write(']')
-        jsonfile.write('\n')
-        jsonfile.write('}')
-        jsonfile.write(',')
 
 def read_txt(fname):
     with open(fname, 'r') as fileReader:
@@ -61,30 +56,38 @@ def decompose_compilations(splitted_lines):
 
     return super_temp
 
-def parse_numpy_logs():
-    log_data = read_txt('compilation_database/numpy_command_log.txt')
-    log_data_decomposed = decompose_compilations(log_data)
+def parse_logs():
+    out_dir = 'compilation_database'
 
-    output = {}
+    for root, dir, files in os.walk(out_dir):
+        for file in files:
+            if re.findall(r'(\_command\_log.txt)', file):
+                current_compilation_log = os.path.join(out_dir, file)
+                log_data = read_txt(current_compilation_log)
+                log_data_decomposed = decompose_compilations(log_data)
+                
+                output = []
+                lib_name = file.split('_')[0]
+                out_json = os.path.join(out_dir, f'compile_commands_{lib_name}.json')
+                jsonfile = open(out_json, 'a', encoding='utf-8')
+                jsonfile.write(json_begin)
 
-    for opt in log_data_decomposed:
-        compile_opts = []
-        file_paths = []
-        for line in opt:
-            if re.findall(r'(INFO\:\scompile\soptions\:)', line):
-                splited_line = line.split("'")
-                compile_opts.append(splited_line[1])
-            if re.findall(r'(INFO\:\sx86\_64\-)', line):
-                splited_file_path = line.split(" ")
-                file_paths.append(splited_file_path[-1])
-        c = list(itertools.product(compile_opts, file_paths))
-        print(c)
+                for j, opt in enumerate(log_data_decomposed):
+                    compile_opts = []
+                    file_paths = []
+                    for line in opt:
+                        if re.findall(r'(INFO\:\scompile\soptions\:)', line):
+                            splited_line = line.split("'")
+                            compile_opts.append(splited_line[1])
+                        if re.findall(r'(INFO\:\sx86\_64\-)', line):
+                            splited_file_path = line.split(" ")
+                            file_paths.append(splited_file_path[-1])
+                    c = list(itertools.product(compile_opts, file_paths))
+                    c = list(map(list, c))
+                    output = output + c
+                    write_to_file(output, jsonfile, j , log_data_decomposed)
+                jsonfile.write(json_end)
 
-def parse_pandas_logs():
-    pass
-
-def parse_scipy_logs():
-    pass
 
 if __name__ == '__main__':
-    parse_numpy_logs()
+    parse_logs()
