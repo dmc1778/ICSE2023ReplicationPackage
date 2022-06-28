@@ -306,7 +306,7 @@ def fixed_warning_base_matching(fix_commit, vul_commit, detector_name):
             res2 = parse_rats(output2)
             
     flag = False
-    if not isinstance(res1, str) and isinstance(res2, str):
+    if not isinstance(res1[0], str) and isinstance(res2[0], str):
         flag = True
 
     subprocess.call('rm -rf '+this_project+'/fix_'+vul_commit.filename, shell=True)
@@ -399,7 +399,7 @@ def main():
                                     flag, vul_file_object, res1, res2, execution_time = fixed_warning_base_matching(cl, mod, tool)
                                 
                                     if flag:
-                                        data_list, j = combine_fixed_results(res1)
+                                        data_list, j = combine_fixed_results(res1[0])
                                         my_data = [tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
                                         my_data = my_data + data_list
             

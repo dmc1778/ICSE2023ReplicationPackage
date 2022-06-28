@@ -151,6 +151,23 @@ def get_prev_file_names(repository_path, items):
                             f_names[modification.old_path] = diff_split
     return f_names
 
+def find_regex_groups(warning):
+    cwe_list = []
+    v = '\\n'.join(warning)
+    if re.findall(r'CWE-(\d+)', v):
+        x = re.findall(r'CWE-(\d+)', v)
+    for cwe_ in x:
+        cwe_list.append('CWE-'+cwe_)
+    return cwe_list
+
+def find_rat_types(warning):
+    if re.findall(r'<type.*>((.|\n)*?)<\/type>', warning):
+        x = list(re.findall(r'<type.*>((.|\n)*?)<\/type>', warning)[0])
+        del x[-1]
+    if re.findall(r'resulting in a\s(.*?)\.', warning):
+        x = re.findall(r'resulting in a\s(.*?)\.', warning)
+    return x
+
 def parse_cppcheck(output):
     parsed_ouput = {}
     if re.findall(r'<location file=',  output):
@@ -170,35 +187,41 @@ def parse_cppcheck(output):
         return 'not detected'
 
 def parse_rats(output):
+    cwe_final_list = []
     parsed_ouput = {}
     if re.findall(r'(<vulnerability\>)', output):
         x = re.findall(r'<vulnerability.*>((.|\n)*?)<\/vulnerability>', output)
-        x = list(x[0])
-        del x[-1]
         for detection in x:
-            detection_split = detection.split('\n')
+            detection = list(detection)
+            del detection[1]
+            cwe_list = find_rat_types(detection[0])
+            detection_split = detection[0].split('\n')
+            cwe_final_list = cwe_final_list + cwe_list
             for line in detection_split:
                 if re.findall(r'<line.*>((.|\n)*?)<\/line>', line):
                     y = int(re.findall(r'<line.*>((.|\n)*?)<\/line>', line)[0][0])
                     parsed_ouput[y] = detection
-        return parsed_ouput
+        return [parsed_ouput, cwe_final_list]
     else:
         return 'not detected'
 
 def parse_flawfinder(output):
+    cwe_final_list = []
     parsed_ouput = {}
     if re.findall(r'(No hits found)', output):
         return 'not detected'
     if re.findall(r'(Hits =)', output):
         detections = decompose_detections(output.split('\n'), 'flawfinder')
         for detection in detections:
+            cwe_list = find_regex_groups(detection)
+            cwe_final_list = cwe_final_list + cwe_list
             for line in detection:
                 # extra looping here, should be resolved
                 if REG_LOC_FLAWFINDER.search(line):
                     x = int(REG_LOC_FLAWFINDER.search(line).group(1))
                     break
             parsed_ouput[x] = '\\n'.join(detection) 
-    return parsed_ouput
+    return [parsed_ouput, cwe_final_list]
 
 def run(test_file, detector_name):
     if detector_name == 'flawfinder':
@@ -245,9 +268,9 @@ def diff_based_matching(changed_lines, current_commit, fix_commit, file, detecto
             res = parse_rats(output)
 
         detection_status = {'detected': []}
-        if not isinstance(res, str):
-            for loc, warning in res.items():
-                detection_status['detected'].append(warning) 
+        if not isinstance(res[0], str):
+            for loc, warning in res[0].items():
+                detection_status['detected'].append(warning)
                 # for k, cl in changed_lines.items():
                 #     if cl[0] <= loc <= cl[1]:
                 #         detection_status['full_match'].append(warning)
@@ -308,7 +331,7 @@ def fixed_warning_base_matching(fix_commit, vul_commit, file, detector_name):
             res2 = parse_rats(output2)
             
     flag = False
-    if not isinstance(res1, str) and isinstance(res2, str):
+    if not isinstance(res1[0], str) and isinstance(res2[0], str):
         flag = True
         
 
@@ -342,7 +365,7 @@ def combine_diff_results(detection_status):
 def main():
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
 
-    tools = ['flawfinder', 'cppcheck' ,'rats']
+    tools = ['flawfinder','rats']
     mappings_ = ['diff', 'fixed']
 
     for tool in tools:
@@ -395,21 +418,28 @@ def main():
                                                     my_data = [tool, 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, pc[1], j]
                                                     my_data = my_data + data_list
 
-                                                with open('./detection_results/results.csv', 'a', newline='\n') as fd:
+                                                    for v in range(len(res[1])):
+                                                        vul_freq_data = [tool, dir.split('_')[1].split('.')[0]]
+                                                        vul_freq_data = vul_freq_data + [res[1][v]]
+                                                        with open('./detection_results/vul_frequency_workflow1.csv', 'a', newline='\n') as fd:
+                                                            writer_object = writer(fd)
+                                                            writer_object.writerow(vul_freq_data)
+
+                                                with open('./detection_results/results_workflow1.csv', 'a', newline='\n') as fd:
                                                     writer_object = writer(fd)
                                                     writer_object.writerow(my_data)
 
                                             if mapping_ == 'fixed':
                                                 flag, vul_file_object, res1, res2, execution_time = fixed_warning_base_matching(PyDrillerGitRepo(repository_path).get_commit(x[0]), current_commit, file, tool)
                                                 if flag:
-                                                    data_list, j = combine_fixed_results(res1)
+                                                    data_list, j = combine_fixed_results(res1[0])
                                                     my_data = [tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed,pc[1], j]
                                                     my_data = my_data + data_list
         
                                                 else:
                                                     my_data = [tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, pc[1], 0 , 'not detected']
                                                 
-                                                with open('./detection_results/results.csv', 'a', newline='\n') as fd:
+                                                with open('./detection_results/results_workflow1.csv', 'a', newline='\n') as fd:
                                                     writer_object = writer(fd)
                                                     writer_object.writerow(my_data)
 

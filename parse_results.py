@@ -1,40 +1,53 @@
-import os
+import os, json
 import pandas as pd
 
 this_project = os.getcwd()
 
-def test1():
-    for dir in os.listdir('./detection_results/project_level'):
-        data = pd.read_csv('./detection_results/project_level/'+dir)
-        flawfinder_data = len(data[data.iloc[:, 1] == 'flawfinder'])
-        cppcheck_data = len(data[data.iloc[:, 1] == 'cppcheck'])
-        rats_data = len(data[data.iloc[:, 1] == 'rats'])
+def count_vic_vfc():
+    vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
 
+    for i, dir in enumerate(os.listdir(vic_path)):
+        vic_lib_path = os.path.join(vic_path, dir)
 
-        if len(data[data.iloc[:, 1] == 'flawfinder']) >= 20:
-            df_flaw = data[data.iloc[:, 1] == 'flawfinder'].sample(20)
+        with open(vic_lib_path, 'r', encoding='utf-8') as f:
+            data = json.loads(f.read(),strict=False)
 
-        if len(data[data.iloc[:, 1] == 'cppcheck']) >= 20:
-            df_cpp = data[data.iloc[:, 1] == 'cppcheck'].sample(20)
-        else:
-            df_cpp = data[data.iloc[:, 1] == 'cppcheck'].sample(len(data[data.iloc[:, 1] == 'cppcheck']))
+        j = 0
+        files = []
+        commits = []
+        for counter, item in enumerate(data):
+            x = list(item.keys())   
+            if bool(item[x[0]]):
+                j += 1
+                for k, v in item.items():
+                    for sub_item in v:
+                        for c in sub_item['previous_commits']:
+                            commits.append(c[0])   
+                        files.append(sub_item['file_path'])
 
-        if len(data[data.iloc[:, 1] == 'rats']) >= 20:
-            df_rats = data[data.iloc[:, 1] == 'rats'].sample(20)
+        print('{} library has {} number of valid VFCs'.format(dir.split('_')[1].split('.')[0], j))
+        print('{} library has {} number of VICs'.format(dir.split('_')[1].split('.')[0], len(commits)))
+        print('{} library has {} number of unique VICs'.format(dir.split('_')[1].split('.')[0], len(set(commits))))
+        print('{} library has {} number of vulnerable files'.format(dir.split('_')[1].split('.')[0], len(files)))
+        print('{} library has {} number of unique vulnerable files'.format(dir.split('_')[1].split('.')[0], len(set(files))))
+        print('################################################################################')
         
-        df_flaw.to_csv('./detection_results/randomly_selected/flawfinder_'+dir, sep=',')
-        df_cpp.to_csv('./detection_results/randomly_selected/cppcheck_'+dir, sep=',')
-        df_rats.to_csv('./detection_results/randomly_selected/rats_'+dir, sep=',')
 
 def parse_results():
-    data = pd.read_csv('detection_results/results1.csv')
+    data = pd.read_csv('detection_results/workflow1/results_workflow1.csv')
     data = data[data.iloc[:, 11] == 'detected']
-    data.to_csv('detection_results/detected.csv', sep=',', index=False)
+    data.to_csv('detection_results/workflow1/detected1.csv', sep=',', index=False)
 
-    data = pd.read_csv('detection_results/detected.csv')
-    data = data[data.iloc[:, 10] == '1']
-    data.to_csv('detection_results/limited_data.csv', sep=',', index=False)
+    data = pd.read_csv('detection_results/workflow1/detected1.csv')
+    data_diff = data[(data.iloc[:, 10] == 1) & (data.iloc[:, 1] == 'diff')]
+    data_fixed = data[(data.iloc[:, 10] <= 5) & (data.iloc[:, 1] == 'fixed')]
+
+    data_new = [data_diff, data_fixed]
+    data_new = pd.concat(data_new)
+    data_new.to_csv('detection_results/workflow1/limited_data.csv', sep=',', index=False)
+
+    # data_fixed.to_csv('detection_results/workflow1/data_fixed.csv', sep=',', index=False)
 
 
 if __name__ == '__main__':
-    parse_results()
+    count_vic_vfc()
