@@ -1,26 +1,58 @@
-import subprocess, os
+import sys, os, re, subprocess, json
+from pydriller import GitRepository as PyDrillerGitRepo
 
-def read_txt(fname):
-    with open(fname, 'r') as fileReader:
-        data = fileReader.read().splitlines()
-    return data
+user_names = ['pytorch', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
 
-base_path = '/media/nimashiri/DATA/vsprojects/ICSE23/ml_repos_cloned/numpy/numpy/'
+_extensions = ['cc', 'cpp', 'hpp', 'h', 'c', 'cu']
 
-compilation_options = '-DNPY_INTERNAL_BUILD=1 -DHAVE_NPY_CONFIG_H=1 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE=1 -D_LARGEFILE64_SOURCE=1 -DNO_ATLAS_INFO=1 -DHAVE_CBLAS -I/usr/local/include -Inumpy/core/src/multiarray -Inumpy/core/src/common -Inumpy/core/src/umath -Inumpy/core/include -Inumpy/core/include/numpy -Ibuild/src.linux-x86_64-3.8/numpy/distutils/include -Inumpy/core/src/common -Inumpy/core/src -Inumpy/core -Inumpy/core/src/npymath -Inumpy/core/src/multiarray -Inumpy/core/src/umath -Inumpy/core/src/npysort -Inumpy/core/src/_simd -I/usr/include/python3.8 -Inumpy/core/src/common -Inumpy/core/src/npymath -c '
+this_project = os.getcwd()
 
-# test_file_path1 = 'numpy/core/src/common/cblasfuncs.c'
+REG_CHANGED = re.compile(".*@@ -(\d+),(\d+) \+(\d+),(\d+) @@.*")
+REG_LOC_FLAWFINDER = re.compile('\:(\d+)')
+REG_RATS = re.compile('<vulnerability>')
+REG_CPP_CHECK_LOC = re.compile('line=\"(\d+)\"')
+REG_CPP_CHECK = re.compile('error id=')
 
-data = read_txt('detectors/infer/files.txt')
-for f in data:
-    target = os.path.join(base_path, f)
+FIND_CWE_IDENTIFIER = re.compile('CWE-(\d+)')
+FIND_RATS_VUL_TYPE = re.compile('<type.*>((.|\n)*?)<\/type>')
+sys.path.insert(1, 'detectors/flawfinder')
 
-    command_capture = 'infer capture -- gcc '+compilation_options+target
-    command_analyze = 'infer analyze -- gcc '+compilation_options+target
+import detectors.flawfinder.song_method as sm
 
-# scan_build_command = 'clang-tidy gcc '+compilation_options+target
-# subprocess.call(scan_build_command, shell=True)
 
-    subprocess.call(command_capture, shell=True)
-    subprocess.call(command_analyze, shell=True)
-    subprocess.call('rm -rf infer-out', shell=True)
+def main():
+    vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
+
+    for i, dir in enumerate(os.listdir(vic_path)):
+        if user_names[i] == 'tensorflow' or user_names[i] == 'pytorch':
+            repository_path = this_project+'/ml_repos_cloned/'+user_names[i]
+        else:
+            repository_path = this_project+'/ml_repos_cloned/'+user_names[i]+'/'+dir.split('_')[1].split('.')[0]
+
+        v = "https://github.com/{0}/{1}{2}".format(user_names[i], dir.split('_')[1].split('.')[0],'.git')
+
+        commit_base_link = "https://github.com/{0}/{1}/{2}/".format(user_names[i], dir.split('_')[1].split('.')[0], 'commit')
+
+        if not os.path.exists(repository_path):
+            subprocess.call('git clone '+v+' '+repository_path, shell=True)
+                
+        vic_lib_path = os.path.join(vic_path, dir)
+
+                # load vulnerable inducing commits
+        with open(vic_lib_path, 'r', encoding='utf-8') as f:
+            data = json.loads(f.read(),strict=False)
+
+        try:
+            for counter, item in enumerate(data):
+                x = list(item.keys())
+                current_commit = PyDrillerGitRepo(repository_path).get_commit(x[0])
+                for mod in current_commit.modifications:
+                    if 'test' not in mod.new_path and 'test' not in mod.filename and mod.filename.split('.')[-1] in _extensions:
+                        cl = sm.get_fix_file_names(mod)
+
+        except Exception as e:
+            print(e)
+
+
+if __name__ == '__main__':
+    main()

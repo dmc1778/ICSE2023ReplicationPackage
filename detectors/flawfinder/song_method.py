@@ -9,7 +9,9 @@ import os, json, re, subprocess, codecs
 from csv import writer
 import time
 
-user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
+user_names = ['pytorch', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
+
+_extensions = ['cc', 'cpp', 'hpp', 'h', 'c', 'cu']
 
 this_project = os.getcwd()
 
@@ -225,7 +227,12 @@ def parse_flawfinder(output):
             parsed_ouput[x] = '\\n'.join(detection) 
     return [parsed_ouput, cwe_final_list]
 
-def run(test_file, detector_name):
+def search_for_compile_command(test_file, library_name):
+    with open(f'compilation_database/compile_commands_{library_name}.json', encoding='utf-8') as f:
+        compile_options = json.loads(f.read(), strict=False)
+    print('dd')
+
+def run(test_file, detector_name, library_name):
     if detector_name == 'flawfinder':
         command_ = 'flawfinder --context '
     if detector_name == 'rats':
@@ -233,21 +240,26 @@ def run(test_file, detector_name):
     if detector_name == 'cppcheck':
         command_ = 'cppcheck --xml '
     if detector_name == 'infer':
-        command_ = 'infer analyze -- gcc -c '
+        compile_options = search_for_compile_command(test_file, library_name)
+        command_capture = f'infer capture -- gcc {compile_options} -c '
+        command_analyze = f'infer analyze -- gcc {compile_options} -c '
         
     start_time = time.time()
     output = subprocess.getoutput(command_+test_file)
     execution_time = time.time() - start_time
+
+    subprocess.call('rm -rf infer-out', shell=True)
+
     return output, execution_time
 
-def diff_based_matching(changed_lines, current_commit, detector_name):
+def diff_based_matching(changed_lines, current_commit, detector_name, library_name):
 
     save_source_code(current_commit.source_code_before, 'vul', current_commit.filename)
 
     loc = len(current_commit.source_code_before.split('\n'))
 
     if os.path.isfile(os.path.join(this_project, 'vul_'+current_commit.filename)):
-        [output, execution_time] = run(os.path.join(this_project, 'vul_'+current_commit.filename), detector_name)
+        [output, execution_time] = run(os.path.join(this_project, 'vul_'+current_commit.filename), detector_name, library_name)
 
         if detector_name == 'flawfinder':
             res = parse_flawfinder(output)
@@ -257,6 +269,9 @@ def diff_based_matching(changed_lines, current_commit, detector_name):
         
         if detector_name == 'rats':
             res = parse_rats(output)
+        
+        if detector_name == 'infer':
+            res = parse_infer(output)
 
         detection_status = {'detected': []}
         if not isinstance(res[0], str):
@@ -339,13 +354,13 @@ def combine_diff_results(detection_status):
 def main():
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
 
-    tools = ['flawfinder', 'rats']
+    tools = ['infer', 'flawfinder', 'rats', 'cppcheck', 'clang']
     mappings_ = ['diff', 'fixed']
 
     for tool in tools:
         for mapping_ in mappings_:
             for i, dir in enumerate(os.listdir(vic_path)):
-                if user_names[i] == 'tensorflow':
+                if user_names[i] == 'tensorflow' or user_names[i] == 'pytorch':
                     repository_path = this_project+'/ml_repos_cloned/'+user_names[i]
                 else:
                     repository_path = this_project+'/ml_repos_cloned/'+user_names[i]+'/'+dir.split('_')[1].split('.')[0]
@@ -369,11 +384,11 @@ def main():
                         x = list(item.keys())
                         current_commit = PyDrillerGitRepo(repository_path).get_commit(x[0])
                         for mod in current_commit.modifications:
-                            if 'test' not in mod.new_path or 'test' not in mod.filename:
+                            if 'test' not in mod.new_path and 'test' not in mod.filename and mod.filename.split('.')[-1] in _extensions:
                                 cl = get_fix_file_names(mod)
 
                                 if mapping_ == 'diff':
-                                    detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool)
+                                    detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i])
                                     if res == 'not detected':
                                         print('No vulnerable candidate detected!')
                                         my_data = [tool, 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
