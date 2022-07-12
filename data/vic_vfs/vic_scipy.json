@@ -1,0 +1,7720 @@
+[{
+"9fede9489d98707240d0e7213104bc617daa4c75": []},
+{
+"9484b9dd6331ca121d2340fb60b8090f8eed67ce": []},
+{
+"e32fc2329d3dd23298725153c5b2cc7fcd0f14f1": [
+{
+    "line_num": 706,
+    "line_str": "Py_XDECREF(result);",
+    "file_path": "scipy/ndimage/src/nd_image.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            706,
+            "Py_XDECREF(result);"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            706,
+            "Py_XDECREF(result);"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            706,
+            "Py_XDECREF(result);"
+        ]
+    ]
+}
+]
+},{
+"e53b4fa02e6e21894cf2fa6e304aaad0da52aa2b": []},
+{
+"9b0b0d61b61ed37b04cc08ebab5b8e73256712c3": [
+{
+    "line_num": 249,
+    "line_str": "return py::reinterpret_borrow<py::array>(arr);",
+    "file_path": "scipy/spatial/src/distance_pybind.cpp",
+    "previous_commits": [
+        [
+            "a90405468ee0d5b49d71fa979b46433e2c04d98b",
+            249,
+            "return py::reinterpret_borrow<py::array>(arr);"
+        ]
+    ]
+},
+{
+    "line_num": 241,
+    "line_str": "return py::reinterpret_borrow<py::array_t<T>>(arr);",
+    "file_path": "scipy/spatial/src/distance_pybind.cpp",
+    "previous_commits": [
+        [
+            "a90405468ee0d5b49d71fa979b46433e2c04d98b",
+            241,
+            "return py::reinterpret_borrow<py::array_t<T>>(arr);"
+        ]
+    ]
+}
+]
+},{
+"e2896720599679d665bbcc42f46fa4729d5eea7b": [
+{
+    "line_num": 136,
+    "line_str": "in = in < -len ? in + sz2 : -in - 1;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            136,
+            "in = in < -len ? in + sz2 : -in - 1;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            136,
+            "in = in < -len ? in + sz2 : -in - 1;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            136,
+            "in = in < -len ? in + sz2 : -in - 1;"
+        ]
+    ]
+}
+]
+},{
+"e2091e9e4be2dffed8c6535547e8519dc002fa74": []},
+{
+"5910e04cb6b58d795623d3d4e30369e733ef41a0": [
+{
+    "line_num": 452,
+    "line_str": "if (iopt == 0|| n > no) {",
+    "file_path": "scipy/interpolate/src/_fitpackmodule.c",
+    "previous_commits": [
+        [
+            "86a53d37c97bb492b03e45b34079bfc6ee776e73",
+            452,
+            "if (iopt == 0|| n > no) {"
+        ]
+    ]
+}
+]
+},{
+"fd3e8c0b871f6033bfd779e69ded86944f7f039c": [
+{
+    "line_num": 188,
+    "line_str": "else  {",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            188,
+            "else  {"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            139,
+            "else {"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            97,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 184,
+    "line_str": "for (k=0; k < Nwin[1]; k++) {",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            184,
+            "for (k=0; k < Nwin[1]; k++) {"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            137,
+            "for (k=0; k < Nwin[1]; k++) {"
+        ]
+    ]
+},
+{
+    "line_num": 122,
+    "line_str": "bounds_pad_flag = 0;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            122,
+            "bounds_pad_flag = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 143,
+    "line_str": "indices = malloc(Nwin[1] * sizeof(indices[0]));",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "39e8992c3011b41a30fcad9f67c42e1c26e0675b",
+            143,
+            "indices = malloc(Nwin[1] * sizeof(indices[0]));"
+        ],
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            135,
+            "indices = malloc(Nwin[1] * sizeof(indices[0]));"
+        ]
+    ]
+},
+{
+    "line_num": 205,
+    "line_str": "}",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            205,
+            "}"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            161,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 81,
+    "line_str": "boundary = flag & BOUNDARY_MASK;  /* flag can be fill, reflecting, circular */",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "298f6e83b16a1a77978edca08e3e681505e5cd9f",
+            81,
+            "boundary = flag & BOUNDARY_MASK;  /* flag can be fill, reflecting, circular */"
+        ]
+    ]
+},
+{
+    "line_num": 110,
+    "line_str": "type_size = elsizes[type_num];",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "cb1881bc137ff303cd65c6a93ff3a861dac8a888",
+            110,
+            "type_size = elsizes[type_num];"
+        ]
+    ]
+},
+{
+    "line_num": 69,
+    "line_str": "char **pvals, npy_intp n) { \\",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            69,
+            "char **pvals, npy_intp n) { \\"
+        ]
+    ]
+},
+{
+    "line_num": 139,
+    "line_str": "ind1 = convolve ? (new_n-k) : (new_n+k);",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "298f6e83b16a1a77978edca08e3e681505e5cd9f",
+            139,
+            "ind1 = convolve ? (new_n-k) : (new_n+k);"
+        ]
+    ]
+},
+{
+    "line_num": 73,
+    "line_str": "int Os[2];",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            73,
+            "int Os[2];"
+        ]
+    ]
+},
+{
+    "line_num": 135,
+    "line_str": "if (!bounds_pad_flag) ind0_memory = ind0*instr[0];",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            135,
+            "if (!bounds_pad_flag) ind0_memory = ind0*instr[0];"
+        ]
+    ]
+},
+{
+    "line_num": 28,
+    "line_str": "static void fname ## _onemultadd(char *sum, char *term1, npy_intp str, char **pvals, npy_intp n) { \\",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            28,
+            "static void fname ## _onemultadd(char *sum, char *term1, npy_intp str, char **pvals, npy_intp n) { \\"
+        ],
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            27,
+            "static void fname ## _onemultadd(char *sum, char *term1, intp str, char **pvals, intp n) { \\"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            20,
+            "static void fname ## _onemultadd(char *sum, char *term1, char *term2) { \\"
+        ]
+    ]
+},
+{
+    "line_num": 185,
+    "line_str": "npy_intp k;",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            185,
+            "npy_intp k;"
+        ]
+    ]
+},
+{
+    "line_num": 127,
+    "line_str": "else bounds_pad_flag = 1;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            127,
+            "else bounds_pad_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 148,
+    "line_str": "else bounds_pad_flag = 1;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            148,
+            "else bounds_pad_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 82,
+    "line_str": "outsize = flag & OUTSIZE_MASK;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "298f6e83b16a1a77978edca08e3e681505e5cd9f",
+            82,
+            "outsize = flag & OUTSIZE_MASK;"
+        ]
+    ]
+},
+{
+    "line_num": 78,
+    "line_str": "int boundary, outsize, convolve, type_num, type_size;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "298f6e83b16a1a77978edca08e3e681505e5cd9f",
+            78,
+            "int boundary, outsize, convolve, type_num, type_size;"
+        ]
+    ]
+},
+{
+    "line_num": 70,
+    "line_str": "npy_intp k; \\",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            70,
+            "npy_intp k; \\"
+        ],
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            68,
+            "intp k; \\"
+        ]
+    ]
+},
+{
+    "line_num": 107,
+    "line_str": "for (n=0; n < Os[1]; n++) {  /* loop over columns */",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            107,
+            "for (n=0; n < Os[1]; n++) {  /* loop over columns */"
+        ]
+    ]
+},
+{
+    "line_num": 136,
+    "line_str": "",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            136,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 190,
+    "line_str": "for (k=0; k < Nwin[1]; k++) {",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            190,
+            "for (k=0; k < Nwin[1]; k++) {"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            137,
+            "for (k=0; k < Nwin[1]; k++) {"
+        ]
+    ]
+},
+{
+    "line_num": 29,
+    "line_str": "npy_intp k; \\",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            29,
+            "npy_intp k; \\"
+        ],
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            28,
+            "intp k; \\"
+        ]
+    ]
+},
+{
+    "line_num": 132,
+    "line_str": "else bounds_pad_flag = 1;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            132,
+            "else bounds_pad_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 186,
+    "line_str": "}",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            186,
+            "}"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            161,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 25,
+    "line_str": "typedef void (OneMultAddFunction) (char *, char *, npy_intp, char **, npy_intp);",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            25,
+            "typedef void (OneMultAddFunction) (char *, char *, npy_intp, char **, npy_intp);"
+        ],
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            24,
+            "typedef void (OneMultAddFunction) (char *, char *, intp, char **, intp);"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            17,
+            "typedef void (OneMultAddFunction) (char *, char *, char *);"
+        ]
+    ]
+},
+{
+    "line_num": 120,
+    "line_str": "char ** indices;",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            120,
+            "char ** indices;"
+        ]
+    ]
+},
+{
+    "line_num": 182,
+    "line_str": "if (bounds_pad_flag) {",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            182,
+            "if (bounds_pad_flag) {"
+        ]
+    ]
+},
+{
+    "line_num": 116,
+    "line_str": "int m, n, j, ind0, ind1;",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            116,
+            "int m, n, j, ind0, ind1;"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            72,
+            "int m, n, j, k, ind0, ind1;"
+        ]
+    ]
+},
+{
+    "line_num": 211,
+    "line_str": "}",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            211,
+            "}"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            161,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 153,
+    "line_str": "else bounds_pad_flag = 1;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            153,
+            "else bounds_pad_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 120,
+    "line_str": "ind0 = convolve ? (new_m-j): (new_m+j);",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "298f6e83b16a1a77978edca08e3e681505e5cd9f",
+            120,
+            "ind0 = convolve ? (new_m-j): (new_m+j);"
+        ]
+    ]
+},
+{
+    "line_num": 87,
+    "line_str": "int new_m, new_n, ind0_memory=0;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "5017e216335aef34e0725e8c27735ec777864906",
+            87,
+            "int new_m, new_n, ind0_memory=0;"
+        ]
+    ]
+},
+{
+    "line_num": 207,
+    "line_str": "indices[k] = in+ind0_memory+ind1*instr[1];",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            207,
+            "indices[k] = in+ind0_memory+ind1*instr[1];"
+        ]
+    ]
+},
+{
+    "line_num": 116,
+    "line_str": "for (j=0; j < Nwin[0]; j++) {",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            116,
+            "for (j=0; j < Nwin[0]; j++) {"
+        ]
+    ]
+},
+{
+    "line_num": 83,
+    "line_str": "convolve = flag & FLIP_MASK;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "298f6e83b16a1a77978edca08e3e681505e5cd9f",
+            83,
+            "convolve = flag & FLIP_MASK;"
+        ]
+    ]
+},
+{
+    "line_num": 71,
+    "line_str": "int bounds_pad_flag = 0;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            71,
+            "int bounds_pad_flag = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 191,
+    "line_str": "npy_intp k;",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            191,
+            "npy_intp k;"
+        ]
+    ]
+},
+{
+    "line_num": 30,
+    "line_str": "for (k=0; k < n; k++) { \\",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            30,
+            "for (k=0; k < n; k++) { \\"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            137,
+            "for (k=0; k < Nwin[1]; k++) {"
+        ]
+    ]
+},
+{
+    "line_num": 187,
+    "line_str": "}",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            187,
+            "}"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            161,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 158,
+    "line_str": "bounds_pad_flag = 0;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            158,
+            "bounds_pad_flag = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 212,
+    "line_str": "mult_and_add(sum, hvals+j*hstr[0], hstr[1], indices, Nwin[1]);",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            212,
+            "mult_and_add(sum, hvals+j*hstr[0], hstr[1], indices, Nwin[1]);"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            160,
+            "mult_and_add(sum, hvals+j*hstr[0]+k*hstr[1], value);"
+        ]
+    ]
+},
+{
+    "line_num": 208,
+    "line_str": "}",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            208,
+            "}"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            161,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 84,
+    "line_str": "type_num = (flag & TYPE_MASK) >> TYPE_SHIFT;",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "298f6e83b16a1a77978edca08e3e681505e5cd9f",
+            84,
+            "type_num = (flag & TYPE_MASK) >> TYPE_SHIFT;"
+        ]
+    ]
+},
+{
+    "line_num": 204,
+    "line_str": "indices[k] = fillvalue;",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            204,
+            "indices[k] = fillvalue;"
+        ]
+    ]
+},
+{
+    "line_num": 6,
+    "line_str": "sizeof(npy_byte),",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            6,
+            "sizeof(npy_byte),"
+        ],
+        [
+            "08972b8a8a6d68c673209bdc4ebcdc6c367711e5",
+            4,
+            "sizeof(byte),"
+        ]
+    ]
+},
+{
+    "line_num": 68,
+    "line_str": "static void fname ## _onemultadd(char *sum, char *term1, npy_intp str, \\",
+    "file_path": "scipy/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "280524810d0e7ac16e2e77507f3e756ce87e4de1",
+            68,
+            "static void fname ## _onemultadd(char *sum, char *term1, npy_intp str, \\"
+        ],
+        [
+            "9cdcaffd962d0fdd6aca607a7bcd455472c65a8a",
+            68,
+            "static void fname ## _onemultadd(char *sum, char *term1, npy_intp str,"
+        ],
+        [
+            "7f3c5c899de09d5c3ca6f89e63732feabe301fda",
+            67,
+            "static void fname ## _onemultadd(char *sum, char *term1, intp str, char **pvals, intp n) { \\"
+        ],
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            37,
+            "static void fname ## _onemultadd(char *sum, char *term1, char *term2) { \\"
+        ]
+    ]
+},
+{
+    "line_num": 134,
+    "line_str": "",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            134,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 101,
+    "line_str": "for (m=0; m < Os[0]; m++) {",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            101,
+            "for (m=0; m < Os[0]; m++) {"
+        ]
+    ]
+}
+]
+},{
+"7b9111c0bc32e136cf64829a483eee58b6d6bf1d": []},
+{
+"01c3d9be867c82aeac46bd92866489f1256db0e9": [
+{
+    "line_num": 456,
+    "line_str": "if (ap_wrk == NULL || ap_iwrk == NULL) {",
+    "file_path": "scipy/interpolate/src/_fitpackmodule.c",
+    "previous_commits": [
+        [
+            "86a53d37c97bb492b03e45b34079bfc6ee776e73",
+            456,
+            "if (ap_wrk == NULL || ap_iwrk == NULL) {"
+        ]
+    ]
+}
+]
+},{
+"e2159417be7d4ab9d0b366ce62d88ff6761e4959": []},
+{
+"e1f97957edf4b750a10cc9957a25af97d95adda1": []},
+{
+"e555b2798bfde3854d8bc88e64b811a4de0a11ef": [
+{
+    "line_num": 307,
+    "line_str": "s *= lanczos_sum_expg_scaled(x + 1) * zeta(x + 1, 1);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2172c00ff8e00eaea5795b16d423733a5a7fcb5b",
+            307,
+            "s *= lanczos_sum_expg_scaled(x + 1) * zeta(x + 1, 1);"
+        ]
+    ]
+},
+{
+    "line_num": 306,
+    "line_str": "s *= -SQRT_2_PI * sin(0.5 * NPY_PI * x_shift);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2172c00ff8e00eaea5795b16d423733a5a7fcb5b",
+            306,
+            "s *= -SQRT_2_PI * sin(0.5 * NPY_PI * x_shift);"
+        ]
+    ]
+},
+{
+    "line_num": 303,
+    "line_str": "s = pow((x + lanczos_g + 0.5) / (2 * NPY_PI * NPY_E), x + 0.5);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2172c00ff8e00eaea5795b16d423733a5a7fcb5b",
+            303,
+            "s = pow((x + lanczos_g + 0.5) / (2 * NPY_PI * NPY_E), x + 0.5);"
+        ]
+    ]
+},
+{
+    "line_num": 327,
+    "line_str": "return s;",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "e7d8b1af041069dc85e1976a0d1ad56cd03b4686",
+            327,
+            "return s;"
+        ],
+        [
+            "2172c00ff8e00eaea5795b16d423733a5a7fcb5b",
+            308,
+            "return s - 1.0;"
+        ],
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            186,
+            "return (b - 1.0);"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            526,
+            "return (b - 1.0);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            519,
+            "return(b - 1.0);"
+        ]
+    ]
+},
+{
+    "line_num": 294,
+    "line_str": "double s, hx, x_shift;",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2172c00ff8e00eaea5795b16d423733a5a7fcb5b",
+            294,
+            "double s, hx, x_shift;"
+        ]
+    ]
+}
+]
+},{
+"9a1cf282fcb0153fadbef1bdf2cf52e7510abc84": []},
+{
+"3245f1996f2cd9d3ac6b9c30e1b2a6a1c7593ec4": [
+{
+    "line_num": 46,
+    "line_str": "",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "b234b11cefc2a2d878ee455f8b31451969d14b46",
+            46,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 45,
+    "line_str": "int num_cols = PyArray_DIM(obj_cont, 1);",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "f00a72ae5a438086e0edbc6c0640d68f5d7b1827",
+            45,
+            "int num_cols = PyArray_DIM(obj_cont, 1);"
+        ]
+    ]
+},
+{
+    "line_num": 44,
+    "line_str": "int num_rows = PyArray_DIM(obj_cont, 0);",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "f00a72ae5a438086e0edbc6c0640d68f5d7b1827",
+            44,
+            "int num_rows = PyArray_DIM(obj_cont, 0);"
+        ]
+    ]
+},
+{
+    "line_num": 60,
+    "line_str": "return x;",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "b234b11cefc2a2d878ee455f8b31451969d14b46",
+            60,
+            "return x;"
+        ]
+    ]
+},
+{
+    "line_num": 59,
+    "line_str": "} else {",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "b234b11cefc2a2d878ee455f8b31451969d14b46",
+            59,
+            "} else {"
+        ]
+    ]
+},
+{
+    "line_num": 58,
+    "line_str": "return NULL;",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "b234b11cefc2a2d878ee455f8b31451969d14b46",
+            58,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 57,
+    "line_str": "PyObject* x = PyArray_SimpleNew(1, dim, NPY_INT64);",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "506246a14aa40067e150c1ec896efb3a70751f6e",
+            57,
+            "PyObject* x = PyArray_SimpleNew(1, dim, NPY_INT64);"
+        ]
+    ]
+},
+{
+    "line_num": 55,
+    "line_str": "Py_DECREF((PyObject*)obj_cont);",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "f00a72ae5a438086e0edbc6c0640d68f5d7b1827",
+            55,
+            "Py_DECREF((PyObject*)obj_cont);"
+        ]
+    ]
+},
+{
+    "line_num": 49,
+    "line_str": "return NULL;",
+    "file_path": "scipy/optimize/_jonkervolgenant_module.c",
+    "previous_commits": [
+        [
+            "b234b11cefc2a2d878ee455f8b31451969d14b46",
+            49,
+            "return NULL;"
+        ]
+    ]
+}
+]
+},{
+"4dcb404450e4d9814baaefe43846e73b37407846": []},
+{
+"2172c00ff8e00eaea5795b16d423733a5a7fcb5b": [
+{
+    "line_num": 179,
+    "line_str": "mtherr(\"zetac\", OVERFLOW);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            179,
+            "mtherr(\"zetac\", OVERFLOW);"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            519,
+            "mtherr(\"zetac\", OVERFLOW);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            513,
+            "mtherr( \"zetac\", OVERFLOW );"
+        ]
+    ]
+},
+{
+    "line_num": 229,
+    "line_str": "return (w);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            229,
+            "return (w);"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            568,
+            "return (w);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            567,
+            "return(w);"
+        ]
+    ]
+},
+{
+    "line_num": 570,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            570,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 504,
+    "line_str": "double x;",
+    "file_path": "Lib/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            504,
+            "double x;"
+        ]
+    ]
+},
+{
+    "line_num": 184,
+    "line_str": "b = sin(0.5 * NPY_PI * x) * pow(2.0 * NPY_PI, x) *",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            184,
+            "b = sin(0.5 * NPY_PI * x) * pow(2.0 * NPY_PI, x) *"
+        ],
+        [
+            "6bfdfd401df24730d86c8467d2d811cb64594f1d",
+            522,
+            "b = sin(0.5 * NPY_PI * x) * pow(2.0 * NPY_PI,"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            524,
+            "b = sin(0.5 * PI * x) * pow(2.0 * PI,"
+        ]
+    ]
+},
+{
+    "line_num": 521,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            521,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 527,
+    "line_str": "}",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            527,
+            "}"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            537,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 222,
+    "line_str": "return (s);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            222,
+            "return (s);"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            561,
+            "return (s);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            559,
+            "return( s );"
+        ]
+    ]
+},
+{
+    "line_num": 501,
+    "line_str": "extern double MACHEP;",
+    "file_path": "Lib/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            501,
+            "extern double MACHEP;"
+        ]
+    ]
+},
+{
+    "line_num": 185,
+    "line_str": "Gamma(s) * (1.0 + w) / NPY_PI;",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            185,
+            "Gamma(s) * (1.0 + w) / NPY_PI;"
+        ],
+        [
+            "6bfdfd401df24730d86c8467d2d811cb64594f1d",
+            523,
+            "x) * Gamma(s) * (1.0 + w) / NPY_PI;"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            525,
+            "x) * Gamma(s) * (1.0 + w) / PI;"
+        ]
+    ]
+},
+{
+    "line_num": 181,
+    "line_str": "return (NPY_NAN);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "90f3bac55d50c2a61dbc3fd8aa2ef44ef6c1b920",
+            181,
+            "return (NPY_NAN);"
+        ]
+    ]
+},
+{
+    "line_num": 210,
+    "line_str": "return (a);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            210,
+            "return (a);"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            549,
+            "return (a);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            545,
+            "return( a );"
+        ]
+    ]
+},
+{
+    "line_num": 586,
+    "line_str": "return (s);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            586,
+            "return (s);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            586,
+            "return(s);"
+        ]
+    ]
+},
+{
+    "line_num": 572,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            572,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 190,
+    "line_str": "return (0.0);       /* because first term is 2**-x */",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            190,
+            "return (0.0);       /* because first term is 2**-x */"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            530,
+            "return (0.0);\t\t/* because first term is 2**-x */"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            523,
+            "return(0.0);\t/* because first term is 2**-x */"
+        ]
+    ]
+},
+{
+    "line_num": 186,
+    "line_str": "return (b - 1.0);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            186,
+            "return (b - 1.0);"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            526,
+            "return (b - 1.0);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            519,
+            "return(b - 1.0);"
+        ]
+    ]
+},
+{
+    "line_num": 182,
+    "line_str": "s = 1.0 - x;",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            182,
+            "s = 1.0 - x;"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            522,
+            "s = 1.0 - x;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            516,
+            "s = 1.0 - x;"
+        ]
+    ]
+},
+{
+    "line_num": 178,
+    "line_str": "if (x < -30.8148) {",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            178,
+            "if (x < -30.8148) {"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            518,
+            "if (x < -30.8148) {"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            511,
+            "if( x < -30.8148 )"
+        ]
+    ]
+},
+{
+    "line_num": 517,
+    "line_str": "if (x < 0.0) {",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            517,
+            "if (x < 0.0) {"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            509,
+            "if( x < 0.0 )"
+        ]
+    ]
+},
+{
+    "line_num": 540,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            540,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 573,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            573,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 503,
+    "line_str": "double zetac(x)",
+    "file_path": "Lib/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            503,
+            "double zetac(x)"
+        ]
+    ]
+},
+{
+    "line_num": 183,
+    "line_str": "w = zetac(s);",
+    "file_path": "scipy/special/cephes/zetac.c",
+    "previous_commits": [
+        [
+            "2489e56465060dcbe1e1a8f96fc30c092fdda94e",
+            183,
+            "w = zetac(s);"
+        ],
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            523,
+            "w = zetac(s);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            517,
+            "w = zetac( s );"
+        ]
+    ]
+}
+]
+},{
+"81bea4e9439d595402c1da0dcf06d7d085ebd749": [
+{
+    "line_num": 990,
+    "line_str": "",
+    "file_path": "scipy/signal/sigtoolsmodule.c",
+    "previous_commits": [
+        [
+            "7d88e1043763345ae7999dadf676f932875a5b3a",
+            990,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1697,
+    "line_str": "memcpy(op, sort_buffer + order*is1, os);",
+    "file_path": "Lib/signal/sigtoolsmodule.c",
+    "previous_commits": [
+        [
+            "5fe4b26374b47c3c397a20ee23361957604fc235",
+            1697,
+            "memcpy(op, sort_buffer + order*is1, os);"
+        ]
+    ]
+}
+]
+},{
+"29626a66e0309ac48070f2b2fb4049ffe3684bf9": []},
+{
+"121686f037acab76dd802553e44f34b9a6a24578": []},
+{
+"d9aa2c0a7b5933c3eb21c6d2fdaf31f1b03de912": []},
+{
+"4d59b1e72e0d7449f356413d57c4e286b87b0e30": []},
+{
+"8bbe97ac91ef109d864dc9f7b818b195db58d6ad": [
+{
+    "line_num": 1174,
+    "line_str": "return NULL;",
+    "file_path": "scipy/interpolate/src/__fitpack.h",
+    "previous_commits": [
+        [
+            "84a2606cf3eb6d2a8de03a248fa7bdf887a10b34",
+            1174,
+            "return NULL;"
+        ],
+        [
+            "989318ad70e46915badde1bc6d950914bdfbce5c",
+            394,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 1372,
+    "line_str": "return NULL;",
+    "file_path": "scipy/interpolate/src/__fitpack.h",
+    "previous_commits": [
+        [
+            "84a2606cf3eb6d2a8de03a248fa7bdf887a10b34",
+            1372,
+            "return NULL;"
+        ],
+        [
+            "989318ad70e46915badde1bc6d950914bdfbce5c",
+            394,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "if (k >= N) return -3;     /* sum did not converge */",
+    "file_path": "Lib/signal/D_bspline_util.c",
+    "previous_commits": [
+        [
+            "9a2bfdf6bd6813cdabd8f2da8b1a5502996cddef",
+            161,
+            "if (k >= N) return -3;     /* sum did not converge */"
+        ]
+    ]
+},
+{
+    "line_num": 598,
+    "line_str": "if (lambda > 0) return -2;",
+    "file_path": "Lib/signal/D_bspline_util.c",
+    "previous_commits": [
+        [
+            "9a2bfdf6bd6813cdabd8f2da8b1a5502996cddef",
+            598,
+            "if (lambda > 0) return -2;"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "if (k >= N) return -3;     /* sum did not converge */",
+    "file_path": "Lib/signal/S_bspline_util.c",
+    "previous_commits": [
+        [
+            "9a2bfdf6bd6813cdabd8f2da8b1a5502996cddef",
+            161,
+            "if (k >= N) return -3;     /* sum did not converge */"
+        ]
+    ]
+},
+{
+    "line_num": 598,
+    "line_str": "if (lambda > 0) return -2;",
+    "file_path": "Lib/signal/S_bspline_util.c",
+    "previous_commits": [
+        [
+            "9a2bfdf6bd6813cdabd8f2da8b1a5502996cddef",
+            598,
+            "if (lambda > 0) return -2;"
+        ]
+    ]
+},
+{
+    "line_num": 99,
+    "line_str": "return -2;   /* Invalid boundary flag */",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            99,
+            "return -2;   /* Invalid boundary flag */"
+        ]
+    ]
+},
+{
+    "line_num": 96,
+    "line_str": "else return -1;  /* Invalid output flag */",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "f6a9458969eb6700a5db87beddbddd1f79f02d78",
+            96,
+            "else return -1;  /* Invalid output flag */"
+        ]
+    ]
+},
+{
+    "line_num": 101,
+    "line_str": "if ((boundary != PAD) && (boundary != REFLECT) && (boundary != CIRCULAR))",
+    "file_path": "Lib/signal/firfilter.c",
+    "previous_commits": [
+        [
+            "298f6e83b16a1a77978edca08e3e681505e5cd9f",
+            101,
+            "if ((boundary != PAD) && (boundary != REFLECT) && (boundary != CIRCULAR))"
+        ]
+    ]
+}
+]
+},{
+"d1203c280a8661536d64f17e6a90d7ef000302d5": []},
+{
+"b1dfa580c46198daa48df1691b71fb459eb1e046": [
+{
+    "line_num": 681,
+    "line_str": "zeros = (npy_intp**)malloc(rank * sizeof(npy_intp*));",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "aac0edf26a0754eef7cc2db3ba61496812e7181f",
+            681,
+            "zeros = (npy_intp**)malloc(rank * sizeof(npy_intp*));"
+        ]
+    ]
+}
+]
+},{
+"00af093cf7a77f207c190c6a6d6bb28e38f7e40a": []},
+{
+"63d5c2bdc93c2da03215774832a1c4ce1b790166": []},
+{
+"2ba92c89df830ca1059ca34431c459accd3ccded": [
+{
+    "line_num": 548,
+    "line_str": "int ii, jj;",
+    "file_path": "scipy/ndimage/src/ni_filters.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            548,
+            "int ii, jj;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            548,
+            "int ii, jj;"
+        ],
+        [
+            "11d0c44a2a02e2a88aca417c6160139778a3b8f4",
+            548,
+            "int ii, jj;"
+        ]
+    ]
+},
+{
+    "line_num": 546,
+    "line_str": "static double NI_Select(double *buffer, int min, int max, int rank)",
+    "file_path": "scipy/ndimage/src/ni_filters.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            546,
+            "static double NI_Select(double *buffer, int min, int max, int rank)"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            546,
+            "static double NI_Select(double *buffer, int min, int max, int rank)"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            546,
+            "static double NI_Select(double *buffer, int min, int max, int rank)"
+        ]
+    ]
+},
+{
+    "line_num": 464,
+    "line_str": "int constant = 0, edge = 0, offset = 0;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            464,
+            "int constant = 0, edge = 0, offset = 0;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            464,
+            "int constant = 0, edge = 0, offset = 0;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            460,
+            "int constant = 0, edge = 0, offset = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 525,
+    "line_str": "int len = idimensions[hh];",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            525,
+            "int len = idimensions[hh];"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            525,
+            "int len = idimensions[hh];"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            521,
+            "int len = idimensions[hh];"
+        ]
+    ]
+},
+{
+    "line_num": 524,
+    "line_str": "int idx = start + ll;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            524,
+            "int idx = start + ll;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            524,
+            "int idx = start + ll;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            520,
+            "int idx = start + ll;"
+        ]
+    ]
+},
+{
+    "line_num": 557,
+    "line_str": "int idx = 0;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            557,
+            "int idx = 0;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            557,
+            "int idx = 0;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            553,
+            "int idx = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 746,
+    "line_str": "start = (int)floor(cc + 0.5) - order / 2;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            746,
+            "start = (int)floor(cc + 0.5) - order / 2;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            746,
+            "start = (int)floor(cc + 0.5) - order / 2;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            741,
+            "start = (int)floor(cc + 0.5) - order / 2;"
+        ]
+    ]
+},
+{
+    "line_num": 744,
+    "line_str": "start = (int)floor(cc) - order / 2;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            744,
+            "start = (int)floor(cc) - order / 2;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            744,
+            "start = (int)floor(cc) - order / 2;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            739,
+            "start = (int)floor(cc) - order / 2;"
+        ]
+    ]
+},
+{
+    "line_num": 740,
+    "line_str": "int start;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            740,
+            "int start;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            740,
+            "int start;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            735,
+            "int start;"
+        ]
+    ]
+},
+{
+    "line_num": 515,
+    "line_str": "start = (int)floor(cc + 0.5) - order / 2;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            515,
+            "start = (int)floor(cc + 0.5) - order / 2;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            515,
+            "start = (int)floor(cc + 0.5) - order / 2;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            511,
+            "start = (int)floor(cc + 0.5) - order / 2;"
+        ]
+    ]
+},
+{
+    "line_num": 513,
+    "line_str": "start = (int)floor(cc) - order / 2;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            513,
+            "start = (int)floor(cc) - order / 2;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            513,
+            "start = (int)floor(cc) - order / 2;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            509,
+            "start = (int)floor(cc) - order / 2;"
+        ]
+    ]
+},
+{
+    "line_num": 511,
+    "line_str": "int start;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            511,
+            "int start;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            511,
+            "int start;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            507,
+            "int start;"
+        ]
+    ]
+},
+{
+    "line_num": 761,
+    "line_str": "int s2 = 2 * len - 2;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            761,
+            "int s2 = 2 * len - 2;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            761,
+            "int s2 = 2 * len - 2;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            756,
+            "int s2 = 2 * len - 2;"
+        ]
+    ]
+},
+{
+    "line_num": 757,
+    "line_str": "int len = idimensions[jj];",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            757,
+            "int len = idimensions[jj];"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            757,
+            "int len = idimensions[jj];"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            752,
+            "int len = idimensions[jj];"
+        ]
+    ]
+},
+{
+    "line_num": 756,
+    "line_str": "int idx = start + hh;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            756,
+            "int idx = start + hh;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            756,
+            "int idx = start + hh;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            751,
+            "int idx = start + hh;"
+        ]
+    ]
+},
+{
+    "line_num": 850,
+    "line_str": "int idx = 0;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            850,
+            "int idx = 0;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            850,
+            "int idx = 0;"
+        ],
+        [
+            "11d0c44a2a02e2a88aca417c6160139778a3b8f4",
+            849,
+            "int idx = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 529,
+    "line_str": "int s2 = 2 * len - 2;",
+    "file_path": "scipy/ndimage/src/ni_interpolation.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            529,
+            "int s2 = 2 * len - 2;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            529,
+            "int s2 = 2 * len - 2;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            525,
+            "int s2 = 2 * len - 2;"
+        ]
+    ]
+},
+{
+    "line_num": 773,
+    "line_str": "int bin;",
+    "file_path": "scipy/ndimage/src/ni_measure.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            773,
+            "int bin;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            773,
+            "int bin;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            773,
+            "int bin;"
+        ]
+    ]
+},
+{
+    "line_num": 900,
+    "line_str": "int ival = 0;",
+    "file_path": "scipy/ndimage/src/ni_measure.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            900,
+            "int ival = 0;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            900,
+            "int ival = 0;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            900,
+            "int ival = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 777,
+    "line_str": "bin = (int)((val - min) / bsize);",
+    "file_path": "scipy/ndimage/src/ni_measure.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            777,
+            "bin = (int)((val - min) / bsize);"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            777,
+            "bin = (int)((val - min) / bsize);"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            777,
+            "bin = (int)((val - min) / bsize);"
+        ]
+    ]
+},
+{
+    "line_num": 767,
+    "line_str": "int jj;",
+    "file_path": "scipy/ndimage/src/ni_morphology.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            767,
+            "int jj;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            767,
+            "int jj;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            767,
+            "int jj;"
+        ]
+    ]
+},
+{
+    "line_num": 855,
+    "line_str": "int kk;",
+    "file_path": "scipy/ndimage/src/ni_morphology.c",
+    "previous_commits": [
+        [
+            "db5b41adcb54c6700dc639dcd168e6ceea9e970c",
+            855,
+            "int kk;"
+        ],
+        [
+            "08569fad438916eed2bf61d26c498794ced0e1c1",
+            855,
+            "int kk;"
+        ],
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            855,
+            "int kk;"
+        ]
+    ]
+}
+]
+},{
+"85ba6f529ab6799bbded4c50ee99c400a51c9bd6": []},
+{
+"7cb266e8ced892fcc8bd4072d1dfcf51261959d3": []},
+{
+"b109a8009252118641d831d774cee2dafd71e1cf": []},
+{
+"ffa6a52647b9449e779e2732f8a435b0b7862fc7": [
+{
+    "line_num": 270,
+    "line_str": "",
+    "file_path": "scipy/special/c_misc/struve.c",
+    "previous_commits": [
+        [
+            "7a91c8b72bdecfe8493eed237b8930f021192b84",
+            270,
+            ""
+        ]
+    ]
+}
+]
+},{
+"a1491c8abfdfd39eccfe917ef4dcc0417f07129c": [
+{
+    "line_num": 208,
+    "line_str": "double term, sum, maxterm;",
+    "file_path": "scipy/special/c_misc/struve.c",
+    "previous_commits": [
+        [
+            "7a91c8b72bdecfe8493eed237b8930f021192b84",
+            208,
+            "double term, sum, maxterm;"
+        ]
+    ]
+},
+{
+    "line_num": 218,
+    "line_str": "term = 2 / sqrt(M_PI) * exp(-lgam(v + 1.5) + (v + 1)*log(z/2)) * gammasgn(v + 1.5);",
+    "file_path": "scipy/special/c_misc/struve.c",
+    "previous_commits": [
+        [
+            "7a91c8b72bdecfe8493eed237b8930f021192b84",
+            218,
+            "term = 2 / sqrt(M_PI) * exp(-lgam(v + 1.5) + (v + 1)*log(z/2)) * gammasgn(v + 1.5);"
+        ]
+    ]
+},
+{
+    "line_num": 217,
+    "line_str": "",
+    "file_path": "scipy/special/c_misc/struve.c",
+    "previous_commits": [
+        [
+            "7a91c8b72bdecfe8493eed237b8930f021192b84",
+            217,
+            ""
+        ]
+    ]
+}
+]
+},{
+"dbb0276cbb525229b9c499a17c03472b39b7b8de": []},
+{
+"c1e407d8e4009de7deecfdf10d68c0283bdc2fdd": [
+{
+    "line_num": 146,
+    "line_str": "s = s + t;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            146,
+            "s = s + t;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            153,
+            "s = s + t;"
+        ]
+    ]
+},
+{
+    "line_num": 142,
+    "line_str": "for (i = 0; i < 12; i++) {",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            142,
+            "for (i = 0; i < 12; i++) {"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            148,
+            "for( i=0; i<12; i++ )"
+        ]
+    ]
+},
+{
+    "line_num": 138,
+    "line_str": "s += b * w / (x - 1.0);",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            138,
+            "s += b * w / (x - 1.0);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            144,
+            "s += b*w/(x-1.0);"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            161,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 130,
+    "line_str": "a += 1.0;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            130,
+            "a += 1.0;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            136,
+            "a += 1.0;"
+        ]
+    ]
+},
+{
+    "line_num": 126,
+    "line_str": "i = 0;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            126,
+            "i = 0;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            131,
+            "i = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 155,
+    "line_str": "done:",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            155,
+            "done:"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            162,
+            "done:"
+        ]
+    ]
+},
+{
+    "line_num": 151,
+    "line_str": "a *= x + k;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            151,
+            "a *= x + k;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            150,
+            "a *= x + k;"
+        ]
+    ]
+},
+{
+    "line_num": 118,
+    "line_str": "{",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            118,
+            "{"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            123,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 141,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            141,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 147,
+    "line_str": "t = fabs(t / s);",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            147,
+            "t = fabs(t / s);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            154,
+            "t = fabs(t/s);"
+        ]
+    ]
+},
+{
+    "line_num": 143,
+    "line_str": "a *= x + k;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            143,
+            "a *= x + k;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            150,
+            "a *= x + k;"
+        ]
+    ]
+},
+{
+    "line_num": 139,
+    "line_str": "s -= 0.5 * b;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            139,
+            "s -= 0.5 * b;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            145,
+            "s -= 0.5 * b;"
+        ]
+    ]
+},
+{
+    "line_num": 131,
+    "line_str": "b = pow(a, -x);",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            131,
+            "b = pow(a, -x);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            137,
+            "b = pow( a, -x );"
+        ]
+    ]
+},
+{
+    "line_num": 127,
+    "line_str": "b = 0.0;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            127,
+            "b = 0.0;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            132,
+            "b = 0.0;"
+        ]
+    ]
+},
+{
+    "line_num": 156,
+    "line_str": "return (s);",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            156,
+            "return (s);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            163,
+            "return(s);"
+        ]
+    ]
+},
+{
+    "line_num": 152,
+    "line_str": "b /= w;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            152,
+            "b /= w;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            151,
+            "b /= w;"
+        ]
+    ]
+},
+{
+    "line_num": 142,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            142,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 148,
+    "line_str": "if (t < MACHEP)",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            148,
+            "if (t < MACHEP)"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            155,
+            "if( t < MACHEP )"
+        ]
+    ]
+},
+{
+    "line_num": 144,
+    "line_str": "b /= w;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            144,
+            "b /= w;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            151,
+            "b /= w;"
+        ]
+    ]
+},
+{
+    "line_num": 167,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            167,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 140,
+    "line_str": "a = 1.0;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            140,
+            "a = 1.0;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            146,
+            "a = 1.0;"
+        ]
+    ]
+},
+{
+    "line_num": 132,
+    "line_str": "s += b;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            132,
+            "s += b;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            138,
+            "s += b;"
+        ]
+    ]
+},
+{
+    "line_num": 128,
+    "line_str": "while ((i < 9) || (a <= 9.0)) {",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            128,
+            "while ((i < 9) || (a <= 9.0)) {"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            133,
+            "while( (i < 9) || (a <= 9.0) )"
+        ]
+    ]
+},
+{
+    "line_num": 124,
+    "line_str": "s = pow(q, -x);",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            124,
+            "s = pow(q, -x);"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            129,
+            "s = pow( q, -x );"
+        ]
+    ]
+},
+{
+    "line_num": 153,
+    "line_str": "k += 1.0;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            153,
+            "k += 1.0;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            157,
+            "k += 1.0;"
+        ]
+    ]
+},
+{
+    "line_num": 145,
+    "line_str": "t = a * b / A[i];",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            145,
+            "t = a * b / A[i];"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            152,
+            "t = a*b/A[i];"
+        ]
+    ]
+},
+{
+    "line_num": 141,
+    "line_str": "k = 0.0;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            141,
+            "k = 0.0;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            147,
+            "k = 0.0;"
+        ]
+    ]
+},
+{
+    "line_num": 137,
+    "line_str": "w = a;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            137,
+            "w = a;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            143,
+            "w = a;"
+        ]
+    ]
+},
+{
+    "line_num": 133,
+    "line_str": "if (fabs(b / s) < MACHEP)",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            133,
+            "if (fabs(b / s) < MACHEP)"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            139,
+            "if( fabs(b/s) < MACHEP )"
+        ]
+    ]
+},
+{
+    "line_num": 156,
+    "line_str": "goto done;",
+    "file_path": "Lib/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            156,
+            "goto done;"
+        ]
+    ]
+},
+{
+    "line_num": 129,
+    "line_str": "i += 1;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            129,
+            "i += 1;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            135,
+            "i += 1;"
+        ]
+    ]
+},
+{
+    "line_num": 125,
+    "line_str": "a = q;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            125,
+            "a = q;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            130,
+            "a = q;"
+        ]
+    ]
+},
+{
+    "line_num": 150,
+    "line_str": "k += 1.0;",
+    "file_path": "scipy/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            150,
+            "k += 1.0;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            157,
+            "k += 1.0;"
+        ]
+    ]
+},
+{
+    "line_num": 140,
+    "line_str": "goto done;",
+    "file_path": "Lib/special/cephes/zeta.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            140,
+            "goto done;"
+        ]
+    ]
+}
+]
+},{
+"024abe70b13741647e230686dccd5401e7035f3c": [
+{
+    "line_num": 263,
+    "line_str": "return sgn*NPY_INFINITY;",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "306eb867773ed7a89dbe65c6f12eceb7fe785c5c",
+            263,
+            "return sgn*NPY_INFINITY;"
+        ]
+    ]
+}
+]
+},{
+"306eb867773ed7a89dbe65c6f12eceb7fe785c5c": [
+{
+    "line_num": 89,
+    "line_str": "if (fabs(y) > MAXGAM) {",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            89,
+            "if (fabs(y) > MAXGAM) {"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            94,
+            "if( fabs(y) > MAXGAM )"
+        ]
+    ]
+},
+{
+    "line_num": 84,
+    "line_str": "goto over;",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            84,
+            "goto over;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            89,
+            "goto over;"
+        ]
+    ]
+},
+{
+    "line_num": 83,
+    "line_str": "if (b == floor(b))",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            83,
+            "if (b == floor(b))"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            88,
+            "if( b == floor(b) )"
+        ]
+    ]
+},
+{
+    "line_num": 80,
+    "line_str": "goto over;",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            80,
+            "goto over;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            84,
+            "goto over;"
+        ]
+    ]
+},
+{
+    "line_num": 79,
+    "line_str": "if (a == floor(a))",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            79,
+            "if (a == floor(a))"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            83,
+            "if( a == floor(a) )"
+        ]
+    ]
+},
+{
+    "line_num": 143,
+    "line_str": "if (fabs(y) > MAXGAM) {",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            143,
+            "if (fabs(y) > MAXGAM) {"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            154,
+            "if( fabs(y) > MAXGAM )"
+        ]
+    ]
+},
+{
+    "line_num": 138,
+    "line_str": "goto over;",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            138,
+            "goto over;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            144,
+            "goto over;"
+        ]
+    ]
+},
+{
+    "line_num": 137,
+    "line_str": "if (b == floor(b))",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            137,
+            "if (b == floor(b))"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            148,
+            "if( b == floor(b) )"
+        ]
+    ]
+},
+{
+    "line_num": 134,
+    "line_str": "goto over;",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            134,
+            "goto over;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            144,
+            "goto over;"
+        ]
+    ]
+},
+{
+    "line_num": 133,
+    "line_str": "if (a == floor(a))",
+    "file_path": "scipy/special/cephes/beta.c",
+    "previous_commits": [
+        [
+            "211abfdf6d5a5ac6172f6e3f570d127e378e98bd",
+            133,
+            "if (a == floor(a))"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            143,
+            "if( a == floor(a) )"
+        ]
+    ]
+}
+]
+},{
+"5085ffb1410aad64b56e3a5b01d87a7afc9fb05f": []},
+{
+"023d6c08a55eaf6ddc3e55ea20b8d3d2da42378f": []},
+{
+"0b99b6d9dd1b11fdd43a8759d0a50bcb3abfb371": []},
+{
+"b618db4a0e7acf50c5268011beb5bea4c6e41432": [
+{
+    "line_num": 422,
+    "line_str": "} else {",
+    "file_path": "scipy/special/amos_wrappers.c",
+    "previous_commits": [
+        [
+            "670b0f6dc7ca2d2b86c72fd8030fd59c4629abef",
+            422,
+            "} else {"
+        ]
+    ]
+}
+]
+},{
+"0a83133a9b13a88f3747bc17a13814bff2bc42c7": [
+{
+    "line_num": 1391,
+    "line_str": "intp is1 = ap1->strides[ndims-1];",
+    "file_path": "Lib/signal/sigtoolsmodule.c",
+    "previous_commits": [
+        [
+            "75a5ea6b5949731a870f0154c6f4790e8dd5aa8b",
+            1391,
+            "intp is1 = ap1->strides[ndims-1];"
+        ]
+    ]
+},
+{
+    "line_num": 1392,
+    "line_str": "intp is2 = ap2->strides[ndims-1];",
+    "file_path": "Lib/signal/sigtoolsmodule.c",
+    "previous_commits": [
+        [
+            "75a5ea6b5949731a870f0154c6f4790e8dd5aa8b",
+            1392,
+            "intp is2 = ap2->strides[ndims-1];"
+        ]
+    ]
+}
+]
+},{
+"da1864d3b47bfd39b7c6dc49475ca3dd8a93c3d0": []},
+{
+"4d7e7be0b8cbab48f8a55bf3d23d5f1e2e785eb9": [
+{
+    "line_num": 298,
+    "line_str": "int trf_finished = 0;",
+    "file_path": "scipy/sparse/linalg/dsolve/_superluobject.c",
+    "previous_commits": [
+        [
+            "967abdd0203b74a07ac9b2f2619bcca5bd4a6c7a",
+            298,
+            "int trf_finished = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 346,
+    "line_str": "trf_finished = 1;",
+    "file_path": "scipy/sparse/linalg/dsolve/_superluobject.c",
+    "previous_commits": [
+        [
+            "967abdd0203b74a07ac9b2f2619bcca5bd4a6c7a",
+            346,
+            "trf_finished = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 374,
+    "line_str": "}",
+    "file_path": "scipy/sparse/linalg/dsolve/_superluobject.c",
+    "previous_commits": [
+        [
+            "967abdd0203b74a07ac9b2f2619bcca5bd4a6c7a",
+            374,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 373,
+    "line_str": "self->U.Store = NULL;",
+    "file_path": "scipy/sparse/linalg/dsolve/_superluobject.c",
+    "previous_commits": [
+        [
+            "967abdd0203b74a07ac9b2f2619bcca5bd4a6c7a",
+            373,
+            "self->U.Store = NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 372,
+    "line_str": "self->L.Store = NULL;",
+    "file_path": "scipy/sparse/linalg/dsolve/_superluobject.c",
+    "previous_commits": [
+        [
+            "967abdd0203b74a07ac9b2f2619bcca5bd4a6c7a",
+            372,
+            "self->L.Store = NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 369,
+    "line_str": "if (!trf_finished) {",
+    "file_path": "scipy/sparse/linalg/dsolve/_superluobject.c",
+    "previous_commits": [
+        [
+            "967abdd0203b74a07ac9b2f2619bcca5bd4a6c7a",
+            369,
+            "if (!trf_finished) {"
+        ]
+    ]
+}
+]
+},{
+"6e8d94af2709142d8075ffec48105df9974f6d10": []},
+{
+"15e808de26d25445cbc7791efda31eba762657e6": [
+{
+    "line_num": 22,
+    "line_str": "static int print_error_messages;",
+    "file_path": "scipy/special/sf_error.c",
+    "previous_commits": [
+        [
+            "a4bac29605bfce6a561ced66775f0bb5d39db58a",
+            22,
+            "static int print_error_messages;"
+        ]
+    ]
+}
+]
+},{
+"bb436fa2644d7217d2d6ed11e7ec57129e7bb5b6": []},
+{
+"61fbbb64c781d39b7f4d11602491668e13e1a90b": [
+{
+    "line_num": 96,
+    "line_str": "*((float *) (ptr)) /= n;",
+    "file_path": "scipy/fftpack/src/zfft.c",
+    "previous_commits": [
+        [
+            "0aeb9ae6bf414588ecb8db912afedff1caf3ae72",
+            96,
+            "*((float *) (ptr)) /= n;"
+        ]
+    ]
+},
+{
+    "line_num": 62,
+    "line_str": "*((double *) (ptr++) + 1) /= n;",
+    "file_path": "scipy/fftpack/src/zfft.c",
+    "previous_commits": [
+        [
+            "0aeb9ae6bf414588ecb8db912afedff1caf3ae72",
+            62,
+            "*((double *) (ptr++) + 1) /= n;"
+        ]
+    ]
+},
+{
+    "line_num": 61,
+    "line_str": "*((double *) (ptr)) /= n;",
+    "file_path": "scipy/fftpack/src/zfft.c",
+    "previous_commits": [
+        [
+            "0aeb9ae6bf414588ecb8db912afedff1caf3ae72",
+            61,
+            "*((double *) (ptr)) /= n;"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "*((float *) (ptr++) + 1) /= n;",
+    "file_path": "scipy/fftpack/src/zfft.c",
+    "previous_commits": [
+        [
+            "0aeb9ae6bf414588ecb8db912afedff1caf3ae72",
+            97,
+            "*((float *) (ptr++) + 1) /= n;"
+        ]
+    ]
+}
+]
+},{
+"973e3432b26aef4a7df198d5ea0696eaf0649db3": [
+{
+    "line_num": 676,
+    "line_str": "double ret_val;",
+    "file_path": "scipy/sparse/linalg/dsolve/SuperLU/SRC/dlamch.c",
+    "previous_commits": [
+        [
+            "b1e7ae993dd1bfd3f6b5349b7d248214db528625",
+            676,
+            "double ret_val;"
+        ],
+        [
+            "5555543153573be22755d926e92767cd64ae6eb9",
+            676,
+            "volatile double ret_val;"
+        ],
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            669,
+            "double ret_val;"
+        ]
+    ]
+},
+{
+    "line_num": 678,
+    "line_str": "ret_val = *a + *b;",
+    "file_path": "scipy/sparse/linalg/dsolve/SuperLU/SRC/dlamch.c",
+    "previous_commits": [
+        [
+            "b1e7ae993dd1bfd3f6b5349b7d248214db528625",
+            678,
+            "ret_val = *a + *b;"
+        ],
+        [
+            "5555543153573be22755d926e92767cd64ae6eb9",
+            682,
+            "ret_val = x + y;"
+        ],
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            671,
+            "ret_val = *a + *b;"
+        ]
+    ]
+},
+{
+    "line_num": 691,
+    "line_str": "ret_val = *a + *b;",
+    "file_path": "scipy/sparse/linalg/dsolve/SuperLU/SRC/slamch.c",
+    "previous_commits": [
+        [
+            "b1e7ae993dd1bfd3f6b5349b7d248214db528625",
+            691,
+            "ret_val = *a + *b;"
+        ],
+        [
+            "5555543153573be22755d926e92767cd64ae6eb9",
+            693,
+            "ret_val = x + y;"
+        ],
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            682,
+            "ret_val = *a + *b;"
+        ]
+    ]
+},
+{
+    "line_num": 689,
+    "line_str": "",
+    "file_path": "scipy/sparse/linalg/dsolve/SuperLU/SRC/slamch.c",
+    "previous_commits": [
+        [
+            "b1e7ae993dd1bfd3f6b5349b7d248214db528625",
+            689,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 688,
+    "line_str": "",
+    "file_path": "scipy/sparse/linalg/dsolve/SuperLU/SRC/slamch.c",
+    "previous_commits": [
+        [
+            "b1e7ae993dd1bfd3f6b5349b7d248214db528625",
+            688,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 687,
+    "line_str": "float ret_val;",
+    "file_path": "scipy/sparse/linalg/dsolve/SuperLU/SRC/slamch.c",
+    "previous_commits": [
+        [
+            "b1e7ae993dd1bfd3f6b5349b7d248214db528625",
+            687,
+            "float ret_val;"
+        ],
+        [
+            "5555543153573be22755d926e92767cd64ae6eb9",
+            687,
+            "volatile float ret_val;"
+        ],
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            678,
+            "float ret_val;"
+        ]
+    ]
+},
+{
+    "line_num": 32,
+    "line_str": "fprintf(stderr, msg);",
+    "file_path": "scipy/sparse/linalg/dsolve/SuperLU/SRC/util.c",
+    "previous_commits": [
+        [
+            "b1e7ae993dd1bfd3f6b5349b7d248214db528625",
+            32,
+            "fprintf(stderr, msg);"
+        ],
+        [
+            "f43cc928b453b9245123352795fa7f6f1f666a52",
+            32,
+            "fprintf(stderr, \"%s\\n\", msg);"
+        ],
+        [
+            "066f39bc3c8e44f369f837fcdc6ac3880d67527d",
+            32,
+            "fprintf(stderr, msg);"
+        ],
+        [
+            "51ff6dcdb111891a966b92f8eb294564c9b4947f",
+            31,
+            "fprintf(stderr, \"%s\\n\", msg);"
+        ],
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            31,
+            "fprintf(stderr, msg);"
+        ]
+    ]
+}
+]
+},{
+"7c03d21d84190f7ca4277b72caba5288d2928381": [
+{
+    "line_num": 934,
+    "line_str": "int *rowsize;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            934,
+            "int *rowsize;"
+        ]
+    ]
+},
+{
+    "line_num": 932,
+    "line_str": "double *dmit, *buf;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            932,
+            "double *dmit, *buf;"
+        ]
+    ]
+},
+{
+    "line_num": 930,
+    "line_str": "int *ind;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            930,
+            "int *ind;"
+        ]
+    ]
+},
+{
+    "line_num": 925,
+    "line_str": "void linkage(double *dm, double *Z, double *X,",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            925,
+            "void linkage(double *dm, double *Z, double *X,"
+        ]
+    ]
+},
+{
+    "line_num": 944,
+    "line_str": "cnode *nodes, *node;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            944,
+            "cnode *nodes, *node;"
+        ]
+    ]
+},
+{
+    "line_num": 943,
+    "line_str": "clnode *lnodes;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            943,
+            "clnode *lnodes;"
+        ]
+    ]
+},
+{
+    "line_num": 942,
+    "line_str": "clist *lists, *listL, *listR, *listC;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            942,
+            "clist *lists, *listL, *listR, *listC;"
+        ]
+    ]
+},
+{
+    "line_num": 939,
+    "line_str": "double **centroids;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            939,
+            "double **centroids;"
+        ]
+    ]
+},
+{
+    "line_num": 938,
+    "line_str": "double *centroidsData;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            938,
+            "double *centroidsData;"
+        ]
+    ]
+},
+{
+    "line_num": 937,
+    "line_str": "double *dmt, **rows, *Zrow;",
+    "file_path": "scipy/cluster/src/hierarchy.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            937,
+            "double *dmt, **rows, *Zrow;"
+        ]
+    ]
+},
+{
+    "line_num": 134,
+    "line_str": "void linkage(double *dm, double *Z, double *X, int m, int n, int ml, int kc, distfunc dfunc, int method);",
+    "file_path": "scipy/cluster/src/hierarchy.h",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            134,
+            "void linkage(double *dm, double *Z, double *X, int m, int n, int ml, int kc, distfunc dfunc, int method);"
+        ]
+    ]
+},
+{
+    "line_num": 88,
+    "line_str": "return 0;",
+    "file_path": "scipy/cluster/src/hierarchy_wrap.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            88,
+            "return 0;"
+        ]
+    ]
+},
+{
+    "line_num": 51,
+    "line_str": "return 0;",
+    "file_path": "scipy/cluster/src/hierarchy_wrap.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            51,
+            "return 0;"
+        ]
+    ]
+},
+{
+    "line_num": 110,
+    "line_str": "m, n, 1, 1, df, method);",
+    "file_path": "scipy/cluster/src/hierarchy_wrap.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            110,
+            "m, n, 1, 1, df, method);"
+        ]
+    ]
+},
+{
+    "line_num": 109,
+    "line_str": "linkage((double*)dm->data, (double*)Z->data, (double*)X->data,",
+    "file_path": "scipy/cluster/src/hierarchy_wrap.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            109,
+            "linkage((double*)dm->data, (double*)Z->data, (double*)X->data,"
+        ]
+    ]
+},
+{
+    "line_num": 72,
+    "line_str": "linkage((double*)dm->data, (double*)Z->data, 0, 0, n, 0, 0, df, method);",
+    "file_path": "scipy/cluster/src/hierarchy_wrap.c",
+    "previous_commits": [
+        [
+            "def89a7571009c4b9939d4de31eccf62ce2370a7",
+            72,
+            "linkage((double*)dm->data, (double*)Z->data, 0, 0, n, 0, 0, df, method);"
+        ]
+    ]
+}
+]
+},{
+"b75d42e6930dd43c35438b58063b0b2212544ddd": []},
+{
+"5555543153573be22755d926e92767cd64ae6eb9": [
+{
+    "line_num": 671,
+    "line_str": "ret_val = *a + *b;",
+    "file_path": "Lib/sparse/SuperLU/SRC/dlamch.c",
+    "previous_commits": [
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            671,
+            "ret_val = *a + *b;"
+        ]
+    ]
+},
+{
+    "line_num": 669,
+    "line_str": "double ret_val;",
+    "file_path": "Lib/sparse/SuperLU/SRC/dlamch.c",
+    "previous_commits": [
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            669,
+            "double ret_val;"
+        ]
+    ]
+},
+{
+    "line_num": 680,
+    "line_str": "",
+    "file_path": "Lib/sparse/SuperLU/SRC/slamch.c",
+    "previous_commits": [
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            680,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 679,
+    "line_str": "",
+    "file_path": "Lib/sparse/SuperLU/SRC/slamch.c",
+    "previous_commits": [
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            679,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 678,
+    "line_str": "float ret_val;",
+    "file_path": "Lib/sparse/SuperLU/SRC/slamch.c",
+    "previous_commits": [
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            678,
+            "float ret_val;"
+        ]
+    ]
+},
+{
+    "line_num": 682,
+    "line_str": "ret_val = *a + *b;",
+    "file_path": "Lib/sparse/SuperLU/SRC/slamch.c",
+    "previous_commits": [
+        [
+            "753fcca454e96eb65e00a4e360b05d1e6bfc0e68",
+            682,
+            "ret_val = *a + *b;"
+        ]
+    ]
+}
+]
+},{
+"0b2ec612e19e09c86afb69411a29c50443dab028": [
+{
+    "line_num": 78,
+    "line_str": "extern double MAXNUM, MACHEP;",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            78,
+            "extern double MAXNUM, MACHEP;"
+        ]
+    ]
+},
+{
+    "line_num": 288,
+    "line_str": "if( asum*2 == asum )",
+    "file_path": "scipy/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "b22c0ccb59517fcf56759c0634777af23798d707",
+            288,
+            "if( asum*2 == asum )"
+        ]
+    ]
+},
+{
+    "line_num": 207,
+    "line_str": "*err = 1.0;",
+    "file_path": "scipy/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "b22c0ccb59517fcf56759c0634777af23798d707",
+            207,
+            "*err = 1.0;"
+        ],
+        [
+            "9bfb2390def95a96da5a56f3a02a6b962e87c293",
+            161,
+            "*err = 1.0;"
+        ]
+    ]
+},
+{
+    "line_num": 95,
+    "line_str": "return( 1.0 );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            95,
+            "return( 1.0 );"
+        ]
+    ]
+},
+{
+    "line_num": 62,
+    "line_str": "extern double floor ( double );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            62,
+            "extern double floor ( double );"
+        ]
+    ]
+},
+{
+    "line_num": 29,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            29,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 72,
+    "line_str": "double t, ax, res;",
+    "file_path": "scipy/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "b22c0ccb59517fcf56759c0634777af23798d707",
+            72,
+            "double t, ax, res;"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            66,
+            "double t, ax;"
+        ]
+    ]
+},
+{
+    "line_num": 79,
+    "line_str": "sign = 1;",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            79,
+            "sign = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 13,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            13,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 96,
+    "line_str": "if( v < 0.0 )",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            96,
+            "if( v < 0.0 )"
+        ]
+    ]
+},
+{
+    "line_num": 63,
+    "line_str": "#else",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            63,
+            "#else"
+        ]
+    ]
+},
+{
+    "line_num": 30,
+    "line_str": "* ACCURACY:",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            30,
+            "* ACCURACY:"
+        ]
+    ]
+},
+{
+    "line_num": 113,
+    "line_str": "t = sign * exp(t) / gamma( v + 1.0 );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            113,
+            "t = sign * exp(t) / gamma( v + 1.0 );"
+        ]
+    ]
+},
+{
+    "line_num": 80,
+    "line_str": "if( x < 0.0 )",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            80,
+            "if( x < 0.0 )"
+        ]
+    ]
+},
+{
+    "line_num": 47,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            47,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 14,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            14,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "{",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            97,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 64,
+    "line_str": "double hyperg(), exp(), gamma(), log(), fabs(), floor();",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            64,
+            "double hyperg(), exp(), gamma(), log(), fabs(), floor();"
+        ]
+    ]
+},
+{
+    "line_num": 31,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            31,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 81,
+    "line_str": "{",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            81,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 48,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            48,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 15,
+    "line_str": "* DESCRIPTION:",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            15,
+            "* DESCRIPTION:"
+        ]
+    ]
+},
+{
+    "line_num": 91,
+    "line_str": "return( NAN );",
+    "file_path": "scipy/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "670b0f6dc7ca2d2b86c72fd8030fd59c4629abef",
+            91,
+            "return( NAN );"
+        ]
+    ]
+},
+{
+    "line_num": 98,
+    "line_str": "mtherr( \"iv\", OVERFLOW );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            98,
+            "mtherr( \"iv\", OVERFLOW );"
+        ]
+    ]
+},
+{
+    "line_num": 65,
+    "line_str": "int sign;",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            65,
+            "int sign;"
+        ]
+    ]
+},
+{
+    "line_num": 32,
+    "line_str": "* Tested at random points (v, x), with v between 0 and",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            32,
+            "* Tested at random points (v, x), with v between 0 and"
+        ]
+    ]
+},
+{
+    "line_num": 82,
+    "line_str": "if( t != v )",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            82,
+            "if( t != v )"
+        ]
+    ]
+},
+{
+    "line_num": 16,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            16,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 99,
+    "line_str": "return( MAXNUM );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            99,
+            "return( MAXNUM );"
+        ]
+    ]
+},
+{
+    "line_num": 33,
+    "line_str": "* 30, x between 0 and 28.",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            33,
+            "* 30, x between 0 and 28."
+        ]
+    ]
+},
+{
+    "line_num": 83,
+    "line_str": "{",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            83,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 17,
+    "line_str": "* Returns modified Bessel function of order v of the",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            17,
+            "* Returns modified Bessel function of order v of the"
+        ]
+    ]
+},
+{
+    "line_num": 100,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            100,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 67,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            67,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 34,
+    "line_str": "*                      Relative error:",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            34,
+            "*                      Relative error:"
+        ]
+    ]
+},
+{
+    "line_num": 1,
+    "line_str": "/*\t\t\t\t\t\t\tiv.c",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            1,
+            "/*\t\t\t\t\t\t\tiv.c"
+        ]
+    ]
+},
+{
+    "line_num": 84,
+    "line_str": "mtherr( \"iv\", DOMAIN );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            84,
+            "mtherr( \"iv\", DOMAIN );"
+        ]
+    ]
+},
+{
+    "line_num": 18,
+    "line_str": "* argument.  If x is negative, v must be integer valued.",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            18,
+            "* argument.  If x is negative, v must be integer valued."
+        ]
+    ]
+},
+{
+    "line_num": 101,
+    "line_str": "else",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            101,
+            "else"
+        ]
+    ]
+},
+{
+    "line_num": 35,
+    "line_str": "* arithmetic   domain     # trials      peak         rms",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            35,
+            "* arithmetic   domain     # trials      peak         rms"
+        ]
+    ]
+},
+{
+    "line_num": 2,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            2,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 19,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            19,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 102,
+    "line_str": "return( 0.0 );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            102,
+            "return( 0.0 );"
+        ]
+    ]
+},
+{
+    "line_num": 69,
+    "line_str": "t = floor(v);",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            69,
+            "t = floor(v);"
+        ]
+    ]
+},
+{
+    "line_num": 36,
+    "line_str": "*    DEC       0,30          2000      3.1e-15     5.4e-16",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            36,
+            "*    DEC       0,30          2000      3.1e-15     5.4e-16"
+        ]
+    ]
+},
+{
+    "line_num": 3,
+    "line_str": "*\tModified Bessel function of noninteger order",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            3,
+            "*\tModified Bessel function of noninteger order"
+        ]
+    ]
+},
+{
+    "line_num": 86,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            86,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 20,
+    "line_str": "* The function is defined as Iv(x) = Jv( ix ).  It is",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            20,
+            "* The function is defined as Iv(x) = Jv( ix ).  It is"
+        ]
+    ]
+},
+{
+    "line_num": 103,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            103,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 70,
+    "line_str": "if( v < 0.0 )",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            70,
+            "if( v < 0.0 )"
+        ]
+    ]
+},
+{
+    "line_num": 37,
+    "line_str": "*    IEEE      0,30         10000      1.7e-14     2.7e-15",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            37,
+            "*    IEEE      0,30         10000      1.7e-14     2.7e-15"
+        ]
+    ]
+},
+{
+    "line_num": 4,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            4,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 87,
+    "line_str": "if( v != 2.0 * floor(v/2.0) )",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            87,
+            "if( v != 2.0 * floor(v/2.0) )"
+        ]
+    ]
+},
+{
+    "line_num": 54,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            54,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 21,
+    "line_str": "* here computed in terms of the confluent hypergeometric",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            21,
+            "* here computed in terms of the confluent hypergeometric"
+        ]
+    ]
+},
+{
+    "line_num": 104,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            104,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 71,
+    "line_str": "{",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            71,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 38,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            38,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 5,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            5,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 88,
+    "line_str": "sign = -1;",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            88,
+            "sign = -1;"
+        ]
+    ]
+},
+{
+    "line_num": 55,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            55,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 22,
+    "line_str": "* function, according to the formula",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            22,
+            "* function, according to the formula"
+        ]
+    ]
+},
+{
+    "line_num": 105,
+    "line_str": "ax = fabs(x);",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            105,
+            "ax = fabs(x);"
+        ]
+    ]
+},
+{
+    "line_num": 72,
+    "line_str": "if( t == v )",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            72,
+            "if( t == v )"
+        ]
+    ]
+},
+{
+    "line_num": 39,
+    "line_str": "* Accuracy is diminished if v is near a negative integer.",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            39,
+            "* Accuracy is diminished if v is near a negative integer."
+        ]
+    ]
+},
+{
+    "line_num": 6,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            6,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 115,
+    "line_str": "res = hyperg( ax,  2.0 * ax,  2.0 * x );",
+    "file_path": "scipy/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "b22c0ccb59517fcf56759c0634777af23798d707",
+            115,
+            "res = hyperg( ax,  2.0 * ax,  2.0 * x );"
+        ],
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            109,
+            "return( t * hyperg( ax,  2.0 * ax,  2.0 * x ) );"
+        ]
+    ]
+},
+{
+    "line_num": 89,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            89,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 56,
+    "line_str": "#ifdef ANSIPROT",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            56,
+            "#ifdef ANSIPROT"
+        ]
+    ]
+},
+{
+    "line_num": 23,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            23,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 66,
+    "line_str": "extern double MACHEP, MAXNUM, NAN;",
+    "file_path": "scipy/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "670b0f6dc7ca2d2b86c72fd8030fd59c4629abef",
+            66,
+            "extern double MACHEP, MAXNUM, NAN;"
+        ],
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            66,
+            "extern double MACHEP, MAXNUM;"
+        ]
+    ]
+},
+{
+    "line_num": 106,
+    "line_str": "t = v * log( 0.5 * ax )  -  x;",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            106,
+            "t = v * log( 0.5 * ax )  -  x;"
+        ]
+    ]
+},
+{
+    "line_num": 73,
+    "line_str": "{",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            73,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 40,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            40,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 7,
+    "line_str": "* SYNOPSIS:",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            7,
+            "* SYNOPSIS:"
+        ]
+    ]
+},
+{
+    "line_num": 116,
+    "line_str": "if (res*2 == res)",
+    "file_path": "scipy/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "b22c0ccb59517fcf56759c0634777af23798d707",
+            116,
+            "if (res*2 == res)"
+        ]
+    ]
+},
+{
+    "line_num": 90,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            90,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 57,
+    "line_str": "extern double hyperg ( double, double, double );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            57,
+            "extern double hyperg ( double, double, double );"
+        ]
+    ]
+},
+{
+    "line_num": 24,
+    "line_str": "*              v  -x",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            24,
+            "*              v  -x"
+        ]
+    ]
+},
+{
+    "line_num": 74,
+    "line_str": "v = -v;\t/* symmetry */",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            74,
+            "v = -v;\t/* symmetry */"
+        ]
+    ]
+},
+{
+    "line_num": 41,
+    "line_str": "* See also hyperg.c.",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            41,
+            "* See also hyperg.c."
+        ]
+    ]
+},
+{
+    "line_num": 8,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            8,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 117,
+    "line_str": "return sign*res / gamma( v + 1.0 ); /* inf */",
+    "file_path": "scipy/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "b22c0ccb59517fcf56759c0634777af23798d707",
+            117,
+            "return sign*res / gamma( v + 1.0 ); /* inf */"
+        ]
+    ]
+},
+{
+    "line_num": 58,
+    "line_str": "extern double exp ( double );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            58,
+            "extern double exp ( double );"
+        ]
+    ]
+},
+{
+    "line_num": 25,
+    "line_str": "* Iv(x) = (x/2)  e   hyperg( v+0.5, 2v+1, 2x ) / gamma(v+1)",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            25,
+            "* Iv(x) = (x/2)  e   hyperg( v+0.5, 2v+1, 2x ) / gamma(v+1)"
+        ]
+    ]
+},
+{
+    "line_num": 108,
+    "line_str": "ax = v + 0.5;",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            108,
+            "ax = v + 0.5;"
+        ]
+    ]
+},
+{
+    "line_num": 75,
+    "line_str": "t = -t;",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            75,
+            "t = -t;"
+        ]
+    ]
+},
+{
+    "line_num": 42,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            42,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 9,
+    "line_str": "* double v, x, y, iv();",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            9,
+            "* double v, x, y, iv();"
+        ]
+    ]
+},
+{
+    "line_num": 118,
+    "line_str": "return( t * res );",
+    "file_path": "scipy/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "b22c0ccb59517fcf56759c0634777af23798d707",
+            118,
+            "return( t * res );"
+        ]
+    ]
+},
+{
+    "line_num": 92,
+    "line_str": "if( x == 0.0 )",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            92,
+            "if( x == 0.0 )"
+        ]
+    ]
+},
+{
+    "line_num": 59,
+    "line_str": "extern double gamma ( double );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            59,
+            "extern double gamma ( double );"
+        ]
+    ]
+},
+{
+    "line_num": 26,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            26,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 76,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            76,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 43,
+    "line_str": "*/",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            43,
+            "*/"
+        ]
+    ]
+},
+{
+    "line_num": 10,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            10,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 93,
+    "line_str": "{",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            93,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 60,
+    "line_str": "extern double log ( double );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            60,
+            "extern double log ( double );"
+        ]
+    ]
+},
+{
+    "line_num": 27,
+    "line_str": "* If v is a negative integer, then v is replaced by -v.",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            27,
+            "* If v is a negative integer, then v is replaced by -v."
+        ]
+    ]
+},
+{
+    "line_num": 110,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            110,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 77,
+    "line_str": "}",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            77,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 44,
+    "line_str": "/*\t\t\t\t\t\t\tiv.c\t*/",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            44,
+            "/*\t\t\t\t\t\t\tiv.c\t*/"
+        ]
+    ]
+},
+{
+    "line_num": 11,
+    "line_str": "* y = iv( v, x );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            11,
+            "* y = iv( v, x );"
+        ]
+    ]
+},
+{
+    "line_num": 94,
+    "line_str": "if( v == 0.0 )",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            94,
+            "if( v == 0.0 )"
+        ]
+    ]
+},
+{
+    "line_num": 61,
+    "line_str": "extern double fabs ( double );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "80591d8a2cf8f9748313f740d4af31fa5f13b513",
+            61,
+            "extern double fabs ( double );"
+        ]
+    ]
+},
+{
+    "line_num": 28,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            28,
+            "*"
+        ]
+    ]
+},
+{
+    "line_num": 12,
+    "line_str": "*",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            12,
+            "*"
+        ]
+    ]
+}
+]
+},{
+"b22c0ccb59517fcf56759c0634777af23798d707": [
+{
+    "line_num": 259,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            259,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 98,
+    "line_str": "asum = hy1f1a( a, b, x, &acanc );",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            98,
+            "asum = hy1f1a( a, b, x, &acanc );"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            97,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 320,
+    "line_str": "if( t > tlast )",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            320,
+            "if( t > tlast )"
+        ]
+    ]
+},
+{
+    "line_num": 95,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            95,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 94,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            94,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 93,
+    "line_str": "goto done;",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            93,
+            "goto done;"
+        ]
+    ]
+},
+{
+    "line_num": 92,
+    "line_str": "if( pcanc < 1.0e-15 )",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            92,
+            "if( pcanc < 1.0e-15 )"
+        ]
+    ]
+},
+{
+    "line_num": 91,
+    "line_str": "psum = hy1f1p( a, b, x, &pcanc );",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            91,
+            "psum = hy1f1p( a, b, x, &pcanc );"
+        ]
+    ]
+},
+{
+    "line_num": 126,
+    "line_str": "double n, a0, sum, t, u, temp;",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            126,
+            "double n, a0, sum, t, u, temp;"
+        ]
+    ]
+},
+{
+    "line_num": 321,
+    "line_str": "goto ndone;",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            321,
+            "goto ndone;"
+        ]
+    ]
+},
+{
+    "line_num": 150,
+    "line_str": "if( n > 200 )",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            150,
+            "if( n > 200 )"
+        ]
+    ]
+},
+{
+    "line_num": 372,
+    "line_str": "",
+    "file_path": "Lib/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            372,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 162,
+    "line_str": "return sum;",
+    "file_path": "scipy/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "9bfb2390def95a96da5a56f3a02a6b962e87c293",
+            162,
+            "return sum;"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "*err = 1.0;",
+    "file_path": "scipy/special/cephes/hyperg.c",
+    "previous_commits": [
+        [
+            "9bfb2390def95a96da5a56f3a02a6b962e87c293",
+            161,
+            "*err = 1.0;"
+        ]
+    ]
+},
+{
+    "line_num": 109,
+    "line_str": "return( t * hyperg( ax,  2.0 * ax,  2.0 * x ) );",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            109,
+            "return( t * hyperg( ax,  2.0 * ax,  2.0 * x ) );"
+        ]
+    ]
+},
+{
+    "line_num": 66,
+    "line_str": "double t, ax;",
+    "file_path": "Lib/special/cephes/iv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            66,
+            "double t, ax;"
+        ]
+    ]
+}
+]
+},{
+"68090baa0b1947a53325bc00d0a66a41149c77e7": [
+{
+    "line_num": 1613,
+    "line_str": "relation = relation_uc[0];",
+    "file_path": "Lib/sandbox/timeseries/src/c_tdates.c",
+    "previous_commits": [
+        [
+            "1c3c3db0df33d397a155d908c9efd2603418cf6b",
+            1613,
+            "relation = relation_uc[0];"
+        ]
+    ]
+},
+{
+    "line_num": 773,
+    "line_str": "int month = (af_info->from_a_year_end + 1) % 12;",
+    "file_path": "Lib/sandbox/timeseries/src/c_tdates.c",
+    "previous_commits": [
+        [
+            "1c3c3db0df33d397a155d908c9efd2603418cf6b",
+            773,
+            "int month = (af_info->from_a_year_end + 1) % 12;"
+        ]
+    ]
+},
+{
+    "line_num": 1387,
+    "line_str": "&datetime)) return -1;",
+    "file_path": "Lib/sandbox/timeseries/src/c_tdates.c",
+    "previous_commits": [
+        [
+            "1c3c3db0df33d397a155d908c9efd2603418cf6b",
+            1387,
+            "&datetime)) return -1;"
+        ]
+    ]
+}
+]
+},{
+"f417aaa4ca3c7030e4fb6a6f60dead2b5f53cfaf": [
+{
+    "line_num": 1400,
+    "line_str": "fmt_str = malloc(strlen(orig_fmt_str)*sizeof(char));",
+    "file_path": "Lib/sandbox/timeseries/src/cseries.c",
+    "previous_commits": [
+        [
+            "6f6181c270afecc379ec972bf3b99fe3b3d229ab",
+            1400,
+            "fmt_str = malloc(strlen(orig_fmt_str)*sizeof(char));"
+        ]
+    ]
+}
+]
+},{
+"fa52128376245c45eff3ed7467fb6942e4481bea": [
+{
+    "line_num": 1081,
+    "line_str": "&min, &max, &nbins, NI_ObjectToOptionalInputArray,",
+    "file_path": "Lib/ndimage/Src/nd_image.c",
+    "previous_commits": [
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            1081,
+            "&min, &max, &nbins, NI_ObjectToOptionalInputArray,"
+        ]
+    ]
+},
+{
+    "line_num": 1080,
+    "line_str": "if (!PyArg_ParseTuple(args, \"O&ddiO&O\", NI_ObjectToInputArray, &input,",
+    "file_path": "Lib/ndimage/Src/nd_image.c",
+    "previous_commits": [
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            1080,
+            "if (!PyArg_ParseTuple(args, \"O&ddiO&O\", NI_ObjectToInputArray, &input,"
+        ]
+    ]
+},
+{
+    "line_num": 1079,
+    "line_str": "",
+    "file_path": "Lib/ndimage/Src/nd_image.c",
+    "previous_commits": [
+        [
+            "ca465a651f693acfbedc6395b0e3f1154ddd6bd7",
+            1079,
+            ""
+        ]
+    ]
+}
+]
+},{
+"a2d6759e9a001df9d5835d7b2e4909194732d52b": [
+{
+    "line_num": 837,
+    "line_str": "&dims,",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            837,
+            "&dims,"
+        ]
+    ]
+},
+{
+    "line_num": 833,
+    "line_str": "char retsig = get_return_sig(self->program);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            833,
+            "char retsig = get_return_sig(self->program);"
+        ]
+    ]
+},
+{
+    "line_num": 701,
+    "line_str": "Py_DECREF(a_inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            701,
+            "Py_DECREF(a_inputs);"
+        ],
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            729,
+            "Py_XDECREF(output);"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            234,
+            "Py_XDECREF(tmp);"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            108,
+            "Py_XDECREF(tmp);"
+        ]
+    ]
+},
+{
+    "line_num": 445,
+    "line_str": "Py_INCREF(o);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            445,
+            "Py_INCREF(o);"
+        ]
+    ]
+},
+{
+    "line_num": 730,
+    "line_str": "PyMem_Del(inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            730,
+            "PyMem_Del(inputs);"
+        ]
+    ]
+},
+{
+    "line_num": 218,
+    "line_str": "\"all inputs must be the same size\");",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            218,
+            "\"all inputs must be the same size\");"
+        ]
+    ]
+},
+{
+    "line_num": 726,
+    "line_str": "PyMem_Del(inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            726,
+            "PyMem_Del(inputs);"
+        ]
+    ]
+},
+{
+    "line_num": 201,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            201,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 214,
+    "line_str": "Py_XDECREF(a_inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            214,
+            "Py_XDECREF(a_inputs);"
+        ]
+    ]
+},
+{
+    "line_num": 210,
+    "line_str": "PyArray_DIMS(a),",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            210,
+            "PyArray_DIMS(a),"
+        ]
+    ]
+},
+{
+    "line_num": 206,
+    "line_str": "PyTuple_SET_ITEM(a_inputs, i, a);  /* steals reference */",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            206,
+            "PyTuple_SET_ITEM(a_inputs, i, a);  /* steals reference */"
+        ]
+    ]
+},
+{
+    "line_num": 714,
+    "line_str": "if (retsig != 'i' && retsig != 'f' && retsig != 'c') {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            714,
+            "if (retsig != 'i' && retsig != 'f' && retsig != 'c') {"
+        ],
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            727,
+            "if (retsig != 'i' && retsig == 'f' && retsig == 'c') {"
+        ]
+    ]
+},
+{
+    "line_num": 842,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            842,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 838,
+    "line_str": "typecode_from_char(retsig));",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            838,
+            "typecode_from_char(retsig));"
+        ]
+    ]
+},
+{
+    "line_num": 132,
+    "line_str": "intp dims[] = {0}, dims2[] = {0,0};",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            132,
+            "intp dims[] = {0}, dims2[] = {0,0};"
+        ]
+    ]
+},
+{
+    "line_num": 834,
+    "line_str": "intp dims[1];",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            834,
+            "intp dims[1];"
+        ]
+    ]
+},
+{
+    "line_num": 706,
+    "line_str": "if (!a) return NULL;",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "4aad97124c6ddf2d189389ae70aa93c6323b1c5a",
+            706,
+            "if (!a) return NULL;"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            154,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 702,
+    "line_str": "return NULL;",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            702,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 446,
+    "line_str": "PyTuple_SET_ITEM(constants, i, o);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            446,
+            "PyTuple_SET_ITEM(constants, i, o);"
+        ]
+    ]
+},
+{
+    "line_num": 731,
+    "line_str": "return PyErr_Format(PyExc_RuntimeError,",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            731,
+            "return PyErr_Format(PyExc_RuntimeError,"
+        ]
+    ]
+},
+{
+    "line_num": 537,
+    "line_str": "for (i = 0; i < n_inputs; i++) {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            537,
+            "for (i = 0; i < n_inputs; i++) {"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            238,
+            "for (i = 0; i < n_constants; i++ ) {"
+        ]
+    ]
+},
+{
+    "line_num": 215,
+    "line_str": "Py_XDECREF(output);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            215,
+            "Py_XDECREF(output);"
+        ]
+    ]
+},
+{
+    "line_num": 566,
+    "line_str": "",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "4aad97124c6ddf2d189389ae70aa93c6323b1c5a",
+            566,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 723,
+    "line_str": "typecode_from_char(retsig));",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            723,
+            "typecode_from_char(retsig));"
+        ],
+        [
+            "4aad97124c6ddf2d189389ae70aa93c6323b1c5a",
+            720,
+            "typecode_from_char(retsig));"
+        ],
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            737,
+            "typecodeFromChar(retsig));"
+        ]
+    ]
+},
+{
+    "line_num": 496,
+    "line_str": "memsteps[i+1] = size_from_char(PyString_AS_STRING(signature)[i]);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "4aad97124c6ddf2d189389ae70aa93c6323b1c5a",
+            496,
+            "memsteps[i+1] = size_from_char(PyString_AS_STRING(signature)[i]);"
+        ],
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            538,
+            "self->memsteps[i+1] = sizeFromChar(PyString_AS_STRING(signature)[i]);"
+        ]
+    ]
+},
+{
+    "line_num": 46,
+    "line_str": "NumExprObject *self;",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            46,
+            "NumExprObject *self;"
+        ]
+    ]
+},
+{
+    "line_num": 843,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            843,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 839,
+    "line_str": "if (!output) {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            839,
+            "if (!output) {"
+        ]
+    ]
+},
+{
+    "line_num": 199,
+    "line_str": "if (!a_inputs) {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            199,
+            "if (!a_inputs) {"
+        ]
+    ]
+},
+{
+    "line_num": 835,
+    "line_str": "len = 1;",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            835,
+            "len = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 831,
+    "line_str": "if (n_inputs == 0) {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            831,
+            "if (n_inputs == 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 703,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            703,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 732,
+    "line_str": "\"bad return format %c\", retsig);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            732,
+            "\"bad return format %c\", retsig);"
+        ]
+    ]
+},
+{
+    "line_num": 728,
+    "line_str": "Py_XDECREF(a_inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            728,
+            "Py_XDECREF(a_inputs);"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            234,
+            "Py_XDECREF(tmp);"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            108,
+            "Py_XDECREF(tmp);"
+        ]
+    ]
+},
+{
+    "line_num": 567,
+    "line_str": "#define REPLACE_MEM",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "4aad97124c6ddf2d189389ae70aa93c6323b1c5a",
+            567,
+            "#define REPLACE_MEM"
+        ]
+    ]
+},
+{
+    "line_num": 216,
+    "line_str": "PyMem_Del(inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            216,
+            "PyMem_Del(inputs);"
+        ]
+    ]
+},
+{
+    "line_num": 245,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            245,
+            "}"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            172,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 724,
+    "line_str": "if (!output) {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            724,
+            "if (!output) {"
+        ]
+    ]
+},
+{
+    "line_num": 212,
+    "line_str": "} else {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            212,
+            "} else {"
+        ]
+    ]
+},
+{
+    "line_num": 208,
+    "line_str": "len = PyArray_SIZE(a);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            208,
+            "len = PyArray_SIZE(a);"
+        ]
+    ]
+},
+{
+    "line_num": 204,
+    "line_str": "PyObject *o = PyTuple_GetItem(args, i); /* borrowed ref */",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            204,
+            "PyObject *o = PyTuple_GetItem(args, i); /* borrowed ref */"
+        ]
+    ]
+},
+{
+    "line_num": 840,
+    "line_str": "Py_XDECREF(a_inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            840,
+            "Py_XDECREF(a_inputs);"
+        ]
+    ]
+},
+{
+    "line_num": 200,
+    "line_str": "return NULL;",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            200,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 836,
+    "line_str": "output = PyArray_SimpleNew(0,",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            836,
+            "output = PyArray_SimpleNew(0,"
+        ]
+    ]
+},
+{
+    "line_num": 704,
+    "line_str": "if (typecode == -1) return NULL;",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "4aad97124c6ddf2d189389ae70aa93c6323b1c5a",
+            704,
+            "if (typecode == -1) return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 733,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            733,
+            "}"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            346,
+            "}"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            172,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 700,
+    "line_str": "if (!inputs) {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            700,
+            "if (!inputs) {"
+        ]
+    ]
+},
+{
+    "line_num": 221,
+    "line_str": "inputs[i] = PyArray_DATA(a);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            221,
+            "inputs[i] = PyArray_DATA(a);"
+        ]
+    ]
+},
+{
+    "line_num": 217,
+    "line_str": "return PyErr_Format(PyExc_ValueError,",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            217,
+            "return PyErr_Format(PyExc_ValueError,"
+        ]
+    ]
+},
+{
+    "line_num": 440,
+    "line_str": "if (!(o = PySequence_GetItem(o_constants, i))) {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            440,
+            "if (!(o = PySequence_GetItem(o_constants, i))) {"
+        ]
+    ]
+},
+{
+    "line_num": 725,
+    "line_str": "Py_XDECREF(a_inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7",
+            725,
+            "Py_XDECREF(a_inputs);"
+        ],
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            729,
+            "Py_XDECREF(output);"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            234,
+            "Py_XDECREF(tmp);"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            108,
+            "Py_XDECREF(tmp);"
+        ]
+    ]
+},
+{
+    "line_num": 213,
+    "line_str": "if (len != PyArray_SIZE(a)) {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            213,
+            "if (len != PyArray_SIZE(a)) {"
+        ]
+    ]
+},
+{
+    "line_num": 275,
+    "line_str": "#define BOUNDS_CHECK(arg) if (((arg) >= params.r_end) && ((arg) != 255)) { \\",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            275,
+            "#define BOUNDS_CHECK(arg) if (((arg) >= params.r_end) && ((arg) != 255)) { \\"
+        ]
+    ]
+},
+{
+    "line_num": 209,
+    "line_str": "output = PyArray_SimpleNew(PyArray_NDIM(a),",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            209,
+            "output = PyArray_SimpleNew(PyArray_NDIM(a),"
+        ]
+    ]
+},
+{
+    "line_num": 48,
+    "line_str": "self = (NumExprObject *)type->tp_alloc(type, 0);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            48,
+            "self = (NumExprObject *)type->tp_alloc(type, 0);"
+        ]
+    ]
+},
+{
+    "line_num": 494,
+    "line_str": "memsteps[0] = size_from_char(get_return_sig(program));",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "4aad97124c6ddf2d189389ae70aa93c6323b1c5a",
+            494,
+            "memsteps[0] = size_from_char(get_return_sig(program));"
+        ],
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            536,
+            "self->memsteps[0] = sizeFromChar(get_return_sig(program));"
+        ]
+    ]
+},
+{
+    "line_num": 841,
+    "line_str": "PyMem_Del(inputs);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "a31dfb19c37b364233ec62f8ff8182124cd9ab17",
+            841,
+            "PyMem_Del(inputs);"
+        ]
+    ]
+}
+]
+},{
+"ce7e912918fcf0c8d1a7e06da3fd7ebc6b1a48a7": [
+{
+    "line_num": 99,
+    "line_str": "VEC_LOOP(f_dest[j] = func(f1[j], f2[j]));",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            99,
+            "VEC_LOOP(f_dest[j] = func(f1[j], f2[j]));"
+        ],
+        [
+            "55f7d07584a01109b15ec0b074652415beaf669e",
+            111,
+            "VEC_LOOP(func(p1[j], p2[j]));"
+        ]
+    ]
+},
+{
+    "line_num": 29,
+    "line_str": "double *f1 = params.mem[arg1];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            29,
+            "double *f1 = params.mem[arg1];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            46,
+            "double *p1 = params.mem[arg1];"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            13,
+            "double *p1 = mem[arg1];"
+        ]
+    ]
+},
+{
+    "line_num": 87,
+    "line_str": "case OP_FUNC_FF:",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            87,
+            "case OP_FUNC_FF:"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            279,
+            "case OP_FUNC_2:"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            263,
+            "case OP_FUNC_2:"
+        ]
+    ]
+},
+{
+    "line_num": 54,
+    "line_str": "VEC_LOOP(i_dest[j] = f1[j] ? i2[j] : i3[j]);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            54,
+            "VEC_LOOP(i_dest[j] = f1[j] ? i2[j] : i3[j]);"
+        ],
+        [
+            "3eecd0298449a8e3bfbe66a9b454ee2251035081",
+            70,
+            "VEC_LOOP(p1[j] ? p2[j] : p3[j]);"
+        ]
+    ]
+},
+{
+    "line_num": 277,
+    "line_str": "break;",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            277,
+            "break;"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            261,
+            "break;"
+        ]
+    ]
+},
+{
+    "line_num": 244,
+    "line_str": "break;",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            244,
+            "break;"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            228,
+            "break;"
+        ]
+    ]
+},
+{
+    "line_num": 83,
+    "line_str": "BOUNDS_CHECK(arg3);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            83,
+            "BOUNDS_CHECK(arg3);"
+        ]
+    ]
+},
+{
+    "line_num": 50,
+    "line_str": "long *i2 = params.mem[arg2];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            50,
+            "long *i2 = params.mem[arg2];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            72,
+            "double *p2 = params.mem[arg2];"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            239,
+            "double *p2 = mem[arg2];"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            223,
+            "double *p2 = mem[arg2];"
+        ]
+    ]
+},
+{
+    "line_num": 17,
+    "line_str": "break;",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            17,
+            "break;"
+        ]
+    ]
+},
+{
+    "line_num": 236,
+    "line_str": "{",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            236,
+            "{"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            220,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 71,
+    "line_str": "unsigned int arg3 = params.program[pc+5];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            71,
+            "unsigned int arg3 = params.program[pc+5];"
+        ]
+    ]
+},
+{
+    "line_num": 38,
+    "line_str": "case OP_COPY_II: VEC_ARG2(i_dest[j] = i1[j]);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            38,
+            "case OP_COPY_II: VEC_ARG2(i_dest[j] = i1[j]);"
+        ],
+        [
+            "55f7d07584a01109b15ec0b074652415beaf669e",
+            37,
+            "case OP_COPY: VEC_ARG1(p1[j]);"
+        ]
+    ]
+},
+{
+    "line_num": 96,
+    "line_str": "double *f2 = params.mem[arg2];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            96,
+            "double *f2 = params.mem[arg2];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            86,
+            "double *p2 = params.mem[arg2];"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            263,
+            "double *p2 = mem[arg2];"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            247,
+            "double *p2 = mem[arg2];"
+        ]
+    ]
+},
+{
+    "line_num": 26,
+    "line_str": "long   *i_dest = params.mem[store_in];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            26,
+            "long   *i_dest = params.mem[store_in];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            45,
+            "double *p_dest = params.mem[store_in];"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            12,
+            "double *p_dest = mem[store_in];"
+        ]
+    ]
+},
+{
+    "line_num": 121,
+    "line_str": "#undef VEC_ARG2_C",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "55f7d07584a01109b15ec0b074652415beaf669e",
+            121,
+            "#undef VEC_ARG2_C"
+        ]
+    ]
+},
+{
+    "line_num": 278,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            278,
+            "}"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            262,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 84,
+    "line_str": "VEC_LOOP(f_dest[j] = f1[j] ? f2[j] : f3[j]);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            84,
+            "VEC_LOOP(f_dest[j] = f1[j] ? f2[j] : f3[j]);"
+        ],
+        [
+            "3eecd0298449a8e3bfbe66a9b454ee2251035081",
+            70,
+            "VEC_LOOP(p1[j] ? p2[j] : p3[j]);"
+        ]
+    ]
+},
+{
+    "line_num": 51,
+    "line_str": "long *i3 = params.mem[arg3];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            51,
+            "long *i3 = params.mem[arg3];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            73,
+            "double *p3 = params.mem[arg3];"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            240,
+            "double *p3 = mem[arg3];"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            224,
+            "double *p3 = mem[arg3];"
+        ]
+    ]
+},
+{
+    "line_num": 80,
+    "line_str": "double *f2 = params.mem[arg2];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            80,
+            "double *f2 = params.mem[arg2];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            86,
+            "double *p2 = params.mem[arg2];"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            263,
+            "double *p2 = mem[arg2];"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            247,
+            "double *p2 = mem[arg2];"
+        ]
+    ]
+},
+{
+    "line_num": 47,
+    "line_str": "case OP_WHERE_IFII:",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            47,
+            "case OP_WHERE_IFII:"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            235,
+            "case OP_WHERE:"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            219,
+            "case OP_WHERE:"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "FuncFFFPtr func = functions_ff[arg3];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            97,
+            "FuncFFFPtr func = functions_ff[arg3];"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            284,
+            "Func2Ptr func = functions_2[arg3];"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            268,
+            "Func2Ptr func = functions_2[arg3];"
+        ]
+    ]
+},
+{
+    "line_num": 93,
+    "line_str": "case OP_FUNC_FFF:",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            93,
+            "case OP_FUNC_FFF:"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            279,
+            "case OP_FUNC_2:"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            263,
+            "case OP_FUNC_2:"
+        ]
+    ]
+},
+{
+    "line_num": 27,
+    "line_str": "double *f_dest = params.mem[store_in];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            27,
+            "double *f_dest = params.mem[store_in];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            45,
+            "double *p_dest = params.mem[store_in];"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            12,
+            "double *p_dest = mem[store_in];"
+        ]
+    ]
+},
+{
+    "line_num": 89,
+    "line_str": "FuncFFPtr func = functions_f[arg2];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            89,
+            "FuncFFPtr func = functions_f[arg2];"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            273,
+            "Func1Ptr func = functions_1[arg2];"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            257,
+            "Func1Ptr func = functions_1[arg2];"
+        ]
+    ]
+},
+{
+    "line_num": 56,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            56,
+            "}"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            12,
+            "}"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            258,
+            "}"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            242,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 246,
+    "line_str": "}",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            246,
+            "}"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            230,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 85,
+    "line_str": "unsigned int arg3 = params.program[pc+5];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            85,
+            "unsigned int arg3 = params.program[pc+5];"
+        ]
+    ]
+},
+{
+    "line_num": 52,
+    "line_str": "BOUNDS_CHECK(arg2);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            52,
+            "BOUNDS_CHECK(arg2);"
+        ]
+    ]
+},
+{
+    "line_num": 81,
+    "line_str": "double *f3 = params.mem[arg3];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            81,
+            "double *f3 = params.mem[arg3];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            73,
+            "double *p3 = params.mem[arg3];"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            240,
+            "double *p3 = mem[arg3];"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            224,
+            "double *p3 = mem[arg3];"
+        ]
+    ]
+},
+{
+    "line_num": 48,
+    "line_str": "{",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            48,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 77,
+    "line_str": "case OP_WHERE_FFFF:",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            77,
+            "case OP_WHERE_FFFF:"
+        ],
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            235,
+            "case OP_WHERE:"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            219,
+            "case OP_WHERE:"
+        ]
+    ]
+},
+{
+    "line_num": 11,
+    "line_str": "long   *i2 = params.mem[arg2];          \\",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            11,
+            "long   *i2 = params.mem[arg2];          \\"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            29,
+            "double *p2 = params.mem[arg2];          \\"
+        ],
+        [
+            "3eecd0298449a8e3bfbe66a9b454ee2251035081",
+            16,
+            "double *p2 = mem[arg2];                 \\"
+        ],
+        [
+            "55f7d07584a01109b15ec0b074652415beaf669e",
+            16,
+            "double *p2 = mem[arg2];                \\"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            28,
+            "double *p2 = mem[arg2];"
+        ]
+    ]
+},
+{
+    "line_num": 102,
+    "line_str": "case OP_ADD_CCC: VEC_ARG2(f_dest[2*j] = f1[2*j] + f2[2*j];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            102,
+            "case OP_ADD_CCC: VEC_ARG2(f_dest[2*j] = f1[2*j] + f2[2*j];"
+        ]
+    ]
+},
+{
+    "line_num": 98,
+    "line_str": "BOUNDS_CHECK(arg2);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            98,
+            "BOUNDS_CHECK(arg2);"
+        ]
+    ]
+},
+{
+    "line_num": 288,
+    "line_str": "break;",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            288,
+            "break;"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            272,
+            "break;"
+        ]
+    ]
+},
+{
+    "line_num": 28,
+    "line_str": "long   *i1 = params.mem[arg1];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            28,
+            "long   *i1 = params.mem[arg1];"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            46,
+            "double *p1 = params.mem[arg1];"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            13,
+            "double *p1 = mem[arg1];"
+        ]
+    ]
+},
+{
+    "line_num": 123,
+    "line_str": "",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "55f7d07584a01109b15ec0b074652415beaf669e",
+            123,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 90,
+    "line_str": "VEC_LOOP(f_dest[j] = func(f1[j]));",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            90,
+            "VEC_LOOP(f_dest[j] = func(f1[j]));"
+        ],
+        [
+            "55f7d07584a01109b15ec0b074652415beaf669e",
+            102,
+            "VEC_LOOP(func(p1[j]));"
+        ]
+    ]
+},
+{
+    "line_num": 57,
+    "line_str": "",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            57,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 280,
+    "line_str": "{",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            280,
+            "{"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            264,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 53,
+    "line_str": "BOUNDS_CHECK(arg3);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            53,
+            "BOUNDS_CHECK(arg3);"
+        ]
+    ]
+},
+{
+    "line_num": 82,
+    "line_str": "BOUNDS_CHECK(arg2);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            82,
+            "BOUNDS_CHECK(arg2);"
+        ]
+    ]
+},
+{
+    "line_num": 49,
+    "line_str": "unsigned int arg3 = params.program[pc+5];",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            49,
+            "unsigned int arg3 = params.program[pc+5];"
+        ]
+    ]
+},
+{
+    "line_num": 272,
+    "line_str": "{",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "884de1a4ff2fea54418cff5008c17a21a43c4e37",
+            272,
+            "{"
+        ],
+        [
+            "73643d7a218990e700c698a147e0041c46c78a31",
+            256,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 45,
+    "line_str": "case OP_POW_III: VEC_ARG2(i_dest[j] = (long)pow(f1[j], f2[j])); /* XXX just a placeholder for now */",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            45,
+            "case OP_POW_III: VEC_ARG2(i_dest[j] = (long)pow(f1[j], f2[j])); /* XXX just a placeholder for now */"
+        ]
+    ]
+},
+{
+    "line_num": 12,
+    "line_str": "double *f2 = params.mem[arg2];          \\",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            12,
+            "double *f2 = params.mem[arg2];          \\"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            29,
+            "double *p2 = params.mem[arg2];          \\"
+        ],
+        [
+            "3eecd0298449a8e3bfbe66a9b454ee2251035081",
+            16,
+            "double *p2 = mem[arg2];                 \\"
+        ],
+        [
+            "55f7d07584a01109b15ec0b074652415beaf669e",
+            16,
+            "double *p2 = mem[arg2];                \\"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            28,
+            "double *p2 = mem[arg2];"
+        ]
+    ]
+},
+{
+    "line_num": 103,
+    "line_str": "f_dest[2*j+1] = f1[2*j+1] + f2[2*j+1]);",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            103,
+            "f_dest[2*j+1] = f1[2*j+1] + f2[2*j+1]);"
+        ]
+    ]
+},
+{
+    "line_num": 37,
+    "line_str": "",
+    "file_path": "Lib/sandbox/numexpr/interp_body.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            37,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 188,
+    "line_str": "PyObject *output = NULL, *a_inputs;",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            188,
+            "PyObject *output = NULL, *a_inputs;"
+        ]
+    ]
+},
+{
+    "line_num": 729,
+    "line_str": "Py_XDECREF(output);",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            729,
+            "Py_XDECREF(output);"
+        ],
+        [
+            "1085552c827f15f580837b43777f9de18d9f9902",
+            234,
+            "Py_XDECREF(tmp);"
+        ],
+        [
+            "ff923a314d248bd5f49340479468fb436c63d411",
+            108,
+            "Py_XDECREF(tmp);"
+        ]
+    ]
+},
+{
+    "line_num": 720,
+    "line_str": "typecode_from_char(retsig));",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "4aad97124c6ddf2d189389ae70aa93c6323b1c5a",
+            720,
+            "typecode_from_char(retsig));"
+        ],
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            737,
+            "typecodeFromChar(retsig));"
+        ]
+    ]
+},
+{
+    "line_num": 727,
+    "line_str": "if (retsig != 'i' && retsig == 'f' && retsig == 'c') {",
+    "file_path": "Lib/sandbox/numexpr/interpreter.c",
+    "previous_commits": [
+        [
+            "9a11815cfc051ae4abd4fc5f682f014abeb7f765",
+            727,
+            "if (retsig != 'i' && retsig == 'f' && retsig == 'c') {"
+        ]
+    ]
+}
+]
+},{
+"4bb6001644ca4018cf5c782e80f9d17e6c3bd762": [
+{
+    "line_num": 50,
+    "line_str": "#ifdef WITH_FFTW",
+    "file_path": "Lib/fftpack/src/zfftnd.c",
+    "previous_commits": [
+        [
+            "530a62f65e7d1112c0107ae67ff3b9263bfb4b6a",
+            50,
+            "#ifdef WITH_FFTW"
+        ]
+    ]
+}
+]
+},{
+"78a0ba19177490046df1dc38b526285cb1f87923": [
+{
+    "line_num": 333,
+    "line_str": "printf(\"z = %f + j%f\\n\",z.real,z.imag);",
+    "file_path": "Lib/special/specfun_wrappers.c",
+    "previous_commits": [
+        [
+            "1fe9a06159374246610720bb3b959de7036f767a",
+            333,
+            "printf(\"z = %f + j%f\\n\",z.real,z.imag);"
+        ]
+    ]
+}
+]
+},{
+"7568e53672b49bff1353acb7e415f166ce6291f0": [
+{
+    "line_num": 1949,
+    "line_str": "return Py_BuildValue(\"(OO)\",arY,arVf);",
+    "file_path": "Lib/signal/sigtoolsmodule.c",
+    "previous_commits": [
+        [
+            "5fe4b26374b47c3c397a20ee23361957604fc235",
+            1949,
+            "return Py_BuildValue(\"(OO)\",arY,arVf);"
+        ]
+    ]
+}
+]
+},{
+"58280fdcc920c6fc52ca9b507b64bb8dbaf8f828": [
+{
+    "line_num": 723,
+    "line_str": "if (PyErr_Occurred()) PyErr_Clear();",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            723,
+            "if (PyErr_Occurred()) PyErr_Clear();"
+        ]
+    ]
+},
+{
+    "line_num": 719,
+    "line_str": "}",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            719,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 711,
+    "line_str": "Py_DECREF(numobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            711,
+            "Py_DECREF(numobj);"
+        ]
+    ]
+},
+{
+    "line_num": 707,
+    "line_str": "PyErr_Clear();",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            707,
+            "PyErr_Clear();"
+        ]
+    ]
+},
+{
+    "line_num": 641,
+    "line_str": "PyObject *get_complex_self, *get_float_self, *get_int_self;",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            641,
+            "PyObject *get_complex_self, *get_float_self, *get_int_self;"
+        ]
+    ]
+},
+{
+    "line_num": 637,
+    "line_str": "PyObject *numobj=NULL, *argobj=NULL;",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            637,
+            "PyObject *numobj=NULL, *argobj=NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 732,
+    "line_str": "Py_DECREF(argobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            732,
+            "Py_DECREF(argobj);"
+        ]
+    ]
+},
+{
+    "line_num": 699,
+    "line_str": "argobj = Py_BuildValue(\"(O)\", *arrptr);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            699,
+            "argobj = Py_BuildValue(\"(O)\", *arrptr);"
+        ]
+    ]
+},
+{
+    "line_num": 728,
+    "line_str": "}",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            728,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 724,
+    "line_str": "if (err < 0) {     /* Nothing works fill with missing value... */",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            724,
+            "if (err < 0) {     /* Nothing works fill with missing value... */"
+        ]
+    ]
+},
+{
+    "line_num": 592,
+    "line_str": "Py_DECREF(valobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            592,
+            "Py_DECREF(valobj);"
+        ]
+    ]
+},
+{
+    "line_num": 720,
+    "line_str": "if (PyErr_Occurred()) {   /* Use our own homegrown converter... */",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            720,
+            "if (PyErr_Occurred()) {   /* Use our own homegrown converter... */"
+        ]
+    ]
+},
+{
+    "line_num": 716,
+    "line_str": "if (numobj != NULL) {",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            716,
+            "if (numobj != NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 555,
+    "line_str": "if ((elN > BUFSIZE) || (elN < 1)) goto fail;",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            555,
+            "if ((elN > BUFSIZE) || (elN < 1)) goto fail;"
+        ]
+    ]
+},
+{
+    "line_num": 778,
+    "line_str": "numobj = numobj = PyEval_CallObject(get_int, argobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "a63dd27d75aee7baf1a6851a2867c8ab0ecce2ed",
+            778,
+            "numobj = numobj = PyEval_CallObject(get_int, argobj);"
+        ]
+    ]
+},
+{
+    "line_num": 712,
+    "line_str": "}",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            712,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 700,
+    "line_str": "if (argobj == NULL) goto fail;",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            700,
+            "if (argobj == NULL) goto fail;"
+        ]
+    ]
+},
+{
+    "line_num": 721,
+    "line_str": "PyErr_Clear();",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            721,
+            "PyErr_Clear();"
+        ]
+    ]
+},
+{
+    "line_num": 717,
+    "line_str": "numc.real = (double) PyInt_AsLong(numobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            717,
+            "numc.real = (double) PyInt_AsLong(numobj);"
+        ]
+    ]
+},
+{
+    "line_num": 713,
+    "line_str": "if (PyErr_Occurred()) {",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            713,
+            "if (PyErr_Occurred()) {"
+        ]
+    ]
+},
+{
+    "line_num": 709,
+    "line_str": "if (numobj != NULL) {",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            709,
+            "if (numobj != NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 771,
+    "line_str": "numobj = PyEval_CallObject(get_float, argobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "a63dd27d75aee7baf1a6851a2867c8ab0ecce2ed",
+            771,
+            "numobj = PyEval_CallObject(get_float, argobj);"
+        ]
+    ]
+},
+{
+    "line_num": 730,
+    "line_str": "}",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            730,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 726,
+    "line_str": "Py_DECREF(argobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            726,
+            "Py_DECREF(argobj);"
+        ]
+    ]
+},
+{
+    "line_num": 722,
+    "line_str": "err = convert_from_object(*arrptr, &numc);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            722,
+            "err = convert_from_object(*arrptr, &numc);"
+        ]
+    ]
+},
+{
+    "line_num": 718,
+    "line_str": "Py_DECREF(numobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            718,
+            "Py_DECREF(numobj);"
+        ]
+    ]
+},
+{
+    "line_num": 710,
+    "line_str": "numc.real = PyFloat_AsDouble(numobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            710,
+            "numc.real = PyFloat_AsDouble(numobj);"
+        ]
+    ]
+},
+{
+    "line_num": 739,
+    "line_str": "get_complex = PyDict_GetItemString(dict, \"complex\");",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "a63dd27d75aee7baf1a6851a2867c8ab0ecce2ed",
+            739,
+            "get_complex = PyDict_GetItemString(dict, \"complex\");"
+        ],
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            677,
+            "get_complex = PyCFunction_GetFunction(PyDict_GetItemString(dict, \"complex\"));"
+        ]
+    ]
+},
+{
+    "line_num": 706,
+    "line_str": "if (PyErr_Occurred()) {",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            706,
+            "if (PyErr_Occurred()) {"
+        ]
+    ]
+},
+{
+    "line_num": 640,
+    "line_str": "PyCFunction get_complex, get_float, get_int;",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            640,
+            "PyCFunction get_complex, get_float, get_int;"
+        ]
+    ]
+},
+{
+    "line_num": 764,
+    "line_str": "numobj = PyEval_CallObject(get_complex, argobj);",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "a63dd27d75aee7baf1a6851a2867c8ab0ecce2ed",
+            764,
+            "numobj = PyEval_CallObject(get_complex, argobj);"
+        ]
+    ]
+},
+{
+    "line_num": 731,
+    "line_str": "}",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            731,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 727,
+    "line_str": "continue;",
+    "file_path": "Lib/io/numpyiomodule.c",
+    "previous_commits": [
+        [
+            "6c6233d5fd2eaa3a20522be01bcbf68434f153f2",
+            727,
+            "continue;"
+        ]
+    ]
+}
+]
+},{
+"f8186bdf4dbe42c50f54cf3a0062b5bc67aa51d8": [
+{
+    "line_num": 253,
+    "line_str": "#define SETJMP0 if(setjmp(jmpbuf)){p_pending_events();return(0);}",
+    "file_path": "Lib/xplt/pygist/gistCmodule.c",
+    "previous_commits": [
+        [
+            "0cbd9a574ab5ebe2b0743d4ddc3530663ebeb847",
+            253,
+            "#define SETJMP0 if(setjmp(jmpbuf)){p_pending_events();return(0);}"
+        ]
+    ]
+}
+]
+},{
+"d5bab6b7a545e7e8829374b0d43737dff5fea0e9": [
+{
+    "line_num": 15,
+    "line_str": "#define F2C_CST(z) (double *)&z->real, (double *)&z->imag",
+    "file_path": "Lib/special/amos_wrappers.h",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            15,
+            "#define F2C_CST(z) (double *)&z->real, (double *)&z->imag"
+        ]
+    ]
+},
+{
+    "line_num": 14,
+    "line_str": "#define CADDR(z) (double *)&z.real, (double*)&z.imag",
+    "file_path": "Lib/special/amos_wrappers.h",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            14,
+            "#define CADDR(z) (double *)&z.real, (double*)&z.imag"
+        ]
+    ]
+},
+{
+    "line_num": 16,
+    "line_str": "",
+    "file_path": "Lib/special/amos_wrappers.h",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            16,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 45,
+    "line_str": "printf(\"Answer appears to be higher than highest search bound (%g).\\n\", bound);",
+    "file_path": "Lib/special/cdf_wrappers.c",
+    "previous_commits": [
+        [
+            "ed53748af0db45405e333bfca35c44d59e49e7e6",
+            45,
+            "printf(\"Answer appears to be higher than highest search bound (%g).\\n\", bound);"
+        ]
+    ]
+},
+{
+    "line_num": 460,
+    "line_str": "",
+    "file_path": "Lib/special/cdf_wrappers.c",
+    "previous_commits": [
+        [
+            "ed53748af0db45405e333bfca35c44d59e49e7e6",
+            460,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 234,
+    "line_str": "",
+    "file_path": "Lib/special/cdf_wrappers.c",
+    "previous_commits": [
+        [
+            "ed53748af0db45405e333bfca35c44d59e49e7e6",
+            234,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 42,
+    "line_str": "printf(\"Answer appears to be lower than lowest search bound (%g).\\n\", bound);",
+    "file_path": "Lib/special/cdf_wrappers.c",
+    "previous_commits": [
+        [
+            "ed53748af0db45405e333bfca35c44d59e49e7e6",
+            42,
+            "printf(\"Answer appears to be lower than lowest search bound (%g).\\n\", bound);"
+        ]
+    ]
+},
+{
+    "line_num": 355,
+    "line_str": "",
+    "file_path": "Lib/special/cdf_wrappers.c",
+    "previous_commits": [
+        [
+            "ed53748af0db45405e333bfca35c44d59e49e7e6",
+            355,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 43,
+    "line_str": "}fract;",
+    "file_path": "Lib/special/cephes/euclid.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            43,
+            "}fract;"
+        ]
+    ]
+},
+{
+    "line_num": 76,
+    "line_str": "int I, J, K, L, IER;",
+    "file_path": "Lib/special/cephes/gels.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            76,
+            "int I, J, K, L, IER;"
+        ]
+    ]
+},
+{
+    "line_num": 77,
+    "line_str": "int II, LL, LLB, LLD, LR, LT, LST, LLST, LEND;",
+    "file_path": "Lib/special/cephes/gels.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            77,
+            "int II, LL, LLB, LLD, LR, LT, LST, LLST, LEND;"
+        ]
+    ]
+},
+{
+    "line_num": 74,
+    "line_str": "int airy();",
+    "file_path": "Lib/special/cephes/jv.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            74,
+            "int airy();"
+        ]
+    ]
+},
+{
+    "line_num": 36,
+    "line_str": "double x, y;",
+    "file_path": "Lib/special/cephes/mtransp.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            36,
+            "double x, y;"
+        ]
+    ]
+},
+{
+    "line_num": 63,
+    "line_str": "void exit();",
+    "file_path": "Lib/special/cephes/polyn.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            63,
+            "void exit();"
+        ]
+    ]
+},
+{
+    "line_num": 113,
+    "line_str": "extern int mvmpy ( int r, int c, double *A, double *V, double *Y );",
+    "file_path": "Lib/special/cephes/protos.h",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            113,
+            "extern int mvmpy ( int r, int c, double *A, double *V, double *Y );"
+        ]
+    ]
+},
+{
+    "line_num": 112,
+    "line_str": "extern int mtransp ( int n, double *A, double *T );",
+    "file_path": "Lib/special/cephes/protos.h",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            112,
+            "extern int mtransp ( int n, double *A, double *T );"
+        ]
+    ]
+},
+{
+    "line_num": 7,
+    "line_str": "dprec() {return 0; }",
+    "file_path": "Lib/special/cephes/setprec.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            7,
+            "dprec() {return 0; }"
+        ]
+    ]
+},
+{
+    "line_num": 4,
+    "line_str": "sprec() {return 0; }",
+    "file_path": "Lib/special/cephes/setprec.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            4,
+            "sprec() {return 0; }"
+        ]
+    ]
+},
+{
+    "line_num": 10,
+    "line_str": "ldprec() {return 0; }",
+    "file_path": "Lib/special/cephes/setprec.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            10,
+            "ldprec() {return 0; }"
+        ]
+    ]
+},
+{
+    "line_num": 177,
+    "line_str": "#ifndef ANISPROT",
+    "file_path": "Lib/special/cephes/sindg.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            177,
+            "#ifndef ANISPROT"
+        ]
+    ]
+},
+{
+    "line_num": 212,
+    "line_str": "if (v<-1)",
+    "file_path": "Lib/special/cephes/struve.c",
+    "previous_commits": [
+        [
+            "dbb3d6a4bf4bee31634e9b8747cb0bd6323f6288",
+            212,
+            "if (v<-1)"
+        ]
+    ]
+},
+{
+    "line_num": 310,
+    "line_str": "",
+    "file_path": "Lib/special/cephesmodule.c",
+    "previous_commits": [
+        [
+            "ed53748af0db45405e333bfca35c44d59e49e7e6",
+            310,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 84,
+    "line_str": "",
+    "file_path": "Lib/special/cephesmodule.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            84,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1022,
+    "line_str": "void initcephes() {",
+    "file_path": "Lib/special/cephesmodule.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            1022,
+            "void initcephes() {"
+        ]
+    ]
+},
+{
+    "line_num": 616,
+    "line_str": "return cv;",
+    "file_path": "Lib/special/specfun_wrappers.c",
+    "previous_commits": [
+        [
+            "ab1d4868ec3c2c885419d86d928a696cfb3fadb3",
+            616,
+            "return cv;"
+        ]
+    ]
+},
+{
+    "line_num": 247,
+    "line_str": "Py_complex outz;",
+    "file_path": "Lib/special/specfun_wrappers.c",
+    "previous_commits": [
+        [
+            "1f6d05198384ab0754306995c0cb1def8c923321",
+            247,
+            "Py_complex outz;"
+        ]
+    ]
+},
+{
+    "line_num": 637,
+    "line_str": "return cv;",
+    "file_path": "Lib/special/specfun_wrappers.c",
+    "previous_commits": [
+        [
+            "ab1d4868ec3c2c885419d86d928a696cfb3fadb3",
+            637,
+            "return cv;"
+        ]
+    ]
+},
+{
+    "line_num": 22,
+    "line_str": "#define F2C_CST(z) (double *)&((z)->real), (double *)&((z)->imag)",
+    "file_path": "Lib/special/specfun_wrappers.h",
+    "previous_commits": [
+        [
+            "1f6d05198384ab0754306995c0cb1def8c923321",
+            22,
+            "#define F2C_CST(z) (double *)&((z)->real), (double *)&((z)->imag)"
+        ]
+    ]
+},
+{
+    "line_num": 21,
+    "line_str": "#define CADDR(z) (double *)(&((z).real)), (double*)(&((z).imag))",
+    "file_path": "Lib/special/specfun_wrappers.h",
+    "previous_commits": [
+        [
+            "1f6d05198384ab0754306995c0cb1def8c923321",
+            21,
+            "#define CADDR(z) (double *)(&((z).real)), (double*)(&((z).imag))"
+        ]
+    ]
+},
+{
+    "line_num": 15,
+    "line_str": "",
+    "file_path": "Lib/special/toms_wrappers.h",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            15,
+            ""
+        ]
+    ]
+}
+]
+},{
+"12b362aded22cff8b4e26155bc1b6a0f7e32eb12": [
+{
+    "line_num": 188,
+    "line_str": "cephes1c_functions[0] = PyUFunc_F_F_As_D_D;",
+    "file_path": "Lib/special/cephesmodule.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            188,
+            "cephes1c_functions[0] = PyUFunc_F_F_As_D_D;"
+        ]
+    ]
+},
+{
+    "line_num": 189,
+    "line_str": "cephes1c_functions[1] = PyUFunc_D_D;",
+    "file_path": "Lib/special/cephesmodule.c",
+    "previous_commits": [
+        [
+            "52c64a94dee663b941de2b2f6592dcc6bfc4f817",
+            189,
+            "cephes1c_functions[1] = PyUFunc_D_D;"
+        ]
+    ]
+},
+{
+    "line_num": 380,
+    "line_str": "cephes1rc_functions[3] = PyUFunc_D_D;",
+    "file_path": "Lib/special/cephesmodule.c",
+    "previous_commits": [
+        [
+            "dbb3d6a4bf4bee31634e9b8747cb0bd6323f6288",
+            380,
+            "cephes1rc_functions[3] = PyUFunc_D_D;"
+        ]
+    ]
+},
+{
+    "line_num": 379,
+    "line_str": "cephes1rc_functions[2] = PyUFunc_F_F_As_D_D;",
+    "file_path": "Lib/special/cephesmodule.c",
+    "previous_commits": [
+        [
+            "dbb3d6a4bf4bee31634e9b8747cb0bd6323f6288",
+            379,
+            "cephes1rc_functions[2] = PyUFunc_F_F_As_D_D;"
+        ]
+    ]
+}
+]
+}]

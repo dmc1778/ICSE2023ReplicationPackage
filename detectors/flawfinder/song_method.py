@@ -9,7 +9,7 @@ import os, json, re, subprocess, codecs
 from csv import writer
 import time
 
-user_names = ['pytorch', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
+user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
 
 _extensions = ['cc', 'cpp', 'hpp', 'h', 'c', 'cu']
 
@@ -35,10 +35,6 @@ def decompose_detections(splitted_lines, detector_name):
             j += 1
         if detector_name == 'cppcheck':
             if REG_CPP_CHECK.search(splitted_lines[j]):
-                indices.append(j)
-            j += 1
-        if detector_name == 'infer':
-            if REG_LOC_FLAWFINDER.search(splitted_lines[j]):
                 indices.append(j)
             j += 1
 
@@ -115,6 +111,7 @@ def get_patches(splitted_lines):
             i+= 1
             j+= 1
     return super_temp, change_info
+
 
 
 def get_diff_header(diff):
@@ -239,16 +236,10 @@ def run(test_file, detector_name, library_name):
         command_ = 'rats --quiet --xml -w 3 '
     if detector_name == 'cppcheck':
         command_ = 'cppcheck --xml '
-    if detector_name == 'infer':
-        compile_options = search_for_compile_command(test_file, library_name)
-        command_capture = f'infer capture -- gcc {compile_options} -c '
-        command_analyze = f'infer analyze -- gcc {compile_options} -c '
         
     start_time = time.time()
     output = subprocess.getoutput(command_+test_file)
     execution_time = time.time() - start_time
-
-    subprocess.call('rm -rf infer-out', shell=True)
 
     return output, execution_time
 
@@ -270,9 +261,6 @@ def diff_based_matching(changed_lines, current_commit, detector_name, library_na
         if detector_name == 'rats':
             res = parse_rats(output)
         
-        if detector_name == 'infer':
-            res = parse_infer(output)
-
         detection_status = {'detected': []}
         if not isinstance(res[0], str):
             for loc, warning in res[0].items():
@@ -290,8 +278,6 @@ def save_source_code(source_code, flag, filename):
         f_method.close()
 
 def fixed_warning_base_matching(fix_commit, vul_commit, detector_name):
-
-
     #save_source_code(vul_file_object.source_code_before, 'fix', vul_file_object.filename)
     save_source_code(vul_commit.source_code_before, 'vul', vul_commit.filename)
     save_source_code(vul_commit.source_code, 'fix', vul_commit.filename)
@@ -354,7 +340,7 @@ def combine_diff_results(detection_status):
 def main():
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
 
-    tools = ['infer', 'flawfinder', 'rats', 'cppcheck', 'clang']
+    tools = ['flawfinder', 'rats', 'cppcheck']
     mappings_ = ['diff', 'fixed']
 
     for tool in tools:
