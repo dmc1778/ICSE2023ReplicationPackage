@@ -1,11 +1,10 @@
-from posixpath import split
 import sys, os, re, subprocess, json
 from pydriller import GitRepository as PyDrillerGitRepo
 from csv import writer
 import time, codecs
+import itertools
 
-user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
-
+user_names = ['tensorflow', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
 
 _extensions = ['cc', 'cpp', 'c', 'cu']
 
@@ -14,6 +13,15 @@ this_project = os.getcwd()
 REG_CHANGED = re.compile(".*@@ -(\d+),(\d+) \+(\d+),(\d+) @@.*")
 REG_LOC_INFER = re.compile('(\d+)\:\serror\:')
 REG_VUL_TYPE_INFER = re.compile('error\:(.*)')
+
+
+class Dictlist(dict):
+    def __setitem__(self, key, value):
+        try:
+            self[key]
+        except KeyError:
+            super(Dictlist, self).__setitem__(key, [])
+        self[key].append(value)
 
 def decompose_detections(splitted_lines, detector_name):
     super_temp = []
@@ -145,8 +153,9 @@ def get_prev_file_names(repository_path, items):
     return f_names
 
 def parse_infer(output):
+    dictlist = Dictlist()
     cwe_final_list = []
-    parsed_output = {}
+    parsed_output = Dictlist()
 
     if re.findall(r'(No\sissues\sfound)', output):
         return 'not detected'
@@ -175,8 +184,45 @@ def find_regex_groups(warning):
 def remove_white_spaces(split_row):
     return list(filter(None, split_row))
 
-def build_global_compile_option(compile_options):
-    print('d')
+def build_global_compile_option(compile_options, test_file, library_name):
+    find_opt = False
+    output = []
+    with open(this_project+'/compilation_database/compile_commands_'+library_name+'.json', encoding='utf-8') as f:
+        compile_options = json.loads(f.read(), strict=False)
+
+    if library_name == 'tensorflow':
+        for opt in compile_options:
+            split_row = opt['command'].split(' ')
+            for j, line in enumerate(list(split_row)):
+                if line == '-c':
+                    f_path = split_row[j+1].split('/')[0:-1]
+            if f_path[0] == 'tensorflow' or f_path[0] == 'third_party':
+                new_opt = '/'.join(f_path)
+                if re.findall(r'(\/'+test_file.split('/')[-2]+')', new_opt):
+                    output.append(opt)
+                    break
+                if re.findall(r'(\/'+test_file.split('/')[-3]+r'\/'+test_file.split('/')[-2]+')', new_opt):
+                    output.append(opt)
+                    break
+                if re.findall(r'(\/'+test_file.split('/')[0]+r'\/'+test_file.split('/')[1]+')', new_opt):
+                    output.append(opt)
+                    break
+
+    else:
+        for opt in compile_options:
+            split_opt = opt['file'].split('/')[0:-1]
+            new_opt = '/'.join(split_opt)
+            if re.findall(r'(\/'+test_file.split('/')[-2]+')', new_opt):
+                output.append(opt)
+                break
+            if re.findall(r'(\/'+test_file.split('/')[-3]+r'\/'+test_file.split('/')[-2]+')', new_opt):
+                output.append(opt)
+                break
+            if re.findall(r'(\/'+test_file.split('/')[0]+r'\/'+test_file.split('/')[1]+')', new_opt):
+                output.append(opt)
+                break
+    return output
+                
 
 def search_for_compile_command(test_file, library_name):
     find_opt = False
@@ -184,18 +230,18 @@ def search_for_compile_command(test_file, library_name):
     with open(this_project+'/compilation_database/compile_commands_'+library_name+'.json', encoding='utf-8') as f:
         compile_options = json.loads(f.read(), strict=False)
 
-    glob_compile_option = build_global_compile_option(compile_options)
-
     if library_name == 'tensorflow':
         for opt in compile_options:
             split_row = opt['command'].split(' ')
             for j, line in enumerate(list(split_row)):
                 if line == '-c':
                     f_path = split_row[j+1].split('/')
-            if os.path.join(f_path[-2], f_path[-1]) == os.path.join(test_file.split('/')[-2], test_file.split('/')[-1]):
-                find_opt = True
-                output.append(opt)
-                break
+            if f_path[0] == 'tensorflow' or f_path[0] == 'third_party':
+                if os.path.join(f_path[-2], f_path[-1]) == os.path.join(test_file.split('/')[-2], test_file.split('/')[-1]):
+                    find_opt = True
+                    output.append(opt)
+                    break
+        
     else:
         for opt in compile_options:
             if os.path.join(opt['file'].split('/')[-2], opt['file'].split('/')[-1]) == os.path.join(test_file.split('/')[-2], test_file.split('/')[-1]):
@@ -205,7 +251,11 @@ def search_for_compile_command(test_file, library_name):
     if find_opt:
         return output
     else:
-        return False
+        glob_compile_option = build_global_compile_option(compile_options, test_file, library_name)
+        if bool(glob_compile_option):
+            return glob_compile_option
+        else:
+            return False
 
 def run(library_name, opt, filename, full_check):
     # command_capture = f'infer --keep-going -- gcc {compile_options} -c '
@@ -304,6 +354,23 @@ def run(library_name, opt, filename, full_check):
 
     return output, execution_time
 
+def _match(cl, loc):
+    super_list = []
+    flag_full = False
+    flag_partial = False
+    for sk, sub_cl in cl.items():
+        super_list.append(tuple(sub_cl))
+    if any(lower <= loc <= upper for (lower, upper) in super_list):
+        flag_full = True
+    if any(lower > loc or loc > upper for (lower, upper) in super_list):
+        flag_partial = True
+    #     if sub_cl[0] <= loc <= sub_cl[1]:
+    #         flag_full = True
+    #     if loc <= sub_cl[0] or loc >= sub_cl[1]:
+    #         flag_partial = True
+    
+    return flag_full, flag_partial
+
 def diff_based_matching(changed_lines, current_commit, detector_name, library_name, opt, full_check):
 
     save_source_code(current_commit.source_code_before, current_commit.filename)
@@ -315,18 +382,18 @@ def diff_based_matching(changed_lines, current_commit, detector_name, library_na
         
         res = parse_infer(output)
 
-        detection_status = {'detected': []}
+        # detection_status = {'detected': []}
+        detection_status = {'full_match': [], 'partial_match': []}
         if not isinstance(res[0], str):
             for loc, warning in res[0].items():
-                detection_status['detected'].append(warning)
-                # for k, cl in changed_lines.items():
-                #     if cl[0] <= loc <= cl[1]:
-                #         detection_status['full_match'].append(warning)
-                #     elif loc <= cl[0] or loc >= cl[1]:
-                #         detection_status['partial_match'].append(warning)
-                #     else:
-                #         detection_status['mismatch'].append(warning)
-
+                # detection_status['detected'].append(warning)
+                for k, cl in changed_lines.items():
+                    [flag_full, flag_partial] = _match(cl, loc)
+                    if flag_full:
+                        detection_status['full_match'].append(warning)
+                    if flag_partial:
+                        detection_status['partial_match'].append(warning)
+                    
     subprocess.call('rm -rf '+this_project+'/'+current_commit.filename, shell=True)
 
     return detection_status, current_commit, res, execution_time
@@ -344,7 +411,7 @@ def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_n
     
         
     if os.path.isfile(os.path.join(this_project, vul_commit.filename)):
-     
+        
         [output1, execution_time1] = run(library_name, opt, vul_commit.filename, full_check)
         
         res1 = parse_infer(output1)
@@ -357,15 +424,32 @@ def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_n
         [output2, execution_time2] = run(library_name, opt, vul_commit.filename, full_check)
 
         res2 = parse_infer(output2)
-            
-    flag = False
-    if not isinstance(res1[0], str) and isinstance(res2[0], str):
-        flag = True
 
+    if not isinstance(res1, str) and not isinstance(res2, str):  
+        set_1 = set(res1[1])
+        set_2 = set(res2[1])
+
+        wfixed = set_1 - set_2
+        if bool(wfixed):
+            out = find_wfix(wfixed, res1)
+            flag = True
+    else:
+        flag = False
+    
     subprocess.call('rm -rf '+os.path.join(this_project, vul_commit.filename), shell=True)
     
 
-    return flag, vul_commit, res1, res2, execution_time1+execution_time2
+    return flag, vul_commit, res1, res2, execution_time1+execution_time2, out
+
+def find_wfix(wfixed, res1):
+    output = {}
+    wfix = list(wfixed)
+    flat_list = sorted({x for v in res1[0].values() for x in v})
+    for item1 in wfix:
+        for item2 in flat_list:
+            if re.findall(r'(\:'+item1+r')', item2):
+                output[int(REG_LOC_INFER.search(item2).group(1))] = item2
+    return output
 
 def combine_fixed_results(detection_status):
     data_list = []
@@ -401,7 +485,7 @@ def main():
 
     _id = 0
 
-    for mapping_ in ['diff', 'fixed']:
+    for mapping_ in ['fixed', 'fixed']:
         for i, dir in enumerate(os.listdir(vic_path)):
             
             if user_names[i] == 'tensorflow' or user_names[i] == 'pytorch':
@@ -424,88 +508,88 @@ def main():
 
             try:
                 for counter, item in enumerate(data):
-                    _id += 1
-                    x = list(item.keys())
-                    current_commit = PyDrillerGitRepo(repository_path).get_commit(x[0])
-                    for mod in current_commit.modifications:
-                        if 'test' not in mod.new_path and 'test' not in mod.filename and mod.filename.split('.')[-1] in _extensions:
-                            cl, raw_name = get_fix_file_names(mod)
-                            cl_list = changed_lines_to_list(cl)
-                            opt = search_for_compile_command(raw_name[0], dir.split('_')[1].split('.')[0])
-                            
-                            print('Running {} using {} method on {} Library, {}/{}'.format('infer', mapping_, dir.split('_')[1].split('.')[0], counter, len(data)))
+                        _id += 1
+                        x = list(item.keys())
+                        current_commit = PyDrillerGitRepo(repository_path).get_commit(x[0])
+                        for mod in current_commit.modifications:
+                            if 'test' not in mod.new_path and 'test' not in mod.filename and mod.filename.split('.')[-1] in _extensions:
+                                cl, raw_name = get_fix_file_names(mod)
+                                cl_list = changed_lines_to_list(cl)
+                                opt = search_for_compile_command(raw_name[0], dir.split('_')[1].split('.')[0])
+                                
+                                print('Running {} using {} method on {} Library, {}/{}'.format('infer', mapping_, dir.split('_')[1].split('.')[0], counter, len(data)))
 
-                            if mapping_ == 'diff' and opt:
-                                detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, 'infer', user_names[i], opt[0], full_check)
-                                if res == 'not detected':
-                                    print('No vulnerable candidate detected!')
-                                    my_data = [_id,'infer', 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
-                                    my_data.append('not detected')
+                                if mapping_ == 'diff' and opt:
+                                    detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, 'infer', user_names[i], opt[0], full_check)
+                                    if res == 'not detected':
+                                        print('No vulnerable candidate detected!')
+                                        my_data = [_id,'infer', 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
+                                        my_data.append('not detected')
 
-                                elif res == 'compilation error':
-                                    print('No vulnerable candidate detected!')
-                                    my_data = [_id, 'infer', 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
-                                    my_data.append('compilation error')
+                                    elif res == 'compilation error':
+                                        print('No vulnerable candidate detected!')
+                                        my_data = [_id, 'infer', 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
+                                        my_data.append('compilation error')
 
-                                else:
-                                    data_list, j = combine_diff_results(detection_status)
-                                    my_data = [_id, 'infer', 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
-                                    my_data = my_data + data_list
-                                           
-                                    for v in range(len(res[1])):
-                                        vul_freq_data = ['infer', dir.split('_')[1].split('.')[0]]
-                                        vul_freq_data = vul_freq_data + [res[1][v]]
-                                        vul_freq_data = [_id] + vul_freq_data
-
-                                        with open('./detection_results/vul_frequency.csv', 'a', newline='\n') as fd:
-                                            writer_object = writer(fd)
-                                            writer_object.writerow(vul_freq_data)
+                                    else:
+                                        data_list, j = combine_diff_results(detection_status)
+                                        my_data = [_id, 'infer', 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
+                                        my_data = my_data + data_list
                                             
-                                with open('./detection_results/results.csv', 'a', newline='\n') as fd:
+                                        for v in range(len(res[1])):
+                                            vul_freq_data = ['infer', dir.split('_')[1].split('.')[0]]
+                                            vul_freq_data = vul_freq_data + [res[1][v]]
+                                            vul_freq_data = [_id] + vul_freq_data
+
+                                            with open('./detection_results/vul_frequency.csv', 'a', newline='\n') as fd:
+                                                writer_object = writer(fd)
+                                                writer_object.writerow(vul_freq_data)
+                                                
+                                    with open('./detection_results/results.csv', 'a', newline='\n') as fd:
+                                            writer_object = writer(fd)
+                                            writer_object.writerow(my_data)
+                                    
+                                    cl_list = [_id] + cl_list
+
+                                    with open('./detection_results/change_info.csv', 'a', newline='\n') as fd:
+                                            writer_object = writer(fd)
+                                            writer_object.writerow(cl_list)
+
+                                if mapping_ == 'fixed' and opt:
+                                    flag, vul_file_object, res1, res2, execution_time, fixed_data = fixed_warning_base_matching(cl, mod, 'infer', user_names[i], opt[0], full_check)
+                                        
+                                    if flag:
+                                        data_list, j = combine_fixed_results(fixed_data)
+                                        my_data = [_id, 'infer', 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
+                
+                                        my_data = my_data + data_list
+                                        
+                    
+                                    if res1 == 'not detected' or res1 == 'not detected':
+                                        my_data = [_id, 'infer', 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0 , 'not detected']
+                                
+
+                                    if res1 == 'compilation error' or res2 == 'compilation error':
+                                        my_data = [_id, 'infer', 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0 , 'compilation error']
+                                                            
+                                    cl_list = [_id] + cl_list
+
+                                    with open('./detection_results/change_info.csv', 'a', newline='\n') as fd:
+                                            writer_object = writer(fd)
+                                            writer_object.writerow(cl_list)
+
+                                    with open('./detection_results/results.csv', 'a', newline='\n') as fd:
                                         writer_object = writer(fd)
                                         writer_object.writerow(my_data)
-                                
-                                cl_list = [_id] + cl_list
 
-                                with open('./detection_results/change_info.csv', 'a', newline='\n') as fd:
+                                if mapping_ != 'fixed' and not opt:
+                                    with open('./detection_results/compile_options_failed.csv', 'a', newline='\n') as fd:
                                         writer_object = writer(fd)
-                                        writer_object.writerow(cl_list)
-
-                            if mapping_ == 'fixed' and opt:
-                                flag, vul_file_object, res1, res2, execution_time = fixed_warning_base_matching(cl, mod, 'infer', user_names[i], opt[0], full_check)
-                                    
-                                if flag:
-                                    data_list, j = combine_fixed_results(res1[0])
-                                    my_data = [_id, 'infer', 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
-            
-                                    my_data = my_data + data_list
-                                    
-                
-                                elif res1 == 'not detected' or res2 == 'not detected':
-                                    my_data = [_id, 'infer', 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0 , 'not detected']
-                             
-
-                                elif res1 == 'compilation error' or res2 == 'compilation error':
-                                    my_data = [_id, 'infer', 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0 , 'compilation error']
-                                                        
-                                cl_list = [_id] + cl_list
-
-                                with open('./detection_results/change_info.csv', 'a', newline='\n') as fd:
-                                        writer_object = writer(fd)
-                                        writer_object.writerow(cl_list)
-
-                                with open('./detection_results/results.csv', 'a', newline='\n') as fd:
-                                    writer_object = writer(fd)
-                                    writer_object.writerow(my_data)
-
-                            if mapping_ != 'fixed' and not opt:
-                                with open('./detection_results/compile_options_failed.csv', 'a', newline='\n') as fd:
+                                        writer_object.writerow([dir.split('_')[1].split('.')[0], x[0], mod.new_path, mod.filename])
+                            else:
+                                with open('./detection_results/filtered_files.csv', 'a', newline='\n') as fd:
                                     writer_object = writer(fd)
                                     writer_object.writerow([dir.split('_')[1].split('.')[0], x[0], mod.new_path, mod.filename])
-                        else:
-                            with open('./detection_results/filtered_files.csv', 'a', newline='\n') as fd:
-                                writer_object = writer(fd)
-                                writer_object.writerow([dir.split('_')[1].split('.')[0], x[0], mod.new_path, mod.filename])
 
             except Exception as e:
                 print(e)

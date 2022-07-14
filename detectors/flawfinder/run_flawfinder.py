@@ -267,17 +267,18 @@ def diff_based_matching(changed_lines, current_commit, fix_commit, file, detecto
         if detector_name == 'rats':
             res = parse_rats(output)
 
-        detection_status = {'detected': []}
+        # detection_status = {'detected': []}
+        detection_status = {'full_match': [], 'partial_match': [], 'mismatch': []}
         if not isinstance(res[0], str):
             for loc, warning in res[0].items():
-                detection_status['detected'].append(warning)
-                # for k, cl in changed_lines.items():
-                #     if cl[0] <= loc <= cl[1]:
-                #         detection_status['full_match'].append(warning)
-                #     elif loc <= cl[0] or loc >= cl[1]:
-                #         detection_status['partial_match'].append(warning)
-                #     else:
-                #         detection_status['mismatch'].append(warning)
+                # detection_status['detected'].append(warning)
+                for k, cl in changed_lines.items():
+                    if cl[0] <= loc <= cl[1]:
+                        detection_status['full_match'].append(warning)
+                    elif loc <= cl[0] or loc >= cl[1]:
+                        detection_status['partial_match'].append(warning)
+                    else:
+                        detection_status['mismatch'].append(warning)
 
     subprocess.call('rm -rf '+this_project+'/vul_'+vul_file_object.filename, shell=True)
 
