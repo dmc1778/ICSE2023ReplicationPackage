@@ -434,7 +434,6 @@ def main():
                         
                 vic_lib_path = os.path.join(vic_path, dir)
 
-                        # load vulnerable inducing commits
                 with open(vic_lib_path, 'r', encoding='utf-8') as f:
                     data = json.loads(f.read(),strict=False)
 
