@@ -364,11 +364,6 @@ def _match(cl, loc):
         flag_full = True
     if any(lower > loc or loc > upper for (lower, upper) in super_list):
         flag_partial = True
-    #     if sub_cl[0] <= loc <= sub_cl[1]:
-    #         flag_full = True
-    #     if loc <= sub_cl[0] or loc >= sub_cl[1]:
-    #         flag_partial = True
-    
     return flag_full, flag_partial
 
 def diff_based_matching(changed_lines, current_commit, detector_name, library_name, opt, full_check):
@@ -409,6 +404,7 @@ def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_n
     #save_source_code(vul_file_object.source_code_before, 'fix', vul_file_object.filename)
     save_source_code(vul_commit.source_code_before, vul_commit.filename)
     
+    out = []
         
     if os.path.isfile(os.path.join(this_project, vul_commit.filename)):
         
@@ -431,7 +427,8 @@ def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_n
 
         wfixed = set_1 - set_2
         if bool(wfixed):
-            out = find_wfix(wfixed, res1)
+            x = find_wfix(wfixed, res1, detector_name)
+            out.append(x)
             flag = True
     else:
         flag = False
