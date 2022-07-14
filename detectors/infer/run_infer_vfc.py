@@ -1,3 +1,4 @@
+from calendar import day_abbr
 import sys, os, re, subprocess, json
 from numpy import std
 from pydriller import GitRepository as PyDrillerGitRepo
@@ -5,8 +6,9 @@ from csv import writer
 import time, codecs
 import itertools
 from subprocess import run
+import pandas as pd
 
-user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
+user_names = ['numpy', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
 
 _extensions = ['cc', 'cpp', 'c', 'cu']
 
@@ -571,14 +573,27 @@ def changed_lines_to_list(cl):
             global_list = global_list + sv
     return global_list
 
+def convert_df_dict():
+    vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vul_data.csv'
+    data = pd.read_csv(vic_path, sep=',')
+    x = {}
+    for index, rows in data.iterrows():
+        x[rows[2].split('/')[-1]] = rows[1]
+    return x
+
+
 def main():
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs'
+    
     full_check = True
+
+    label_dict = convert_df_dict()
 
     _id = 0
 
-    for tool in ['clang']:
-        for mapping_ in ['fixed', 'fixed']:
+    for tool in ['infer', 'clang']:
+        for mapping_ in ['None', 'diff', 'fixed']:
+
             for i, dir in enumerate(os.listdir(vic_path)):
                 
                 if user_names[i] == 'tensorflow' or user_names[i] == 'pytorch':
@@ -611,6 +626,27 @@ def main():
                                     opt = search_for_compile_command(raw_name[0], dir.split('_')[1].split('.')[0])
                                     
                                     print('Running {} using {} method on {} Library, {}/{}'.format(tool, mapping_, dir.split('_')[1].split('.')[0], counter, len(data)))
+                                    
+                                    if mapping_ == 'None':
+                                        detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i], opt[0], full_check)
+                                        if res == 'not detected':
+                                            print('No vulnerable candidate detected!')
+                                            my_data = [_id, tool, label_dict[x[0]], dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
+                                            my_data.append('not detected')
+
+                                        elif res == 'compilation error':
+                                            print('No vulnerable candidate detected!')
+                                            my_data = [_id, tool, label_dict[x[0]], dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
+                                            my_data.append('compilation error')
+
+                                        else:
+                                            data_list, j = combine_diff_results(res[0])
+                                            my_data = [_id, tool, label_dict[x[0]] , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
+                                            my_data = my_data + data_list
+
+                                        with open('./detection_results/infer/results.csv', 'a', newline='\n') as fd:
+                                                writer_object = writer(fd)
+                                                writer_object.writerow(my_data)
 
                                     if mapping_ == 'diff' and opt:
                                         detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i], opt[0], full_check)

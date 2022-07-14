@@ -449,6 +449,27 @@ def main():
                                     
                                     print('Running {} using {} method on {} Library, {}/{}'.format(tool, mapping_, dir.split('_')[1].split('.')[0], counter, len(data)))
 
+                                    if mapping_ == 'None':
+                                        detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i], opt[0], full_check)
+                                        if res == 'not detected':
+                                            print('No vulnerable candidate detected!')
+                                            my_data = [_id, tool, label_dict[x[0]], dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
+                                            my_data.append('not detected')
+
+                                        elif res == 'compilation error':
+                                            print('No vulnerable candidate detected!')
+                                            my_data = [_id, tool, label_dict[x[0]], dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
+                                            my_data.append('compilation error')
+
+                                        else:
+                                            data_list, j = combine_diff_results(res[0])
+                                            my_data = [_id, tool, label_dict[x[0]] , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
+                                            my_data = my_data + data_list
+
+                                        with open('./detection_results/infer/results.csv', 'a', newline='\n') as fd:
+                                                writer_object = writer(fd)
+                                                writer_object.writerow(my_data)
+                                                
                                     if mapping_ == 'diff':
                                         detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i])
                                         if res == 'not detected':
