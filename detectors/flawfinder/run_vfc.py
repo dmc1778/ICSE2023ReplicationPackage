@@ -1,12 +1,8 @@
 
-from fnmatch import fnmatch
-import string
-from charset_normalizer import detect
-from numpy import diff, isin
-from py import code
-from pydriller import ModificationType, GitRepository as PyDrillerGitRepo
+
+from pydriller import GitRepository as PyDrillerGitRepo
 import os, json, re, subprocess, codecs
-from csv import writer
+import csv
 import time
 import pandas as pd
 
@@ -73,7 +69,6 @@ def decompose_detections(splitted_lines, detector_name):
 
     return super_temp
 
-
 def get_patches(splitted_lines):
     change_info = {}
     i = 0
@@ -123,13 +118,10 @@ def get_patches(splitted_lines):
             j+= 1
     return super_temp, change_info
 
-
-
 def get_diff_header(diff):
     code_lines = diff.split('\n')
     [super_temp, change_info] = get_patches(code_lines)
     return change_info
-
 
 def get_fix_file_names(commit):
     f_names = {}
@@ -177,9 +169,9 @@ def find_cppcheck_cwe(warning):
             cwe_list.append('CWE-'+cwe_)
     return cwe_list
 
-def parse_cppcheck(output):
+def parse_cppcheck(output, mapping_):
     parsed_ouput = Dictlist()
-    if re.findall(r'<location file=',  output):
+    if re.findall(r'\<error\sid\=\"',  output):
         # x = re.findall(r'<error id=.*>((.|\n)*?)<\/error>', output)
         detections = decompose_detections(output.split('\n'), 'cppcheck')
         for detection in detections:
@@ -190,11 +182,22 @@ def parse_cppcheck(output):
                 if REG_CPP_CHECK_LOC.search(line):
                     y = int(REG_CPP_CHECK_LOC.search(line).group(1))
                     parsed_ouput[y] = '\\n'.join(detection)
-        # for k, v in parsed_ouput.items():
-        #     cwe_list = find_cppcheck_cwe(v[0])
-        #     h[cwe_list] = len(re.findall(r'line=\"(\d+)\"', v[0]))
+
+        if mapping_ == 'TrueBugs':
+            for k, v in parsed_ouput.items():
+                for item in v:
+                    cwe_list = find_cppcheck_cwe(item)
+                    for cwe in cwe_list:
+                        if cwe not in h:
+                            h[cwe] = 0
+
+            for k, v in parsed_ouput.items():
+                for item in v:
+                    cwe_list = find_cppcheck_cwe(item)
+                    for cwe in cwe_list:
+                        h[cwe] += len([cwe])
             
-        return [parsed_ouput, []]
+        return [parsed_ouput, h]
     else:
         return 'not detected'
 
@@ -206,7 +209,7 @@ def find_rat_types(warning):
         x = re.findall(r'resulting in a\s(.*?)\.', warning)
     return x
 
-def parse_rats(output):
+def parse_rats(output, mapping_):
     # h = {}
     parsed_ouput = Dictlist()
     if re.findall(r'(<vulnerability\>)', output):
@@ -219,10 +222,16 @@ def parse_rats(output):
                 if re.findall(r'<line.*>((.|\n)*?)<\/line>', line):
                     y = int(re.findall(r'<line.*>((.|\n)*?)<\/line>', line)[0][0])
                     parsed_ouput[y] = detection[0]
-        
-        for k, v in parsed_ouput.items():
-            cwe_list = find_rat_types(v[0])
-            h[cwe_list[0]] = len(re.findall(r'<line>(\d+)\<\/line>', v[0]))
+        if mapping_ == 'TrueBugs':
+            for k, v in parsed_ouput.items():
+                cwe_list = find_rat_types(v[0])
+                if cwe_list[0] not in h:
+                    h[cwe_list[0]] = 0
+
+            for k, v in parsed_ouput.items():
+                cwe_list = find_rat_types(v[0])
+                if cwe_list[0] in h:
+                    h[cwe_list[0]] += len(cwe_list)
         return [parsed_ouput, h]
     else:
         return 'not detected'
@@ -236,9 +245,7 @@ def find_regex_groups(warning):
         cwe_list.append('CWE-'+cwe_)
     return cwe_list
 
-def parse_flawfinder(output):
-    
-    cwe_final_list = []
+def parse_flawfinder(output, mapping_):
     parsed_ouput = Dictlist()
     if re.findall(r'(No hits found)', output):
         return 'not detected'
@@ -251,10 +258,20 @@ def parse_flawfinder(output):
                     x = int(REG_LOC_FLAWFINDER.search(line).group(1))
                     break
             parsed_ouput[x] = '\\n'.join(detection)
-        for k, v in parsed_ouput.items():
-            cwe_list = find_regex_groups(v[0])
-            cwe_list = '/'.join(cwe_list)
-            h[cwe_list] = len(re.findall(r'\:(\d+)', v[0]))
+
+        if mapping_ == 'TrueBugs':
+            for k, v in parsed_ouput.items():
+                cwe_list = find_regex_groups(v[0])
+                #cwe_list = '/'.join(cwe_list)
+                for cwe in cwe_list:
+                    if cwe not in h:
+                        h[cwe] = 0
+
+            for k, v in parsed_ouput.items():
+                cwe_list = find_regex_groups(v[0])
+                for cwe in cwe_list:
+                # cwe_list = '/'.join(cwe_list)
+                    h[cwe] += len([cwe])
     return [parsed_ouput, h]
 
 def search_for_compile_command(test_file, library_name):
@@ -268,7 +285,7 @@ def run(test_file, detector_name, library_name):
     if detector_name == 'rats':
         command_ = 'rats --quiet --xml -w 3 '
     if detector_name == 'cppcheck':
-        command_ = 'cppcheck --xml '
+        command_ = 'cppcheck --xml --inconclusive --enable=warning '
         
     start_time = time.time()
     output = subprocess.getoutput(command_+test_file)
@@ -288,8 +305,7 @@ def _match(cl, loc):
         flag_partial = True
     return flag_full, flag_partial
 
-
-def diff_based_matching(changed_lines, current_commit, detector_name, library_name):
+def diff_based_matching(changed_lines, current_commit, detector_name, library_name, mapping_):
 
     save_source_code(current_commit.source_code_before, 'vul', current_commit.filename)
 
@@ -299,13 +315,13 @@ def diff_based_matching(changed_lines, current_commit, detector_name, library_na
         [output, execution_time] = run(os.path.join(this_project, 'vul_'+current_commit.filename), detector_name, library_name)
 
         if detector_name == 'flawfinder':
-            res = parse_flawfinder(output)
+            res = parse_flawfinder(output, mapping_)
 
         if detector_name == 'cppcheck':
-            res = parse_cppcheck(output)
+            res = parse_cppcheck(output, mapping_)
         
         if detector_name == 'rats':
-            res = parse_rats(output)
+            res = parse_rats(output, mapping_)
         
         # detection_status = {'detected': []}
         detection_status = {'full_match': [], 'partial_match': []}
@@ -331,7 +347,7 @@ def save_source_code(source_code, flag, filename):
             f_method.write("%s\n" % line)
         f_method.close()
 
-def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_name):
+def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_name, mapping_):
     #save_source_code(vul_file_object.source_code_before, 'fix', vul_file_object.filename)
     save_source_code(vul_commit.source_code_before, 'vul', vul_commit.filename)
     
@@ -340,13 +356,13 @@ def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_n
         [output1, execution_time1] = run(this_project+'/vul_'+vul_commit.filename, detector_name, library_name)
 
         if detector_name == 'flawfinder':
-            res1 = parse_flawfinder(output1)
+            res1 = parse_flawfinder(output1, mapping_)
 
         if detector_name == 'cppcheck':
-            res1 = parse_cppcheck(output1)
+            res1 = parse_cppcheck(output1, mapping_)
         
         if detector_name == 'rats':
-            res1 = parse_rats(output1)
+            res1 = parse_rats(output1, mapping_)
 
     subprocess.call('rm -rf '+this_project+'/vul_'+vul_commit.filename, shell=True)
    
@@ -356,13 +372,13 @@ def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_n
         [output2, execution_time2] = run(this_project+'/vul_'+vul_commit.filename, detector_name, library_name)
 
         if detector_name == 'flawfinder':
-            res2 = parse_flawfinder(output2)
+            res2 = parse_flawfinder(output2, mapping_)
 
         if detector_name == 'cppcheck':
-            res2 = parse_cppcheck(output2)
+            res2 = parse_cppcheck(output2, mapping_)
         
         if detector_name == 'rats':
-            res2 = parse_rats(output2)
+            res2 = parse_rats(output2, mapping_)
 
     if not isinstance(res1, str):  
         set_1 = set(res1[1])
@@ -438,7 +454,6 @@ def convert_df_dict():
         x[rows[2].split('/')[-1]] = rows[1]
     return x
 
-
 def main():
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs'
     full_check = True
@@ -447,7 +462,7 @@ def main():
 
     label_dict = convert_df_dict()
 
-    for tool in ['flawfinder','rats','cppcheck']:
+    for tool in ['flawfinder', 'rats', 'cppcheck']:
         for mapping_ in ['TrueBugs', 'diff', 'fixed']:
             for i, dir in enumerate(os.listdir(vic_path)):
                 
@@ -481,7 +496,7 @@ def main():
                                     print('Running {} using {} method on {} Library, {}/{}'.format(tool, mapping_, dir.split('_')[1].split('.')[0], counter, len(data)))
 
                                     if mapping_ == 'TrueBugs':
-                                        detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i])
+                                        detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i], mapping_)
                                         if res == 'not detected':
                                             print('No vulnerable candidate detected!')
                                             my_data = [_id, tool, label_dict[x[0]], dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
@@ -497,23 +512,17 @@ def main():
                                             my_data = [_id, tool, label_dict[x[0]] , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
                                             my_data = my_data + data_list
 
-                                            # for v in range(len(res[1])):
-                                            #     vul_freq_data = [tool, dir.split('_')[1].split('.')[0]]
-                                            #     vul_freq_data = vul_freq_data + [res[1][v]]
-                                            #     vul_freq_data = [_id] + vul_freq_data
-
-                                            #     with open('./detection_results/vul_frequency.csv', 'a', newline='\n') as fd:
-                                            #         writer_object = writer(fd)
-                                            #         writer_object.writerow(vul_freq_data)
-                                                
-
+                                            with open('./detection_results/vul_frequency.csv', 'a') as csv_file:  
+                                                writer = csv.writer(csv_file)
+                                                for key, value in h.items():
+                                                    writer.writerow([tool, key, value])
+                                                                                            
                                         with open('./detection_results/results_true.csv', 'a', newline='\n') as fd:
-                                                writer_object = writer(fd)
+                                                writer_object = csv.writer(fd)
                                                 writer_object.writerow(my_data)
 
-
                                     if mapping_ == 'diff':
-                                        detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i])
+                                        detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i], mapping_)
                                         if res == 'not detected':
                                             print('No vulnerable candidate detected!')
                                             my_data = [_id,tool, 'diff', dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0]
@@ -530,17 +539,17 @@ def main():
                                             my_data = my_data + data_list
                                              
                                         with open('./detection_results/results.csv', 'a', newline='\n') as fd:
-                                                writer_object = writer(fd)
+                                                writer_object = csv.writer(fd)
                                                 writer_object.writerow(my_data)
                                         
                                         cl_list = [_id] + cl_list
 
                                         with open('./detection_results/change_info.csv', 'a', newline='\n') as fd:
-                                                writer_object = writer(fd)
+                                                writer_object = csv.writer(fd)
                                                 writer_object.writerow(cl_list)
 
                                     if mapping_ == 'fixed':
-                                        flag, vul_file_object, res1, res2, execution_time, wfix = fixed_warning_base_matching(cl, mod, tool, user_names[i])
+                                        flag, vul_file_object, res1, res2, execution_time, wfix = fixed_warning_base_matching(cl, mod, tool, user_names[i], mapping_)
                                             
                                         if flag:
                                             data_list, j = combine_fixed_results(res1[0])
@@ -555,21 +564,20 @@ def main():
                                         cl_list = [_id] + cl_list
 
                                         with open('./detection_results/change_info.csv', 'a', newline='\n') as fd:
-                                                writer_object = writer(fd)
+                                                writer_object = csv.writer(fd)
                                                 writer_object.writerow(cl_list)
 
                                         with open('./detection_results/results.csv', 'a', newline='\n') as fd:
-                                            writer_object = writer(fd)
+                                            writer_object = csv.writer(fd)
                                             writer_object.writerow(my_data)
 
                                 else:
                                     with open('./detection_results/filtered_files.csv', 'a', newline='\n') as fd:
-                                        writer_object = writer(fd)
+                                        writer_object = csv.writer(fd)
                                         writer_object.writerow([dir.split('_')[1].split('.')[0], x[0], mod.new_path, mod.filename])
 
                 except Exception as e:
                     print(e)
-
 
 if __name__ == '__main__':
     main()
