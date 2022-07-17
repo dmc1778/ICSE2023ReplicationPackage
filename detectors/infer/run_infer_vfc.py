@@ -8,7 +8,7 @@ import itertools
 from subprocess import run
 import pandas as pd
 
-user_names = ['numpy', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
+user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
 
 _extensions = ['cc', 'cpp', 'c', 'cu']
 
@@ -317,7 +317,8 @@ def run(library_name, opt, filename, full_check, detector_name):
 
             _path = os.path.join(this_project,'ml_repos_cloned', library_name, temp_path)
 
-            command = 'clang++-10 --analyze -Xanalyzer -analyzer-output=text '+command_+' '+_path
+            # command = 'clang++-10 --analyze -Xanalyzer -analyzer-output=text '+command_+' '+_path
+            command = 'clang-tidy '+_path+' -checks=-*,clang-analyzer-* -- '+command_
             start_time = time.time()
             output = subprocess.getoutput(command)
             execution_time = time.time() - start_time
@@ -367,7 +368,8 @@ def run(library_name, opt, filename, full_check, detector_name):
                     
                     _command = ' '.join(split_row)
                             
-                    command = 'clang++-10 --analyze -Xanalyzer '+_command+' '+_path
+                    # command = 'clang++-10 --analyze -Xanalyzer '+_command+' '+_path
+                    command = 'clang-tidy '+_path+' -checks=-*,clang-analyzer-* -- '+_command
                     #os.chdir(_path)
 
                     start_time = time.time()
@@ -409,7 +411,17 @@ def run(library_name, opt, filename, full_check, detector_name):
                 command_ = ' '.join(split_row)
 
                 if full_check and detector_name == 'clang':
-                    command = 'clang++-10 --analyze -Xanalyzer '+command_+' '+opt['file']
+                    split_row = remove_white_spaces(split_row)
+                    split_row.remove(split_row[0])
+                    split_row.remove(split_row[-1])
+                    split_row.remove(split_row[-1])
+                    split_row.remove(split_row[-1])
+                    split_row.remove(split_row[-1])
+
+                    command_ = ' '.join(split_row)
+
+                    # command = 'clang++-10 --analyze -Xanalyzer '+command_+' '+opt['file']
+                    command = 'clang-tidy '+opt['file']+' -checks=-*,clang-analyzer-* -- '+command_
                     # os.chdir('/'.join(opt['file'].split('/')[0:-1]))
 
                     start_time = time.time()
@@ -591,8 +603,8 @@ def main():
 
     _id = 0
 
-    for tool in ['infer', 'clang']:
-        for mapping_ in ['None', 'diff', 'fixed']:
+    for tool in ['infer']:
+        for mapping_ in ['TrueBugs', 'diff', 'fixed']:
 
             for i, dir in enumerate(os.listdir(vic_path)):
                 
@@ -627,7 +639,7 @@ def main():
                                     
                                     print('Running {} using {} method on {} Library, {}/{}'.format(tool, mapping_, dir.split('_')[1].split('.')[0], counter, len(data)))
                                     
-                                    if mapping_ == 'None':
+                                    if mapping_ == 'TrueBugs':
                                         detection_status, vul_file_object, res, execution_time = diff_based_matching(cl, mod, tool, user_names[i], opt[0], full_check)
                                         if res == 'not detected':
                                             print('No vulnerable candidate detected!')

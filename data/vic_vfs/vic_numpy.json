@@ -1,0 +1,7593 @@
+[{
+"ec6b1aef8d81a06385f9602688c500009f71b41c": [
+{
+    "line_num": 418,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/array_method.c",
+    "previous_commits": [
+        [
+            "3cfcd221818b489712b8cfe1082743a1056b42ec",
+            418,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 432,
+    "line_str": "self->method->name, dtypes);",
+    "file_path": "numpy/core/src/multiarray/array_method.c",
+    "previous_commits": [
+        [
+            "3cfcd221818b489712b8cfe1082743a1056b42ec",
+            432,
+            "self->method->name, dtypes);"
+        ]
+    ]
+},
+{
+    "line_num": 431,
+    "line_str": "\"<np._BoundArrayMethod `%s` for dtypes %S>\",",
+    "file_path": "numpy/core/src/multiarray/array_method.c",
+    "previous_commits": [
+        [
+            "3cfcd221818b489712b8cfe1082743a1056b42ec",
+            431,
+            "\"<np._BoundArrayMethod `%s` for dtypes %S>\","
+        ]
+    ]
+},
+{
+    "line_num": 430,
+    "line_str": "return PyUnicode_FromFormat(",
+    "file_path": "numpy/core/src/multiarray/array_method.c",
+    "previous_commits": [
+        [
+            "3cfcd221818b489712b8cfe1082743a1056b42ec",
+            430,
+            "return PyUnicode_FromFormat("
+        ]
+    ]
+}
+]
+},{
+"0ed58f8b3eabb82f82176f58a311d7e3a0d4da32": [
+{
+    "line_num": 5262,
+    "line_str": "return 0;",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "e2921434a07c22714bbf242be5389c3056449863",
+            5262,
+            "return 0;"
+        ],
+        [
+            "e3b0a3f743cb215cf8a61e318687e9b54a8691a5",
+            382,
+            "return;"
+        ],
+        [
+            "a8f5b4ca6759c46abf4d169bed0178559518b641",
+            4202,
+            "return;"
+        ],
+        [
+            "f362b39ddc85a0529196de99b79dbcdce58c77e4",
+            3048,
+            "return;"
+        ]
+    ]
+},
+{
+    "line_num": 5358,
+    "line_str": "Py_DECREF(key);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "0272316aa55bef9da9d21a8ad590432385bc81e3",
+            5358,
+            "Py_DECREF(key);"
+        ]
+    ]
+}
+]
+},{
+"10d15ea888880e9b0d22fd7e36f96fff18255e55": [
+{
+    "line_num": 270,
+    "line_str": ")*NPY_SIZEOF_INTP )",
+    "file_path": "numpy/core/src/multiarray/nditer_impl.h",
+    "previous_commits": [
+        [
+            "36f4bdfbe464259540208a5d7d927ec656524757",
+            270,
+            ")*NPY_SIZEOF_INTP )"
+        ]
+    ]
+}
+]
+},{
+"10d15ea888880e9b0d22fd7e36f96fff18255e55": [
+{
+    "line_num": 270,
+    "line_str": ")*NPY_SIZEOF_INTP )",
+    "file_path": "numpy/core/src/multiarray/nditer_impl.h",
+    "previous_commits": [
+        [
+            "36f4bdfbe464259540208a5d7d927ec656524757",
+            270,
+            ")*NPY_SIZEOF_INTP )"
+        ]
+    ]
+}
+]
+},{
+"b63e25648f2d7d0c2d56851352740620848da3ae": []},
+{
+"bdb5cc7b54d19f1f79eba1680a59f6852c6e3614": []},
+{
+"4b971415cd44ab42f4853c3cd5639ff14a9c329d": []},
+{
+"e69faef03428b82f5651a5fb521610ddea2bd22a": []},
+{
+"40ea4aadb82be7aea3e0d28221288d11a9bf7cb8": [
+{
+    "line_num": 1611,
+    "line_str": "Py_XDECREF(v);",
+    "file_path": "numpy/core/src/multiarray/nditer_pywrap.c",
+    "previous_commits": [
+        [
+            "3c94550789ba2328ebcd2faaa51c873dc3f1852c",
+            1611,
+            "Py_XDECREF(v);"
+        ]
+    ]
+}
+]
+},{
+"6e9b746833f23c15741d741c339eaaaece639ce0": []},
+{
+"2b18f72ad0784abdbc2eb302eb84511f62042a9b": []},
+{
+"be09bb6ba4d27fbd1f667d34bb2f11cccb446d65": [
+{
+    "line_num": 2686,
+    "line_str": "NPY_CASTING field_casting = PyArray_GetCastSafety(",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "3cfcd221818b489712b8cfe1082743a1056b42ec",
+            2686,
+            "NPY_CASTING field_casting = PyArray_GetCastSafety("
+        ]
+    ]
+},
+{
+    "line_num": 2687,
+    "line_str": "given_descrs[0]->subarray->base, given_descrs[1]->subarray->base, NULL);",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "3cfcd221818b489712b8cfe1082743a1056b42ec",
+            2687,
+            "given_descrs[0]->subarray->base, given_descrs[1]->subarray->base, NULL);"
+        ]
+    ]
+}
+]
+},{
+"548b8c72d66bb279d7c6dea9c2ff67e7ec21c7da": []},
+{
+"bfc3d87e1d85913918c39db7c1afd177578bc3ab": [
+{
+    "line_num": 1576,
+    "line_str": "goto finish;",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1576,
+            "goto finish;"
+        ]
+    ]
+},
+{
+    "line_num": 1629,
+    "line_str": "goto finish;",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1629,
+            "goto finish;"
+        ]
+    ]
+},
+{
+    "line_num": 1657,
+    "line_str": "finish:",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1657,
+            "finish:"
+        ]
+    ]
+},
+{
+    "line_num": 1624,
+    "line_str": "goto finish;",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1624,
+            "goto finish;"
+        ]
+    ]
+},
+{
+    "line_num": 1623,
+    "line_str": "Py_SETREF(result, NULL);",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1623,
+            "Py_SETREF(result, NULL);"
+        ]
+    ]
+},
+{
+    "line_num": 1651,
+    "line_str": "goto finish;",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1651,
+            "goto finish;"
+        ]
+    ]
+},
+{
+    "line_num": 1650,
+    "line_str": "Py_SETREF(result, NULL);",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1650,
+            "Py_SETREF(result, NULL);"
+        ]
+    ]
+},
+{
+    "line_num": 1617,
+    "line_str": "goto finish;",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1617,
+            "goto finish;"
+        ]
+    ]
+},
+{
+    "line_num": 1616,
+    "line_str": "Py_SETREF(result, NULL);",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1616,
+            "Py_SETREF(result, NULL);"
+        ]
+    ]
+},
+{
+    "line_num": 1583,
+    "line_str": "goto finish;",
+    "file_path": "numpy/core/src/multiarray/convert_datatype.c",
+    "previous_commits": [
+        [
+            "97031c1b82c6d86cfad9c3ecded3971402e6e8c9",
+            1583,
+            "goto finish;"
+        ]
+    ]
+}
+]
+},{
+"ced57c47b24b1b2ff275fef2b633a2b227a7a5cd": []},
+{
+"04ab04d93d4d7a4d241fe0ceb725436a8b6c8c2e": []},
+{
+"4619081d1faca58dd3e25db76164c1c7ad928a0f": []},
+{
+"36cc9be1b66bbcd291652095bed4f75887eb84e8": []},
+{
+"519ab995e59b33b68ec28ac0c635158f3acc5447": [
+{
+    "line_num": 85,
+    "line_str": "__m256i mulhi       = _mm256_blendv_epi8(mulhi_even, mulhi_odd, bmask);",
+    "file_path": "numpy/core/src/common/simd/avx2/arithmetic.h",
+    "previous_commits": [
+        [
+            "a40a3537796e8f4d3fc45ff3942ba6327df19739",
+            85,
+            "__m256i mulhi       = _mm256_blendv_epi8(mulhi_even, mulhi_odd, bmask);"
+        ]
+    ]
+},
+{
+    "line_num": 76,
+    "line_str": "const __m256i bmask = _mm256_set1_epi32(0xFF00FF00);",
+    "file_path": "numpy/core/src/common/simd/avx2/arithmetic.h",
+    "previous_commits": [
+        [
+            "a40a3537796e8f4d3fc45ff3942ba6327df19739",
+            76,
+            "const __m256i bmask = _mm256_set1_epi32(0xFF00FF00);"
+        ]
+    ]
+},
+{
+    "line_num": 83,
+    "line_str": "__m256i mulhi_even  = _mm256_mulhi_epu16(_mm256_slli_epi16(a, 8), divisor.val[0]);",
+    "file_path": "numpy/core/src/common/simd/avx2/arithmetic.h",
+    "previous_commits": [
+        [
+            "a40a3537796e8f4d3fc45ff3942ba6327df19739",
+            83,
+            "__m256i mulhi_even  = _mm256_mulhi_epu16(_mm256_slli_epi16(a, 8), divisor.val[0]);"
+        ]
+    ]
+},
+{
+    "line_num": 82,
+    "line_str": "__m256i mulhi_odd   = _mm256_mulhi_epu16(a, divisor.val[0]);",
+    "file_path": "numpy/core/src/common/simd/avx2/arithmetic.h",
+    "previous_commits": [
+        [
+            "a40a3537796e8f4d3fc45ff3942ba6327df19739",
+            82,
+            "__m256i mulhi_odd   = _mm256_mulhi_epu16(a, divisor.val[0]);"
+        ]
+    ]
+},
+{
+    "line_num": 133,
+    "line_str": "const __m256i bmask = _mm256_set1_epi32(0xFF00FF00);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            133,
+            "const __m256i bmask = _mm256_set1_epi32(0xFF00FF00);"
+        ]
+    ]
+},
+{
+    "line_num": 157,
+    "line_str": "mulhi       = _mm256_blendv_epi8(mulhi_even, mulhi_odd, bmask);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            157,
+            "mulhi       = _mm256_blendv_epi8(mulhi_even, mulhi_odd, bmask);"
+        ]
+    ]
+},
+{
+    "line_num": 123,
+    "line_str": "__m512i mulhi_even  = _mm512_mulhi_epu16(_mm512_slli_epi16(a, 8), divisor.val[0]);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            123,
+            "__m512i mulhi_even  = _mm512_mulhi_epu16(_mm512_slli_epi16(a, 8), divisor.val[0]);"
+        ]
+    ]
+},
+{
+    "line_num": 122,
+    "line_str": "__m512i mulhi_odd   = _mm512_mulhi_epu16(a, divisor.val[0]);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            122,
+            "__m512i mulhi_odd   = _mm512_mulhi_epu16(a, divisor.val[0]);"
+        ]
+    ]
+},
+{
+    "line_num": 154,
+    "line_str": "mulhi_odd   = _mm256_mulhi_epu16(hi_a, mulc);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            154,
+            "mulhi_odd   = _mm256_mulhi_epu16(hi_a, mulc);"
+        ]
+    ]
+},
+{
+    "line_num": 155,
+    "line_str": "mulhi_even  = _mm256_mulhi_epu16(_mm256_slli_epi16(hi_a, 8), mulc);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            155,
+            "mulhi_even  = _mm256_mulhi_epu16(_mm256_slli_epi16(hi_a, 8), mulc);"
+        ]
+    ]
+},
+{
+    "line_num": 144,
+    "line_str": "__m256i mulhi       = _mm256_blendv_epi8(mulhi_even, mulhi_odd, bmask);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            144,
+            "__m256i mulhi       = _mm256_blendv_epi8(mulhi_even, mulhi_odd, bmask);"
+        ]
+    ]
+},
+{
+    "line_num": 142,
+    "line_str": "__m256i mulhi_even  = _mm256_mulhi_epu16(_mm256_slli_epi16(lo_a, 8), mulc);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            142,
+            "__m256i mulhi_even  = _mm256_mulhi_epu16(_mm256_slli_epi16(lo_a, 8), mulc);"
+        ]
+    ]
+},
+{
+    "line_num": 141,
+    "line_str": "__m256i mulhi_odd   = _mm256_mulhi_epu16(lo_a, mulc);",
+    "file_path": "numpy/core/src/common/simd/avx512/arithmetic.h",
+    "previous_commits": [
+        [
+            "6ab925dbf6548e384b08ad88f5951eb8c81e905e",
+            141,
+            "__m256i mulhi_odd   = _mm256_mulhi_epu16(lo_a, mulc);"
+        ]
+    ]
+},
+{
+    "line_num": 207,
+    "line_str": "divisor.val[0] = npyv_setall_u8(m);",
+    "file_path": "numpy/core/src/common/simd/intdiv.h",
+    "previous_commits": [
+        [
+            "6f4ba2ad101456b5fbebde9ed4331a1945ae2deb",
+            207,
+            "divisor.val[0] = npyv_setall_u8(m);"
+        ]
+    ]
+},
+{
+    "line_num": 102,
+    "line_str": "__m128i mulhi       = npyv_select_u8(bmask, mulhi_odd, mulhi_even);",
+    "file_path": "numpy/core/src/common/simd/sse/arithmetic.h",
+    "previous_commits": [
+        [
+            "f4d06c77e1873759e573176b50dfcd41e2fa9982",
+            102,
+            "__m128i mulhi       = npyv_select_u8(bmask, mulhi_odd, mulhi_even);"
+        ]
+    ]
+},
+{
+    "line_num": 100,
+    "line_str": "__m128i mulhi_even  = _mm_mulhi_epu16(_mm_slli_epi16(a, 8), divisor.val[0]);",
+    "file_path": "numpy/core/src/common/simd/sse/arithmetic.h",
+    "previous_commits": [
+        [
+            "f4d06c77e1873759e573176b50dfcd41e2fa9982",
+            100,
+            "__m128i mulhi_even  = _mm_mulhi_epu16(_mm_slli_epi16(a, 8), divisor.val[0]);"
+        ]
+    ]
+},
+{
+    "line_num": 99,
+    "line_str": "__m128i mulhi_odd   = _mm_mulhi_epu16(a, divisor.val[0]);",
+    "file_path": "numpy/core/src/common/simd/sse/arithmetic.h",
+    "previous_commits": [
+        [
+            "f4d06c77e1873759e573176b50dfcd41e2fa9982",
+            99,
+            "__m128i mulhi_odd   = _mm_mulhi_epu16(a, divisor.val[0]);"
+        ]
+    ]
+},
+{
+    "line_num": 95,
+    "line_str": "const __m128i bmask = _mm_set1_epi32(0xFF00FF00);",
+    "file_path": "numpy/core/src/common/simd/sse/arithmetic.h",
+    "previous_commits": [
+        [
+            "f4d06c77e1873759e573176b50dfcd41e2fa9982",
+            95,
+            "const __m128i bmask = _mm_set1_epi32(0xFF00FF00);"
+        ]
+    ]
+}
+]
+},{
+"ae317fd9ff3e79c0eac357d723bfc29cbd625f2e": []},
+{
+"d908afddfad9508f837aadc6b8c29dd0c94694a1": []},
+{
+"7a4098825a301be93f6e13e69cf12add9a940cd4": [
+{
+    "line_num": 1060,
+    "line_str": "* #name = cfloat, cdouble, clongdouble#",
+    "file_path": "numpy/core/src/scalarmathmodule.c.src",
+    "previous_commits": [
+        [
+            "77caaafb47034280e1b3c3e63067a976919e5d47",
+            1060,
+            "* #name = cfloat, cdouble, clongdouble#"
+        ]
+    ]
+}
+]
+},{
+"d2a608224de02dff0c62cc2eeab3882a5402cb91": [
+{
+    "line_num": 184,
+    "line_str": "PyObject *NoValue = NULL;",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "797c3aaf6108699e46407096c5fecd77f62a535c",
+            184,
+            "PyObject *NoValue = NULL;"
+        ],
+        [
+            "6b728d19150f013ba885451f79990c30e872fe8f",
+            126,
+            "static PyObject *NoValue = NULL;"
+        ]
+    ]
+}
+]
+},{
+"2ccc7942f072b7fdbe54f148cdcb6a7d79388a89": []},
+{
+"d23d968fef1464407bcb1b28147dcfff133bced4": []},
+{
+"0eb9f54e5e466c8d7a76ae116712b368d045c7e0": []},
+{
+"e9070852051515395e0ae9bbe66f929111d59c41": []},
+{
+"fe16f90d637e6b1e4f7835f286bb4ae40f76e753": []},
+{
+"509b5ae4a7bb3c99324fd302ead1bbf4b130c741": []},
+{
+"c946dbaed8737af68fee8de44cbde7169a8ec75c": []},
+{
+"a82260f332138c7d703e7de21e8907f34fb48e6e": []},
+{
+"d6ecc97f55fd7ce3a5f3d4709938e7cc066900b8": []},
+{
+"a74789081fd9753c5e5637c404523b8f47b55dcc": []},
+{
+"84626f2cdf1e14fcd5acfad5169afbe6830a0bed": []},
+{
+"78080362911a36a2f4eff99a41b42dfb4c18c39c": [
+{
+    "line_num": 382,
+    "line_str": "item = PyList_GetItem(item_list, PyList_GET_SIZE(item_list) - 1);",
+    "file_path": "numpy/core/src/multiarray/buffer.c",
+    "previous_commits": [
+        [
+            "f0fb3132896af12210cfb3aa17eb6f3bfc43af64",
+            382,
+            "item = PyList_GetItem(item_list, PyList_GET_SIZE(item_list) - 1);"
+        ]
+    ]
+},
+{
+    "line_num": 381,
+    "line_str": "if (PyList_GET_SIZE(item_list) > 0) {",
+    "file_path": "numpy/core/src/multiarray/buffer.c",
+    "previous_commits": [
+        [
+            "f0fb3132896af12210cfb3aa17eb6f3bfc43af64",
+            381,
+            "if (PyList_GET_SIZE(item_list) > 0) {"
+        ]
+    ]
+}
+]
+},{
+"bb76bff17f86e468ca9fbc5071d95782dc932c10": [
+{
+    "line_num": 1448,
+    "line_str": "return _convert_from_tuple(obj, align);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "b36db6635969e665a22a602e867702cfcd1764a9",
+            1448,
+            "return _convert_from_tuple(obj, align);"
+        ],
+        [
+            "1367acb94cc2b0803932dd71ba9679e00a49114e",
+            1451,
+            "return _convert_from_tuple(obj, 0);"
+        ],
+        [
+            "ab9953baf29ace44ef1f014f3713f1ee919f79bb",
+            1557,
+            "*at = _convert_from_tuple(obj, 0);"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            858,
+            "*at = _convert_from_tuple(obj);"
+        ]
+    ]
+},
+{
+    "line_num": 1456,
+    "line_str": "return _convert_from_dict(obj, align);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "b36db6635969e665a22a602e867702cfcd1764a9",
+            1456,
+            "return _convert_from_dict(obj, align);"
+        ],
+        [
+            "1367acb94cc2b0803932dd71ba9679e00a49114e",
+            1459,
+            "return _convert_from_dict(obj, 0);"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            880,
+            "*at = _convert_from_dict(obj,0);"
+        ]
+    ]
+},
+{
+    "line_num": 1452,
+    "line_str": "return _convert_from_array_descr(obj, align);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "b36db6635969e665a22a602e867702cfcd1764a9",
+            1452,
+            "return _convert_from_array_descr(obj, align);"
+        ],
+        [
+            "1367acb94cc2b0803932dd71ba9679e00a49114e",
+            1455,
+            "return _convert_from_array_descr(obj, 0);"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            869,
+            "*at = _convert_from_array_descr(obj,0);"
+        ]
+    ]
+}
+]
+},{
+"e6b8b19ee832ae89289721301a4f5afcd454ec4f": []},
+{
+"565fe77f9ed8ed5720b42ddc3dc30947a1f3e9ae": []},
+{
+"0e4a4d4026e9fba72c5e063c59f243a755d8979a": [
+{
+    "line_num": 631,
+    "line_str": "PyObject_FREE(current);",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "3f5e4a2420cc7af011d198a02f626f68af57d10a",
+            631,
+            "PyObject_FREE(current);"
+        ],
+        [
+            "cec10fbb8ec407258ce431c6d6bd64c430191f10",
+            607,
+            "PyObject_FREE(current);"
+        ]
+    ]
+},
+{
+    "line_num": 597,
+    "line_str": "cache = PyObject_MALLOC(sizeof(coercion_cache_obj));",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "3f5e4a2420cc7af011d198a02f626f68af57d10a",
+            597,
+            "cache = PyObject_MALLOC(sizeof(coercion_cache_obj));"
+        ],
+        [
+            "cec10fbb8ec407258ce431c6d6bd64c430191f10",
+            582,
+            "coercion_cache_obj *cache = PyObject_MALLOC(sizeof(coercion_cache_obj));"
+        ],
+        [
+            "b5dc1ed68147ec03ce7ba7cfde253fb4eabe5321",
+            115,
+            "coercion_cache_obj *cache = PyArray_malloc(sizeof(coercion_cache_obj));"
+        ]
+    ]
+}
+]
+},{
+"b3544a1e1339834af30bc1f6fd9c8f1313b6a96c": [
+{
+    "line_num": 275,
+    "line_str": "return PyArray_AssignArray(dest, view, NULL, NPY_UNSAFE_CASTING);",
+    "file_path": "numpy/core/src/multiarray/arrayobject.c",
+    "previous_commits": [
+        [
+            "08a46876fde929944a59ecf48caa3c70a0a59261",
+            275,
+            "return PyArray_AssignArray(dest, view, NULL, NPY_UNSAFE_CASTING);"
+        ]
+    ]
+}
+]
+},{
+"002fa2f4e77caee20e507ef151e30a77fd2099a5": [
+{
+    "line_num": 794,
+    "line_str": "return NULL;",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "63bb4177cceeea30959a43483e5cea1498d3cac7",
+            794,
+            "return NULL;"
+        ],
+        [
+            "f5df08c3009abca21b7d4fa8d2e151d54ab3f499",
+            648,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 793,
+    "line_str": "if (ndim < 0) {",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "63bb4177cceeea30959a43483e5cea1498d3cac7",
+            793,
+            "if (ndim < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 791,
+    "line_str": "npy_free_coercion_cache(coercion_cache);",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "63bb4177cceeea30959a43483e5cea1498d3cac7",
+            791,
+            "npy_free_coercion_cache(coercion_cache);"
+        ]
+    ]
+},
+{
+    "line_num": 948,
+    "line_str": "Py_XSETREF(*out_descr, PyArray_DescrNewFromType(NPY_OBJECT));",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "efbe979df6e5bcc47afe5bcc24d2cebcb2db3e78",
+            948,
+            "Py_XSETREF(*out_descr, PyArray_DescrNewFromType(NPY_OBJECT));"
+        ],
+        [
+            "9e03d8db0d0fd50305d7f968918ad8eb980894e8",
+            879,
+            "Py_XSETREF(*out_descr, PyArray_DescrNewFromType(NPY_OBJECT));"
+        ],
+        [
+            "b5dc1ed68147ec03ce7ba7cfde253fb4eabe5321",
+            354,
+            "*out_descr = PyArray_DescrFromType(NPY_OBJECT);"
+        ]
+    ]
+},
+{
+    "line_num": 915,
+    "line_str": "*coercion_cache = NULL;",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "9e03d8db0d0fd50305d7f968918ad8eb980894e8",
+            915,
+            "*coercion_cache = NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 785,
+    "line_str": "coercion_cache_obj *coercion_cache;",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "63bb4177cceeea30959a43483e5cea1498d3cac7",
+            785,
+            "coercion_cache_obj *coercion_cache;"
+        ],
+        [
+            "f5df08c3009abca21b7d4fa8d2e151d54ab3f499",
+            600,
+            "coercion_cache_obj ***coercion_cache_tail_ptr,"
+        ]
+    ]
+},
+{
+    "line_num": 795,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "63bb4177cceeea30959a43483e5cea1498d3cac7",
+            795,
+            "}"
+        ],
+        [
+            "b5dc1ed68147ec03ce7ba7cfde253fb4eabe5321",
+            356,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 542,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "9e03d8db0d0fd50305d7f968918ad8eb980894e8",
+            542,
+            "}"
+        ],
+        [
+            "63bb4177cceeea30959a43483e5cea1498d3cac7",
+            477,
+            "}"
+        ],
+        [
+            "b5dc1ed68147ec03ce7ba7cfde253fb4eabe5321",
+            239,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 541,
+    "line_str": "return -1;",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "9e03d8db0d0fd50305d7f968918ad8eb980894e8",
+            541,
+            "return -1;"
+        ],
+        [
+            "b2043794f6d40ff32d45008ad2ffc69ba1fc920a",
+            558,
+            "return -1;"
+        ],
+        [
+            "b5dc1ed68147ec03ce7ba7cfde253fb4eabe5321",
+            277,
+            "return -1;"
+        ]
+    ]
+},
+{
+    "line_num": 540,
+    "line_str": "if (descr == NULL) {",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "9e03d8db0d0fd50305d7f968918ad8eb980894e8",
+            540,
+            "if (descr == NULL) {"
+        ],
+        [
+            "b2043794f6d40ff32d45008ad2ffc69ba1fc920a",
+            557,
+            "if (descr == NULL) {"
+        ],
+        [
+            "f5df08c3009abca21b7d4fa8d2e151d54ab3f499",
+            410,
+            "if (descr == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 539,
+    "line_str": "descr = find_scalar_descriptor(fixed_DType, DType, obj, requested_descr);",
+    "file_path": "numpy/core/src/multiarray/array_coercion.c",
+    "previous_commits": [
+        [
+            "9e03d8db0d0fd50305d7f968918ad8eb980894e8",
+            539,
+            "descr = find_scalar_descriptor(fixed_DType, DType, obj, requested_descr);"
+        ],
+        [
+            "5bd5847d85ce05c01e9e55a6b7075aaa4fa51f3e",
+            580,
+            "descr = find_scalar_descriptor(fixed_DType, DType, obj, requested_descr);"
+        ],
+        [
+            "b2043794f6d40ff32d45008ad2ffc69ba1fc920a",
+            556,
+            "descr = find_scalar_descriptor(fixed_DType, DType, obj);"
+        ]
+    ]
+}
+]
+},{
+"cb98ad400c701f189d4e4043ee2cb44857733df4": []},
+{
+"e4894aef5c93c845081388818a2eb4264c5e1d72": []},
+{
+"ba5205c1b8a7bebdf37535c701ffcd8bd79362bb": []},
+{
+"66c756ce333dc40120d4dd77b14517c6819cd410": [
+{
+    "line_num": 776,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arrayctors.c",
+    "previous_commits": [
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            776,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 510,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "afdb698c81d58450289a222c263565219785e42e",
+            510,
+            "}"
+        ],
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            586,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 509,
+    "line_str": "goto fail;",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "afdb698c81d58450289a222c263565219785e42e",
+            509,
+            "goto fail;"
+        ],
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            585,
+            "goto fail;"
+        ],
+        [
+            "2f300ed50be961076a28c60a7227233ce72975aa",
+            967,
+            "goto fail;"
+        ]
+    ]
+},
+{
+    "line_num": 508,
+    "line_str": "if (seq == NULL) {",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "afdb698c81d58450289a222c263565219785e42e",
+            508,
+            "if (seq == NULL) {"
+        ],
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            584,
+            "if (o == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 507,
+    "line_str": "seq = PySequence_Fast(s, \"Could not convert object to sequence\");",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "afdb698c81d58450289a222c263565219785e42e",
+            507,
+            "seq = PySequence_Fast(s, \"Could not convert object to sequence\");"
+        ]
+    ]
+},
+{
+    "line_num": 506,
+    "line_str": "PyObject * seq;",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "afdb698c81d58450289a222c263565219785e42e",
+            506,
+            "PyObject * seq;"
+        ]
+    ]
+},
+{
+    "line_num": 573,
+    "line_str": "Py_DECREF(o);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            573,
+            "Py_DECREF(o);"
+        ]
+    ]
+},
+{
+    "line_num": 533,
+    "line_str": "Py_DECREF(seq);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "afdb698c81d58450289a222c263565219785e42e",
+            533,
+            "Py_DECREF(seq);"
+        ],
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            593,
+            "Py_DECREF(o);"
+        ]
+    ]
+},
+{
+    "line_num": 563,
+    "line_str": "goto fail;",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            563,
+            "goto fail;"
+        ],
+        [
+            "2f300ed50be961076a28c60a7227233ce72975aa",
+            967,
+            "goto fail;"
+        ]
+    ]
+},
+{
+    "line_num": 658,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "02b42b5823019052b28e68b01c733b4f281eda59",
+            658,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 529,
+    "line_str": "Py_DECREF(seq);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "afdb698c81d58450289a222c263565219785e42e",
+            529,
+            "Py_DECREF(seq);"
+        ],
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            593,
+            "Py_DECREF(o);"
+        ]
+    ]
+},
+{
+    "line_num": 561,
+    "line_str": "o = PySequence_GetItem(s, 0);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            561,
+            "o = PySequence_GetItem(s, 0);"
+        ],
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            773,
+            "PyObject *o = PySequence_GetItem(s, i);"
+        ]
+    ]
+},
+{
+    "line_num": 562,
+    "line_str": "if (o == NULL) {",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            562,
+            "if (o == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 558,
+    "line_str": "PyObject *o;",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            558,
+            "PyObject *o;"
+        ]
+    ]
+},
+{
+    "line_num": 517,
+    "line_str": "Py_DECREF(seq);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "afdb698c81d58450289a222c263565219785e42e",
+            517,
+            "Py_DECREF(seq);"
+        ],
+        [
+            "4e52c48bd37abdce856033f48d3ce9c0a8c5483f",
+            593,
+            "Py_DECREF(o);"
+        ]
+    ]
+},
+{
+    "line_num": 780,
+    "line_str": "Py_DECREF(o);",
+    "file_path": "numpy/core/src/arrayctors.c",
+    "previous_commits": [
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            780,
+            "Py_DECREF(o);"
+        ]
+    ]
+},
+{
+    "line_num": 486,
+    "line_str": "if (slen < 0) {",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "ba53a63ee9be7a7bad7685b051a0ef984caa321e",
+            486,
+            "if (slen < 0) {"
+        ],
+        [
+            "2635398db3f26529ce2aaea4028a8118844f3c48",
+            545,
+            "if (slen < 0) {"
+        ],
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            863,
+            "if (nd < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 485,
+    "line_str": "slen = PySequence_Length(s);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "ba53a63ee9be7a7bad7685b051a0ef984caa321e",
+            485,
+            "slen = PySequence_Length(s);"
+        ],
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            765,
+            "slen = PySequence_Length(s);"
+        ]
+    ]
+}
+]
+},{
+"bec92c201c708e13265b935318ca0f585264a92e": [
+{
+    "line_num": 557,
+    "line_str": "PyDict_SetItem(fields, name, tup);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "dbccef858cf2c1d169f3c99e3e1a7aa956ca4e01",
+            557,
+            "PyDict_SetItem(fields, name, tup);"
+        ],
+        [
+            "c355e7162b6b170372471266d3f913a07d5561e2",
+            353,
+            "PyDict_SetItem(fields, name, tup);"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            276,
+            "PyDict_SetItem(fields, name, tup);"
+        ]
+    ]
+},
+{
+    "line_num": 360,
+    "line_str": "Py_DECREF(tup);",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            360,
+            "Py_DECREF(tup);"
+        ]
+    ]
+},
+{
+    "line_num": 359,
+    "line_str": "PyDict_SetItem(fields, key, tup);",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            359,
+            "PyDict_SetItem(fields, key, tup);"
+        ]
+    ]
+},
+{
+    "line_num": 358,
+    "line_str": "PyTuple_SET_ITEM(tup, 1, PyInt_FromLong((long) totalsize));",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            358,
+            "PyTuple_SET_ITEM(tup, 1, PyInt_FromLong((long) totalsize));"
+        ]
+    ]
+},
+{
+    "line_num": 352,
+    "line_str": "_align = conv->alignment;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            352,
+            "_align = conv->alignment;"
+        ]
+    ]
+},
+{
+    "line_num": 257,
+    "line_str": "_align = conv->alignment;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            257,
+            "_align = conv->alignment;"
+        ]
+    ]
+},
+{
+    "line_num": 256,
+    "line_str": "",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            256,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 255,
+    "line_str": "int _align;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            255,
+            "int _align;"
+        ]
+    ]
+},
+{
+    "line_num": 350,
+    "line_str": "int _align;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            350,
+            "int _align;"
+        ]
+    ]
+},
+{
+    "line_num": 351,
+    "line_str": "",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            351,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 348,
+    "line_str": "PyTuple_SET_ITEM(tup, 0, (PyObject *)conv);",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            348,
+            "PyTuple_SET_ITEM(tup, 0, (PyObject *)conv);"
+        ]
+    ]
+},
+{
+    "line_num": 635,
+    "line_str": "PyArray_Descr *conv = _arraydescr_run_converter(PyList_GET_ITEM(obj, i), align);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "a975ad565afb52d3a8c3f41d1f1f209b6f980310",
+            635,
+            "PyArray_Descr *conv = _arraydescr_run_converter(PyList_GET_ITEM(obj, i), align);"
+        ],
+        [
+            "d11601b3e4a1d4762dbb042d0844276a8f7fe44e",
+            647,
+            "conv = _arraydescr_run_converter(PyList_GET_ITEM(obj, i), align);"
+        ]
+    ]
+},
+{
+    "line_num": 634,
+    "line_str": "PyObject *key = PyUString_FromFormat(\"f%d\", i);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "a975ad565afb52d3a8c3f41d1f1f209b6f980310",
+            634,
+            "PyObject *key = PyUString_FromFormat(\"f%d\", i);"
+        ],
+        [
+            "8028e7797548122b2f12d025c11f6a897b494dae",
+            461,
+            "key = PyUString_FromFormat(\"f%d\", i);"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            340,
+            "key = PyString_FromFormat(\"f%d\", i);"
+        ]
+    ]
+},
+{
+    "line_num": 633,
+    "line_str": "PyObject *tup = PyTuple_New(2);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "a975ad565afb52d3a8c3f41d1f1f209b6f980310",
+            633,
+            "PyObject *tup = PyTuple_New(2);"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            339,
+            "tup = PyTuple_New(2);"
+        ]
+    ]
+},
+{
+    "line_num": 344,
+    "line_str": "Py_DECREF(key);",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            344,
+            "Py_DECREF(key);"
+        ]
+    ]
+},
+{
+    "line_num": 343,
+    "line_str": "Py_DECREF(tup);",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            343,
+            "Py_DECREF(tup);"
+        ]
+    ]
+}
+]
+},{
+"0927f7bda1396007b8168192a1d181b0a34af89d": [
+{
+    "line_num": 3980,
+    "line_str": "memcpy(PyArray_DATA(ret), data, num*dtype->elsize);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "67c10988b1c1805988077a18ce477ba8d362e1b5",
+            3980,
+            "memcpy(PyArray_DATA(ret), data, num*dtype->elsize);"
+        ],
+        [
+            "96a1f08f4f92f8a3dc39979f440c41e0f4fa018a",
+            3204,
+            "memcpy(ret->data, data, num*dtype->elsize);"
+        ]
+    ]
+}
+]
+},{
+"4da9256cd8e0cfc82d27530526857bc70a6c2309": []},
+{
+"965ea2ff417bcb285beca5c36cd02a8790a3d8f6": []},
+{
+"98bdde643af6443d68a8c6233807b75bd3f0ed80": []},
+{
+"4ada0641ed1a50a2473f8061f4808b4b0d68eff5": [
+{
+    "line_num": 91,
+    "line_str": "PyMem_Del(fp);",
+    "file_path": "numpy/f2py/src/fortranobject.c",
+    "previous_commits": [
+        [
+            "f362b39ddc85a0529196de99b79dbcdce58c77e4",
+            91,
+            "PyMem_Del(fp);"
+        ],
+        [
+            "571c53f4101a82805bcbe0b8378dd6b147a5d797",
+            75,
+            "PyMem_Del(fp);"
+        ]
+    ]
+},
+{
+    "line_num": 80,
+    "line_str": "if ((fp->dict = PyDict_New())==NULL) return NULL;",
+    "file_path": "numpy/f2py/src/fortranobject.c",
+    "previous_commits": [
+        [
+            "f362b39ddc85a0529196de99b79dbcdce58c77e4",
+            80,
+            "if ((fp->dict = PyDict_New())==NULL) return NULL;"
+        ],
+        [
+            "571c53f4101a82805bcbe0b8378dd6b147a5d797",
+            64,
+            "if ((fp->dict = PyDict_New())==NULL) return NULL;"
+        ]
+    ]
+}
+]
+},{
+"bb257bd058997c903c454f17402f553664159c82": []},
+{
+"deea4983aedfa96905bbaee64e3d1de84144303f": [
+{
+    "line_num": 219,
+    "line_str": "Py_INCREF(dtype);",
+    "file_path": "numpy/core/src/multiarray/common.c",
+    "previous_commits": [
+        [
+            "3abe4fd00ab1eead3a5a35163821a3edac504a36",
+            219,
+            "Py_INCREF(dtype);"
+        ]
+    ]
+},
+{
+    "line_num": 2225,
+    "line_str": "return PyArray_Nonzero(self_1d);",
+    "file_path": "numpy/core/src/multiarray/item_selection.c",
+    "previous_commits": [
+        [
+            "64edab687abce12c09b60ab78db2666738b37ef2",
+            2225,
+            "return PyArray_Nonzero(self_1d);"
+        ]
+    ]
+},
+{
+    "line_num": 2363,
+    "line_str": "Py_INCREF(extra_op_dtype);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "ef22bd4e22356df5c35b5a30a69c51d04ac33a3c",
+            2363,
+            "Py_INCREF(extra_op_dtype);"
+        ],
+        [
+            "5b3d406cad485871bb4623034dc3607c3126179a",
+            2428,
+            "Py_INCREF(extra_op_dtype);"
+        ]
+    ]
+},
+{
+    "line_num": 2388,
+    "line_str": "for (i=0; i < nops; i++) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "ef22bd4e22356df5c35b5a30a69c51d04ac33a3c",
+            2388,
+            "for (i=0; i < nops; i++) {"
+        ],
+        [
+            "5b3d406cad485871bb4623034dc3607c3126179a",
+            2175,
+            "for (i = 0; i < n; i++) {"
+        ],
+        [
+            "4bc65576d00984642572e043a6736ae2dbf7a458",
+            1859,
+            "for (i = 0; i < n; i++) {"
+        ],
+        [
+            "1f56580f0a5d818c865a83f334a4df385e774634",
+            1269,
+            "for (i = 0; i < n; i++) {"
+        ]
+    ]
+},
+{
+    "line_num": 2036,
+    "line_str": "PyArray_Descr *dtypes[NPY_MAXDIMS];",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "607863d7387e80dab4b064856b598a8c86e9bee4",
+            2036,
+            "PyArray_Descr *dtypes[NPY_MAXDIMS];"
+        ]
+    ]
+},
+{
+    "line_num": 2478,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "1bad2c3eeb4ddc2906eb24d10a20e4f85766e4c7",
+            2478,
+            "}"
+        ],
+        [
+            "3e35c313a61273382391c65fa8eab24e61c0cab9",
+            2119,
+            "}"
+        ],
+        [
+            "1f56580f0a5d818c865a83f334a4df385e774634",
+            1395,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 2477,
+    "line_str": "Py_DECREF(dtypes[i]);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "1bad2c3eeb4ddc2906eb24d10a20e4f85766e4c7",
+            2477,
+            "Py_DECREF(dtypes[i]);"
+        ]
+    ]
+},
+{
+    "line_num": 2284,
+    "line_str": "dtypes[0] = PyArray_DescrFromType(NPY_INTP);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            2284,
+            "dtypes[0] = PyArray_DescrFromType(NPY_INTP);"
+        ]
+    ]
+},
+{
+    "line_num": 2148,
+    "line_str": "dtypes[mit->numiter] = PyArray_DescrFromType(NPY_INTP);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "3e35c313a61273382391c65fa8eab24e61c0cab9",
+            2148,
+            "dtypes[mit->numiter] = PyArray_DescrFromType(NPY_INTP);"
+        ],
+        [
+            "607863d7387e80dab4b064856b598a8c86e9bee4",
+            2055,
+            "dtypes[mit->numiter] = PyArray_DescrFromType(NPY_INTP); /* may have to refcount? */"
+        ]
+    ]
+},
+{
+    "line_num": 493,
+    "line_str": "file = npy_PyFile_OpenFile(file, \"wb\");",
+    "file_path": "numpy/core/src/multiarray/methods.c",
+    "previous_commits": [
+        [
+            "0e70ee67e8a9d937b9773cedfd52344cab3e03cf",
+            493,
+            "file = npy_PyFile_OpenFile(file, \"wb\");"
+        ]
+    ]
+},
+{
+    "line_num": 426,
+    "line_str": "Py_INCREF(file);",
+    "file_path": "numpy/core/src/arraymethods.c",
+    "previous_commits": [
+        [
+            "f362b39ddc85a0529196de99b79dbcdce58c77e4",
+            426,
+            "Py_INCREF(file);"
+        ]
+    ]
+},
+{
+    "line_num": 1046,
+    "line_str": "",
+    "file_path": "scipy/base/src/arraymethods.c",
+    "previous_commits": [
+        [
+            "8cb36a620861800a190974388f069af424fac958",
+            1046,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1716,
+    "line_str": "file = npy_PyFile_OpenFile(file, \"rb\");",
+    "file_path": "numpy/core/src/multiarray/multiarraymodule.c",
+    "previous_commits": [
+        [
+            "0e70ee67e8a9d937b9773cedfd52344cab3e03cf",
+            1716,
+            "file = npy_PyFile_OpenFile(file, \"rb\");"
+        ]
+    ]
+},
+{
+    "line_num": 6297,
+    "line_str": "Py_INCREF(file);",
+    "file_path": "numpy/core/src/multiarraymodule.c",
+    "previous_commits": [
+        [
+            "f362b39ddc85a0529196de99b79dbcdce58c77e4",
+            6297,
+            "Py_INCREF(file);"
+        ]
+    ]
+},
+{
+    "line_num": 540,
+    "line_str": "Py_DECREF(a);",
+    "file_path": "numpy/core/src/multiarray/new_iterator_pywrap.c",
+    "previous_commits": [
+        [
+            "fe791db7b96ca4f19d490f43cf3dc5157d7e325f",
+            540,
+            "Py_DECREF(a);"
+        ]
+    ]
+},
+{
+    "line_num": 527,
+    "line_str": "op_dtypes[2] = PyArray_DescrFromType(NPY_BOOL);",
+    "file_path": "numpy/core/src/umath/reduction.c",
+    "previous_commits": [
+        [
+            "5afe650403bdb3aa1a3189c1b8c3233501208521",
+            527,
+            "op_dtypes[2] = PyArray_DescrFromType(NPY_BOOL);"
+        ]
+    ]
+},
+{
+    "line_num": 5141,
+    "line_str": "Py_XDECREF(array_operands[2]);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "1e4d589d7252ffcc55da930496cbe01c078cc3a6",
+            5141,
+            "Py_XDECREF(array_operands[2]);"
+        ]
+    ]
+},
+{
+    "line_num": 5140,
+    "line_str": "Py_XDECREF(array_operands[1]);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "1e4d589d7252ffcc55da930496cbe01c078cc3a6",
+            5140,
+            "Py_XDECREF(array_operands[1]);"
+        ]
+    ]
+},
+{
+    "line_num": 5139,
+    "line_str": "Py_XDECREF(array_operands[0]);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "1e4d589d7252ffcc55da930496cbe01c078cc3a6",
+            5139,
+            "Py_XDECREF(array_operands[0]);"
+        ]
+    ]
+},
+{
+    "line_num": 4947,
+    "line_str": "dtypes[1] = PyArray_DESCR(op2_array);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "b259cdc9c1ec356b6e7c4652ed60686e12fbf958",
+            4947,
+            "dtypes[1] = PyArray_DESCR(op2_array);"
+        ],
+        [
+            "da3f8cb19c81c909636de6ece7e33454d8cec79b",
+            4957,
+            "dtypes[1] = PyArray_DESCR(operands[1]);"
+        ],
+        [
+            "7191df063cb598e917407b6b805c620f3dee15e2",
+            4932,
+            "dtypes[1] = PyArray_DESCR(op2_array);"
+        ]
+    ]
+},
+{
+    "line_num": 4945,
+    "line_str": "dtypes[0] = PyArray_DESCR(op1_array);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "b259cdc9c1ec356b6e7c4652ed60686e12fbf958",
+            4945,
+            "dtypes[0] = PyArray_DESCR(op1_array);"
+        ],
+        [
+            "da3f8cb19c81c909636de6ece7e33454d8cec79b",
+            4953,
+            "dtypes[0] = PyArray_DESCR(operands[0]);"
+        ],
+        [
+            "7191df063cb598e917407b6b805c620f3dee15e2",
+            4930,
+            "dtypes[0] = PyArray_DESCR(op1_array);"
+        ]
+    ]
+},
+{
+    "line_num": 4948,
+    "line_str": "dtypes[2] = dtypes[0];",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "b259cdc9c1ec356b6e7c4652ed60686e12fbf958",
+            4948,
+            "dtypes[2] = dtypes[0];"
+        ]
+    ]
+},
+{
+    "line_num": 5130,
+    "line_str": "Py_XDECREF(array_operands[2]);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "1e4d589d7252ffcc55da930496cbe01c078cc3a6",
+            5130,
+            "Py_XDECREF(array_operands[2]);"
+        ]
+    ]
+},
+{
+    "line_num": 5129,
+    "line_str": "Py_XDECREF(array_operands[1]);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "1e4d589d7252ffcc55da930496cbe01c078cc3a6",
+            5129,
+            "Py_XDECREF(array_operands[1]);"
+        ]
+    ]
+},
+{
+    "line_num": 5128,
+    "line_str": "Py_XDECREF(array_operands[0]);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "1e4d589d7252ffcc55da930496cbe01c078cc3a6",
+            5128,
+            "Py_XDECREF(array_operands[0]);"
+        ]
+    ]
+},
+{
+    "line_num": 4952,
+    "line_str": "dtypes[2] = NULL;",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "b259cdc9c1ec356b6e7c4652ed60686e12fbf958",
+            4952,
+            "dtypes[2] = NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 4951,
+    "line_str": "dtypes[1] = dtypes[0];",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "b259cdc9c1ec356b6e7c4652ed60686e12fbf958",
+            4951,
+            "dtypes[1] = dtypes[0];"
+        ]
+    ]
+},
+{
+    "line_num": 2285,
+    "line_str": "Py_INCREF(out_dtypes[2]);",
+    "file_path": "numpy/core/src/umath/ufunc_type_resolution.c",
+    "previous_commits": [
+        [
+            "4b81a240a4ffffea8a502afbdea43d8bf2991228",
+            2285,
+            "Py_INCREF(out_dtypes[2]);"
+        ]
+    ]
+}
+]
+},{
+"ad84b69bda8eb5e2998370148b9e830d40099d5c": []},
+{
+"0570cff60c79b72f74db179f1871a3fd5badb45a": []},
+{
+"bc3c7176987a5017126abbc861458fe53cd099fc": [
+{
+    "line_num": 2589,
+    "line_str": "if (PyArray_ISBOOL(self)) {",
+    "file_path": "numpy/core/src/multiarray/item_selection.c",
+    "previous_commits": [
+        [
+            "c5ee7f75d685ab520da528898df2e5570d0ee7f6",
+            2589,
+            "if (PyArray_ISBOOL(self)) {"
+        ]
+    ]
+},
+{
+    "line_num": 2644,
+    "line_str": "if (PyArray_ISBOOL(self)) {",
+    "file_path": "numpy/core/src/multiarray/item_selection.c",
+    "previous_commits": [
+        [
+            "c5ee7f75d685ab520da528898df2e5570d0ee7f6",
+            2644,
+            "if (PyArray_ISBOOL(self)) {"
+        ]
+    ]
+}
+]
+},{
+"9776a73cee9eaaff6af40e971fa2bb7f8f1086c5": []},
+{
+"5a967c9d61f7c2ecce4e215065731a7ab2832574": [
+{
+    "line_num": 682,
+    "line_str": "Py_DECREF(arr);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "020ec9612e522f2bc6dffb54da00cc4919457541",
+            682,
+            "Py_DECREF(arr);"
+        ],
+        [
+            "607863d7387e80dab4b064856b598a8c86e9bee4",
+            626,
+            "Py_DECREF(tmp_arr);"
+        ],
+        [
+            "0e5fb25980859a44fed8a1b5ddc85075d28c7883",
+            1635,
+            "Py_DECREF(op_arr);"
+        ]
+    ]
+}
+]
+},{
+"e4edcb7418cd1344e2446b75891c15111db250f1": []},
+{
+"bd9f33fc3201e15b86b3e4333d65f1a085d1f012": []},
+{
+"5c0c3ebb3fb4b861ed624117a8524f8f296c9c91": [
+{
+    "line_num": 2146,
+    "line_str": "ret = npy_try_collapse(start, stack, &stack_ptr, &buffer, len, cmp, varr);",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2146,
+            "ret = npy_try_collapse(start, stack, &stack_ptr, &buffer, len, cmp, varr);"
+        ],
+        [
+            "19952f4ad0345f8ea0398b4983384c3dc8a8f3bb",
+            457,
+            "ret = try_collapse_@suff@(arr, stack, &stack_ptr, &buffer);"
+        ]
+    ]
+},
+{
+    "line_num": 2530,
+    "line_str": "varr);",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2530,
+            "varr);"
+        ]
+    ]
+},
+{
+    "line_num": 1344,
+    "line_str": "cleanup:",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            1344,
+            "cleanup:"
+        ]
+    ]
+},
+{
+    "line_num": 1727,
+    "line_str": "",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            1727,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 2141,
+    "line_str": "n = npy_count_run(start, l, num, minrun, buffer.pw, len, cmp, varr);",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2141,
+            "n = npy_count_run(start, l, num, minrun, buffer.pw, len, cmp, varr);"
+        ]
+    ]
+},
+{
+    "line_num": 2524,
+    "line_str": "n = npy_acount_run(start, tosort, l, num, minrun, len, cmp, varr);",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2524,
+            "n = npy_acount_run(start, tosort, l, num, minrun, len, cmp, varr);"
+        ]
+    ]
+},
+{
+    "line_num": 1722,
+    "line_str": "cleanup:",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            1722,
+            "cleanup:"
+        ]
+    ]
+},
+{
+    "line_num": 886,
+    "line_str": "",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "19952f4ad0345f8ea0398b4983384c3dc8a8f3bb",
+            886,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 2163,
+    "line_str": "",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2163,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 2513,
+    "line_str": "PyArray_CompareFunc *cmp = PyArray_DESCR(varr)->f->compare;",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2513,
+            "PyArray_CompareFunc *cmp = PyArray_DESCR(varr)->f->compare;"
+        ],
+        [
+            "19952f4ad0345f8ea0398b4983384c3dc8a8f3bb",
+            871,
+            "PyArray_CompareFunc *cmp = PyArray_DESCR(arr)->f->compare;"
+        ]
+    ]
+},
+{
+    "line_num": 2512,
+    "line_str": "size_t len = PyArray_ITEMSIZE(varr);",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2512,
+            "size_t len = PyArray_ITEMSIZE(varr);"
+        ],
+        [
+            "19952f4ad0345f8ea0398b4983384c3dc8a8f3bb",
+            705,
+            "size_t elsize = PyArray_ITEMSIZE(arr);"
+        ]
+    ]
+},
+{
+    "line_num": 2543,
+    "line_str": "cleanup:",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2543,
+            "cleanup:"
+        ]
+    ]
+},
+{
+    "line_num": 2158,
+    "line_str": "cleanup:",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2158,
+            "cleanup:"
+        ]
+    ]
+},
+{
+    "line_num": 2125,
+    "line_str": "PyArray_CompareFunc *cmp = PyArray_DESCR(varr)->f->compare;",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2125,
+            "PyArray_CompareFunc *cmp = PyArray_DESCR(varr)->f->compare;"
+        ],
+        [
+            "19952f4ad0345f8ea0398b4983384c3dc8a8f3bb",
+            871,
+            "PyArray_CompareFunc *cmp = PyArray_DESCR(arr)->f->compare;"
+        ]
+    ]
+},
+{
+    "line_num": 2124,
+    "line_str": "size_t len = PyArray_ITEMSIZE(varr);",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2124,
+            "size_t len = PyArray_ITEMSIZE(varr);"
+        ],
+        [
+            "19952f4ad0345f8ea0398b4983384c3dc8a8f3bb",
+            705,
+            "size_t elsize = PyArray_ITEMSIZE(arr);"
+        ]
+    ]
+},
+{
+    "line_num": 2538,
+    "line_str": "cmp, varr);",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2538,
+            "cmp, varr);"
+        ]
+    ]
+},
+{
+    "line_num": 2153,
+    "line_str": "ret = npy_force_collapse(start, stack, &stack_ptr, &buffer, len, cmp, varr);",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            2153,
+            "ret = npy_force_collapse(start, stack, &stack_ptr, &buffer, len, cmp, varr);"
+        ],
+        [
+            "19952f4ad0345f8ea0398b4983384c3dc8a8f3bb",
+            464,
+            "ret = force_collapse_@suff@(arr, stack, &stack_ptr, &buffer);"
+        ]
+    ]
+},
+{
+    "line_num": 1349,
+    "line_str": "",
+    "file_path": "numpy/core/src/npysort/timsort.c.src",
+    "previous_commits": [
+        [
+            "918988bcaa04fb692af68324d87be3ede01bb1c7",
+            1349,
+            ""
+        ]
+    ]
+}
+]
+},{
+"1b144ad9d45647960c009ff4fe4e1b18958ff997": []},
+{
+"529e552be4b20c1545051ac6a192d61350e7c2e1": []},
+{
+"9a39877b9f9761051a8f86a9cfff392660fa7189": []},
+{
+"c1f593265650a19547bfc5cbc0b43830f9276e5f": []},
+{
+"4754eb8587ddc342be48ff966d3504dc19c76a52": []},
+{
+"78ac0ed8c6b8e4006c62d6bc68e41cdd438fe4e5": [
+{
+    "line_num": 511,
+    "line_str": "free(fmt.s);",
+    "file_path": "numpy/core/src/multiarray/buffer.c",
+    "previous_commits": [
+        [
+            "e4d678a2f5859d29a853d617e9e5bbd4b6241898",
+            511,
+            "free(fmt.s);"
+        ],
+        [
+            "2f8d33bc755b869639e38e0482c0abda956578cc",
+            457,
+            "free(fmt.s);"
+        ]
+    ]
+}
+]
+},{
+"9b2ca4c16b25d8c11e7ae2ec526e8c42fedda68e": [
+{
+    "line_num": 295,
+    "line_str": "if (_append_char(str, ':') < 0) return -1;",
+    "file_path": "numpy/core/src/multiarray/buffer.c",
+    "previous_commits": [
+        [
+            "56a70cf044f4f305e6e7ab40adb2b884a632c855",
+            295,
+            "if (_append_char(str, ':') < 0) return -1;"
+        ],
+        [
+            "3c55cff1254ead7de6f75919e295289fcbe67923",
+            335,
+            "if (_append_char(str, 'q')) return -1;"
+        ],
+        [
+            "816035e8881f19437b7f1d08b30e48cf4adac278",
+            200,
+            "case NPY_LONG:         if (_append_char(str, 'l')) return -1; break;"
+        ]
+    ]
+},
+{
+    "line_num": 183,
+    "line_str": "#endif",
+    "file_path": "numpy/core/src/multiarray/buffer.c",
+    "previous_commits": [
+        [
+            "816035e8881f19437b7f1d08b30e48cf4adac278",
+            183,
+            "#endif"
+        ],
+        [
+            "30a0e8e344f8a53870df423338188df22f234605",
+            81,
+            "#endif"
+        ]
+    ]
+},
+{
+    "line_num": 181,
+    "line_str": "#if defined(NPY_PY3K)",
+    "file_path": "numpy/core/src/multiarray/buffer.c",
+    "previous_commits": [
+        [
+            "816035e8881f19437b7f1d08b30e48cf4adac278",
+            181,
+            "#if defined(NPY_PY3K)"
+        ]
+    ]
+},
+{
+    "line_num": 308,
+    "line_str": "if (_append_char(str, ':') < 0) return -1;",
+    "file_path": "numpy/core/src/multiarray/buffer.c",
+    "previous_commits": [
+        [
+            "56a70cf044f4f305e6e7ab40adb2b884a632c855",
+            308,
+            "if (_append_char(str, ':') < 0) return -1;"
+        ],
+        [
+            "3c55cff1254ead7de6f75919e295289fcbe67923",
+            335,
+            "if (_append_char(str, 'q')) return -1;"
+        ],
+        [
+            "816035e8881f19437b7f1d08b30e48cf4adac278",
+            200,
+            "case NPY_LONG:         if (_append_char(str, 'l')) return -1; break;"
+        ]
+    ]
+},
+{
+    "line_num": 304,
+    "line_str": "if (_append_char(str, *p) < 0) return -1;",
+    "file_path": "numpy/core/src/multiarray/buffer.c",
+    "previous_commits": [
+        [
+            "56a70cf044f4f305e6e7ab40adb2b884a632c855",
+            304,
+            "if (_append_char(str, *p) < 0) return -1;"
+        ],
+        [
+            "3c55cff1254ead7de6f75919e295289fcbe67923",
+            335,
+            "if (_append_char(str, 'q')) return -1;"
+        ],
+        [
+            "816035e8881f19437b7f1d08b30e48cf4adac278",
+            200,
+            "case NPY_LONG:         if (_append_char(str, 'l')) return -1; break;"
+        ]
+    ]
+}
+]
+},{
+"f49c0169f5a62d4bfa62c791e2a4e2b78ddf7517": []},
+{
+"530ac095504b903d7f87ff635e81935c7c6ee180": []},
+{
+"7c5a3f4f9135af6ebe33dcd3242ef3e6db115cd6": []},
+{
+"e759594d126ccfa16b871e1d484b52e36bffd001": []},
+{
+"a56c4e6251d6e607759788727ede2fe2f10a417b": []},
+{
+"eda0b3a475ef7bb5c1976e56184cc4810fa5024c": [
+{
+    "line_num": 1517,
+    "line_str": "Py_DECREF(title);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "9f27418f48ada95a1cf19c98a8d1116f97f86ec5",
+            1517,
+            "Py_DECREF(title);"
+        ]
+    ]
+}
+]
+},{
+"3bb11d6f1758e4d3d6ca812749cc5145f82713b3": []},
+{
+"5b8b1349ed194516b5e1804b63ff4266bca286ab": []},
+{
+"644c78809ff5b53b0fcdbb35e5823fc6e01d24ac": [
+{
+    "line_num": 250,
+    "line_str": "Py_DECREF(self);",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "4c019647e7ddc22da8fa20468785381526ba450a",
+            250,
+            "Py_DECREF(self);"
+        ],
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            182,
+            "Py_DECREF(self);"
+        ]
+    ]
+}
+]
+},{
+"abeb96d183b4e7a058066f47be3a4a599d935c3c": [
+{
+    "line_num": 2630,
+    "line_str": "PyObject *val;",
+    "file_path": "numpy/core/src/arrayctors.c",
+    "previous_commits": [
+        [
+            "96a1f08f4f92f8a3dc39979f440c41e0f4fa018a",
+            2630,
+            "PyObject *val;"
+        ]
+    ]
+},
+{
+    "line_num": 2974,
+    "line_str": "if (error_converting(length)) {",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "c28f1ae597dac17353ef0f3f2d466305cdbc9305",
+            2974,
+            "if (error_converting(length)) {"
+        ]
+    ]
+},
+{
+    "line_num": 2973,
+    "line_str": "length = _arange_safe_ceil_to_intp((stop - start)/step);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "c28f1ae597dac17353ef0f3f2d466305cdbc9305",
+            2973,
+            "length = _arange_safe_ceil_to_intp((stop - start)/step);"
+        ]
+    ]
+},
+{
+    "line_num": 2969,
+    "line_str": "return NULL;",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "655ba9a968ba4f1419693c978b175fac8baee06e",
+            2969,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 2682,
+    "line_str": "return -1;",
+    "file_path": "numpy/core/src/arrayctors.c",
+    "previous_commits": [
+        [
+            "96a1f08f4f92f8a3dc39979f440c41e0f4fa018a",
+            2682,
+            "return -1;"
+        ]
+    ]
+},
+{
+    "line_num": 3087,
+    "line_str": "if (error_converting(len)) {",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "c28f1ae597dac17353ef0f3f2d466305cdbc9305",
+            3087,
+            "if (error_converting(len)) {"
+        ]
+    ]
+},
+{
+    "line_num": 3086,
+    "line_str": "len = _arange_safe_ceil_to_intp(value);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "c28f1ae597dac17353ef0f3f2d466305cdbc9305",
+            3086,
+            "len = _arange_safe_ceil_to_intp(value);"
+        ]
+    ]
+}
+]
+},{
+"9939691b86be9eb144622afc6b2796b659ce38bc": []},
+{
+"2cf2db309dcbce5a99102d568f50e734633e2eb8": []},
+{
+"a670fa652bf582a5454249ee0104249410714168": [
+{
+    "line_num": 1982,
+    "line_str": "PyObject *tmp = NULL;",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "32b1e64dfe854091a8ac4dbc38ca035f207419e9",
+            1982,
+            "PyObject *tmp = NULL;"
+        ],
+        [
+            "fa967ee478e819ce34ee6de2745f3be4c5350b67",
+            1982,
+            "PyObject *tmp;"
+        ]
+    ]
+},
+{
+    "line_num": 2173,
+    "line_str": "tmp = PyTuple_GET_ITEM(attr, i);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "fa967ee478e819ce34ee6de2745f3be4c5350b67",
+            2173,
+            "tmp = PyTuple_GET_ITEM(attr, i);"
+        ],
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            1929,
+            "item = PyTuple_GET_ITEM(attr, i);"
+        ]
+    ]
+},
+{
+    "line_num": 2068,
+    "line_str": "tmp = PyTuple_GET_ITEM(attr, i);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "097e823c84048a85082e4e1c9e35952ad39b2064",
+            2068,
+            "tmp = PyTuple_GET_ITEM(attr, i);"
+        ],
+        [
+            "fa967ee478e819ce34ee6de2745f3be4c5350b67",
+            2058,
+            "tmp = PyTuple_GET_ITEM(attr, i);"
+        ],
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            1896,
+            "item = PyTuple_GET_ITEM(attr, i);"
+        ]
+    ]
+},
+{
+    "line_num": 2222,
+    "line_str": "Py_DECREF(attr);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "36fcc17fdcc233c1ebb96903eea2973ae67089c4",
+            2222,
+            "Py_DECREF(attr);"
+        ],
+        [
+            "fa967ee478e819ce34ee6de2745f3be4c5350b67",
+            2035,
+            "Py_DECREF(tmp);"
+        ],
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            1891,
+            "Py_DECREF(type);"
+        ]
+    ]
+},
+{
+    "line_num": 2252,
+    "line_str": "Py_DECREF(attr);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "36fcc17fdcc233c1ebb96903eea2973ae67089c4",
+            2252,
+            "Py_DECREF(attr);"
+        ],
+        [
+            "fa967ee478e819ce34ee6de2745f3be4c5350b67",
+            2035,
+            "Py_DECREF(tmp);"
+        ],
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            1891,
+            "Py_DECREF(type);"
+        ]
+    ]
+},
+{
+    "line_num": 2022,
+    "line_str": "tmp = PyUnicode_AsASCIIString(attr);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "fa967ee478e819ce34ee6de2745f3be4c5350b67",
+            2022,
+            "tmp = PyUnicode_AsASCIIString(attr);"
+        ],
+        [
+            "4662956d7c4f1e76468d8e161f33928f20983679",
+            2266,
+            "attr = PyUnicode_AsASCIIString(tstr);"
+        ]
+    ]
+},
+{
+    "line_num": 2213,
+    "line_str": "Py_DECREF(attr);",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "36fcc17fdcc233c1ebb96903eea2973ae67089c4",
+            2213,
+            "Py_DECREF(attr);"
+        ],
+        [
+            "fa967ee478e819ce34ee6de2745f3be4c5350b67",
+            2035,
+            "Py_DECREF(tmp);"
+        ],
+        [
+            "f3e2b283aaec79f6ae8516c03fe91c11bcd0ecb0",
+            1891,
+            "Py_DECREF(type);"
+        ]
+    ]
+},
+{
+    "line_num": 2210,
+    "line_str": "Py_INCREF(attr);  /* incref so it is easier to replace */",
+    "file_path": "numpy/core/src/multiarray/ctors.c",
+    "previous_commits": [
+        [
+            "36fcc17fdcc233c1ebb96903eea2973ae67089c4",
+            2210,
+            "Py_INCREF(attr);  /* incref so it is easier to replace */"
+        ]
+    ]
+}
+]
+},{
+"47cbd4063044f6a3da90e46084a63235d6d1c4df": []},
+{
+"06b972f05072a9390808bf2c895427ce8a46bb42": []},
+{
+"1cb7ffdef69980460c00a60636abbf6b4c470b75": [
+{
+    "line_num": 3944,
+    "line_str": "",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "18bac353f667da6969716b60f3d3315ffd0b7aaa",
+            3944,
+            ""
+        ]
+    ]
+}
+]
+},{
+"1bef8624bbaa4753ffd3c5bf73fadc5b5f2f6de8": []},
+{
+"2f366f11466bcac98e2a8c527bc68f20f5d416ff": [
+{
+    "line_num": 298,
+    "line_str": "it->factors[nd-1] = 1;",
+    "file_path": "numpy/core/src/arrayiterators.c",
+    "previous_commits": [
+        [
+            "44ff04765d36fe39859452aace91480f74292905",
+            298,
+            "it->factors[nd-1] = 1;"
+        ]
+    ]
+}
+]
+},{
+"984bc91367f9b525eadef14c48c759999bc4adfc": []},
+{
+"b97f9b0cd6b08e2174fbde6329d16099856e5947": []},
+{
+"e66780ca1066e36129d7570c294ce8a563330b6e": [
+{
+    "line_num": 367,
+    "line_str": "else if (end == s || *end) {",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "fdcf1513cab2f9ff8ad463b73c1118ac6db01a30",
+            367,
+            "else if (end == s || *end) {"
+        ],
+        [
+            "6cbd724f75f25cdaa7cf68fd9743064b77fbf787",
+            333,
+            "if (end==s || *end) {"
+        ]
+    ]
+},
+{
+    "line_num": 359,
+    "line_str": "if (errno) {",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "fdcf1513cab2f9ff8ad463b73c1118ac6db01a30",
+            359,
+            "if (errno) {"
+        ],
+        [
+            "6cbd724f75f25cdaa7cf68fd9743064b77fbf787",
+            340,
+            "else if (errno) {"
+        ]
+    ]
+}
+]
+},{
+"1d67d8896de9242248cf2bcaea7ed8308756dff0": [
+{
+    "line_num": 914,
+    "line_str": "\"invalid entry in index array\");",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "623195534e98b12c5c109d0963b26d57617da99b",
+            914,
+            "\"invalid entry in index array\");"
+        ]
+    ]
+},
+{
+    "line_num": 913,
+    "line_str": "PyErr_SetString(PyExc_ValueError,",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "623195534e98b12c5c109d0963b26d57617da99b",
+            913,
+            "PyErr_SetString(PyExc_ValueError,"
+        ]
+    ]
+},
+{
+    "line_num": 880,
+    "line_str": "\"invalid entry in index array\");",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "623195534e98b12c5c109d0963b26d57617da99b",
+            880,
+            "\"invalid entry in index array\");"
+        ]
+    ]
+},
+{
+    "line_num": 879,
+    "line_str": "PyErr_SetString(PyExc_ValueError,",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "623195534e98b12c5c109d0963b26d57617da99b",
+            879,
+            "PyErr_SetString(PyExc_ValueError,"
+        ]
+    ]
+}
+]
+},{
+"5b5c100b2d192b72c76c71c2aec720c0b2500c08": [
+{
+    "line_num": 139,
+    "line_str": "if (newdescr == NULL) {",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            139,
+            "if (newdescr == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 385,
+    "line_str": "npy_free_cache_dim_obj(shape);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "5a08e209863038b411bc506893093c5a4b8377c9",
+            385,
+            "npy_free_cache_dim_obj(shape);"
+        ]
+    ]
+},
+{
+    "line_num": 160,
+    "line_str": "Py_XDECREF(type);",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            160,
+            "Py_XDECREF(type);"
+        ]
+    ]
+},
+{
+    "line_num": 156,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            156,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 90,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            90,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 86,
+    "line_str": "return res;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            86,
+            "return res;"
+        ]
+    ]
+},
+{
+    "line_num": 161,
+    "line_str": "return NULL;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            161,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 157,
+    "line_str": "return type;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            157,
+            "return type;"
+        ]
+    ]
+},
+{
+    "line_num": 87,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            87,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 370,
+    "line_str": "Py_DECREF(newdescr->subarray->shape);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "1951d3d4c1011132560ae4326f636e5cef01d918",
+            370,
+            "Py_DECREF(newdescr->subarray->shape);"
+        ],
+        [
+            "b12429704242314703797ed2076d3036d19327eb",
+            265,
+            "newdescr->subarray->shape = val;"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            150,
+            "newdescr->subarray->shape = val;"
+        ]
+    ]
+},
+{
+    "line_num": 271,
+    "line_str": "newdescr = PyArray_DescrNewFromType(NPY_VOID);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "215a91a9a0e790273a3dc1203709190025ce0641",
+            271,
+            "newdescr = PyArray_DescrNewFromType(NPY_VOID);"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            138,
+            "newdescr = PyArray_DescrNewFromType(PyArray_VOID);"
+        ]
+    ]
+},
+{
+    "line_num": 141,
+    "line_str": "goto fail;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            141,
+            "goto fail;"
+        ]
+    ]
+},
+{
+    "line_num": 395,
+    "line_str": "npy_free_cache_dim_obj(shape);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "5a08e209863038b411bc506893093c5a4b8377c9",
+            395,
+            "npy_free_cache_dim_obj(shape);"
+        ]
+    ]
+},
+{
+    "line_num": 329,
+    "line_str": "npy_free_cache_dim_obj(shape);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "5a08e209863038b411bc506893093c5a4b8377c9",
+            329,
+            "npy_free_cache_dim_obj(shape);"
+        ]
+    ]
+},
+{
+    "line_num": 346,
+    "line_str": "npy_free_cache_dim_obj(shape);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "5a08e209863038b411bc506893093c5a4b8377c9",
+            346,
+            "npy_free_cache_dim_obj(shape);"
+        ]
+    ]
+},
+{
+    "line_num": 88,
+    "line_str": "else {",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            88,
+            "else {"
+        ]
+    ]
+},
+{
+    "line_num": 371,
+    "line_str": "newdescr->subarray->shape = NULL;",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "1951d3d4c1011132560ae4326f636e5cef01d918",
+            371,
+            "newdescr->subarray->shape = NULL;"
+        ],
+        [
+            "b12429704242314703797ed2076d3036d19327eb",
+            268,
+            "if (newdescr->subarray->shape == NULL) {"
+        ],
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            150,
+            "newdescr->subarray->shape = val;"
+        ]
+    ]
+},
+{
+    "line_num": 142,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            142,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 105,
+    "line_str": "goto fail;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            105,
+            "goto fail;"
+        ]
+    ]
+},
+{
+    "line_num": 355,
+    "line_str": "npy_free_cache_dim_obj(shape);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "5a08e209863038b411bc506893093c5a4b8377c9",
+            355,
+            "npy_free_cache_dim_obj(shape);"
+        ]
+    ]
+},
+{
+    "line_num": 159,
+    "line_str": "fail:",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            159,
+            "fail:"
+        ]
+    ]
+},
+{
+    "line_num": 318,
+    "line_str": "Py_DECREF(newdescr);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "cedc9c4995afa0e9386c5b741cbc99c5543c806c",
+            318,
+            "Py_DECREF(newdescr);"
+        ]
+    ]
+},
+{
+    "line_num": 155,
+    "line_str": "type = newdescr;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            155,
+            "type = newdescr;"
+        ]
+    ]
+},
+{
+    "line_num": 122,
+    "line_str": "PyArray_Descr *newdescr;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            122,
+            "PyArray_Descr *newdescr;"
+        ]
+    ]
+},
+{
+    "line_num": 89,
+    "line_str": "return NULL;",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            89,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 310,
+    "line_str": "npy_free_cache_dim_obj(shape);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "5a08e209863038b411bc506893093c5a4b8377c9",
+            310,
+            "npy_free_cache_dim_obj(shape);"
+        ]
+    ]
+},
+{
+    "line_num": 85,
+    "line_str": "if (res) {",
+    "file_path": "numpy/core/src/arraydescr.c",
+    "previous_commits": [
+        [
+            "3d730002b1428cce568bcf6fcda0e0df76c5d960",
+            85,
+            "if (res) {"
+        ]
+    ]
+},
+{
+    "line_num": 339,
+    "line_str": "npy_free_cache_dim_obj(shape);",
+    "file_path": "numpy/core/src/multiarray/descriptor.c",
+    "previous_commits": [
+        [
+            "5a08e209863038b411bc506893093c5a4b8377c9",
+            339,
+            "npy_free_cache_dim_obj(shape);"
+        ]
+    ]
+}
+]
+},{
+"f785875f81727a3b9c6c67a7e6962183bbe19f28": []},
+{
+"daf7a4e33168aeec05ad2217b49550bfab3d18d9": [
+{
+    "line_num": 459,
+    "line_str": "return PyArray_Return(out_buf);",
+    "file_path": "numpy/core/src/multiarray/cblasfuncs.c",
+    "previous_commits": [
+        [
+            "780ef22557f25e1531221e06657afc18af084117",
+            459,
+            "return PyArray_Return(out_buf);"
+        ],
+        [
+            "41396c415529a0d862fa292c3e46a6f3d660a1a6",
+            371,
+            "return PyArray_Return(ret);"
+        ]
+    ]
+}
+]
+},{
+"01718a9feb7f949b091e4f95320c1a60116e77a5": []},
+{
+"c02f1ed4d649e65eb8e3caf2bcf0a1e2f46a16fa": [
+{
+    "line_num": 154,
+    "line_str": "PyArray_FLAGS(self), &(((PyArrayObject_fields *)self)->flags));",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "3e8c2b00ee7d0c438226057bebeb973c4ab3458f",
+            154,
+            "PyArray_FLAGS(self), &(((PyArrayObject_fields *)self)->flags));"
+        ],
+        [
+            "094992665c66ec66bb33042bfa1c1dc496e11b5c",
+            160,
+            "PyArray_FLAGS(self), &(((PyArrayObject_fields *)self)->flags));"
+        ],
+        [
+            "d88bfeb397c5cc568a52c269630a3d4a0a16a1e1",
+            159,
+            "PyArray_FLAGS(self), &(((PyArrayObject_fieldaccess *)self)->flags));"
+        ]
+    ]
+},
+{
+    "line_num": 153,
+    "line_str": "new_strides, new_dimensions, new_nd, PyArray_DESCR(self)->elsize,",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "3e8c2b00ee7d0c438226057bebeb973c4ab3458f",
+            153,
+            "new_strides, new_dimensions, new_nd, PyArray_DESCR(self)->elsize,"
+        ]
+    ]
+},
+{
+    "line_num": 152,
+    "line_str": "_array_fill_strides(",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "3e8c2b00ee7d0c438226057bebeb973c4ab3458f",
+            152,
+            "_array_fill_strides("
+        ]
+    ]
+},
+{
+    "line_num": 149,
+    "line_str": "PyErr_SetString(PyExc_MemoryError,",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "ba7d1cb99e01d2341dd0bcd256ee4fc69edd4865",
+            149,
+            "PyErr_SetString(PyExc_MemoryError,"
+        ]
+    ]
+},
+{
+    "line_num": 148,
+    "line_str": "\"cannot allocate memory for array\");",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "8088b49b100d0933cbd71a83e5b6d28f8b38c222",
+            148,
+            "\"cannot allocate memory for array\");"
+        ],
+        [
+            "ba7d1cb99e01d2341dd0bcd256ee4fc69edd4865",
+            118,
+            "\"cannot allocate memory for array\");"
+        ]
+    ]
+},
+{
+    "line_num": 146,
+    "line_str": "dimptr = PyDimMem_RENEW(PyArray_DIMS(self), 3*new_nd);",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "02b42b5823019052b28e68b01c733b4f281eda59",
+            146,
+            "dimptr = PyDimMem_RENEW(PyArray_DIMS(self), 3*new_nd);"
+        ],
+        [
+            "d88bfeb397c5cc568a52c269630a3d4a0a16a1e1",
+            146,
+            "dimptr = PyDimMem_RENEW(PyArray_DIMS(self), 2*new_nd);"
+        ]
+    ]
+},
+{
+    "line_num": 144,
+    "line_str": "((PyArrayObject_fields *)self)->nd = new_nd;",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "094992665c66ec66bb33042bfa1c1dc496e11b5c",
+            144,
+            "((PyArrayObject_fields *)self)->nd = new_nd;"
+        ],
+        [
+            "d88bfeb397c5cc568a52c269630a3d4a0a16a1e1",
+            144,
+            "((PyArrayObject_fieldaccess *)self)->nd = new_nd;"
+        ]
+    ]
+},
+{
+    "line_num": 142,
+    "line_str": "if (PyArray_NDIM(self) != new_nd) {",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "d88bfeb397c5cc568a52c269630a3d4a0a16a1e1",
+            142,
+            "if (PyArray_NDIM(self) != new_nd) {"
+        ]
+    ]
+},
+{
+    "line_num": 164,
+    "line_str": "memmove(PyArray_STRIDES(self), new_strides, new_nd*sizeof(npy_intp));",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "0163eb8f9de6584db731db12ec68b549fc5b1749",
+            164,
+            "memmove(PyArray_STRIDES(self), new_strides, new_nd*sizeof(npy_intp));"
+        ],
+        [
+            "d88bfeb397c5cc568a52c269630a3d4a0a16a1e1",
+            161,
+            "memmove(PyArray_STRIDES(self), new_strides, new_nd*sizeof(intp));"
+        ],
+        [
+            "ba7d1cb99e01d2341dd0bcd256ee4fc69edd4865",
+            163,
+            "memmove(self->strides, new_strides, new_nd*sizeof(intp));"
+        ]
+    ]
+},
+{
+    "line_num": 163,
+    "line_str": "memmove(PyArray_DIMS(self), new_dimensions, new_nd*sizeof(npy_intp));",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "0163eb8f9de6584db731db12ec68b549fc5b1749",
+            163,
+            "memmove(PyArray_DIMS(self), new_dimensions, new_nd*sizeof(npy_intp));"
+        ],
+        [
+            "d88bfeb397c5cc568a52c269630a3d4a0a16a1e1",
+            160,
+            "memmove(PyArray_DIMS(self), new_dimensions, new_nd*sizeof(intp));"
+        ],
+        [
+            "ba7d1cb99e01d2341dd0bcd256ee4fc69edd4865",
+            162,
+            "memmove(self->dimensions, new_dimensions, new_nd*sizeof(intp));"
+        ]
+    ]
+},
+{
+    "line_num": 157,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "ba7d1cb99e01d2341dd0bcd256ee4fc69edd4865",
+            157,
+            ""
+        ]
+    ]
+}
+]
+},{
+"22ccc378253c3c2beefc603a2e0bccc5a3a9e1d1": []},
+{
+"790dbcb6dde4259ec073444a3294975f304b6f49": []},
+{
+"00f77106275986b155d2b71ce672225792a07d87": [
+{
+    "line_num": 550,
+    "line_str": "return PyArray_DESCR(mp)->f->nonzero(PyArray_DATA(mp), mp);",
+    "file_path": "numpy/core/src/multiarray/number.c",
+    "previous_commits": [
+        [
+            "67c10988b1c1805988077a18ce477ba8d362e1b5",
+            550,
+            "return PyArray_DESCR(mp)->f->nonzero(PyArray_DATA(mp), mp);"
+        ]
+    ]
+}
+]
+},{
+"b1fa10aaf1dc70343e7b267a6e2858ad30b0d97e": [
+{
+    "line_num": 412,
+    "line_str": "if (PyObject_Type(other_obj) != PyObject_Type(obj) &&",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            412,
+            "if (PyObject_Type(other_obj) != PyObject_Type(obj) &&"
+        ]
+    ]
+}
+]
+},{
+"4408f743db8b5a15e9d0b5ace39ef12cafa1bce3": []},
+{
+"07201420338f87d0a19ec6b5d756f40350e1f21b": [
+{
+    "line_num": 150,
+    "line_str": "goto stack_pop;",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            150,
+            "goto stack_pop;"
+        ]
+    ]
+},
+{
+    "line_num": 22,
+    "line_str": "* The merge sort is *stable*, meaning that equal components",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "d619a0d443f1a064cf1e2b48198a17e0fd89849c",
+            22,
+            "* The merge sort is *stable*, meaning that equal components"
+        ]
+    ]
+},
+{
+    "line_num": 18,
+    "line_str": "* Quick sort is usually the fastest, but the worst case scenario can",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "d619a0d443f1a064cf1e2b48198a17e0fd89849c",
+            18,
+            "* Quick sort is usually the fastest, but the worst case scenario can"
+        ]
+    ]
+},
+{
+    "line_num": 489,
+    "line_str": "npy_intp depth_limit = npy_get_msb(num) * 2;",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            489,
+            "npy_intp depth_limit = npy_get_msb(num) * 2;"
+        ]
+    ]
+},
+{
+    "line_num": 72,
+    "line_str": "npy_intp depth_limit = npy_get_msb(num) * 2;",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            72,
+            "npy_intp depth_limit = npy_get_msb(num) * 2;"
+        ]
+    ]
+},
+{
+    "line_num": 316,
+    "line_str": "if (depth_limit-- < 0) {",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            316,
+            "if (depth_limit-- < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 151,
+    "line_str": "}",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            151,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 23,
+    "line_str": "* are unmoved from their entry versions, so it can be used to",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "d619a0d443f1a064cf1e2b48198a17e0fd89849c",
+            23,
+            "* are unmoved from their entry versions, so it can be used to"
+        ]
+    ]
+},
+{
+    "line_num": 19,
+    "line_str": "* be slower than the merge and heap sorts.  The merge sort requires",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "d619a0d443f1a064cf1e2b48198a17e0fd89849c",
+            19,
+            "* be slower than the merge and heap sorts.  The merge sort requires"
+        ]
+    ]
+},
+{
+    "line_num": 36,
+    "line_str": "#define PYA_QS_STACK 100",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "d619a0d443f1a064cf1e2b48198a17e0fd89849c",
+            36,
+            "#define PYA_QS_STACK 100"
+        ]
+    ]
+},
+{
+    "line_num": 313,
+    "line_str": "npy_intp depth_limit = npy_get_msb(num) * 2;",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            313,
+            "npy_intp depth_limit = npy_get_msb(num) * 2;"
+        ]
+    ]
+},
+{
+    "line_num": 24,
+    "line_str": "* implement lexigraphic sorting on multiple keys.",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "d619a0d443f1a064cf1e2b48198a17e0fd89849c",
+            24,
+            "* implement lexigraphic sorting on multiple keys."
+        ]
+    ]
+},
+{
+    "line_num": 148,
+    "line_str": "if (depth_limit-- < 0) {",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            148,
+            "if (depth_limit-- < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 404,
+    "line_str": "if (depth_limit-- < 0) {",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            404,
+            "if (depth_limit-- < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 20,
+    "line_str": "* extra memory and so for large arrays may not be useful.",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "d619a0d443f1a064cf1e2b48198a17e0fd89849c",
+            20,
+            "* extra memory and so for large arrays may not be useful."
+        ]
+    ]
+},
+{
+    "line_num": 144,
+    "line_str": "npy_intp depth_limit = npy_get_msb(num) * 2;",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            144,
+            "npy_intp depth_limit = npy_get_msb(num) * 2;"
+        ]
+    ]
+},
+{
+    "line_num": 239,
+    "line_str": "if (depth_limit-- < 0) {",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            239,
+            "if (depth_limit-- < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 149,
+    "line_str": "aheapsort_@suff@(vv, pl, pr - pl + 1, NULL);",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            149,
+            "aheapsort_@suff@(vv, pl, pr - pl + 1, NULL);"
+        ]
+    ]
+},
+{
+    "line_num": 397,
+    "line_str": "npy_intp depth_limit = npy_get_msb(num) * 2;",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            397,
+            "npy_intp depth_limit = npy_get_msb(num) * 2;"
+        ]
+    ]
+},
+{
+    "line_num": 492,
+    "line_str": "if (depth_limit-- < 0) {",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            492,
+            "if (depth_limit-- < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 75,
+    "line_str": "if (depth_limit-- < 0) {",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            75,
+            "if (depth_limit-- < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 232,
+    "line_str": "npy_intp depth_limit = npy_get_msb(num) * 2;",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "c3cea4558bb37ba1e6a7a045c108081a88a88691",
+            232,
+            "npy_intp depth_limit = npy_get_msb(num) * 2;"
+        ]
+    ]
+},
+{
+    "line_num": 26,
+    "line_str": "* The heap sort is included for completeness.",
+    "file_path": "numpy/core/src/npysort/quicksort.c.src",
+    "previous_commits": [
+        [
+            "d619a0d443f1a064cf1e2b48198a17e0fd89849c",
+            26,
+            "* The heap sort is included for completeness."
+        ]
+    ]
+}
+]
+},{
+"5657a6cd5ed1c54986f697660c6336d2fb2b1c21": []},
+{
+"d4a39b0f0e7d5b999b834b86f4beababe23e77f1": []},
+{
+"d69c1470ed09f18293b9a9dec1809e14b5b9b779": []},
+{
+"080c433e9979f964155692d21b26e073914610f5": []},
+{
+"b0efcbadd5944d44f56c106dc5bc4571ebcab03e": []},
+{
+"f65b233dc5689ecbb79a4ed8a383ef0251bc39c6": []},
+{
+"da668fc74653e5caae9f741461c4d20f9df6e5c1": []},
+{
+"0b2e590ec18942f8f149ab2306b80da86b04eaeb": []},
+{
+"25d60a989766e630b92a79284388845ade96d3d0": []},
+{
+"4b200d27e9bfba4b28d51cd5d5132a2a4cacb8f1": []},
+{
+"2bd5e6a90eec63787d9c23d0e8dacb31e93cf8c7": [
+{
+    "line_num": 294,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            294,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 290,
+    "line_str": "",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            290,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 397,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "49bf2045e1cc7d1fb7e2ce771fbb1636c9d28e5a",
+            397,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 307,
+    "line_str": "",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            307,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 402,
+    "line_str": "PyErr_SetString(PyExc_ValueError, msg);",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            402,
+            "PyErr_SetString(PyExc_ValueError, msg);"
+        ]
+    ]
+},
+{
+    "line_num": 299,
+    "line_str": "if (np != op) {",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            299,
+            "if (np != op) {"
+        ]
+    ]
+},
+{
+    "line_num": 295,
+    "line_str": "op = 1;",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            295,
+            "op = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 390,
+    "line_str": "\"can only specify one\"  \\",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            390,
+            "\"can only specify one\"  \\"
+        ]
+    ]
+},
+{
+    "line_num": 291,
+    "line_str": "np = 1;",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            291,
+            "np = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 621,
+    "line_str": "_fix_unknown_dimension(PyArray_Dims *newshape, npy_intp s_original)",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "0163eb8f9de6584db731db12ec68b549fc5b1749",
+            621,
+            "_fix_unknown_dimension(PyArray_Dims *newshape, npy_intp s_original)"
+        ],
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            371,
+            "_fix_unknown_dimension(PyArray_Dims *newshape, intp s_original)"
+        ]
+    ]
+},
+{
+    "line_num": 304,
+    "line_str": "if (np == 0) {",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            304,
+            "if (np == 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 366,
+    "line_str": "",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            366,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 395,
+    "line_str": "else {",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            395,
+            "else {"
+        ]
+    ]
+},
+{
+    "line_num": 296,
+    "line_str": "for (oi = 0; oi < oldnd; oi++) {",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            296,
+            "for (oi = 0; oi < oldnd; oi++) {"
+        ]
+    ]
+},
+{
+    "line_num": 391,
+    "line_str": "\" unknown dimension\");",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            391,
+            "\" unknown dimension\");"
+        ]
+    ]
+},
+{
+    "line_num": 292,
+    "line_str": "for (ni = 0; ni < newnd; ni++) {",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            292,
+            "for (ni = 0; ni < newnd; ni++) {"
+        ]
+    ]
+},
+{
+    "line_num": 209,
+    "line_str": "if (_fix_unknown_dimension(newdims, PyArray_SIZE(self)) < 0) {",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "0d275f114e49ef5f9569832be2743aa85c4bb4e1",
+            209,
+            "if (_fix_unknown_dimension(newdims, PyArray_SIZE(self)) < 0) {"
+        ],
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            87,
+            "if (_fix_unknown_dimension(newdims, PyArray_SIZE(self)) < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 313,
+    "line_str": "np = newdims[ni];",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            313,
+            "np = newdims[ni];"
+        ]
+    ]
+},
+{
+    "line_num": 358,
+    "line_str": "npy_intp np, op, last_stride;",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "49bf2045e1cc7d1fb7e2ce771fbb1636c9d28e5a",
+            358,
+            "npy_intp np, op, last_stride;"
+        ]
+    ]
+},
+{
+    "line_num": 305,
+    "line_str": "return 0;",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            305,
+            "return 0;"
+        ]
+    ]
+},
+{
+    "line_num": 301,
+    "line_str": "return 0;",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            301,
+            "return 0;"
+        ]
+    ]
+},
+{
+    "line_num": 396,
+    "line_str": "s_known *= dimensions[i];",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            396,
+            "s_known *= dimensions[i];"
+        ]
+    ]
+},
+{
+    "line_num": 297,
+    "line_str": "op *= olddims[oi];",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            297,
+            "op *= olddims[oi];"
+        ]
+    ]
+},
+{
+    "line_num": 28,
+    "line_str": "_fix_unknown_dimension(PyArray_Dims *newshape, npy_intp s_original);",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "0163eb8f9de6584db731db12ec68b549fc5b1749",
+            28,
+            "_fix_unknown_dimension(PyArray_Dims *newshape, npy_intp s_original);"
+        ],
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            21,
+            "_fix_unknown_dimension(PyArray_Dims *newshape, intp s_original);"
+        ]
+    ]
+},
+{
+    "line_num": 293,
+    "line_str": "np *= newdims[ni];",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            293,
+            "np *= newdims[ni];"
+        ]
+    ]
+},
+{
+    "line_num": 289,
+    "line_str": "",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            289,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 314,
+    "line_str": "op = olddims[oi];",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            314,
+            "op = olddims[oi];"
+        ]
+    ]
+},
+{
+    "line_num": 409,
+    "line_str": "PyErr_SetString(PyExc_ValueError, msg);",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            409,
+            "PyErr_SetString(PyExc_ValueError, msg);"
+        ]
+    ]
+},
+{
+    "line_num": 376,
+    "line_str": "static char msg[] = \"total size of new array must be unchanged\";",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            376,
+            "static char msg[] = \"total size of new array must be unchanged\";"
+        ]
+    ]
+},
+{
+    "line_num": 405,
+    "line_str": "dimensions[i_unknown] = s_original/s_known;",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            405,
+            "dimensions[i_unknown] = s_original/s_known;"
+        ]
+    ]
+},
+{
+    "line_num": 306,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            306,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 401,
+    "line_str": "if ((s_known == 0) || (s_original % s_known != 0)) {",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            401,
+            "if ((s_known == 0) || (s_original % s_known != 0)) {"
+        ]
+    ]
+},
+{
+    "line_num": 302,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            302,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 298,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arrayshape.c",
+    "previous_commits": [
+        [
+            "32a5fe9739bf34b1d6ff071dbb12968666831718",
+            298,
+            "}"
+        ]
+    ]
+}
+]
+},{
+"58ff38a547e59e2e8f8278d445f66c1091f1299a": [
+{
+    "line_num": 679,
+    "line_str": "@name@_ctype_power(arg1, -arg2, &out);",
+    "file_path": "numpy/core/src/scalarmathmodule.c.src",
+    "previous_commits": [
+        [
+            "f362b39ddc85a0529196de99b79dbcdce58c77e4",
+            679,
+            "@name@_ctype_power(arg1, -arg2, &out);"
+        ]
+    ]
+},
+{
+    "line_num": 1004,
+    "line_str": "out1 = (@otype@) (1.0 / out);",
+    "file_path": "numpy/core/src/scalarmathmodule.c.src",
+    "previous_commits": [
+        [
+            "77caaafb47034280e1b3c3e63067a976919e5d47",
+            1004,
+            "out1 = (@otype@) (1.0 / out);"
+        ]
+    ]
+}
+]
+},{
+"5c24db244ec8a8d7e4ca2f823b0ba71b7d4dff3d": []},
+{
+"94a47c5294033c8078e4ab4bd61a7fec7f3458af": [
+{
+    "line_num": 133,
+    "line_str": "type = PyArray_DescrFromType(NPY_INTP);",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "40f0844846a9d7665616b142407a3d74cb65a040",
+            133,
+            "type = PyArray_DescrFromType(NPY_INTP);"
+        ]
+    ]
+},
+{
+    "line_num": 129,
+    "line_str": "numbers = (npy_intp *) PyArray_DATA(lst);",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "57d6b5bebb039dc6b2b3c5a2cc7bfc8e2cc3fb98",
+            129,
+            "numbers = (npy_intp *) PyArray_DATA(lst);"
+        ]
+    ]
+},
+{
+    "line_num": 158,
+    "line_str": "ians = (npy_intp *)(PyArray_DATA(ans));",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "57d6b5bebb039dc6b2b3c5a2cc7bfc8e2cc3fb98",
+            158,
+            "ians = (npy_intp *)(PyArray_DATA(ans));"
+        ]
+    ]
+},
+{
+    "line_num": 93,
+    "line_str": "PyArray_Descr *type;",
+    "file_path": "scipy/base/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "88c06a9dadff289c870549299019d8378358cec0",
+            93,
+            "PyArray_Descr *type;"
+        ]
+    ]
+},
+{
+    "line_num": 123,
+    "line_str": "weights = (double *)PyArray_DATA (wts);",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "f362b39ddc85a0529196de99b79dbcdce58c77e4",
+            123,
+            "weights = (double *)PyArray_DATA (wts);"
+        ]
+    ]
+},
+{
+    "line_num": 154,
+    "line_str": "ans = (PyArrayObject *)PyArray_Zeros(1, &ans_size, type, 0);",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "57d6b5bebb039dc6b2b3c5a2cc7bfc8e2cc3fb98",
+            154,
+            "ans = (PyArrayObject *)PyArray_Zeros(1, &ans_size, type, 0);"
+        ]
+    ]
+},
+{
+    "line_num": 175,
+    "line_str": "type = PyArray_DescrFromType(NPY_DOUBLE);",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "57d6b5bebb039dc6b2b3c5a2cc7bfc8e2cc3fb98",
+            175,
+            "type = PyArray_DescrFromType(NPY_DOUBLE);"
+        ]
+    ]
+},
+{
+    "line_num": 147,
+    "line_str": "npy_intp *numbers, *ians, len , mx, mn, ans_size, minlength;",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "9dcdb57792d9b03144b55ebe84bc97b32af6c1db",
+            147,
+            "npy_intp *numbers, *ians, len , mx, mn, ans_size, minlength;"
+        ]
+    ]
+},
+{
+    "line_num": 176,
+    "line_str": "ans = (PyArrayObject *)PyArray_Zeros(1, &ans_size, type, 0);",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "57d6b5bebb039dc6b2b3c5a2cc7bfc8e2cc3fb98",
+            176,
+            "ans = (PyArrayObject *)PyArray_Zeros(1, &ans_size, type, 0);"
+        ]
+    ]
+},
+{
+    "line_num": 143,
+    "line_str": "if (!(ans = (PyArrayObject *)PyArray_Zeros(1, &minlength, type, 0))){",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "044c7a670005f38f229b2da11fec9f9f4204de29",
+            143,
+            "if (!(ans = (PyArrayObject *)PyArray_Zeros(1, &minlength, type, 0))){"
+        ]
+    ]
+},
+{
+    "line_num": 109,
+    "line_str": "PyArrayObject *lst=NULL, *ans=NULL, *wts=NULL;",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "57d6b5bebb039dc6b2b3c5a2cc7bfc8e2cc3fb98",
+            109,
+            "PyArrayObject *lst=NULL, *ans=NULL, *wts=NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 107,
+    "line_str": "PyObject *list = NULL, *weight=Py_None, *mlength=Py_None;",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "f72c60510a225f242a36cdbbc3aacf1b36f05f22",
+            107,
+            "PyObject *list = NULL, *weight=Py_None, *mlength=Py_None;"
+        ]
+    ]
+}
+]
+},{
+"9cdff27107b5feb0f6bfe5c408970716b19aa93d": []},
+{
+"2112e7d47ab401453230f6dc1b6923a468ad947d": []},
+{
+"5dab9275475e70630d7b1242c3530a6726c61fa2": []},
+{
+"bba8647dbf7098ffcf6df70b959b6079b5682e0c": [
+{
+    "line_num": 2726,
+    "line_str": "new->f->copyswap(nip1, ip1 + offset, swap, dummy);",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "23901aa4eaeb04d52bbf1869d34633510e9ffefb",
+            2726,
+            "new->f->copyswap(nip1, ip1 + offset, swap, dummy);"
+        ]
+    ]
+},
+{
+    "line_num": 2737,
+    "line_str": "new->f->copyswap(nip2, ip2 + offset, swap, dummy);",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "23901aa4eaeb04d52bbf1869d34633510e9ffefb",
+            2737,
+            "new->f->copyswap(nip2, ip2 + offset, swap, dummy);"
+        ]
+    ]
+}
+]
+},{
+"7f53768b8ff70d4eaf03198c283a8eebdd9281ee": []},
+{
+"710beb20281eb65a291edfd041942301296ff125": [
+{
+    "line_num": 212,
+    "line_str": "static npy_int64",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            212,
+            "static npy_int64"
+        ]
+    ]
+},
+{
+    "line_num": 262,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            262,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 229,
+    "line_str": "if (a > 0) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            229,
+            "if (a > 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 444,
+    "line_str": "x1 = safe_mul(gamma, c, &overflow);",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            444,
+            "x1 = safe_mul(gamma, c, &overflow);"
+        ]
+    ]
+},
+{
+    "line_num": 279,
+    "line_str": "r = a % b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            279,
+            "r = a % b;"
+        ]
+    ]
+},
+{
+    "line_num": 213,
+    "line_str": "safe_sub(npy_int64 a, npy_int64 b, char *overflow_flag)",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            213,
+            "safe_sub(npy_int64 a, npy_int64 b, char *overflow_flag)"
+        ]
+    ]
+},
+{
+    "line_num": 263,
+    "line_str": "return v;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            263,
+            "return v;"
+        ]
+    ]
+},
+{
+    "line_num": 230,
+    "line_str": "if (b > NPY_MAX_INT64 / a || b < NPY_MIN_INT64 / a) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            230,
+            "if (b > NPY_MAX_INT64 / a || b < NPY_MIN_INT64 / a) {"
+        ]
+    ]
+},
+{
+    "line_num": 445,
+    "line_str": "x2 = safe_mul(epsilon, c, &overflow);",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            445,
+            "x2 = safe_mul(epsilon, c, &overflow);"
+        ]
+    ]
+},
+{
+    "line_num": 280,
+    "line_str": "if (r != 0) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            280,
+            "if (r != 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 247,
+    "line_str": "static npy_int64",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            247,
+            "static npy_int64"
+        ]
+    ]
+},
+{
+    "line_num": 214,
+    "line_str": "{",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            214,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 627,
+    "line_str": "E[j].ub = MIN(E[j].ub, floordiv(b, E[j].a));",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            627,
+            "E[j].ub = MIN(E[j].ub, floordiv(b, E[j].a));"
+        ]
+    ]
+},
+{
+    "line_num": 429,
+    "line_str": "l2 = 0;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            429,
+            "l2 = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 264,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            264,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 231,
+    "line_str": "*overflow_flag = 1;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            231,
+            "*overflow_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 198,
+    "line_str": "static npy_int64",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            198,
+            "static npy_int64"
+        ]
+    ]
+},
+{
+    "line_num": 446,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            446,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 281,
+    "line_str": "++v;  /* cannot overflow */",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            281,
+            "++v;  /* cannot overflow */"
+        ]
+    ]
+},
+{
+    "line_num": 248,
+    "line_str": "floordiv(npy_int64 a, npy_int64 b)",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            248,
+            "floordiv(npy_int64 a, npy_int64 b)"
+        ]
+    ]
+},
+{
+    "line_num": 215,
+    "line_str": "if (a > 0 && b < a - NPY_MAX_INT64) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            215,
+            "if (a > 0 && b < a - NPY_MAX_INT64) {"
+        ]
+    ]
+},
+{
+    "line_num": 265,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            265,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 232,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            232,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 199,
+    "line_str": "safe_add(npy_int64 a, npy_int64 b, char *overflow_flag)",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            199,
+            "safe_add(npy_int64 a, npy_int64 b, char *overflow_flag)"
+        ]
+    ]
+},
+{
+    "line_num": 282,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            282,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 249,
+    "line_str": "{",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            249,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 216,
+    "line_str": "*overflow_flag = 1;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            216,
+            "*overflow_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 266,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            266,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 233,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            233,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 200,
+    "line_str": "{",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            200,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 283,
+    "line_str": "return v;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            283,
+            "return v;"
+        ]
+    ]
+},
+{
+    "line_num": 250,
+    "line_str": "assert(b > 0);",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            250,
+            "assert(b > 0);"
+        ]
+    ]
+},
+{
+    "line_num": 217,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            217,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 234,
+    "line_str": "else if (a < 0) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            234,
+            "else if (a < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 201,
+    "line_str": "if (a > 0 && b > NPY_MAX_INT64 - a) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            201,
+            "if (a > 0 && b > NPY_MAX_INT64 - a) {"
+        ]
+    ]
+},
+{
+    "line_num": 284,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            284,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 251,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            251,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 218,
+    "line_str": "else if (a < 0 && b > a - NPY_MIN_INT64) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            218,
+            "else if (a < 0 && b > a - NPY_MIN_INT64) {"
+        ]
+    ]
+},
+{
+    "line_num": 268,
+    "line_str": "static npy_int64",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            268,
+            "static npy_int64"
+        ]
+    ]
+},
+{
+    "line_num": 235,
+    "line_str": "if (b > 0 && a < NPY_MIN_INT64 / b) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            235,
+            "if (b > 0 && a < NPY_MIN_INT64 / b) {"
+        ]
+    ]
+},
+{
+    "line_num": 202,
+    "line_str": "*overflow_flag = 1;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            202,
+            "*overflow_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 450,
+    "line_str": "t_l = MAX(ceildiv(safe_sub(l1, x1, &overflow), c1),",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            450,
+            "t_l = MAX(ceildiv(safe_sub(l1, x1, &overflow), c1),"
+        ]
+    ]
+},
+{
+    "line_num": 285,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            285,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 219,
+    "line_str": "*overflow_flag = 1;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            219,
+            "*overflow_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 269,
+    "line_str": "ceildiv(npy_int64 a, npy_int64 b)",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            269,
+            "ceildiv(npy_int64 a, npy_int64 b)"
+        ]
+    ]
+},
+{
+    "line_num": 236,
+    "line_str": "*overflow_flag = 1;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            236,
+            "*overflow_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 203,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            203,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 451,
+    "line_str": "ceildiv(safe_sub(x2, u2, &overflow), c2));",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            451,
+            "ceildiv(safe_sub(x2, u2, &overflow), c2));"
+        ]
+    ]
+},
+{
+    "line_num": 286,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            286,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 253,
+    "line_str": "if (a > 0) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            253,
+            "if (a > 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 220,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            220,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 270,
+    "line_str": "{",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            270,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 237,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            237,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 204,
+    "line_str": "else if (a < 0 && b < NPY_MIN_INT64 - a) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            204,
+            "else if (a < 0 && b < NPY_MIN_INT64 - a) {"
+        ]
+    ]
+},
+{
+    "line_num": 452,
+    "line_str": "t_u = MIN(floordiv(safe_sub(u1, x1, &overflow), c1),",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            452,
+            "t_u = MIN(floordiv(safe_sub(u1, x1, &overflow), c1),"
+        ]
+    ]
+},
+{
+    "line_num": 419,
+    "line_str": "l1 = 0;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            419,
+            "l1 = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 287,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            287,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 254,
+    "line_str": "return a / b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            254,
+            "return a / b;"
+        ]
+    ]
+},
+{
+    "line_num": 221,
+    "line_str": "return a - b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            221,
+            "return a - b;"
+        ]
+    ]
+},
+{
+    "line_num": 271,
+    "line_str": "assert(b > 0);",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            271,
+            "assert(b > 0);"
+        ]
+    ]
+},
+{
+    "line_num": 238,
+    "line_str": "else if (b < 0 && a < NPY_MAX_INT64 / b) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            238,
+            "else if (b < 0 && a < NPY_MAX_INT64 / b) {"
+        ]
+    ]
+},
+{
+    "line_num": 205,
+    "line_str": "*overflow_flag = 1;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            205,
+            "*overflow_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 453,
+    "line_str": "floordiv(safe_sub(x2, l2, &overflow), c2));",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            453,
+            "floordiv(safe_sub(x2, l2, &overflow), c2));"
+        ]
+    ]
+},
+{
+    "line_num": 255,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            255,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 222,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            222,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 272,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            272,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 239,
+    "line_str": "*overflow_flag = 1;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            239,
+            "*overflow_flag = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 206,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            206,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 256,
+    "line_str": "else {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            256,
+            "else {"
+        ]
+    ]
+},
+{
+    "line_num": 223,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            223,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 273,
+    "line_str": "if (a < 0) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            273,
+            "if (a < 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 240,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            240,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 207,
+    "line_str": "return a + b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            207,
+            "return a + b;"
+        ]
+    ]
+},
+{
+    "line_num": 257,
+    "line_str": "npy_int64 v, r;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            257,
+            "npy_int64 v, r;"
+        ]
+    ]
+},
+{
+    "line_num": 224,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            224,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 158,
+    "line_str": "Note that array memory bound overlap check is done before integer overflows",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            158,
+            "Note that array memory bound overlap check is done before integer overflows"
+        ]
+    ]
+},
+{
+    "line_num": 274,
+    "line_str": "return a / b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            274,
+            "return a / b;"
+        ]
+    ]
+},
+{
+    "line_num": 241,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            241,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 208,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            208,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 258,
+    "line_str": "v = a / b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            258,
+            "v = a / b;"
+        ]
+    ]
+},
+{
+    "line_num": 159,
+    "line_str": "can occur, so these are not of so much practical relevance, since we are",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            159,
+            "can occur, so these are not of so much practical relevance, since we are"
+        ]
+    ]
+},
+{
+    "line_num": 275,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            275,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 242,
+    "line_str": "return a * b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            242,
+            "return a * b;"
+        ]
+    ]
+},
+{
+    "line_num": 209,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            209,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 424,
+    "line_str": "l1 = 0;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            424,
+            "l1 = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 259,
+    "line_str": "r = a % b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            259,
+            "r = a % b;"
+        ]
+    ]
+},
+{
+    "line_num": 226,
+    "line_str": "static npy_int64",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            226,
+            "static npy_int64"
+        ]
+    ]
+},
+{
+    "line_num": 160,
+    "line_str": "working in int64.",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            160,
+            "working in int64."
+        ]
+    ]
+},
+{
+    "line_num": 408,
+    "line_str": "npy_int64 a_gcd, gamma, epsilon, a1, l1, u1, a2, l2, u2, c, r, x1, x2, c1, c2, t_l, t_u, t, b2;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            408,
+            "npy_int64 a_gcd, gamma, epsilon, a1, l1, u1, a2, l2, u2, c, r, x1, x2, c1, c2, t_l, t_u, t, b2;"
+        ]
+    ]
+},
+{
+    "line_num": 276,
+    "line_str": "else {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            276,
+            "else {"
+        ]
+    ]
+},
+{
+    "line_num": 243,
+    "line_str": "}",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            243,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 210,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            210,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 260,
+    "line_str": "if (r != 0) {",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            260,
+            "if (r != 0) {"
+        ]
+    ]
+},
+{
+    "line_num": 227,
+    "line_str": "safe_mul(npy_int64 a, npy_int64 b, char *overflow_flag)",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            227,
+            "safe_mul(npy_int64 a, npy_int64 b, char *overflow_flag)"
+        ]
+    ]
+},
+{
+    "line_num": 277,
+    "line_str": "npy_int64 v, r;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            277,
+            "npy_int64 v, r;"
+        ]
+    ]
+},
+{
+    "line_num": 244,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            244,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 261,
+    "line_str": "--v;  /* cannot overflow */",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            261,
+            "--v;  /* cannot overflow */"
+        ]
+    ]
+},
+{
+    "line_num": 228,
+    "line_str": "{",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            228,
+            "{"
+        ]
+    ]
+},
+{
+    "line_num": 278,
+    "line_str": "v = a / b;",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            278,
+            "v = a / b;"
+        ]
+    ]
+},
+{
+    "line_num": 245,
+    "line_str": "",
+    "file_path": "numpy/core/src/private/mem_overlap.c",
+    "previous_commits": [
+        [
+            "67ec47b23011604c491afae49dc8a2f106fe9f4c",
+            245,
+            ""
+        ]
+    ]
+}
+]
+},{
+"50f1fce49d79444c29d63cd632bbb87ceec39f07": [
+{
+    "line_num": 89,
+    "line_str": "if (*first) {",
+    "file_path": "numpy/core/src/umath_ufunc_object.inc",
+    "previous_commits": [
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            89,
+            "if (*first) {"
+        ]
+    ]
+},
+{
+    "line_num": 88,
+    "line_str": "case UFUNC_ERR_PRINT:",
+    "file_path": "numpy/core/src/umath_ufunc_object.inc",
+    "previous_commits": [
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            88,
+            "case UFUNC_ERR_PRINT:"
+        ]
+    ]
+},
+{
+    "line_num": 94,
+    "line_str": "NPY_ALLOW_C_API_DEF;",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "acad872c5bb8138cd2b0a065830cb88270f1d55f",
+            94,
+            "NPY_ALLOW_C_API_DEF;"
+        ],
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            53,
+            "ALLOW_C_API_DEF;"
+        ]
+    ]
+},
+{
+    "line_num": 93,
+    "line_str": "break;",
+    "file_path": "numpy/core/src/umath_ufunc_object.inc",
+    "previous_commits": [
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            93,
+            "break;"
+        ]
+    ]
+},
+{
+    "line_num": 92,
+    "line_str": "}",
+    "file_path": "numpy/core/src/umath_ufunc_object.inc",
+    "previous_commits": [
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            92,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 91,
+    "line_str": "*first = 0;",
+    "file_path": "numpy/core/src/umath_ufunc_object.inc",
+    "previous_commits": [
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            91,
+            "*first = 0;"
+        ]
+    ]
+},
+{
+    "line_num": 90,
+    "line_str": "fprintf(stderr, \"Warning: %s encountered in %s\\n\", errtype, name);",
+    "file_path": "numpy/core/src/umath_ufunc_object.inc",
+    "previous_commits": [
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            90,
+            "fprintf(stderr, \"Warning: %s encountered in %s\\n\", errtype, name);"
+        ]
+    ]
+}
+]
+},{
+"808e4c214941104e188897f58fd2ec1ac510d2cb": []},
+{
+"4027d16f0aa19e551067bf0c93dbe057e0142bb8": []},
+{
+"3c1a13dea6a7e189675977ad65ea230ce4816061": [
+{
+    "line_num": 597,
+    "line_str": "res = -1;",
+    "file_path": "numpy/core/src/arraytypes.inc.src",
+    "previous_commits": [
+        [
+            "823aed7b2324feb1d8e4bd52504e8bc86309126a",
+            597,
+            "res = -1;"
+        ]
+    ]
+},
+{
+    "line_num": 1566,
+    "line_str": "return obj;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1566,
+            "return obj;"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            590,
+            "return obj;"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            574,
+            "return obj;"
+        ]
+    ]
+},
+{
+    "line_num": 1405,
+    "line_str": "\"field named %S not found\",",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "e3f01df89db94886c75718f1ead7c084f9e71905",
+            1405,
+            "\"field named %S not found\","
+        ],
+        [
+            "c1bec1ddc38648b415df4387e4172e32c29a1d94",
+            818,
+            "\"field named %S not found.\","
+        ]
+    ]
+},
+{
+    "line_num": 570,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            570,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 571,
+    "line_str": "Py_DECREF(obj);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            571,
+            "Py_DECREF(obj);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            555,
+            "Py_DECREF(obj);"
+        ]
+    ]
+},
+{
+    "line_num": 1562,
+    "line_str": "if (obj == NULL) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1562,
+            "if (obj == NULL) {"
+        ],
+        [
+            "0c09e1f184fde335f3533b0b9ef6ea46379309db",
+            979,
+            "if (obj == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 1529,
+    "line_str": "PyBytes_AsString(temp));",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1529,
+            "PyBytes_AsString(temp));"
+        ],
+        [
+            "57224077fecbc3f43b55966ed60a317c1b5a447b",
+            568,
+            "PyBytes_AsString(temp));"
+        ]
+    ]
+},
+{
+    "line_num": 1558,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1558,
+            "}"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            591,
+            "}"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            575,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1525,
+    "line_str": "temp = PyUnicode_AsUnicodeEscapeString(op);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1525,
+            "temp = PyUnicode_AsUnicodeEscapeString(op);"
+        ],
+        [
+            "57224077fecbc3f43b55966ed60a317c1b5a447b",
+            564,
+            "temp = PyUnicode_AsUnicodeEscapeString(op);"
+        ]
+    ]
+},
+{
+    "line_num": 1554,
+    "line_str": "PyObject *_numpy_internal;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1554,
+            "PyObject *_numpy_internal;"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            582,
+            "PyObject *_numpy_internal;"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            566,
+            "PyObject *_numpy_internal;"
+        ]
+    ]
+},
+{
+    "line_num": 1517,
+    "line_str": "Py_INCREF(descr);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1517,
+            "Py_INCREF(descr);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            536,
+            "Py_INCREF(descr);"
+        ]
+    ]
+},
+{
+    "line_num": 777,
+    "line_str": "Py_INCREF(descr);",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            777,
+            "Py_INCREF(descr);"
+        ]
+    ]
+},
+{
+    "line_num": 1707,
+    "line_str": "if (PyString_Check(ind) || PyUnicode_Check(ind)) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "1b35cb9e5b1e45cd9c4cb11107a5a794a07c5f77",
+            1707,
+            "if (PyString_Check(ind) || PyUnicode_Check(ind)) {"
+        ],
+        [
+            "231b96a460b86f6f8867be6f5b8261fbd3784ebe",
+            1525,
+            "if (PyString_Check(ind) || PyUnicode_Check(ind)) {"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            766,
+            "if (PyString_Check(index) || PyUnicode_Check(index)) {"
+        ]
+    ]
+},
+{
+    "line_num": 1513,
+    "line_str": "int offset;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1513,
+            "int offset;"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            532,
+            "int offset;"
+        ]
+    ]
+},
+{
+    "line_num": 773,
+    "line_str": "int offset;",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            773,
+            "int offset;"
+        ]
+    ]
+},
+{
+    "line_num": 1542,
+    "line_str": "if (!PyString_Check(obj) && !PyUnicode_Check(obj)) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1542,
+            "if (!PyString_Check(obj) && !PyUnicode_Check(obj)) {"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            570,
+            "if (!PyString_Check(obj) && !PyUnicode_Check(obj)) {"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            554,
+            "if (!PyString_Check(obj) && !PyUnicode_Check(obj)) {"
+        ]
+    ]
+},
+{
+    "line_num": 1509,
+    "line_str": "if (PyDataType_HASFIELDS(PyArray_DESCR(self))) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "acafbff07a8687d9990d83f2c0f0e17e9b5eca46",
+            1509,
+            "if (PyDataType_HASFIELDS(PyArray_DESCR(self))) {"
+        ],
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1500,
+            "if (PyDataType_HASFIELDS(PyArray_DESCR(self)))"
+        ],
+        [
+            "67c10988b1c1805988077a18ce477ba8d362e1b5",
+            562,
+            "if (PyDataType_HASFIELDS(PyArray_DESCR(self))) {"
+        ]
+    ]
+},
+{
+    "line_num": 769,
+    "line_str": "",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            769,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1538,
+    "line_str": "PyObject *obj;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1538,
+            "PyObject *obj;"
+        ],
+        [
+            "818e3ebc61b485465412251e86d3b4f95c75deb8",
+            1120,
+            "PyObject *obj;"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            525,
+            "PyObject *obj;"
+        ]
+    ]
+},
+{
+    "line_num": 538,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            538,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1563,
+    "line_str": "return NULL;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1563,
+            "return NULL;"
+        ],
+        [
+            "0c09e1f184fde335f3533b0b9ef6ea46379309db",
+            980,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 1530,
+    "line_str": "if (temp != op) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1530,
+            "if (temp != op) {"
+        ],
+        [
+            "57224077fecbc3f43b55966ed60a317c1b5a447b",
+            569,
+            "if (temp != op) {"
+        ]
+    ]
+},
+{
+    "line_num": 1559,
+    "line_str": "obj = PyObject_CallMethod(_numpy_internal,",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1559,
+            "obj = PyObject_CallMethod(_numpy_internal,"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            587,
+            "obj = PyObject_CallMethod(_numpy_internal,"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            571,
+            "obj = PyObject_CallMethod(_numpy_internal,"
+        ]
+    ]
+},
+{
+    "line_num": 1526,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1526,
+            "}"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            591,
+            "}"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            575,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 981,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "0c09e1f184fde335f3533b0b9ef6ea46379309db",
+            981,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1555,
+    "line_str": "_numpy_internal = PyImport_ImportModule(\"numpy.core._internal\");",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1555,
+            "_numpy_internal = PyImport_ImportModule(\"numpy.core._internal\");"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            583,
+            "_numpy_internal = PyImport_ImportModule(\"numpy.core._internal\");"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            567,
+            "_numpy_internal = PyImport_ImportModule(\"numpy.core._internal\");"
+        ]
+    ]
+},
+{
+    "line_num": 1518,
+    "line_str": "return PyArray_GetField(self, descr, offset);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1518,
+            "return PyArray_GetField(self, descr, offset);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            537,
+            "return PyArray_GetField(self, descr, offset);"
+        ]
+    ]
+},
+{
+    "line_num": 778,
+    "line_str": "return PyArray_SetField(self, descr, offset, op);",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            778,
+            "return PyArray_SetField(self, descr, offset, op);"
+        ]
+    ]
+},
+{
+    "line_num": 1514,
+    "line_str": "PyObject *title;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1514,
+            "PyObject *title;"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            533,
+            "PyObject *title;"
+        ]
+    ]
+},
+{
+    "line_num": 774,
+    "line_str": "PyObject *title;",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            774,
+            "PyObject *title;"
+        ]
+    ]
+},
+{
+    "line_num": 1543,
+    "line_str": "Py_DECREF(obj);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1543,
+            "Py_DECREF(obj);"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            574,
+            "Py_DECREF(obj);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            558,
+            "Py_DECREF(obj);"
+        ]
+    ]
+},
+{
+    "line_num": 1510,
+    "line_str": "obj = PyDict_GetItem(PyArray_DESCR(self)->fields, op);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1510,
+            "obj = PyDict_GetItem(PyArray_DESCR(self)->fields, op);"
+        ],
+        [
+            "67c10988b1c1805988077a18ce477ba8d362e1b5",
+            563,
+            "obj = PyDict_GetItem(PyArray_DESCR(self)->fields, op);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            529,
+            "obj = PyDict_GetItem(self->descr->fields, op);"
+        ]
+    ]
+},
+{
+    "line_num": 1539,
+    "line_str": "seqlen = PySequence_Size(op);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1539,
+            "seqlen = PySequence_Size(op);"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            567,
+            "seqlen = PySequence_Size(op);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            551,
+            "seqlen = PySequence_Size(op);"
+        ]
+    ]
+},
+{
+    "line_num": 1506,
+    "line_str": "if (PyString_Check(op) || PyUnicode_Check(op)) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1506,
+            "if (PyString_Check(op) || PyUnicode_Check(op)) {"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            527,
+            "if (PyString_Check(op) || PyUnicode_Check(op)) {"
+        ]
+    ]
+},
+{
+    "line_num": 539,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            539,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1564,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1564,
+            "}"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            591,
+            "}"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            575,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1531,
+    "line_str": "Py_DECREF(temp);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1531,
+            "Py_DECREF(temp);"
+        ],
+        [
+            "57224077fecbc3f43b55966ed60a317c1b5a447b",
+            570,
+            "Py_DECREF(temp);"
+        ]
+    ]
+},
+{
+    "line_num": 1560,
+    "line_str": "\"_index_fields\", \"OO\", self, op);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1560,
+            "\"_index_fields\", \"OO\", self, op);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            572,
+            "\"_index_fields\", \"OO\", self, op);"
+        ]
+    ]
+},
+{
+    "line_num": 1527,
+    "line_str": "PyErr_Format(PyExc_ValueError,",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1527,
+            "PyErr_Format(PyExc_ValueError,"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            542,
+            "PyErr_Format(PyExc_ValueError,"
+        ]
+    ]
+},
+{
+    "line_num": 787,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            787,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1556,
+    "line_str": "if (_numpy_internal == NULL) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1556,
+            "if (_numpy_internal == NULL) {"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            584,
+            "if (_numpy_internal == NULL) {"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            568,
+            "if (_numpy_internal == NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 1523,
+    "line_str": "temp = op;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1523,
+            "temp = op;"
+        ],
+        [
+            "57224077fecbc3f43b55966ed60a317c1b5a447b",
+            562,
+            "temp = op;"
+        ]
+    ]
+},
+{
+    "line_num": 1552,
+    "line_str": "fancy = ((seqlen > 0) && (i == seqlen));",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1552,
+            "fancy = ((seqlen > 0) && (i == seqlen));"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            580,
+            "fancy = ((seqlen > 0) && (i == seqlen));"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            564,
+            "fancy = ((seqlen > 0) && (i == seqlen));"
+        ]
+    ]
+},
+{
+    "line_num": 1519,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1519,
+            "}"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            591,
+            "}"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            575,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 779,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            779,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1515,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1515,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 1544,
+    "line_str": "break;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1544,
+            "break;"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            572,
+            "break;"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            556,
+            "break;"
+        ]
+    ]
+},
+{
+    "line_num": 1511,
+    "line_str": "if (obj != NULL) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1511,
+            "if (obj != NULL) {"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            530,
+            "if (obj != NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 771,
+    "line_str": "if (obj != NULL) {",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            771,
+            "if (obj != NULL) {"
+        ]
+    ]
+},
+{
+    "line_num": 1540,
+    "line_str": "for (i = 0; i < seqlen; i++) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1540,
+            "for (i = 0; i < seqlen; i++) {"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            568,
+            "for (i = 0; i < seqlen; i++) {"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            552,
+            "for (i = 0; i < seqlen; i++) {"
+        ]
+    ]
+},
+{
+    "line_num": 1507,
+    "line_str": "PyObject *temp, *obj;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1507,
+            "PyObject *temp, *obj;"
+        ],
+        [
+            "818e3ebc61b485465412251e86d3b4f95c75deb8",
+            1086,
+            "PyObject *temp, *obj;"
+        ],
+        [
+            "57224077fecbc3f43b55966ed60a317c1b5a447b",
+            546,
+            "PyObject *temp;"
+        ]
+    ]
+},
+{
+    "line_num": 1536,
+    "line_str": "else if (PySequence_Check(op) && !PyTuple_Check(op)) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1536,
+            "else if (PySequence_Check(op) && !PyTuple_Check(op)) {"
+        ]
+    ]
+},
+{
+    "line_num": 1726,
+    "line_str": "PyErr_Format(PyExc_ValueError,",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "631710bbf4a6ef7a3119214cc890b9d18bcc42a7",
+            1726,
+            "PyErr_Format(PyExc_ValueError,"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            783,
+            "PyErr_Format(PyExc_ValueError,"
+        ]
+    ]
+},
+{
+    "line_num": 1565,
+    "line_str": "PyArray_ENABLEFLAGS((PyArrayObject*)obj, NPY_ARRAY_WARN_ON_WRITE);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1565,
+            "PyArray_ENABLEFLAGS((PyArrayObject*)obj, NPY_ARRAY_WARN_ON_WRITE);"
+        ],
+        [
+            "0c09e1f184fde335f3533b0b9ef6ea46379309db",
+            982,
+            "PyArray_ENABLEFLAGS((PyArrayObject*)obj, NPY_ARRAY_WARN_ON_WRITE);"
+        ],
+        [
+            "6363bb7cbb1d0e292e8af87f92a28faf781d3d95",
+            978,
+            "PyArray_ENABLEFLAGS((PyArrayObject*)obj, NPY_ARRAY_WARN_ON_WRITE);"
+        ]
+    ]
+},
+{
+    "line_num": 1532,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1532,
+            "}"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            591,
+            "}"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            575,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1722,
+    "line_str": "PyErr_Format(PyExc_ValueError,",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "631710bbf4a6ef7a3119214cc890b9d18bcc42a7",
+            1722,
+            "PyErr_Format(PyExc_ValueError,"
+        ],
+        [
+            "c1bec1ddc38648b415df4387e4172e32c29a1d94",
+            817,
+            "PyErr_Format(PyExc_ValueError,"
+        ]
+    ]
+},
+{
+    "line_num": 1561,
+    "line_str": "Py_DECREF(_numpy_internal);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1561,
+            "Py_DECREF(_numpy_internal);"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            589,
+            "Py_DECREF(_numpy_internal);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            573,
+            "Py_DECREF(_numpy_internal);"
+        ]
+    ]
+},
+{
+    "line_num": 1528,
+    "line_str": "\"field named %s not found\",",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1528,
+            "\"field named %s not found\","
+        ],
+        [
+            "818e3ebc61b485465412251e86d3b4f95c75deb8",
+            1107,
+            "\"field named %s not found\","
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            543,
+            "\"field named %s not found.\","
+        ]
+    ]
+},
+{
+    "line_num": 1557,
+    "line_str": "return NULL;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1557,
+            "return NULL;"
+        ],
+        [
+            "0c09e1f184fde335f3533b0b9ef6ea46379309db",
+            980,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 1524,
+    "line_str": "if (PyUnicode_Check(op)) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1524,
+            "if (PyUnicode_Check(op)) {"
+        ],
+        [
+            "57224077fecbc3f43b55966ed60a317c1b5a447b",
+            563,
+            "if (PyUnicode_Check(op)) {"
+        ]
+    ]
+},
+{
+    "line_num": 1553,
+    "line_str": "if (fancy) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1553,
+            "if (fancy) {"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            581,
+            "if (fancy) {"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            565,
+            "if (fancy) {"
+        ]
+    ]
+},
+{
+    "line_num": 780,
+    "line_str": "}",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            780,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1409,
+    "line_str": "\"field named %s not found\",",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "e3f01df89db94886c75718f1ead7c084f9e71905",
+            1409,
+            "\"field named %s not found\","
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            784,
+            "\"field named %s not found.\","
+        ]
+    ]
+},
+{
+    "line_num": 1516,
+    "line_str": "if (PyArg_ParseTuple(obj, \"Oi|O\", &descr, &offset, &title)) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1516,
+            "if (PyArg_ParseTuple(obj, \"Oi|O\", &descr, &offset, &title)) {"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            535,
+            "if (PyArg_ParseTuple(obj, \"Oi|O\", &descr, &offset, &title)) {"
+        ]
+    ]
+},
+{
+    "line_num": 1549,
+    "line_str": "PyString_AsString(ind));",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "231b96a460b86f6f8867be6f5b8261fbd3784ebe",
+            1549,
+            "PyString_AsString(ind));"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            785,
+            "PyString_AsString(index));"
+        ]
+    ]
+},
+{
+    "line_num": 1706,
+    "line_str": "if (PyDataType_HASFIELDS(PyArray_DESCR(self))) {",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "1b35cb9e5b1e45cd9c4cb11107a5a794a07c5f77",
+            1706,
+            "if (PyDataType_HASFIELDS(PyArray_DESCR(self))) {"
+        ],
+        [
+            "67c10988b1c1805988077a18ce477ba8d362e1b5",
+            816,
+            "if (PyDataType_HASFIELDS(PyArray_DESCR(self))) {"
+        ]
+    ]
+},
+{
+    "line_num": 1545,
+    "line_str": "}",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1545,
+            "}"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            591,
+            "}"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            575,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 1512,
+    "line_str": "PyArray_Descr *descr;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1512,
+            "PyArray_Descr *descr;"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            531,
+            "PyArray_Descr *descr;"
+        ]
+    ]
+},
+{
+    "line_num": 772,
+    "line_str": "PyArray_Descr *descr;",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            772,
+            "PyArray_Descr *descr;"
+        ]
+    ]
+},
+{
+    "line_num": 776,
+    "line_str": "if (PyArg_ParseTuple(obj, \"Oi|O\", &descr, &offset, &title)) {",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            776,
+            "if (PyArg_ParseTuple(obj, \"Oi|O\", &descr, &offset, &title)) {"
+        ]
+    ]
+},
+{
+    "line_num": 1541,
+    "line_str": "obj = PySequence_GetItem(op, i);",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1541,
+            "obj = PySequence_GetItem(op, i);"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            569,
+            "obj = PySequence_GetItem(op, i);"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            553,
+            "obj = PySequence_GetItem(op, i);"
+        ]
+    ]
+},
+{
+    "line_num": 1508,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1508,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 768,
+    "line_str": "PyObject *obj;",
+    "file_path": "numpy/core/src/arraymapping.c",
+    "previous_commits": [
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            768,
+            "PyObject *obj;"
+        ]
+    ]
+},
+{
+    "line_num": 1537,
+    "line_str": "int seqlen, i;",
+    "file_path": "numpy/core/src/multiarray/mapping.c",
+    "previous_commits": [
+        [
+            "efdc9b078cf172bd693a7a2f8117cb2404b12f54",
+            1537,
+            "int seqlen, i;"
+        ],
+        [
+            "93cdc76e7af217c7e72be99dad59dd08a87922f4",
+            566,
+            "int seqlen, i;"
+        ],
+        [
+            "efd5b424216fb0ce6aa3c7529d8c3e1d5ae34116",
+            550,
+            "int seqlen, i;"
+        ]
+    ]
+}
+]
+},{
+"bdfea0af2036e74396b78e076e90170eddbbf670": []},
+{
+"d73f23b092c3b44c279412c4833eb6bd953b713a": [
+{
+    "line_num": 1244,
+    "line_str": "return NULL;",
+    "file_path": "numpy/core/src/multiarray/item_selection.c",
+    "previous_commits": [
+        [
+            "0ac3920c1c1a015deb416bd93c370f4f9ab0baf0",
+            1244,
+            "return NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 1233,
+    "line_str": "return NULL;",
+    "file_path": "numpy/core/src/multiarray/item_selection.c",
+    "previous_commits": [
+        [
+            "0ac3920c1c1a015deb416bd93c370f4f9ab0baf0",
+            1233,
+            "return NULL;"
+        ]
+    ]
+}
+]
+},{
+"9fc077332b34a7b2a90126f5ae6cc50d57162db5": []},
+{
+"8c0a50c5b1b331738a8bfb6a94ccc588851d1a0c": []},
+{
+"8b44a5522628cae522f00985b4ac7b3f6c21fb18": []},
+{
+"e3cc0f4af6c306370fd5fdcd35a1f02be50f4dd1": [
+{
+    "line_num": 967,
+    "line_str": "npy_intp stride, base_stride = NPY_MIN_INTP;",
+    "file_path": "numpy/core/src/multiarray/shape.c",
+    "previous_commits": [
+        [
+            "44877b36870ec2a0505c536a30b9fbf06a414c17",
+            967,
+            "npy_intp stride, base_stride = NPY_MIN_INTP;"
+        ]
+    ]
+}
+]
+},{
+"7c8486de75e82cc9fd6a754ce0ede14579d44023": [
+{
+    "line_num": 576,
+    "line_str": "docstr = PyBytes_AS_STRING(PyUnicode_AsUTF8String(str));",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "e8699dd5cd3e018250393d989aa1146d89ad9b72",
+            576,
+            "docstr = PyBytes_AS_STRING(PyUnicode_AsUTF8String(str));"
+        ]
+    ]
+}
+]
+},{
+"4e19f408de900f958441af4ec8a458f5ce6473eb": [
+{
+    "line_num": 2455,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/methods.c",
+    "previous_commits": [
+        [
+            "f031cdf83593907431ca2666d8484cb1c36315bd",
+            2455,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 2435,
+    "line_str": "return PyObject_GetItem((PyObject *)self, slice);",
+    "file_path": "numpy/core/src/multiarray/methods.c",
+    "previous_commits": [
+        [
+            "f031cdf83593907431ca2666d8484cb1c36315bd",
+            2435,
+            "return PyObject_GetItem((PyObject *)self, slice);"
+        ]
+    ]
+},
+{
+    "line_num": 2424,
+    "line_str": "PyObject *start, *stop, *slice;",
+    "file_path": "numpy/core/src/multiarray/methods.c",
+    "previous_commits": [
+        [
+            "f031cdf83593907431ca2666d8484cb1c36315bd",
+            2424,
+            "PyObject *start, *stop, *slice;"
+        ]
+    ]
+}
+]
+},{
+"4e19f408de900f958441af4ec8a458f5ce6473eb": [
+{
+    "line_num": 2455,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/methods.c",
+    "previous_commits": [
+        [
+            "f031cdf83593907431ca2666d8484cb1c36315bd",
+            2455,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 2435,
+    "line_str": "return PyObject_GetItem((PyObject *)self, slice);",
+    "file_path": "numpy/core/src/multiarray/methods.c",
+    "previous_commits": [
+        [
+            "f031cdf83593907431ca2666d8484cb1c36315bd",
+            2435,
+            "return PyObject_GetItem((PyObject *)self, slice);"
+        ]
+    ]
+},
+{
+    "line_num": 2424,
+    "line_str": "PyObject *start, *stop, *slice;",
+    "file_path": "numpy/core/src/multiarray/methods.c",
+    "previous_commits": [
+        [
+            "f031cdf83593907431ca2666d8484cb1c36315bd",
+            2424,
+            "PyObject *start, *stop, *slice;"
+        ]
+    ]
+}
+]
+},{
+"e413b8f2568dcb6912f107bd68caaa27a85fc2da": []},
+{
+"6f9ea0abbd305d53f9017debab3a3a591fe0e249": []},
+{
+"3d7e4224d5f9dbb872ac7c59a8ce43fa3523976d": [
+{
+    "line_num": 423,
+    "line_str": "with_override[i] = NULL;",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            423,
+            "with_override[i] = NULL;"
+        ]
+    ]
+},
+{
+    "line_num": 451,
+    "line_str": "",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            451,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 477,
+    "line_str": "return 1;",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            477,
+            "return 1;"
+        ]
+    ]
+},
+{
+    "line_num": 442,
+    "line_str": "",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            442,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 472,
+    "line_str": "",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            472,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 471,
+    "line_str": "return 0;",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            471,
+            "return 0;"
+        ]
+    ]
+},
+{
+    "line_num": 470,
+    "line_str": "Py_DECREF(override_args);",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            470,
+            "Py_DECREF(override_args);"
+        ]
+    ]
+},
+{
+    "line_num": 469,
+    "line_str": "Py_XDECREF(normal_kwds);",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            469,
+            "Py_XDECREF(normal_kwds);"
+        ]
+    ]
+},
+{
+    "line_num": 468,
+    "line_str": "Py_XDECREF(method_name);",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            468,
+            "Py_XDECREF(method_name);"
+        ]
+    ]
+},
+{
+    "line_num": 466,
+    "line_str": "",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "25e973d61150f515448566d35a86ea878aa4c98f",
+            466,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 558,
+    "line_str": "Py_INCREF(override_obj);",
+    "file_path": "numpy/core/src/umath/override.c",
+    "previous_commits": [
+        [
+            "5bf2a79f939bf46fa76b127c7fa09db0e235475b",
+            558,
+            "Py_INCREF(override_obj);"
+        ]
+    ]
+}
+]
+},{
+"1e65a2af062012ab4fd4f9954b45a608a915e56d": []},
+{
+"e3f8b9366bc1b3491422478a8179ea768b7619bf": [
+{
+    "line_num": 1891,
+    "line_str": "memcpy(dst, src, PyArray_DESCR(arr)->elsize * n);",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "b7cc20ad3400f650bbc45feb5a0bad041722ef29",
+            1891,
+            "memcpy(dst, src, PyArray_DESCR(arr)->elsize * n);"
+        ]
+    ]
+}
+]
+},{
+"9791f20e113f217c700310f6a0c8551f0d42a966": []},
+{
+"6a4858cc1b416bbff014d520a2725cbc25e7d7c4": []},
+{
+"5095f42427da68b71459f052148f600144c6762f": [
+{
+    "line_num": 4289,
+    "line_str": "}",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "a8f5b4ca6759c46abf4d169bed0178559518b641",
+            4289,
+            "}"
+        ],
+        [
+            "fa08ee2832e68f91a4ea38aa8d1d55dbb143cfd4",
+            4023,
+            "}"
+        ]
+    ]
+},
+{
+    "line_num": 4288,
+    "line_str": "Py_DECREF(res);",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "a8f5b4ca6759c46abf4d169bed0178559518b641",
+            4288,
+            "Py_DECREF(res);"
+        ],
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            3118,
+            "Py_DECREF(res);"
+        ]
+    ]
+},
+{
+    "line_num": 4287,
+    "line_str": "else if (res == Py_None) {",
+    "file_path": "numpy/core/src/umath/ufunc_object.c",
+    "previous_commits": [
+        [
+            "a8f5b4ca6759c46abf4d169bed0178559518b641",
+            4287,
+            "else if (res == Py_None) {"
+        ],
+        [
+            "dc779a81db086e54a997d9392e0f051c201259ce",
+            3117,
+            "else if (res == Py_None) {"
+        ]
+    ]
+}
+]
+},{
+"5056c4cef5a320b2f30f5d89175e95eb4184dab1": []},
+{
+"63f3f246f73873c40b32092b0052befeaa6d9d05": []},
+{
+"6cbd724f75f25cdaa7cf68fd9743064b77fbf787": [
+{
+    "line_num": 1547,
+    "line_str": "* #type = npy_float, npy_double, npy_longdouble#",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "f332b6f975555f5d8536c002ab8bb6266346470a",
+            1547,
+            "* #type = npy_float, npy_double, npy_longdouble#"
+        ],
+        [
+            "f1737c782aad8b17410d42c0e41c827c24477341",
+            1045,
+            "* #type=float,double,longdouble#"
+        ]
+    ]
+},
+{
+    "line_num": 1546,
+    "line_str": "* #fname = FLOAT, DOUBLE, LONGDOUBLE#",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "f332b6f975555f5d8536c002ab8bb6266346470a",
+            1546,
+            "* #fname = FLOAT, DOUBLE, LONGDOUBLE#"
+        ],
+        [
+            "f1737c782aad8b17410d42c0e41c827c24477341",
+            1044,
+            "* #fname=FLOAT,DOUBLE,LONGDOUBLE#"
+        ]
+    ]
+},
+{
+    "line_num": 973,
+    "line_str": "* #fname = FLOAT, DOUBLE, LONGDOUBLE#",
+    "file_path": "numpy/core/src/arraytypes.inc.src",
+    "previous_commits": [
+        [
+            "f1737c782aad8b17410d42c0e41c827c24477341",
+            973,
+            "* #fname = FLOAT, DOUBLE, LONGDOUBLE#"
+        ]
+    ]
+},
+{
+    "line_num": 1446,
+    "line_str": "* #type = npy_float, npy_double, npy_longdouble#",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "f332b6f975555f5d8536c002ab8bb6266346470a",
+            1446,
+            "* #type = npy_float, npy_double, npy_longdouble#"
+        ],
+        [
+            "f1737c782aad8b17410d42c0e41c827c24477341",
+            1045,
+            "* #type=float,double,longdouble#"
+        ]
+    ]
+},
+{
+    "line_num": 293,
+    "line_str": "temp = (npy_longdouble) MyPyFloat_AsDouble(op);",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "f332b6f975555f5d8536c002ab8bb6266346470a",
+            293,
+            "temp = (npy_longdouble) MyPyFloat_AsDouble(op);"
+        ],
+        [
+            "823aed7b2324feb1d8e4bd52504e8bc86309126a",
+            271,
+            "temp = (longdouble) MyPyFloat_AsDouble(op);"
+        ]
+    ]
+},
+{
+    "line_num": 25,
+    "line_str": "",
+    "file_path": "numpy/core/src/multiarray/arraytypes.c.src",
+    "previous_commits": [
+        [
+            "15c68128fea5618902c62c62436e2bad1eb865b7",
+            25,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 131,
+    "line_str": "strobj = PyObject_Str(obj);",
+    "file_path": "numpy/core/src/arrayconvert.c",
+    "previous_commits": [
+        [
+            "695bf8bcd07f9bb5670a90c6e3f72c9c33a6bd27",
+            131,
+            "strobj = PyObject_Str(obj);"
+        ]
+    ]
+},
+{
+    "line_num": 30,
+    "line_str": "int r = dtype->f->fromstr(*s, dptr, s, dtype);",
+    "file_path": "numpy/core/src/arrayctors.c",
+    "previous_commits": [
+        [
+            "96a1f08f4f92f8a3dc39979f440c41e0f4fa018a",
+            30,
+            "int r = dtype->f->fromstr(*s, dptr, s, dtype);"
+        ]
+    ]
+},
+{
+    "line_num": 42,
+    "line_str": "return dtype->f->scanfunc(*fp, dptr, NULL, dtype);",
+    "file_path": "numpy/core/src/arrayctors.c",
+    "previous_commits": [
+        [
+            "96a1f08f4f92f8a3dc39979f440c41e0f4fa018a",
+            42,
+            "return dtype->f->scanfunc(*fp, dptr, NULL, dtype);"
+        ]
+    ]
+},
+{
+    "line_num": 433,
+    "line_str": "",
+    "file_path": "numpy/core/src/npy_format.c",
+    "previous_commits": [
+        [
+            "87d1c9c3c310874e1502c8691bc953fce539c166",
+            433,
+            ""
+        ]
+    ]
+},
+{
+    "line_num": 687,
+    "line_str": "return (buffer == p) ? 0 : 1;",
+    "file_path": "numpy/core/src/numpyos.c",
+    "previous_commits": [
+        [
+            "931a59258f256189dca707067e1719c023ef15da",
+            687,
+            "return (buffer == p) ? 0 : 1;"
+        ]
+    ]
+},
+{
+    "line_num": 617,
+    "line_str": "*value = NumPyOS_ascii_strtod(buffer, &p);",
+    "file_path": "numpy/core/src/numpyos.c",
+    "previous_commits": [
+        [
+            "2dd3ad531b59ee15ef54aeb10b261956d7407d94",
+            617,
+            "*value = NumPyOS_ascii_strtod(buffer, &p);"
+        ]
+    ]
+},
+{
+    "line_num": 573,
+    "line_str": "char buffer[FLOAT_FORMATBUFLEN + 1];",
+    "file_path": "numpy/core/src/numpyos.c",
+    "previous_commits": [
+        [
+            "931a59258f256189dca707067e1719c023ef15da",
+            573,
+            "char buffer[FLOAT_FORMATBUFLEN + 1];"
+        ]
+    ]
+},
+{
+    "line_num": 315,
+    "line_str": "NumPyOS_ascii_ftolf(FILE *fp, double *value)",
+    "file_path": "numpy/core/src/npy_format.c",
+    "previous_commits": [
+        [
+            "87d1c9c3c310874e1502c8691bc953fce539c166",
+            315,
+            "NumPyOS_ascii_ftolf(FILE *fp, double *value)"
+        ]
+    ]
+},
+{
+    "line_num": 535,
+    "line_str": "NPY_NO_EXPORT int",
+    "file_path": "numpy/core/src/numpyos.c",
+    "previous_commits": [
+        [
+            "4c2a9af485cd64335f82dac9756a856da9adee16",
+            535,
+            "NPY_NO_EXPORT int"
+        ]
+    ]
+},
+{
+    "line_num": 342,
+    "line_str": "if (c == EOF || endp >= buffer + FLOAT_FORMATBUFLEN)            \\",
+    "file_path": "numpy/core/src/npy_format.c",
+    "previous_commits": [
+        [
+            "87d1c9c3c310874e1502c8691bc953fce539c166",
+            342,
+            "if (c == EOF || endp >= buffer + FLOAT_FORMATBUFLEN)            \\"
+        ]
+    ]
+}
+]
+},{
+"86ffb953d00e4e2af58b74a8df942ac786d8d640": [
+{
+    "line_num": 136,
+    "line_str": "ians [numbers [i]] += 1;",
+    "file_path": "numpy/lib/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "e3d65f0e5ad0323894d5171ed2ec7b45e6280d18",
+            136,
+            "ians [numbers [i]] += 1;"
+        ]
+    ]
+},
+{
+    "line_num": 97,
+    "line_str": "int i;",
+    "file_path": "scipy/base/src/_compiled_base.c",
+    "previous_commits": [
+        [
+            "b48b35f199ec5d54b2ce3334d5ffa96f17fe1a60",
+            97,
+            "int i;"
+        ]
+    ]
+}
+]
+},{
+"b26aef66a998b8a6877ee261e4d97ec8f815dad2": [
+{
+    "line_num": 462,
+    "line_str": "npy_intp stride, sizes[NPY_MAXDIMS];",
+    "file_path": "numpy/core/src/multiarray/multiarraymodule.c",
+    "previous_commits": [
+        [
+            "027c3d91b6b5bbc0f7e50cce8a39da439e165d39",
+            462,
+            "npy_intp stride, sizes[NPY_MAXDIMS];"
+        ]
+    ]
+},
+{
+    "line_num": 534,
+    "line_str": "sliding_view->dimensions[0] = sizes[iarrays];",
+    "file_path": "numpy/core/src/multiarray/multiarraymodule.c",
+    "previous_commits": [
+        [
+            "027c3d91b6b5bbc0f7e50cce8a39da439e165d39",
+            534,
+            "sliding_view->dimensions[0] = sizes[iarrays];"
+        ],
+        [
+            "9194b3af704df71aa9b1ff2f53f169848d0f9dc7",
+            564,
+            "sliding_view->dimensions[0] = 1;"
+        ]
+    ]
+},
+{
+    "line_num": 545,
+    "line_str": "sliding_view->data += sliding_view->strides[0] * sizes[iarrays];",
+    "file_path": "numpy/core/src/multiarray/multiarraymodule.c",
+    "previous_commits": [
+        [
+            "027c3d91b6b5bbc0f7e50cce8a39da439e165d39",
+            545,
+            "sliding_view->data += sliding_view->strides[0] * sizes[iarrays];"
+        ],
+        [
+            "9194b3af704df71aa9b1ff2f53f169848d0f9dc7",
+            576,
+            "sliding_view->data += sliding_view->strides[0];"
+        ]
+    ]
+},
+{
+    "line_num": 479,
+    "line_str": "shape += sizes[iarrays] = PyArray_SIZE(arrays[iarrays]);",
+    "file_path": "numpy/core/src/multiarray/multiarraymodule.c",
+    "previous_commits": [
+        [
+            "027c3d91b6b5bbc0f7e50cce8a39da439e165d39",
+            479,
+            "shape += sizes[iarrays] = PyArray_SIZE(arrays[iarrays]);"
+        ]
+    ]
+}
+]
+},{
+"ba29c7b224618b069644e747d6e9236f88accad4": []},
+{
+"4679ff2380c01f18ea8cfd2d89838ba53f6381de": []},
+{
+"35d01b2a7cd38b2fda54b148402919aa1dd7e9c4": []}
+]

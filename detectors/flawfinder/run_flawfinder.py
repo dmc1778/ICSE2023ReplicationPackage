@@ -6,6 +6,7 @@ from pydriller import ModificationType, GitRepository as PyDrillerGitRepo
 import os, json, re, subprocess, codecs
 from csv import writer
 import time
+import pandas as pd
 
 user_names = ['mlpack', 'numpy', 'pandas-dev', 'pytorch' ,'scipy', 'tensorflow']
 
@@ -362,12 +363,21 @@ def combine_diff_results(detection_status):
                 data_list.append(item)
     return data_list, j
 
+def convert_df_dict():
+    vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vul_data.csv'
+    data = pd.read_csv(vic_path, sep=',')
+    x = {}
+    for index, rows in data.iterrows():
+        x[rows[2].split('/')[-1]] = rows[1]
+    return x
 
 def main():
     vic_path = '/media/nimashiri/DATA/vsprojects/ICSE23/data/vic_vfs_json'
 
-    tools = ['flawfinder','rats']
+    tools = ['flawfinder','rats', 'cppcheck']
     mappings_ = ['diff', 'fixed']
+
+    label_dict = convert_df_dict()
 
     for tool in tools:
         for mapping_ in mappings_:
