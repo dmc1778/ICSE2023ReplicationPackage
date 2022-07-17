@@ -183,21 +183,13 @@ def parse_cppcheck(output, mapping_):
                     y = int(REG_CPP_CHECK_LOC.search(line).group(1))
                     parsed_ouput[y] = '\\n'.join(detection)
 
-        if mapping_ == 'TrueBugs':
             for k, v in parsed_ouput.items():
                 for item in v:
                     cwe_list = find_cppcheck_cwe(item)
                     for cwe in cwe_list:
-                        if cwe not in h:
-                            h[cwe] = 0
-
-            for k, v in parsed_ouput.items():
-                for item in v:
-                    cwe_list = find_cppcheck_cwe(item)
-                    for cwe in cwe_list:
-                        h[cwe] += len([cwe])
+                        cwe_final_list = cwe_final_list + [cwe]
             
-        return [parsed_ouput, h]
+        return [parsed_ouput, cwe_final_list]
     else:
         return 'not detected'
 
@@ -211,6 +203,7 @@ def find_rat_types(warning):
 
 def parse_rats(output, mapping_):
     # h = {}
+    cwe_final_list
     parsed_ouput = Dictlist()
     if re.findall(r'(<vulnerability\>)', output):
         x = re.findall(r'<vulnerability.*>((.|\n)*?)<\/vulnerability>', output)
@@ -222,17 +215,12 @@ def parse_rats(output, mapping_):
                 if re.findall(r'<line.*>((.|\n)*?)<\/line>', line):
                     y = int(re.findall(r'<line.*>((.|\n)*?)<\/line>', line)[0][0])
                     parsed_ouput[y] = detection[0]
-        if mapping_ == 'TrueBugs':
-            for k, v in parsed_ouput.items():
-                cwe_list = find_rat_types(v[0])
-                if cwe_list[0] not in h:
-                    h[cwe_list[0]] = 0
 
             for k, v in parsed_ouput.items():
                 cwe_list = find_rat_types(v[0])
-                if cwe_list[0] in h:
-                    h[cwe_list[0]] += len(cwe_list)
-        return [parsed_ouput, h]
+                for cwe in cwe_list:
+                    cwe_final_list = cwe_final_list + [cwe]
+        return [parsed_ouput, cwe_final_list]
     else:
         return 'not detected'
 
@@ -246,6 +234,7 @@ def find_regex_groups(warning):
     return cwe_list
 
 def parse_flawfinder(output, mapping_):
+    cwe_final_list = []
     parsed_ouput = Dictlist()
     if re.findall(r'(No hits found)', output):
         return 'not detected'
@@ -259,20 +248,11 @@ def parse_flawfinder(output, mapping_):
                     break
             parsed_ouput[x] = '\\n'.join(detection)
 
-        if mapping_ == 'TrueBugs':
-            for k, v in parsed_ouput.items():
-                cwe_list = find_regex_groups(v[0])
-                #cwe_list = '/'.join(cwe_list)
-                for cwe in cwe_list:
-                    if cwe not in h:
-                        h[cwe] = 0
-
-            for k, v in parsed_ouput.items():
-                cwe_list = find_regex_groups(v[0])
-                for cwe in cwe_list:
-                # cwe_list = '/'.join(cwe_list)
-                    h[cwe] += len([cwe])
-    return [parsed_ouput, h]
+        for k, v in parsed_ouput.items():
+            cwe_list = find_regex_groups(v[0])
+            for cwe in cwe_list:
+                cwe_final_list = cwe_final_list + [cwe]
+    return [parsed_ouput, cwe_final_list]
 
 def search_for_compile_command(test_file, library_name):
     with open(f'compilation_database/compile_commands_{library_name}.json', encoding='utf-8') as f:
@@ -512,10 +492,14 @@ def main():
                                             my_data = [_id, tool, label_dict[x[0]] , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
                                             my_data = my_data + data_list
 
-                                            with open('./detection_results/vul_frequency.csv', 'a') as csv_file:  
-                                                writer = csv.writer(csv_file)
-                                                for key, value in h.items():
-                                                    writer.writerow([tool, key, value])
+                                            for v in range(len(res[1])):
+                                                vul_freq_data = [tool, dir.split('_')[1].split('.')[0]]
+                                                vul_freq_data = vul_freq_data + [res[1][v]]
+                                                vul_freq_data = [_id] + vul_freq_data
+
+                                                with open('./detection_results/vul_frequency.csv', 'a', newline='\n') as fd:
+                                                    writer_object = csv.writer(fd)
+                                                    writer_object.writerow(vul_freq_data)
                                                                                             
                                         with open('./detection_results/results_true.csv', 'a', newline='\n') as fd:
                                                 writer_object = csv.writer(fd)

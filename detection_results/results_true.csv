@@ -1,2 +1,0 @@
-5,flawfinder,CWE-401,mlpack,0.035333871841430664,https://github.com/mlpack/mlpack/commit/bde18b80ada1e0d5774f17c39cb72477a1a97618,https://github.com/mlpack/mlpack/commit/bde18b80ada1e0d5774f17c39cb72477a1a97618,cf_main.cpp,src/mlpack/methods/cf/cf_main.cpp,18,4,0,not detected
-5,flawfinder,CWE-401,mlpack,0.0295412540435791,https://github.com/mlpack/mlpack/commit/bde18b80ada1e0d5774f17c39cb72477a1a97618,https://github.com/mlpack/mlpack/commit/bde18b80ada1e0d5774f17c39cb72477a1a97618,fastmks_main.cpp,src/mlpack/methods/fastmks/fastmks_main.cpp,29,3,0,not detected
