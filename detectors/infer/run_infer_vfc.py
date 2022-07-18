@@ -1,10 +1,10 @@
 from calendar import day_abbr
-import sys, os, re, subprocess, json
+import os, re, subprocess, json
 from numpy import std
 from pydriller import GitRepository as PyDrillerGitRepo
 from csv import writer
+import csv
 import time, codecs
-import itertools
 from subprocess import run
 import pandas as pd
 
@@ -173,6 +173,7 @@ def parse_clang(output):
                     x = int(REG_LOC_CLANG.search(line).group(2))
                     cwe_final_list = cwe_final_list + [REG_VUL_TYPE_CLANG.search(line).group(4)]            
             parsed_output[x] = '\\n'.join(detection)
+
         return [parsed_output, cwe_final_list]
     else:
         return 'not detected'
@@ -192,6 +193,12 @@ def parse_infer(output):
                     cwe_final_list = cwe_final_list + [REG_VUL_TYPE_INFER.search(line).group(1)]
                     break
             parsed_output[x] = '\\n'.join(detection)
+
+        # for k, v in parsed_output.items():
+        #     cwe_list = REG_VUL_TYPE_INFER.search(v[0]).group(1)
+        #     for cwe in cwe_list:
+        #         cwe_final_list = cwe_final_list + [cwe]
+
         return [parsed_output, cwe_final_list]
     else:
         return 'compilation error'
@@ -655,8 +662,17 @@ def main():
                                             data_list, j = combine_diff_results(res[0])
                                             my_data = [_id, tool, label_dict[x[0]] , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, j]
                                             my_data = my_data + data_list
+                                
+                                            for v in range(len(res[1])):
+                                                vul_freq_data = [tool, dir.split('_')[1].split('.')[0]]
+                                                vul_freq_data = vul_freq_data + [res[1][v]]
+                                                vul_freq_data = [_id] + vul_freq_data
 
-                                        with open('./detection_results/infer/results.csv', 'a', newline='\n') as fd:
+                                                with open('./detection_results/infer2/vul_frequency.csv', 'a', newline='\n') as fd:
+                                                    writer_object = csv.writer(fd)
+                                                    writer_object.writerow(vul_freq_data)
+
+                                        with open('./detection_results/infer2/results.csv', 'a', newline='\n') as fd:
                                                 writer_object = writer(fd)
                                                 writer_object.writerow(my_data)
 
@@ -682,17 +698,17 @@ def main():
                                                 vul_freq_data = vul_freq_data + [res[1][v]]
                                                 vul_freq_data = [_id] + vul_freq_data
 
-                                                with open('./detection_results/infer/vul_frequency.csv', 'a', newline='\n') as fd:
+                                                with open('./detection_results/infer2/vul_frequency.csv', 'a', newline='\n') as fd:
                                                     writer_object = writer(fd)
                                                     writer_object.writerow(vul_freq_data)
                                                     
-                                        with open('./detection_results/infer/results.csv', 'a', newline='\n') as fd:
+                                        with open('./detection_results/infer2/results.csv', 'a', newline='\n') as fd:
                                                 writer_object = writer(fd)
                                                 writer_object.writerow(my_data)
                                         
                                         cl_list = [_id] + cl_list
 
-                                        with open('./detection_results/infer/change_info.csv', 'a', newline='\n') as fd:
+                                        with open('./detection_results/infer2/change_info.csv', 'a', newline='\n') as fd:
                                                 writer_object = writer(fd)
                                                 writer_object.writerow(cl_list)
 
@@ -707,29 +723,25 @@ def main():
                                             my_data = my_data + data_list
                                             
                         
-                                        if res1 == 'not detected' or res1 == 'not detected':
-                                            my_data = [_id, tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0 , 'not detected']
-                                    
-
-                                        if res1 == 'compilation error' or res2 == 'compilation error':
-                                            my_data = [_id, tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0 , 'compilation error']
-                                                                
+                                        else:
+                                            my_data = [_id, tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0 , 'not detected or error']
+                                                
                                         cl_list = [_id] + cl_list
 
-                                        with open('./detection_results/infer/change_info.csv', 'a', newline='\n') as fd:
+                                        with open('./detection_results/infer2/change_info.csv', 'a', newline='\n') as fd:
                                                 writer_object = writer(fd)
                                                 writer_object.writerow(cl_list)
 
-                                        with open('./detection_results/infer/results.csv', 'a', newline='\n') as fd:
+                                        with open('./detection_results/infer2/results.csv', 'a', newline='\n') as fd:
                                             writer_object = writer(fd)
                                             writer_object.writerow(my_data)
 
                                     if mapping_ != 'fixed' and not opt:
-                                        with open('./detection_results/infer/compile_options_failed.csv', 'a', newline='\n') as fd:
+                                        with open('./detection_results/infer2/compile_options_failed.csv', 'a', newline='\n') as fd:
                                             writer_object = writer(fd)
                                             writer_object.writerow([dir.split('_')[1].split('.')[0], x[0], mod.new_path, mod.filename])
                                 else:
-                                    with open('./detection_results/infer/filtered_files.csv', 'a', newline='\n') as fd:
+                                    with open('./detection_results/infer2/filtered_files.csv', 'a', newline='\n') as fd:
                                         writer_object = writer(fd)
                                         writer_object.writerow([dir.split('_')[1].split('.')[0], x[0], mod.new_path, mod.filename])
 

@@ -170,6 +170,7 @@ def find_cppcheck_cwe(warning):
     return cwe_list
 
 def parse_cppcheck(output, mapping_):
+    cwe_final_list = []
     parsed_ouput = Dictlist()
     if re.findall(r'\<error\sid\=\"',  output):
         # x = re.findall(r'<error id=.*>((.|\n)*?)<\/error>', output)
@@ -184,10 +185,9 @@ def parse_cppcheck(output, mapping_):
                     parsed_ouput[y] = '\\n'.join(detection)
 
             for k, v in parsed_ouput.items():
-                for item in v:
-                    cwe_list = find_cppcheck_cwe(item)
-                    for cwe in cwe_list:
-                        cwe_final_list = cwe_final_list + [cwe]
+                cwe_list = find_cppcheck_cwe(v[0])
+                for cwe in cwe_list:
+                    cwe_final_list = cwe_final_list + [cwe]
             
         return [parsed_ouput, cwe_final_list]
     else:
@@ -203,7 +203,7 @@ def find_rat_types(warning):
 
 def parse_rats(output, mapping_):
     # h = {}
-    cwe_final_list
+    cwe_final_list = []
     parsed_ouput = Dictlist()
     if re.findall(r'(<vulnerability\>)', output):
         x = re.findall(r'<vulnerability.*>((.|\n)*?)<\/vulnerability>', output)
@@ -235,7 +235,7 @@ def find_regex_groups(warning):
 
 def parse_flawfinder(output, mapping_):
     cwe_final_list = []
-    parsed_ouput = Dictlist()
+    parsed_output = Dictlist()
     if re.findall(r'(No hits found)', output):
         return 'not detected'
     if re.findall(r'(Hits =)', output):
@@ -246,13 +246,14 @@ def parse_flawfinder(output, mapping_):
                 if REG_LOC_FLAWFINDER.search(line):
                     x = int(REG_LOC_FLAWFINDER.search(line).group(1))
                     break
-            parsed_ouput[x] = '\\n'.join(detection)
+            parsed_output[x] = '\\n'.join(detection)
 
-        for k, v in parsed_ouput.items():
+        for k, v in parsed_output.items():
             cwe_list = find_regex_groups(v[0])
             for cwe in cwe_list:
                 cwe_final_list = cwe_final_list + [cwe]
-    return [parsed_ouput, cwe_final_list]
+
+    return [parsed_output, cwe_final_list]
 
 def search_for_compile_command(test_file, library_name):
     with open(f'compilation_database/compile_commands_{library_name}.json', encoding='utf-8') as f:
@@ -330,7 +331,7 @@ def save_source_code(source_code, flag, filename):
 def fixed_warning_base_matching(fix_commit, vul_commit, detector_name, library_name, mapping_):
     #save_source_code(vul_file_object.source_code_before, 'fix', vul_file_object.filename)
     save_source_code(vul_commit.source_code_before, 'vul', vul_commit.filename)
-    
+    flag = False
     out = []    
     if os.path.isfile(this_project+'/vul_'+vul_commit.filename):
         [output1, execution_time1] = run(this_project+'/vul_'+vul_commit.filename, detector_name, library_name)
@@ -442,8 +443,8 @@ def main():
 
     label_dict = convert_df_dict()
 
-    for tool in ['flawfinder', 'rats', 'cppcheck']:
-        for mapping_ in ['TrueBugs', 'diff', 'fixed']:
+    for tool in ['cppcheck']:
+        for mapping_ in ['fixed']:
             for i, dir in enumerate(os.listdir(vic_path)):
                 
                 if user_names[i] == 'tensorflow' or user_names[i] == 'pytorch':
@@ -542,9 +543,10 @@ def main():
                                             my_data = my_data + [list(wfix[0])]
                                             my_data = my_data + data_list
 
-                                        if res1 == 'not detected' or res1 == 'not detected':
+                                        else:
                                             my_data = [_id, tool, 'fixed' , dir.split('_')[1].split('.')[0], execution_time, commit_base_link+x[0], commit_base_link+current_commit.hash, vul_file_object.filename, vul_file_object.new_path, vul_file_object.added, vul_file_object.removed, 0 , 'not detected']
-                                             
+
+
                                         cl_list = [_id] + cl_list
 
                                         with open('./detection_results/change_info.csv', 'a', newline='\n') as fd:
